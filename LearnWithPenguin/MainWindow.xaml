@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearnWithPenguin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    Title="MainWindow" Height="800" Width="1125">
+
+    <Grid Background="#FFA0C4FF">
+        <Image HorizontalAlignment="Left" Margin="0,342,0,0" Width="334" Source="/OnBoarding.png" Stretch="Uniform"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,276,0,0" TextWrapping="Wrap" Text="Học cùng Penguin" VerticalAlignment="Top" Height="96" Width="719" OpacityMask="#FF073580" FontFamily="Baloo" FontSize="72" FontWeight="Normal" FontStyle="Normal" LineStackingStrategy="MaxHeight"/>
     </Grid>
 </Window>
