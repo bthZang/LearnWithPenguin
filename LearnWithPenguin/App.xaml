@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:LearnWithPenguin"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="Baloo2-Bold">
+            <Setter Property="TextElement.FontFamily" 
+        Value="pack://application:,,,/fonts/#Baloo 2" />
+        </Style>
     </Application.Resources>
 </Application>
