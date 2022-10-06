@@ -7,7 +7,7 @@
         mc:Ignorable="d"
     Title="MainWindow" Height="800" Width="1125">
     <Grid>
-        <StackPanel Orientation="Horizontal"  Background="#FFA0C4FF">
+        <DockPanel   Background="#FFA0C4FF">
             <Image 
                 Width="552" 
                 Source="/OnBoarding.png" 
@@ -18,14 +18,12 @@
                 
 />
             <StackPanel
-                VerticalAlignment="Top"
+                VerticalAlignment="Stretch"
                 HorizontalAlignment="Right"
-                Margin="0 50 0 0" 
-                
                 >
                 <StackPanel
                 VerticalAlignment="Top"
-                    Margin="0 300 0 60.32" >
+                    Margin="0 300 0 160.32" >
                     <TextBlock 
                         Text="Học cùng Penguin" 
                         Foreground="#FF073580"
@@ -44,14 +42,14 @@
                         >
                         <TextBlock
                             TextWrapping="Wrap"
-                            Text="Ứng dụng học tập tốt nhất giúp luyện các kỹ năng nghe - nói - đọc - viết dành cho bé từ 3 đến 7 tuổi, và hoàn toàn miễn phí ." 
+                            Text="Ứng dụng học tập tốt nhất giúp luyện các kỹ năng nghe - nói - đọc - viết dành cho bé từ 3 
+                            đến 7 tuổi, và hoàn toàn miễn phí ." 
                             Foreground="#2D3D8F"
                             FontSize="24.45" 
-                            FontWeight="Bold" 
                             FontStyle="Normal" 
                             LineStackingStrategy="MaxHeight"
-                            Style="{StaticResource Baloo2-Bold}" 
-                            Width="511.87" Height="123"
+                            Style="{StaticResource Baloo2-Regular}" 
+                            Width="508" Height="123"
                         />
 
                     </StackPanel>
@@ -64,12 +62,12 @@
                     TextWrapping="Wrap"
                             Text="Bắt đầu ngay"
                     Foreground="#2D3D8F"
-                    FontSize="24.45" 
+                    FontSize="19.8" 
                     FontWeight="Bold" 
                     FontStyle="Normal" 
                     LineStackingStrategy="MaxHeight"
                     Style="{StaticResource Baloo2-Bold}" 
-                    Width="118"
+                    Width="168"
  Height="31"
                     />
                         <Image 
@@ -81,6 +79,6 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>

@@ -8,5 +8,13 @@
             <Setter Property="TextElement.FontFamily" 
         Value="pack://application:,,,/fonts/#Baloo 2" />
         </Style>
+        <Style x:Key="Baloo-Regular">
+            <Setter Property="TextElement.FontFamily" 
+        Value="pack://application:,,,/fonts/#Baloo" />
+        </Style>
+        <Style x:Key="Baloo2-Regular">
+            <Setter Property="TextElement.FontFamily" 
+        Value="pack://application:,,,/fonts/#Baloo 2" />
+        </Style>
     </Application.Resources>
 </Application>
