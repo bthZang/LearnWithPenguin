@@ -3,7 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LearnWithPenguin"
+        xmlns:local="clr-namespace:LearnWithPenguin.UserControl"
+        xmlns:UC="clr-namespace:LearnWithPenguin.UserControl"
+        
+        
         mc:Ignorable="d"
     Title="MainWindow" Height="800" Width="1125">
     <Grid>
@@ -17,68 +20,8 @@
                 Margin="-35 0"
                 
 />
-            <StackPanel
-                VerticalAlignment="Stretch"
-                HorizontalAlignment="Right"
-                >
-                <StackPanel
-                VerticalAlignment="Top"
-                    Margin="0 300 0 160.32" >
-                    <TextBlock 
-                        Text="Học cùng Penguin" 
-                        Foreground="#FF073580"
-                        FontSize="56.56"
-                        FontWeight="Bold" 
-                        FontStyle="Normal" 
-                        LineStackingStrategy="MaxHeight"
-                        Style="{StaticResource Baloo2-Bold}" 
-                        Width="512"
-                        Height="89"
-                    
-                    />
-                    <StackPanel 
-                        VerticalAlignment="Top"
-                         Margin="0 24.12 0 0" 
-                        >
-                        <TextBlock
-                            TextWrapping="Wrap"
-                            Text="Ứng dụng học tập tốt nhất giúp luyện các kỹ năng nghe - nói - đọc - viết dành cho bé từ 3 
-                            đến 7 tuổi, và hoàn toàn miễn phí ." 
-                            Foreground="#2D3D8F"
-                            FontSize="24.45" 
-                            FontStyle="Normal" 
-                            LineStackingStrategy="MaxHeight"
-                            Style="{StaticResource Baloo2-Regular}" 
-                            Width="508" Height="123"
-                        />
+            <local:TextOnBoarding></local:TextOnBoarding>
 
-                    </StackPanel>
-                    <StackPanel 
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                Margin="0 118.09 0 0" >
-                        <TextBlock
-                            TextAlignment="Center"
-                    TextWrapping="Wrap"
-                            Text="Bắt đầu ngay"
-                    Foreground="#2D3D8F"
-                    FontSize="19.8" 
-                    FontWeight="Bold" 
-                    FontStyle="Normal" 
-                    LineStackingStrategy="MaxHeight"
-                    Style="{StaticResource Baloo2-Bold}" 
-                    Width="168"
- Height="31"
-                    />
-                        <Image 
-                Width="26.73" 
-                Source="/Down.png" 
-                Stretch="Uniform"
-                Height="13.73"
-                VerticalAlignment="Top" ></Image>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
         </DockPanel>
     </Grid>
 </Window>
