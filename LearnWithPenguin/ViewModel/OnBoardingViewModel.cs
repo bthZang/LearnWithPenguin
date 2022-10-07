@@ -17,45 +17,42 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-
 namespace LearnWithPenguin.ViewModel
 {
-    public class MainViewModel : BaseViewModel
+    public class OnBoardingViewModel : BaseViewModel
     {
+        private BaseViewModel _PartOnBoarding;
 
-        protected BaseViewModel _navigatetoHome;
-
-        public MainViewModel()
-        {
-            this.NavigatetoHome = new OnBoardingViewModel();
-
-        }
-
-        public BaseViewModel NavigatetoHome
+        public BaseViewModel PartOnBoarding
         {
             get
             {
-                return _navigatetoHome;
+                return _PartOnBoarding;
             }
             set
             {
-                _navigatetoHome = value;
+                _PartOnBoarding = value;
                 OnPropertyChanged();
             }
         }
 
-        public ICommand Transform
+        public ICommand Show
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new HomeViewModel();                    
+                    PartOnBoarding = new LoginViewModel();
                 });
             }
 
             set { }
+        }
+
+        public OnBoardingViewModel()
+        {
+            this.PartOnBoarding = new TextOnBoardingViewModel();
+
         }
     }
 }

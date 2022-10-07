@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LearnWithPenguin.UserControl;
-using LearnWithPenguin.UserControls;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using LearnWithPenguin.UserControl;
+using LearnWithPenguin.UserControls;
 using System.Windows.Input;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,8 +19,8 @@ using System.Windows.Shapes;
 
 namespace LearnWithPenguin.ViewModel
 {
-
-    public class TextOnBoardingViewModel : BaseViewModel
+    public class HomeViewModel : BaseViewModel
     {
+        
     }
 }

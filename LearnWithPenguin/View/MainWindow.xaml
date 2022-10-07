@@ -6,31 +6,24 @@
         xmlns:local="clr-namespace:LearnWithPenguin.UserControl"
         xmlns:localLorgin="clr-namespace:LearnWithPenguin.UserControls"
         xmlns:viewmodelTOB="clr-namespace:LearnWithPenguin.ViewModel"
+        xmlns:viewmodelHome="clr-namespace:LearnWithPenguin.ViewModel"
+        xmlns:view="clr-namespace:LearnWithPenguin.View"
         DataContext="{StaticResource MainVM}"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="800"
-        Width="1125"
-        >
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type viewmodelTOB:TextOnBoardingViewModel}">
-            <local:TextOnBoarding />
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodelTOB:LoginViewModel}">
-            <localLorgin:Login />
-        </DataTemplate>
-    </Window.Resources>
-    <Grid>
-        <DockPanel   Background="#FFA0C4FF">
-            <Image 
-                Width="552" 
-                Source="../images/OnBoarding.png" 
-                Stretch="Uniform"
-                Height="651"
-                VerticalAlignment="Bottom"
-                Margin="-35 0"                
-/>
-            <ContentControl Content="{Binding PartOnBoarding}" />
-        </DockPanel>
-    </Grid>
+        Width="1125">
+
+
+    <ContentControl Content="{Binding NavigatetoHome}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodelHome:OnBoardingViewModel}">
+                <Frame Source="OnBoardingView.xaml"></Frame>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:HomeViewModel}">
+                <Frame Source="HomeView.xaml"></Frame>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+
 </Window>

@@ -6,7 +6,7 @@
              xmlns:viewmodelTOB="clr-namespace:LearnWithPenguin.ViewModel"
              mc:Ignorable="d"
              Width="513"
-             DataContext="{StaticResource MainVM}"
+             DataContext="{StaticResource OnBoardingVM}"
              Height="876">
 
 

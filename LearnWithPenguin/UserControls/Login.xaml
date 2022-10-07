@@ -5,10 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             DataContext="{StaticResource MainVM}"
              mc:Ignorable="d"
              Height="800"
              Width="947">
-    <Grid Margin="110,210,0, 0">
+    <Grid Margin="110,210,50, 0">
         <StackPanel HorizontalAlignment="Left">
             <StackPanel VerticalAlignment="Center"
                         Margin="0 0 0 160.32">
@@ -124,13 +125,15 @@
                         </Grid>
 
                     </Border>
+                    <Button Command="{Binding Transform}">
                     <Border Background="#FFFFFF"
                             Width="177.34"
                             Height="63.28"
                             CornerRadius="23.44"
                             BorderThickness="4"
                             BorderBrush="#000000"
-                            Margin="0 26.56 0 0">
+                            Margin="0 26.56 0 0"
+                            >
                         <TextBlock Width="158"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
@@ -143,6 +146,7 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    Text="Đăng nhập" />
                     </Border>
+                    </Button>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center"
                             VerticalAlignment="Center"

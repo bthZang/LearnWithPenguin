@@ -8,7 +8,9 @@
     
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
     <viewmodel:MainViewModel x:Key="LoginVM"></viewmodel:MainViewModel>
+    <viewmodel:OnBoardingViewModel x:Key="OnBoardingVM"></viewmodel:OnBoardingViewModel>
     <viewmodel:TextOnBoardingViewModel x:Key="TextOnBoardingVM"></viewmodel:TextOnBoardingViewModel>
+    <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
 
 
 </ResourceDictionary>
