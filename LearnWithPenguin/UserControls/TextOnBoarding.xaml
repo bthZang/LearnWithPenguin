@@ -7,13 +7,12 @@
              mc:Ignorable="d" Width="513" Height="876">
     <Grid Margin="0,0,-78,-355">
         <StackPanel
-                HorizontalAlignment="Left"
-                >
+                HorizontalAlignment="Left">
             <StackPanel
                 VerticalAlignment="Top"
                     Margin="0 300 0 160.32" >
                 <TextBlock 
-                        Text="Học cùng Penguin" 
+                        Text="HỌC CÙNG PENGUIN" 
                         Foreground="#FF073580"
                         FontSize="56.56"
                         FontWeight="Bold" 
@@ -21,13 +20,10 @@
                         LineStackingStrategy="MaxHeight"
                         Style="{StaticResource Baloo2-Bold}" 
                         Width="512"
-                        Height="89"
-                    
-                    />
+                        Height="89" />
                 <StackPanel 
                         VerticalAlignment="Top"
-                         Margin="0 24.12 0 0" 
-                        >
+                        Margin="0 24.12 0 0" >
                     <TextBlock
                             TextWrapping="Wrap"
                             Text="Ứng dụng học tập tốt nhất giúp luyện các kỹ năng nghe - nói - đọc - viết dành cho bé từ 3 
@@ -44,19 +40,19 @@
                 <StackPanel 
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
-                Margin="0 118.09 0 0" >
+                        Margin="0 118.09 0 0" >
                     <TextBlock
-                            TextAlignment="Center"
-                    TextWrapping="Wrap"
-                            Text="Bắt đầu ngay"
-                    Foreground="#2D3D8F"
-                    FontSize="19.8" 
-                    FontWeight="Bold" 
-                    FontStyle="Normal" 
-                    LineStackingStrategy="MaxHeight"
-                    Style="{StaticResource Baloo2-Bold}" 
-                    Width="168"
- Height="31"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        Text="Bắt đầu ngay"
+                        Foreground="#2D3D8F"
+                        FontSize="19.8" 
+                        FontWeight="Bold" 
+                        FontStyle="Normal" 
+                        LineStackingStrategy="MaxHeight"
+                        Style="{StaticResource Baloo2-Bold}" 
+                        Width="168" 
+                        Height="31"
                     />
                     <Image 
                 Width="26.73" 

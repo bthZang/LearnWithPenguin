@@ -57,6 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ResourceXAML\MainResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\iconGoogle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
