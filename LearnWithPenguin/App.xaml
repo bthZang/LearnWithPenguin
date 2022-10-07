@@ -2,19 +2,27 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:LearnWithPenguin"
-             StartupUri="MainWindow.xaml">
+             StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="Baloo2-Bold">
-            <Setter Property="TextElement.FontFamily" 
-        Value="pack://application:,,,/fonts/#Baloo 2" />
-        </Style>
-        <Style x:Key="Baloo-Regular">
-            <Setter Property="TextElement.FontFamily" 
-        Value="pack://application:,,,/fonts/#Baloo" />
-        </Style>
-        <Style x:Key="Baloo2-Regular">
-            <Setter Property="TextElement.FontFamily" 
-        Value="pack://application:,,,/fonts/#Baloo 2" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./ResourceXAML/MainResource.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Style x:Key="Baloo2-Bold">
+                <Setter Property="TextElement.FontFamily"
+                        Value="pack://application:,,,/fonts/#Baloo 2" />
+            </Style>
+            <Style x:Key="Baloo-Regular">
+                <Setter Property="TextElement.FontFamily"
+                        Value="pack://application:,,,/fonts/#Baloo" />
+            </Style>
+            <Style x:Key="Baloo2-Regular">
+                <Setter Property="TextElement.FontFamily"
+                        Value="pack://application:,,,/fonts/#Baloo 2" />
+            </Style>
+        </ResourceDictionary>
+
+
     </Application.Resources>
 </Application>

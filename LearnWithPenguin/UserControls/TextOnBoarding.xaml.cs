@@ -20,9 +20,15 @@ namespace LearnWithPenguin.UserControl
     /// </summary>
     public partial class TextOnBoarding : System.Windows.Controls.UserControl
     {
+        public bool isLoaded = false;
         public TextOnBoarding()
         {
+            if (!isLoaded)
+            {
+                isLoaded=true;
             InitializeComponent();
+            }
         }
+
     }
 }

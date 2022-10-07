@@ -5,23 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearnWithPenguin.UserControl"
         xmlns:localLorgin="clr-namespace:LearnWithPenguin.UserControls"
-        xmlns:UC="clr-namespace:LearnWithPenguin.UserControl"
-        
-        
+        xmlns:viewmodelTOB="clr-namespace:LearnWithPenguin.ViewModel"
+        DataContext="{StaticResource MainVM}"
         mc:Ignorable="d"
-    Title="MainWindow" Height="800" Width="1125">
+        Title="MainWindow"
+        Height="800"
+        Width="1125"
+        >
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodelTOB:TextOnBoardingViewModel}">
+            <local:TextOnBoarding />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodelTOB:LoginViewModel}">
+            <localLorgin:Login />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <DockPanel   Background="#FFA0C4FF">
             <Image 
                 Width="552" 
-                Source="/OnBoarding.png" 
+                Source="../images/OnBoarding.png" 
                 Stretch="Uniform"
                 Height="651"
                 VerticalAlignment="Bottom"
-                Margin="-35 0"
-                
+                Margin="-35 0"                
 />
-            <localLorgin:Login>  </localLorgin:Login>
+            <ContentControl Content="{Binding PartOnBoarding}" />
         </DockPanel>
     </Grid>
 </Window>
