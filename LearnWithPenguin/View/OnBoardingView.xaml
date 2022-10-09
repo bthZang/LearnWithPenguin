@@ -5,8 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LearnWithPenguin.UserControl"
       xmlns:localLorgin="clr-namespace:LearnWithPenguin.UserControls"
-      xmlns:viewmodelTOB="clr-namespace:LearnWithPenguin.ViewModel"
-      xmlns:viewmodelHome="clr-namespace:LearnWithPenguin.ViewModel"
+      xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:view="clr-namespace:LearnWithPenguin.View"
       mc:Ignorable="d"
       DataContext="{StaticResource OnBoardingVM}"
@@ -14,11 +13,14 @@
       Title="OnBoardingView">
 
     <Page.Resources>
-        <DataTemplate DataType="{x:Type viewmodelTOB:TextOnBoardingViewModel}">
+        <DataTemplate DataType="{x:Type viewmodel:TextOnBoardingViewModel}">
             <local:TextOnBoarding />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodelTOB:LoginViewModel}">
+        <DataTemplate DataType="{x:Type viewmodel:LoginViewModel}">
             <localLorgin:Login />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:TermAndConditionViewModel}">
+            <localLorgin:TermAndCondition />
         </DataTemplate>
     </Page.Resources>
     <Grid>

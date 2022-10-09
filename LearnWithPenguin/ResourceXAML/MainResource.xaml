@@ -12,6 +12,10 @@
     <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
+    <viewmodel:IconViewModel x:Key="IconVM"></viewmodel:IconViewModel>
+    <viewmodel:TermAndConditionViewModel x:Key="TermAndConditionVM"></viewmodel:TermAndConditionViewModel>
+
+
 
 
 

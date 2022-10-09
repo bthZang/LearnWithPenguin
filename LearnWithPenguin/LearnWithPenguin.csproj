@@ -57,21 +57,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Icon.xaml.cs">
+      <DependentUpon>Icon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TermAndCondition.xaml.cs">
+      <DependentUpon>TermAndCondition.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
+    <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\Icon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TermAndCondition.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,9 +188,6 @@
     <Resource Include="images\Volume.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="UserControls\User.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="UserControls\Volume.png" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +201,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\share%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\BlurNext.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
