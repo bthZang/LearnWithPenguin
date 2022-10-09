@@ -18,7 +18,7 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class Menu : System.Windows.Controls.UserControl
     {
         public Menu()
         {

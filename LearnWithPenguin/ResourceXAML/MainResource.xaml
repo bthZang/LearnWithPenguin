@@ -11,6 +11,8 @@
     <viewmodel:TextOnBoardingViewModel x:Key="TextOnBoardingVM"></viewmodel:TextOnBoardingViewModel>
     <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
+    <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
+
 
 
 </ResourceDictionary>

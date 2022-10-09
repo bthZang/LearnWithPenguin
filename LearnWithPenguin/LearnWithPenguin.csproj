@@ -66,6 +66,7 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
@@ -158,6 +159,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\iconGoogle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LogOut.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\Mute.png" />
+    <Resource Include="images\noSound.png" />
+    <Resource Include="images\People.png" />
+    <Resource Include="images\Rate.png" />
+    <Resource Include="images\Sound.png" />
+    <Resource Include="images\User.png" />
+    <Resource Include="images\Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\share%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

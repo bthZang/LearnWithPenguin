@@ -1,18 +1,126 @@
 ﻿<UserControl x:Class="LearnWithPenguin.UserControls.Menu"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1250">
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1250">
     <Grid>
         <Border Background="White"
                 Width="360"
                 HorizontalAlignment="Left"
-                CornerRadius="0 31.2 31.2 0"
-                >
-            <Image></Image>
-        </Border>  
+                CornerRadius="0 31.2 31.2 0">
+            <StackPanel>
+                <Image Source="/UserControls/User.png"
+                       Width="182.03"
+                       Height="182.03"
+                       Margin="89,59,89,9.75"></Image>
+                <TextBlock TextAlignment="Center"
+                           Text="Display name"
+                           Foreground="#2D3D8F"
+                           FontSize="28.12"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           LineStackingStrategy="MaxHeight"
+                           Style="{StaticResource Baloo2-Bold}"
+                           Height="44"
+                           Width="172"
+                           Margin="0,0,0,0" />
+                <StackPanel Orientation="Horizontal"
+                            Margin="76.65 88.81 0 0">
+                    <Image Source="/UserControls/Volume.png"
+                           Width="39.06"
+                           Height="39.06"
+                           Margin="0,0,0,0"></Image>
+                    <TextBlock TextAlignment="Left"
+                               Text="Âm thanh"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="44.53"
+                               Width="131.25"
+                               Margin="37.5,0,0,0" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="76.65 31.25 0 0">
+                    <Image Source="/UserControls/Sound.png"
+                           Width="39.06"
+                           Height="39.06"
+                           Margin="0,0,0,0"></Image>
+                    <TextBlock TextAlignment="Left"
+                               Text="Âm nhạc"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="44.53"
+                               Width="131.25"
+                               Margin="37.5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="76.65 31.25 0 0">
+                    <Image Source="/UserControls/Rate.png"
+                           Width="39.06"
+                           Height="39.06"
+                           Margin="0,0,0,0"></Image>
+                    <TextBlock TextAlignment="Left"
+                               Text="Đánh giá"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="44.53"
+                               Width="131.25"
+                               Margin="37.5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="76.65 31.25 0 0">
+                    <Image Source="/UserControls/People.png"
+                           Width="39.06"
+                           Height="39.06"
+                           Margin="0,0,0,0"></Image>
+                    <TextBlock TextAlignment="Left"
+                               Text="Về chúng tôi"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="45"
+                               Width="164"
+                               Margin="37.5,0,0,0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="76.65 31.25 0 0">
+                    <Image Source="/UserControls/share@2x.png"
+                           Width="39.06"
+                           Height="39.06"
+                           Margin="0,0,0,0"></Image>
+                    <TextBlock TextAlignment="Left"
+                               Text="Đăng xuất"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="44.53"
+                               Width="131.25"
+                               Margin="37.5,0,0,0" />
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
     </Grid>
 </UserControl>
