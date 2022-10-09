@@ -54,6 +54,12 @@
                              Background="Transparent"
                              BorderThickness="0"
                              Width="157">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="50 50 50 50" />
+                            </Style>
+                        </Button.Resources>
                         <Grid>
                             <TextBlock TextAlignment="Center"
                                        TextWrapping="Wrap"

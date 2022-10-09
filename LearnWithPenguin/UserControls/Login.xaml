@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
-             DataContext="{StaticResource MainVM}"
              mc:Ignorable="d"
              Height="800"
              Width="947">
@@ -22,9 +21,7 @@
                            Style="{StaticResource Baloo2-Bold}"
                            Width="512"
                            Height="86"
-                           HorizontalAlignment="Center"
-                           
-                           />
+                           HorizontalAlignment="Center" />
                 <StackPanel VerticalAlignment="Top"
                             Margin="0 24.12 0 0">
                     <Border Background="#BDB2FF"
@@ -44,7 +41,7 @@
                                      FontSize="21.88"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
-                                     Background="#BDB2FF"
+                                     Background="Transparent"
                                      TextAlignment="Left"
                                      Style="{StaticResource Baloo2-Bold}" />
                             <TextBlock IsHitTestVisible="False"
@@ -54,7 +51,8 @@
                                        Margin="21,0,0,0"
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
-                                       FontWeight="Bold">
+                                       FontWeight="Bold"
+                                       Width="234">
                                 <TextBlock.Style>
 
                                     <Style TargetType="{x:Type TextBlock}"
@@ -84,20 +82,23 @@
                             BorderBrush="#000000"
                             Margin="0 26.56 0 0">
 
-                        <Grid>
-                            <TextBox Width="250"
-                                     VerticalAlignment="Center"
+                        <Grid DataContext="{StaticResource LoginVM}">
+                            <TextBox Width="240"
+                                     VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      x:Name="Password"
-                                     Margin="5"
+                                     Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
-                                     FontSize="21.88"
+                                     FontSize="51.88"
+                                     Height="42"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
-                                     Background="#BDB2FF"
-                                     TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}" />
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Style="{StaticResource Baloo2-Bold}"
+                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"
+                                     />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"
@@ -105,7 +106,8 @@
                                        Margin="21,0,0,0"
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
-                                       FontWeight="Bold">
+                                       FontWeight="Bold"
+                                       TextAlignment="Left">
                                 <TextBlock.Style>
 
                                     <Style TargetType="{x:Type TextBlock}"
@@ -125,28 +127,42 @@
                         </Grid>
 
                     </Border>
-                    <Button Command="{Binding Transform}">
-                    <Border Background="#FFFFFF"
-                            Width="177.34"
-                            Height="63.28"
-                            CornerRadius="23.44"
-                            BorderThickness="4"
-                            BorderBrush="#000000"
-                            Margin="0 26.56 0 0"
-                            >
-                        <TextBlock Width="158"
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Center"
-                                   Foreground="#000000"
-                                   FontSize="21.88"
-                                   FontStyle="Normal"
-                                   FontWeight="Bold"
-                                   Background="#FFFFFF"
-                                   TextAlignment="Center"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Text="Đăng nhập" />
-                    </Border>
-                    </Button>
+                    <Grid DataContext="{StaticResource MainVM}">
+                        <Button Command="{Binding Transform}"
+                                Background="Transparent"
+                                Width="180"
+                                Height="63"
+                                Margin="0 50 0 10"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="70 70 70 70" />
+                                </Style>
+                            </Button.Resources>
+
+                            <Border Background="#FFFFFF"
+                                    Width="177"
+                                    Height="59"
+                                    CornerRadius="23.44"
+                                    BorderThickness="4"
+                                    BorderBrush="#000000"
+                                    VerticalAlignment="Top">
+                                <TextBlock Width="158"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Foreground="#000000"
+                                           FontSize="21.88"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           Background="#FFFFFF"
+                                           TextAlignment="Center"
+                                           Style="{StaticResource Baloo2-Bold}"
+                                           Text="Đăng nhập" />
+                            </Border>
+                        </Button>
+                    </Grid>
+
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -170,10 +186,8 @@
                             CornerRadius="16.24"
                             BorderThickness="1.5"
                             BorderBrush="#857D7D"
-                            Margin="15.78 26.56 10 25"
-                            
-                            >
-                        
+                            Margin="15.78 26.56 10 25">
+
                         <StackPanel Orientation="Horizontal">
                             <Image Width="28.12"
                                    Source="../images/iconGoogle.png"
