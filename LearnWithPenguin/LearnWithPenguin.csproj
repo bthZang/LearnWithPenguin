@@ -217,5 +217,23 @@
   <ItemGroup>
     <Resource Include="UserControls\BlurNext.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TongKet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\HomeView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TapDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TapViet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\DoVui.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

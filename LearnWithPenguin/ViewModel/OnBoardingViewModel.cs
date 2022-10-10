@@ -42,7 +42,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    PartOnBoarding = new TermAndConditionViewModel();
+                    PartOnBoarding = new LoginViewModel();
                 });
             }
 
@@ -52,7 +52,7 @@ namespace LearnWithPenguin.ViewModel
         public OnBoardingViewModel()
         {
             this.PartOnBoarding = new TextOnBoardingViewModel();
-            this.PartOnBoardingTerm = new TextOnBoardingViewModel();
+            this.PartOnBoardingTerm = new TermAndConditionViewModel();
 
 
         }
@@ -86,5 +86,33 @@ namespace LearnWithPenguin.ViewModel
     }
 
 
-}
+            //private BaseViewModel _;
+
+            //public BaseViewModel PartOnBoarding
+            //{
+            //    get
+            //    {
+            //        return _PartOnBoarding;
+            //    }
+            //    set
+            //    {
+            //        _PartOnBoarding = value;
+            //        OnPropertyChanged();
+            //    }
+            //}
+
+            //public ICommand Show
+            //{
+            //    get
+            //    {
+            //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+            //        {
+            //            PartOnBoarding = new TermAndConditionViewModel();
+            //        });
+            //    }
+
+            //    set { }
+            //}
+
+        }
 }

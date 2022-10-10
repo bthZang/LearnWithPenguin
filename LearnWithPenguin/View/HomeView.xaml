@@ -1,14 +1,129 @@
 ﻿<Page x:Class="LearnWithPenguin.View.HomeView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"
+      d:DesignHeight="800"
+      d:DesignWidth="1125"
       Title="HomeView">
 
-    <Grid>
-        <Border Background="Aqua"></Border>
+    <Grid Background="#FFA0C4FF">
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel  Margin="93,174,45,23">
+                <Image Stretch="Uniform"
+                       Source="/View/TapDoc.png"
+                       Height="252"
+                       Width="195" />
+                <Image Stretch="Uniform"
+                       Source="/View/DoVui.png"
+                       Height="251.52"
+                       Width="195.66"
+                       Margin="0 47.19 0 0" />
+            </StackPanel>
+            <StackPanel Margin="65,161,84,10"
+                        Grid.Column="1">
+                <Image Stretch="Uniform"
+                       Source="/View/TapViet.png"
+                       Height="301"
+                       Width="200" />
+                <Image Stretch="Uniform"
+                       Source="/View/TongKet.png"
+                       Height="271.52"
+                       Width="230.6"
+                       Margin="0 20 0 0" />
+            </StackPanel>
+            <Image Width="444"
+                   Source="/View/HomeView.png"
+                   Margin="0,370,10,-16"
+                   HorizontalAlignment="Right"
+                   Stretch="Uniform"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2" />
+
+        </Grid>
     </Grid>
+
+    <!--<Grid>
+
+        <StackPanel   Background="#FFA0C4FF">
+
+            <Image Width="426"
+                   Source="../images/HomeScreen.png"
+                   HorizontalAlignment="Right"
+                   Height="674"
+                   VerticalAlignment="Bottom"
+                   Stretch="Uniform" />
+
+        </StackPanel>
+        <Grid ShowGridLines="False"
+              Margin="111,100,300,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500*"></ColumnDefinition>
+                <ColumnDefinition Width="500*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="500*"></RowDefinition>
+                <RowDefinition Height="500*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <DockPanel Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2">
+                <ContentControl Width="200">
+                    <Image Source="../images/TapDoc.png"
+                           Height="200"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Width="200"
+                           Stretch="Fill"
+                           Margin="-100,0,0,0" />
+                </ContentControl>
+            </DockPanel>
+            <DockPanel Grid.Row="0"
+                       Grid.Column="1">
+                <ContentControl>
+                    <Image Width="200"
+                           Source="../images/TapViet.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Height="200"
+                           RenderTransformOrigin="0.603,0.487"
+                           Stretch="Fill" />
+                </ContentControl>
+            </DockPanel>
+            <DockPanel Grid.Row="1"
+                       Grid.Column="1">
+                <ContentControl>
+                    <Image Width="200"
+                           Source="../images/TongKet.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Height="200"
+                           Stretch="Fill" />
+                </ContentControl>
+            </DockPanel>
+            <DockPanel Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Margin="0,0,205,0">
+                <ContentControl>
+                    <Image Width="200"
+                           Source="../images/DoVui.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Height="200"
+                           Stretch="Fill" />
+                </ContentControl>
+            </DockPanel>
+        </Grid>
+    </Grid>-->
 </Page>

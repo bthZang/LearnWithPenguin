@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class TermAndConditionViewModel : BaseViewModel
+    public class TermAndConditionViewModel : BaseViewModel
     {
+        public bool _next;
+
     }
 }

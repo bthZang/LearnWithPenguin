@@ -7,16 +7,22 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1125">
-    <Grid 
-          Margin="-485.5 0 0 0"
-          >
+    <Grid Margin="-485.5 0 0 0">
+        <Grid.Resources>
+
+            <!--<DataTemplate Da>
+                <local:TextOnBoarding />
+            </DataTemplate>-->
+            <!--<DataTemplate DataType="{x:Type viewmodel:LoginViewModel}">
+                <localLorgin:Login />
+            </DataTemplate>-->
+        </Grid.Resources>
         <Grid Background="Black"
               Opacity="0.5"></Grid>
         <Border Width="974.58"
                 Height="643.02"
                 CornerRadius="50.24"
-                Background="White"
-                >
+                Background="White">
             <Grid>
                 <StackPanel>
                     <StackPanel VerticalAlignment="Top"
@@ -82,14 +88,93 @@
 
                         <StackPanel Orientation="Horizontal"
                                     Width="1346"
+                                    Height="70"
                                     HorizontalAlignment="Left"
-                                    Margin="0 101.9 0 0">
-                            <Image Width="46.34"
-                                   Source="/UserControls/Square.png"
-                                   Stretch="Uniform"
-                                   Height="46.34"
-                                   VerticalAlignment="Top"
-                                   Margin="81 0 0 13.21 " />
+                                    DataContext="{StaticResource OnBoardingVM}"
+                                    Margin="0 71.9 0 0">
+                            <CheckBox ClickMode="Press"
+                                      RenderTransformOrigin="0.5,0.5"
+                                      Foreground="#FF073580"
+                                      BorderBrush="#FF073580"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      Margin="100.9 -5 13.21 0 "
+                                      Cursor="Hand"
+                                      Panel.ZIndex="20"
+                                      DataContext="{StaticResource TermAndConditionVM}"
+                                      IsChecked="{Binding _next, UpdateSourceTrigger=PropertyChanged}">
+
+                                <CheckBox.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type CheckBox}">
+                                                    <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Stretch">
+                                                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                                                Background="{TemplateBinding Background}"
+                                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                                Width="15"
+                                                                CornerRadius="3 3 3 3"
+                                                                Height="15">
+                                                            <Path Stretch="Uniform"
+                                                                  Width="15"
+                                                                  Height="10"
+                                                                  Fill="#189D0C"
+                                                                  Name="eliCheck"
+                                                                  Data="M15.7672 1.16871C16.0505 1.41667 16.0793 1.84742 15.8313 2.13081L6.28584 13.0399C6.16158 13.1819 5.98402 13.2661 5.79541 13.2724C5.60681 13.2786 5.42404 13.2065 5.29061 13.073L1.1997 8.98212C0.933433 8.71586 0.933433 8.28415 1.1997 8.01789C1.46597 7.75162 1.89767 7.75162 2.16394 8.01789L5.73951 11.5935L14.8051 1.23285C15.053 0.949459 15.4838 0.920742 15.7672 1.16871Z"
+                                                                  Visibility="Collapsed" />
+                                                        </Border>
+                                                        <TextBlock Margin="5,0,0,0"
+                                                                   VerticalAlignment="Center"
+                                                                   Foreground="{TemplateBinding Foreground}"
+                                                                   Text="{TemplateBinding Content}"></TextBlock>
+                                                    </StackPanel>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver"
+                                                                 Value="True">
+                                                            <Setter Property="Background"
+                                                                    Value="LightGray" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsPressed"
+                                                                 Value="True">
+                                                            <Setter Property="Background"
+                                                                    Value="#FF9C9E9F" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsEnabled"
+                                                                 Value="False">
+                                                            <Setter Property="Background"
+                                                                    Value="LightGray" />
+                                                            <Setter Property="Foreground"
+                                                                    Value="Gray" />
+                                                            <Setter Property="BorderBrush"
+                                                                    Value="Gray" />
+                                                            <Setter TargetName="eliCheck"
+                                                                    Property="Opacity"
+                                                                    Value="0.5" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsChecked"
+                                                                 Value="True">
+                                                            <Setter TargetName="eliCheck"
+                                                                    Property="Visibility"
+                                                                    Value="Visible"></Setter>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </CheckBox.Resources>
+                                <CheckBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="3.5"
+                                                        ScaleY="3.5" />
+                                        <SkewTransform />
+                                        <RotateTransform />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </CheckBox.RenderTransform>
+                            </CheckBox>
                             <TextBlock TextAlignment="Center"
                                        TextWrapping="Wrap"
                                        Text="Tôi đồng ý với tất cả điều khoản trên"
@@ -101,12 +186,10 @@
                                        Style="{StaticResource Baloo2-Bold}"
                                        Height="31"
                                        Margin="13.13,6,0,17" />
-
                             <Button Command="{Binding Show}"
                                     Width="59.46"
                                     Height="59.46"
                                     Margin="297.5 0 0 0"
-                                    Background="Transparent"
                                     BorderThickness="0">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -114,13 +197,43 @@
                                                 Value="13 13 13 13" />
                                     </Style>
                                 </Button.Resources>
-                                <Image Width="59.46"
-                                   Source="/UserControls/BlurNext.png"
-                                   Stretch="Uniform"
-                                   Height="59.46"
-                                   VerticalAlignment="Top"
-                                   Margin="297.5 0 0 0"></Image>
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/UserControls/next.png"
+                                                Stretch="Uniform" />
+                                </Button.Background>
+
+
                             </Button>
+                            <Button Command="{Binding Show}"
+                                    Width="59.46"
+                                    Height="59.46"
+                                    Margin="297.5 0 0 0"
+                                    BorderThickness="0">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="13 13 13 13" />
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/UserControls/next.png"
+                                                Stretch="Uniform" />
+                                </Button.Background>
+
+
+                            </Button>
+                            <!--<Grid>
+                                <Grid>
+                                    <Grid.Triggers>
+                                        <DataTrigger Binding="{Binding _next}"
+                                                     Value="True">
+
+
+                                        </DataTrigger>
+                                    </Grid.Triggers>
+
+                                </Grid>
+                            </Grid>-->
 
 
                         </StackPanel>
