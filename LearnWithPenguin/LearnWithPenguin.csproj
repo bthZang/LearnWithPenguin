@@ -66,11 +66,31 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\EvaluateViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
+    <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\ReadViewModel.cs" />
+    <Compile Include="ViewModel\WriteViewModel.cs" />
+    <Compile Include="View\EvaluateView.xaml.cs">
+      <DependentUpon>EvaluateView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PuzzleView.xaml.cs">
+      <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadView.xaml.cs">
+      <DependentUpon>ReadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WriteView.xaml.cs">
+      <DependentUpon>WriteView.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EvaluateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,6 +131,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\OnBoardingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PuzzleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReadView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WriteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +190,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\iconGoogle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapViet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HomeScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TongKet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
