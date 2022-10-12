@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for EvaluateView.xaml
+    /// Interaction logic for CodingView.xaml
     /// </summary>
-    public partial class EvaluateView : Page
+    public partial class CodingView : System.Windows.Controls.Page
     {
-        public EvaluateView()
+        public CodingView()
         {
             InitializeComponent();
         }

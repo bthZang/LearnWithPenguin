@@ -14,7 +14,7 @@
     <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
     <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
-    <viewmodel:EvaluateViewModel x:Key="EvaluateVM"></viewmodel:EvaluateViewModel>
+    <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
 
 
 

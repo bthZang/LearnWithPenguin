@@ -24,7 +24,7 @@ namespace LearnWithPenguin.ViewModel
         protected BaseViewModel _navigatetoRead;
         protected BaseViewModel _navigatetoWrite;
         protected BaseViewModel _navigatetoPuzzle;
-        protected BaseViewModel _navigatetoEvaluate;
+        protected BaseViewModel _navigatetoCoding;
 
      
 
@@ -52,15 +52,15 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-        public BaseViewModel NavigatetoEvaluate
+        public BaseViewModel NavigatetoCoding
         {
             get
             {
-                return _navigatetoEvaluate;
+                return _navigatetoCoding;
             }
             set
             {
-                _navigatetoEvaluate = value;
+                _navigatetoCoding = value;
                 OnPropertyChanged();
             }
         }

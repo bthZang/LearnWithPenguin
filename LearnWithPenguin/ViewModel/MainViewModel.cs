@@ -80,13 +80,13 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
-        public ICommand TransformToEvaluate
+        public ICommand TransformToCoding
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new EvaluateViewModel();
+                    NavigatetoHome = new CodingViewModel();
                 });
             }
 

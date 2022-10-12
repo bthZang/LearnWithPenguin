@@ -31,8 +31,8 @@
             <DataTemplate DataType="{x:Type viewmodelHome:PuzzleViewModel}">
                 <Frame Source="PuzzleView.xaml"></Frame>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodelHome:EvaluateViewModel}">
-                <Frame Source="EvaluateView.xaml"></Frame>
+            <DataTemplate DataType="{x:Type viewmodelHome:CodingViewModel}">
+                <Frame Source="CodingView.xaml"></Frame>
             </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>

@@ -66,13 +66,13 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\EvaluateViewModel.cs" />
+    <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
-    <Compile Include="View\EvaluateView.xaml.cs">
-      <DependentUpon>EvaluateView.xaml</DependentUpon>
+    <Compile Include="View\CodingView.xaml.cs">
+      <DependentUpon>CodingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
@@ -90,7 +90,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\EvaluateView.xaml">
+    <Page Include="View\CodingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
