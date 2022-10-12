@@ -192,19 +192,19 @@
     <Resource Include="images\iconGoogle.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\HomeScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="images\TapViet.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\TapDoc.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\HomeScreen.png" />
+    <Resource Include="images\LapTrinh.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\DoVui.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\TongKet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

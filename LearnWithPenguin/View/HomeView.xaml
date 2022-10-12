@@ -15,7 +15,9 @@
                 <Button DataContext="{StaticResource MainVM}"
                         Command="{Binding TransformToRead}"
                         Height="251.52"
-                        Width="195.66">
+                        Width="200"
+                        Background="Transparent"
+                        BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -30,7 +32,9 @@
 
                 <Button DataContext="{StaticResource MainVM}"
                         Command="{Binding TransformToWrite}"
-                        Height="296">
+                        Height="296"
+                        Background="Transparent"
+                        BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -44,11 +48,13 @@
                            Margin="0 47.19 0 0"></Image>
                 </Button>
             </StackPanel>
-            <StackPanel Margin="74.22 200.88 74.9 50">
+            <StackPanel Margin="40 160 0 0">
                 <Button DataContext="{StaticResource MainVM}"
                         Command="{Binding TransformToPuzzle}"
-                        Height="250.52"
-                        Width="200.56">
+                        Height="300"
+                        Width="300"
+                        Background="Transparent"
+                        BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -57,12 +63,15 @@
                     </Button.Resources>
                     <Image Stretch="Uniform"
                            Source="../images/DoVui.png"
-                           Height="255"
-                           Width="201" />
+                           Height="284"
+                           Width="228" />
                 </Button>
                 <Button Command="{Binding TransformToEvaluate}"
-                        Height="267"
-                        Width="220">
+                        Height="298"
+                        Width="263"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Margin="0 0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius"
@@ -73,9 +82,9 @@
                         <StaticResource ResourceKey="MainVM" />
                     </Button.DataContext>
                     <Image Stretch="Uniform"
-                           Source="../images/TongKet.png"
-                           Height="277"
-                           Width="225" />
+                           Source="../images/LapTrinh.png"
+                           Height="288"
+                           Width="255" />
                 </Button>
             </StackPanel>
         </StackPanel>
