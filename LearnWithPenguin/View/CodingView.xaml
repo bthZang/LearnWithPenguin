@@ -5,10 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LearnWithPenguin.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1200"
       Title="CodingView">
 
-    <Grid>
-        
+    <Grid Background="#A0C4FF">
+        <StackPanel Orientation="Horizontal">
+
+            <StackPanel 
+                HorizontalAlignment="Left"
+                Orientation="Vertical">
+                
+
+                <TextBlock Text="VỀ ĐÍCH"
+                           Foreground="#FF073580"
+                           FontSize="80"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           LineStackingStrategy="MaxHeight"
+                           Style="{StaticResource Baloo2-Bold}"
+                           Margin="88, 98, 170, 0"
+                           Width="290"
+                           Height="126"
+                           HorizontalAlignment="Left"
+                />
+
+                <TextBlock TextWrapping="Wrap"
+                               Text="Hãy giúp Penguin tìm
+                           được cá nhé!"
+                               Foreground="#2D3D8F"
+                               FontSize="36"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Regular}"
+                               Margin="92, 0, 0, 0"
+                               Width="380"
+                               Height="123"
+                               HorizontalAlignment="Left"
+                />
+
+                <Image
+                    Source="D:\LearnWithPenguin\LearnWithPenguin\LearnWithPenguin\images\Coding.png"
+                    Width="367.85"
+                    Margin="75, 21, 682.15, 112.57"
+                />
+            </StackPanel>
+              
+            <StackPanel>
+                <TextBlock></TextBlock>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

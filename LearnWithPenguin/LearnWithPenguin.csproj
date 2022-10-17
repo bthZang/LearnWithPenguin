@@ -206,5 +206,8 @@
   <ItemGroup>
     <Resource Include="images\DoVui.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Coding.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
