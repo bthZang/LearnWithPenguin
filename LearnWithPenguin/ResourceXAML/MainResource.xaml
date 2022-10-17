@@ -22,6 +22,8 @@
     <viewmodel:BackViewModel x:Key="BackVM"></viewmodel:BackViewModel>
     <viewmodel:TermAndConditionViewModel x:Key="TermAndConditionVM"></viewmodel:TermAndConditionViewModel>
     <viewmodel:BadResultViewModel x:Key="BadResultVM"></viewmodel:BadResultViewModel>
+    <viewmodel:GoodResultViewModel x:Key="GoodResultVM"></viewmodel:GoodResultViewModel>
+
 
 
 

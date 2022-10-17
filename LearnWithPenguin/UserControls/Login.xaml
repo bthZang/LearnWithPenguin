@@ -49,14 +49,13 @@
                             <TextBlock IsHitTestVisible="False"
                                        Text="Tên đăng nhập"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="21,0,0,0"
+                                       HorizontalAlignment="Center"
+                                       TextAlignment="Center"
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
-                                       Width="234">
+                                       Width="250">
                                 <TextBlock.Style>
-
                                     <Style TargetType="{x:Type TextBlock}"
                                            BasedOn="{StaticResource Baloo2-Bold}">
                                         <Setter Property="Visibility"
@@ -104,11 +103,12 @@
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
-                                       Margin="21,0,0,0"
+                                       Margin="20,0,0,0"
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
-                                       TextAlignment="Left">
+                                       TextAlignment="Center"
+                                       Width="250">
                                 <TextBlock.Style>
 
                                     <Style TargetType="{x:Type TextBlock}"

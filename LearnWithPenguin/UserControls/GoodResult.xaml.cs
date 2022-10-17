@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for CodingView.xaml
+    /// Interaction logic for GoodResult.xaml
     /// </summary>
-    public partial class CodingView : System.Windows.Controls.Page
+    public partial class GoodResult : System.Windows.Controls.UserControl
     {
-        public CodingView()
+        public GoodResult()
         {
-           
+            InitializeComponent();
         }
     }
 }

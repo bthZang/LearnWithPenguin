@@ -63,6 +63,9 @@
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GoodResult.xaml.cs">
+      <DependentUpon>GoodResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -78,30 +81,15 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
+    <Compile Include="ViewModel\GoodResultViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
-    <Compile Include="ViewModel\PuzzleViewModel.cs" />
-    <Compile Include="ViewModel\ReadViewModel.cs" />
-    <Compile Include="ViewModel\WriteViewModel.cs" />
-    <Compile Include="View\CodingView.xaml.cs">
-      <DependentUpon>CodingView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\PuzzleView.xaml.cs">
-      <DependentUpon>PuzzleView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\ReadView.xaml.cs">
-      <DependentUpon>ReadView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\WriteView.xaml.cs">
-      <DependentUpon>WriteView.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
@@ -111,15 +99,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\GoodResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Icon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\CodingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,18 +155,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PuzzleView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ReadView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\WriteView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -223,21 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\iconGoogle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\HomeScreen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\TapViet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\TapDoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\LapTrinh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\DoVui.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\LogOut.png" />
@@ -300,6 +261,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\userEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\whiteStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\badResult.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
