@@ -19,7 +19,10 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="0 84.18 0 0">
                         <StackPanel Margin="62.92 0 0 0"
-                                    Orientation="Horizontal">
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    >
                             <Image Source="/UserControls/whiteStar.png"
                                    Width="37"
                                    Height="34.54"

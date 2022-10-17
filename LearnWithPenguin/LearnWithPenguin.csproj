@@ -83,11 +83,15 @@
     </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
+    <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
+    <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
+    <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
@@ -267,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\badResult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\goodResult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\tryAgain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

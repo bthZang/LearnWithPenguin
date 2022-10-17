@@ -4,9 +4,104 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1125">
+    <Grid Margin="-485.5 0 0 0">
+
+        <Grid Background="Black"
+              Opacity="0.5"></Grid>
+        <Border Width="599.27"
+                Height="395.39"
+                CornerRadius="50.24"
+                Background="White">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Margin="0 84.18 0 0">
+                        <StackPanel Margin="62.92 0 0 0"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    >
+                            <Image Source="/UserControls/whiteStar.png"
+                                   Width="37"
+                                   Height="34.54"
+                                   Margin="0,0,12.9,0"></Image>
+                            <Image Source="/UserControls/whiteStar.png"
+                                   Width="37"
+                                   Height="34.54"
+                                   Margin="0 0 12.9 0"></Image>
+                            <Image Source="/UserControls/whiteStar.png"
+                                   Width="37"
+                                   Height="34.54"
+                                   Margin="0 0 12.9 0"></Image>
+                            <Image Source="/UserControls/whiteStar.png"
+                                   Width="37"
+                                   Height="34.54"
+                                   Margin="0 0 12.9 0"></Image>
+                            <Image Source="/UserControls/whiteStar.png"
+                                   Width="37"
+                                   Height="34.54"></Image>
+
+                        </StackPanel>
+                        <Image Source="/UserControls/goodResult.png"
+                               Width="210.05"
+                               Height="217.77"
+                               Margin="76.45,20.05,0,0"></Image>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Border Background="#AB9DFF"
+                                Width="234.76"
+                                Height="91.13"
+                                Margin="65 84.18 0 0"
+                                CornerRadius="20,0,0,20">
+                            <TextBlock Width="158"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Foreground="#19468E"
+                                       FontSize="21.88"
+                                       FontStyle="Normal"
+                                       FontWeight="Bold"
+                                       TextAlignment="Center"
+                                       Style="{StaticResource Baloo2-Bold}"
+                                       Text="Bài tiếp" />
+
+                        </Border>
+
+                        <Border Background="#FF99FF"
+                                Width="212.37"
+                                Height="91.13"
+                                Margin="87,60.24,0,0"
+                                CornerRadius="20,0,0,20">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Width="158"
+                                           Margin="30,0,-39.7,0"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Foreground="#19468E"
+                                           FontSize="21.88"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           TextAlignment="Center"
+                                           Style="{StaticResource Baloo2-Bold}"
+                                           Text="Làm lại" />
+                                <Image Source="/UserControls/tryAgain.png"
+                                       Width="34"
+                                       Height="45"
+                                       Margin="7.04,0,0,0"
+                                       Stretch="Uniform"
+                                       VerticalAlignment="Center"></Image>
+
+                            </StackPanel>
+
+                        </Border>
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
+
+
 </UserControl>
