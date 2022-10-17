@@ -10,44 +10,120 @@
       Title="HomeView">
 
     <Grid Background="#FFA0C4FF">
-        <Grid HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <StackPanel  Margin="93,174,45,23">
-                <Image Stretch="Uniform"
-                       Source="/View/TapDoc.png"
-                       Height="252"
-                       Width="195" />
-                <Image Stretch="Uniform"
-                       Source="/View/DoVui.png"
-                       Height="251.52"
-                       Width="195.66"
-                       Margin="0 47.19 0 0" />
-            </StackPanel>
-            <StackPanel Margin="65,161,84,10"
-                        Grid.Column="1">
-                <Image Stretch="Uniform"
-                       Source="/View/TapViet.png"
-                       Height="301"
-                       Width="200" />
-                <Image Stretch="Uniform"
-                       Source="/View/TongKet.png"
-                       Height="271.52"
-                       Width="230.6"
-                       Margin="0 20 0 0" />
-            </StackPanel>
-            <Image Width="444"
-                   Source="/View/HomeView.png"
-                   Margin="0,370,10,-16"
-                   HorizontalAlignment="Right"
-                   Stretch="Uniform"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2" />
+        <StackPanel Orientation="Horizontal">
+            <StackPanel  Margin="156.35 196.88 74.9 0">
+                <Button DataContext="{StaticResource MainVM}"
+                        Command="{Binding TransformToRead}"
+                        Height="251.52"
+                        Width="200"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/TapDoc.png"
+                           Height="251.52"
+                           Width="195.66" />
+                </Button>
 
-        </Grid>
+                <Button DataContext="{StaticResource MainVM}"
+                        Command="{Binding TransformToWrite}"
+                        Height="296"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/TapViet.png"
+                           Height="251.52"
+                           Width="195.66"
+                           Margin="0 47.19 0 0"></Image>
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="40 160 0 0">
+                <Button DataContext="{StaticResource MainVM}"
+                        Command="{Binding TransformToPuzzle}"
+                        Height="300"
+                        Width="300"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/DoVui.png"
+                           Height="284"
+                           Width="228" />
+                </Button>
+                <Button Command="{Binding TransformToCoding}"
+                        Height="298"
+                        Width="263"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Margin="0 0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Button.DataContext>
+                        <StaticResource ResourceKey="MainVM" />
+                    </Button.DataContext>
+                    <Image Stretch="Uniform"
+                           Source="../images/LapTrinh.png"
+                           Height="288"
+                           Width="255" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+
+        <Image Width="454"
+               Source="../images/HomeScreen.png"
+               Margin="0,370,0,-16"
+               HorizontalAlignment="Right"
+               Stretch="Uniform" />
+        <StackPanel HorizontalAlignment="Right">
+            <StackPanel VerticalAlignment="Top"
+                        Margin="143.72 85.94 0 140.81">
+                <TextBlock Text="BẮT ĐẦU"
+                           Foreground="#FF073580"
+                           FontSize="56.56"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           LineStackingStrategy="MaxHeight"
+                           Style="{StaticResource Baloo2-Bold}"
+                           Width="360"
+                           Height="98" />
+                <StackPanel VerticalAlignment="Top"
+                            Margin="0 24.12 0 0">
+                    <TextBlock TextWrapping="Wrap"
+                               Text="Hãy chọn một bài học để bắt đầu cùng Penguine nhé!"
+                               Foreground="#2D3D8F"
+                               FontSize="28.13"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Regular}"
+                               Width="362"
+                               Height="88" />
+
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
     </Grid>
 
     <!--<Grid>

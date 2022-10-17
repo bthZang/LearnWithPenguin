@@ -11,6 +11,12 @@
     <viewmodel:TextOnBoardingViewModel x:Key="TextOnBoardingVM"></viewmodel:TextOnBoardingViewModel>
     <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
+    <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
+    <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
+    <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
+    <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
+
+
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
     <viewmodel:IconViewModel x:Key="IconVM"></viewmodel:IconViewModel>
     <viewmodel:BackViewModel x:Key="BackVM"></viewmodel:BackViewModel>

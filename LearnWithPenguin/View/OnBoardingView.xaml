@@ -24,7 +24,7 @@
         </DataTemplate>
     </Page.Resources>
     <Grid>
-        <Grid>
+        
             <DockPanel   Background="#FFA0C4FF">
                 <Image Width="552"
                        Source="../images/OnBoarding.png"
@@ -35,7 +35,7 @@
                 <ContentControl Content="{Binding PartOnBoarding}" />
             </DockPanel>
 
-        </Grid>
+       
      
     </Grid>
 </Page>
