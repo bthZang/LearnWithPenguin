@@ -57,6 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Back.xaml.cs">
+      <DependentUpon>Back.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BadResult.xaml.cs">
+      <DependentUpon>BadResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -72,6 +78,8 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BackViewModel.cs" />
+    <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
@@ -79,6 +87,14 @@
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\Back.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Icon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -234,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\DoVui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\userEdit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

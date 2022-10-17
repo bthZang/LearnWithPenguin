@@ -28,10 +28,12 @@
                     <StackPanel VerticalAlignment="Top"
                                 Orientation="Horizontal"
                                 Margin="0 35.52 0 160.32">
-                        <Image Source="/UserControls/backIcon.png"
-                               Width="59.46"
-                               Height="59.46"
-                               Margin="44.79 0 0 0"></Image>
+                        <local:Back Margin="44.79 0 0 0"
+                                    Width="100"
+                                    Panel.ZIndex="100"
+                                    DataContext="{StaticResource OnBoardingVM}"
+                                    Command="{Binding HideTerm}"
+                                    ></local:Back>
                         <TextBlock Text="ĐIỀU KHOẢN VÀ ĐIỀU KIỆN"
                                    Foreground="#FF073580"
                                    FontSize="45.21"
@@ -102,7 +104,8 @@
                                       Cursor="Hand"
                                       Panel.ZIndex="20"
                                       DataContext="{StaticResource TermAndConditionVM}"
-                                      IsChecked="{Binding _next, UpdateSourceTrigger=PropertyChanged}">
+                                      IsChecked="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
+                                      Checked="CheckBox_Checked">
 
                                 <CheckBox.Resources>
                                     <Style TargetType="{x:Type CheckBox}">
@@ -186,42 +189,35 @@
                                        Style="{StaticResource Baloo2-Bold}"
                                        Height="31"
                                        Margin="13.13,6,0,17" />
+                            
                             <Button Command="{Binding Show}"
+                                    IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"
+                                    x:Name="NoneBlur"
                                     Width="59.46"
                                     Height="59.46"
                                     Margin="297.5 0 0 0"
-                                    BorderThickness="0">
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="NoneBlur_Click">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="Border.CornerRadius"
                                                 Value="13 13 13 13" />
                                     </Style>
                                 </Button.Resources>
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/UserControls/next.png"
-                                                Stretch="Uniform" />
-                                </Button.Background>
+                                <Grid DataContext="{StaticResource TermAndConditionVM}">
+
+                                    <Image Width="59.46"
+                                           Height="59.46"
+                                           Source="{Binding obacity, UpdateSourceTrigger=PropertyChanged}"
+                                           Stretch="Uniform">
+
+                                    </Image>
+                                </Grid>
 
 
                             </Button>
-                            <Button Command="{Binding Show}"
-                                    Width="59.46"
-                                    Height="59.46"
-                                    Margin="297.5 0 0 0"
-                                    BorderThickness="0">
-                                <Button.Resources>
-                                    <Style TargetType="{x:Type Border}">
-                                        <Setter Property="Border.CornerRadius"
-                                                Value="13 13 13 13" />
-                                    </Style>
-                                </Button.Resources>
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/UserControls/next.png"
-                                                Stretch="Uniform" />
-                                </Button.Background>
 
-
-                            </Button>
                             <!--<Grid>
                                 <Grid>
                                     <Grid.Triggers>

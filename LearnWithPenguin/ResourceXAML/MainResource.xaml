@@ -13,7 +13,10 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
     <viewmodel:IconViewModel x:Key="IconVM"></viewmodel:IconViewModel>
+    <viewmodel:BackViewModel x:Key="BackVM"></viewmodel:BackViewModel>
     <viewmodel:TermAndConditionViewModel x:Key="TermAndConditionVM"></viewmodel:TermAndConditionViewModel>
+    <viewmodel:BadResultViewModel x:Key="BadResultVM"></viewmodel:BadResultViewModel>
+
 
 
 

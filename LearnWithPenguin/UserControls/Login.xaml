@@ -32,18 +32,20 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
-                                     VerticalAlignment="Center"
-                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top"
+                                     HorizontalAlignment="Center"
                                      x:Name="Username"
-                                     Margin="5"
+                                     Margin="0,8,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
                                      FontSize="21.88"
+                                     BorderThickness="0"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
                                      Background="Transparent"
                                      TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}" />
+                                     Style="{StaticResource Baloo2-Bold}"
+                                     SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Tên đăng nhập"
                                        VerticalAlignment="Center"
@@ -97,8 +99,7 @@
                                      Background="Transparent"
                                      BorderThickness="0"
                                      Style="{StaticResource Baloo2-Bold}"
-                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"
-                                     />
+                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"

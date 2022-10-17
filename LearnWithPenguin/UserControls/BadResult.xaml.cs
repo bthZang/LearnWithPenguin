@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for TermAndCondition.xaml
+    /// Interaction logic for badResult.xaml
     /// </summary>
-    public partial class TermAndCondition : System.Windows.Controls.UserControl
+    public partial class BadResult : System.Windows.Controls.UserControl
     {
-        public TermAndCondition()
+        public BadResult()
         {
-            InitializeComponent();
-        }
-
-
-
-        private void NoneBlur_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
+            
         }
     }
 }

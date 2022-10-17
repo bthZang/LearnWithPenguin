@@ -16,25 +16,23 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for TermAndCondition.xaml
+    /// Interaction logic for Back.xaml
     /// </summary>
-    public partial class TermAndCondition : System.Windows.Controls.UserControl
+    public partial class Back : System.Windows.Controls.UserControl
     {
-        public TermAndCondition()
+        public Back()
         {
             InitializeComponent();
         }
 
+        public static readonly DependencyProperty CommandProperty =
+            DependencyProperty.Register("Command", typeof(ICommand), typeof(Back), new UIPropertyMetadata());
 
 
-        private void NoneBlur_Click(object sender, RoutedEventArgs e)
+        public ICommand Command
         {
-
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
         }
     }
 }
