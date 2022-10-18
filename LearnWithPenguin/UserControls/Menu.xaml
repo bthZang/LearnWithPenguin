@@ -36,10 +36,19 @@
                            Width="39.06"
                            Height="39.06"
                            Margin="0,0,0,0"></Image>
-                    <Button 
-                        DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToUser}"
-                        >
+                    <Button Background="Transparent"
+                            DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToUser}"
+                            Width="168"
+                            Height="45"
+                            BorderThickness="0"
+                            Margin="37.5,0,0,0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
                         <TextBlock TextAlignment="Left"
                                    Text="Hồ sơ của tôi"
                                    Foreground="#2D3D8F"
@@ -48,9 +57,10 @@
                                    FontStyle="Normal"
                                    LineStackingStrategy="MaxHeight"
                                    Style="{StaticResource Baloo2-Bold}"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Stretch"
                                    Height="45"
-                                   Width="185"
-                                   Margin="37.5,0,0,0" />
+                                   Margin="0,0,0,0" />
                     </Button>
 
                 </StackPanel>
