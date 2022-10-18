@@ -12,7 +12,9 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="800"
-        Width="1125">
+        Width="1125"
+        WindowStartupLocation="CenterScreen"
+        >
 
     <ContentControl Content="{Binding NavigatetoHome}">
         <ContentControl.Resources>

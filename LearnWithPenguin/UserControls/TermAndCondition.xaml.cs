@@ -13,16 +13,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for CodingView.xaml
+    /// Interaction logic for TermAndCondition.xaml
     /// </summary>
-    public partial class CodingView : System.Windows.Controls.Page
+    public partial class TermAndCondition : System.Windows.Controls.UserControl
     {
-        public CodingView()
+        public TermAndCondition()
         {
-           
+            InitializeComponent();
+        }
+
+
+
+        private void NoneBlur_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

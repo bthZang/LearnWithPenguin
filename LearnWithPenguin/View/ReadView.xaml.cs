@@ -22,7 +22,6 @@ namespace LearnWithPenguin.View
     {
         public ReadView()
         {
-            InitializeComponent();
         }
     }
 }

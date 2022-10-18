@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.TermAndCondition"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1125">
+    <Grid Margin="-485.5 0 0 0">
+        <Grid.Resources>
+
+            <!--<DataTemplate Da>
+                <local:TextOnBoarding />
+            </DataTemplate>-->
+            <!--<DataTemplate DataType="{x:Type viewmodel:LoginViewModel}">
+                <localLorgin:Login />
+            </DataTemplate>-->
+        </Grid.Resources>
+        <Grid Background="Black"
+              Opacity="0.5"></Grid>
+        <Border Width="974.58"
+                Height="643.02"
+                CornerRadius="50.24"
+                Background="White">
+            <Grid>
+                <StackPanel>
+                    <StackPanel VerticalAlignment="Top"
+                                Orientation="Horizontal"
+                                Margin="0 35.52 0 160.32">
+                        <local:Back Margin="44.79 0 0 0"
+                                    Width="100"
+                                    Panel.ZIndex="100"
+                                    DataContext="{StaticResource OnBoardingVM}"
+                                    Command="{Binding HideTerm}"
+                                    ></local:Back>
+                        <TextBlock Text="ĐIỀU KHOẢN VÀ ĐIỀU KIỆN"
+                                   Foreground="#FF073580"
+                                   FontSize="45.21"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Width="528"
+                                   Height="73"
+                                   Margin="118.93 0 0 0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+
+                    <StackPanel>
+
+
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="         Bằng việc tải xuống, cài đặt, sử dụng Ứng dụng Học cùng Penguin, bạn đồng ý rằng bạn đã đọc, đã hiểu, đã chấp nhận và đã đồng ý Điều khoản sử dụng Ứng dụng. Những Điều khoản sử dụng này cấu thành một thỏa thuận giữa bạn và Học cùng Penguin, áp dụng cho việc truy cập và sử dụng Ứng dụng Học cùng Penguin."
+                                   Foreground="#2D3D8F"
+                                   FontSize="18.53"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Margin="0 -115.9 0 0"
+                                   Style="{StaticResource Baloo2-Regular}"
+                                   Width="816.27"
+                                   Height="300"
+                                   TextAlignment="Justify" />
+
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="         Vui lòng xoá bỏ vĩnh viễn Ứng dụng từ các thiết bị của bạn nếu bạn không đồng ý hoặc không mong muốn chấp thuận các Điều khoản sử dụng này."
+                                   Foreground="#2D3D8F"
+                                   FontSize="18.53"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Margin="0 -300 0 0"
+                                   Style="{StaticResource Baloo2-Regular}"
+                                   Width="816.27"
+                                   Height="55"
+                                   TextAlignment="Justify" />
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="         VUI LÒNG ĐỌC KỸ ĐIỀU KHOẢN SỬ DỤNG NÀY, ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CÙNG CHÍNH SÁCH BẢO MẬT VÀ QUYỀN RIÊNG TƯ CỦA CHÚNG TÔI ĐƯỢC ĐĂNG TẢI CÔNG KHAI TẠI WEBSITE: www.HocCungPenguin.com   TRƯỚC KHI TẢI ỨNG DỤNG XUỐNG HOẶC ĐANG SỬ DỤNG SẢN PHẨM, DỊCH VỤ CỦA CHÚNG TÔI TRONG LẦN ĐẦU TIÊN."
+                                   Foreground="#2D3D8F"
+                                   FontSize="18.53"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Margin="0 -114 0 0"
+                                   Style="{StaticResource Baloo2-Regular}"
+                                   Width="816"
+                                   Height="130"
+                                   TextAlignment="Justify" />
+
+                        <StackPanel Orientation="Horizontal"
+                                    Width="1346"
+                                    Height="70"
+                                    HorizontalAlignment="Left"
+                                    DataContext="{StaticResource OnBoardingVM}"
+                                    Margin="0 71.9 0 0">
+                            <CheckBox ClickMode="Press"
+                                      RenderTransformOrigin="0.5,0.5"
+                                      Foreground="#FF073580"
+                                      BorderBrush="#FF073580"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      Margin="100.9 -5 13.21 0 "
+                                      Cursor="Hand"
+                                      Panel.ZIndex="20"
+                                      DataContext="{StaticResource TermAndConditionVM}"
+                                      IsChecked="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
+                                      Checked="CheckBox_Checked">
+
+                                <CheckBox.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type CheckBox}">
+                                                    <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Stretch">
+                                                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                                                Background="{TemplateBinding Background}"
+                                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                                Width="15"
+                                                                CornerRadius="3 3 3 3"
+                                                                Height="15">
+                                                            <Path Stretch="Uniform"
+                                                                  Width="15"
+                                                                  Height="10"
+                                                                  Fill="#189D0C"
+                                                                  Name="eliCheck"
+                                                                  Data="M15.7672 1.16871C16.0505 1.41667 16.0793 1.84742 15.8313 2.13081L6.28584 13.0399C6.16158 13.1819 5.98402 13.2661 5.79541 13.2724C5.60681 13.2786 5.42404 13.2065 5.29061 13.073L1.1997 8.98212C0.933433 8.71586 0.933433 8.28415 1.1997 8.01789C1.46597 7.75162 1.89767 7.75162 2.16394 8.01789L5.73951 11.5935L14.8051 1.23285C15.053 0.949459 15.4838 0.920742 15.7672 1.16871Z"
+                                                                  Visibility="Collapsed" />
+                                                        </Border>
+                                                        <TextBlock Margin="5,0,0,0"
+                                                                   VerticalAlignment="Center"
+                                                                   Foreground="{TemplateBinding Foreground}"
+                                                                   Text="{TemplateBinding Content}"></TextBlock>
+                                                    </StackPanel>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver"
+                                                                 Value="True">
+                                                            <Setter Property="Background"
+                                                                    Value="LightGray" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsPressed"
+                                                                 Value="True">
+                                                            <Setter Property="Background"
+                                                                    Value="#FF9C9E9F" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsEnabled"
+                                                                 Value="False">
+                                                            <Setter Property="Background"
+                                                                    Value="LightGray" />
+                                                            <Setter Property="Foreground"
+                                                                    Value="Gray" />
+                                                            <Setter Property="BorderBrush"
+                                                                    Value="Gray" />
+                                                            <Setter TargetName="eliCheck"
+                                                                    Property="Opacity"
+                                                                    Value="0.5" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsChecked"
+                                                                 Value="True">
+                                                            <Setter TargetName="eliCheck"
+                                                                    Property="Visibility"
+                                                                    Value="Visible"></Setter>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </CheckBox.Resources>
+                                <CheckBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="3.5"
+                                                        ScaleY="3.5" />
+                                        <SkewTransform />
+                                        <RotateTransform />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </CheckBox.RenderTransform>
+                            </CheckBox>
+                            <TextBlock TextAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       Text="Tôi đồng ý với tất cả điều khoản trên"
+                                       Foreground="#2D3D8F"
+                                       FontSize="24.71"
+                                       FontWeight="Bold"
+                                       FontStyle="Normal"
+                                       LineStackingStrategy="MaxHeight"
+                                       Style="{StaticResource Baloo2-Bold}"
+                                       Height="31"
+                                       Margin="13.13,6,0,17" />
+                            
+                            <Button Command="{Binding Show}"
+                                    IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"
+                                    x:Name="NoneBlur"
+                                    Width="59.46"
+                                    Height="59.46"
+                                    Margin="297.5 0 0 0"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="NoneBlur_Click">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="13 13 13 13" />
+                                    </Style>
+                                </Button.Resources>
+                                <Grid DataContext="{StaticResource TermAndConditionVM}">
+
+                                    <Image Width="59.46"
+                                           Height="59.46"
+                                           Source="{Binding obacity, UpdateSourceTrigger=PropertyChanged}"
+                                           Stretch="Uniform">
+
+                                    </Image>
+                                </Grid>
+
+
+                            </Button>
+
+                            <!--<Grid>
+                                <Grid>
+                                    <Grid.Triggers>
+                                        <DataTrigger Binding="{Binding _next}"
+                                                     Value="True">
+
+
+                                        </DataTrigger>
+                                    </Grid.Triggers>
+
+                                </Grid>
+                            </Grid>-->
+
+
+                        </StackPanel>
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+
+
+</UserControl>
