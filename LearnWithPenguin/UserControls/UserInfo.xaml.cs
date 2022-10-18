@@ -18,7 +18,7 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for UserInfo.xaml
     /// </summary>
-    public partial class UserInfo : UserControl
+    public partial class UserInfo : System.Windows.Controls.UserControl
     {
         public UserInfo()
         {

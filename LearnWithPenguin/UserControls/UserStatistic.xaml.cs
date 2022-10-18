@@ -18,7 +18,7 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for UserStatistic.xaml
     /// </summary>
-    public partial class UserStatistic : UserControl
+    public partial class UserStatistic : System.Windows.Controls.UserControl
     {
         public UserStatistic()
         {

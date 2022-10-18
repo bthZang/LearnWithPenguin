@@ -18,7 +18,7 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for UserRanking.xaml
     /// </summary>
-    public partial class UserRanking : UserControl
+    public partial class UserRanking : System.Windows.Controls.UserControl
     {
         public UserRanking()
         {

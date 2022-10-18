@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class UserRankingViewModel : BackViewModel 
+    public class UserRankingViewModel : BackViewModel 
     {
     }
 }
