@@ -100,6 +100,10 @@
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\UserRankingViewModel.cs" />
+    <Compile Include="ViewModel\UserStatisticViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
