@@ -15,6 +15,8 @@
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
     <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
+    <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
+
 
 
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>

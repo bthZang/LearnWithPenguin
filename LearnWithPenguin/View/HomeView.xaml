@@ -4,13 +4,35 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
+      xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+      xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
       mc:Ignorable="d"
       d:DesignHeight="800"
       d:DesignWidth="1125"
       Title="HomeView">
-
+    <Page.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
+            <localUC:Icon />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
+            <localUC:Menu />
+        </DataTemplate>
+    </Page.Resources>
     <Grid Background="#FFA0C4FF">
-        <StackPanel Orientation="Horizontal">
+        <StackPanel 
+            DataContext="{StaticResource HomeVM}"
+            Orientation="Horizontal">
+            <ContentControl Content="{Binding Menu}" />
+
+            <localUC:Icon Width="63.28"
+                          Height="63.28"
+                          Margin="42.97,-645.16,0,0"
+                          DataContext="{StaticResource HomeVM}"
+                          Command="{Binding ShowMenu}"
+                          >
+
+            </localUC:Icon>
+
             <StackPanel  Margin="156.35 196.88 74.9 0">
                 <Button DataContext="{StaticResource MainVM}"
                         Command="{Binding TransformToRead}"
