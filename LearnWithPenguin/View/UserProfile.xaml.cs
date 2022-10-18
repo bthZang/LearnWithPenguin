@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.UserControls
+namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for UserProfile.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class UserProfile : Page
     {
-        public Menu()
+        public UserProfile()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
+
     }
 }

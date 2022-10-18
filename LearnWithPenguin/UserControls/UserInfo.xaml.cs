@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for UserInfo.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class UserInfo : System.Windows.Controls.UserControl
     {
-        public Menu()
+        public UserInfo()
         {
             InitializeComponent();
         }

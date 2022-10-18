@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.UserControls
+namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for CodingView.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class CodingView : System.Windows.Controls.Page
     {
-        public Menu()
+        public CodingView()
         {
             InitializeComponent();
         }

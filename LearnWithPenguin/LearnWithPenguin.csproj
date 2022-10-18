@@ -66,11 +66,62 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserRank.xaml.cs">
+      <DependentUpon>UserRank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserStats.xaml.cs">
+      <DependentUpon>UserStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
+    <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\ReadViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\UserRankViewModel.cs" />
+    <Compile Include="ViewModel\UserStatsViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\WriteViewModel.cs" />
+    <Compile Include="View\CodingView.xaml.cs">
+      <DependentUpon>CodingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PuzzleView.xaml.cs">
+      <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadView.xaml.cs">
+      <DependentUpon>ReadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WriteView.xaml.cs">
+      <DependentUpon>WriteView.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserRank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CodingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,6 +162,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\OnBoardingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PuzzleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReadView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <EmbeddedResource Include="View\UserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Page Include="View\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WriteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +229,34 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\iconGoogle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HomeScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapViet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LapTrinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\female.jpg" />
+    <Resource Include="images\male.jpg" />
+    <Resource Include="images\unknownGender.jpg" />
+    <Resource Include="images\userNameDecorate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\anonymousUser.jpg" />
+    <Resource Include="images\mix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Stick.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

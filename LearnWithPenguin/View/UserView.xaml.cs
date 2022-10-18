@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.UserControls
+namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for UserView.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class UserView : Window
     {
-        public Menu()
+        public UserView()
         {
             InitializeComponent();
         }
