@@ -44,54 +44,7 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-        public ICommand TransformToRead
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new ReadViewModel();
-                });
-            }
 
-            set { }
-        }
-        public ICommand TransformToWrite
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new WriteViewModel();
-                });
-            }
-
-            set { }
-        }
-        public ICommand TransformToPuzzle
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new PuzzleViewModel();
-                });
-            }
-
-            set { }
-        }
-        public ICommand TransformToCoding
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new CodingViewModel();
-                });
-            }
-
-            set { }
-        }
         public ICommand Transform
         {
             get
