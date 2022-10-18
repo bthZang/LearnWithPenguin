@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LearnWithPenguin.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1125"
       Title="UserView">
 
     <Grid Background="#A0C4FF">
@@ -19,10 +19,10 @@
                     <StackPanel>
                         <TextBlock TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="Bắt đầu ngay"
-                                   Foreground="#2D3D8F"
+                                   Text="Thông tin"
+                                   Foreground="#073580"
                                    FontSize="36"
-                                   FontWeight="Bold"
+                                   FontWeight="UltraBold"
                                    FontStyle="Normal"
                                    LineStackingStrategy="MaxHeight"
                                    Style="{StaticResource Baloo2-Bold}"
@@ -33,11 +33,53 @@
                                 Height="10"
                                 CornerRadius="4"
                                 BorderThickness="3"
-                                Background="#19468E " />
+                                Background="#19468E"
+                                Margin="110 0 0 0" />
+                    </StackPanel>
+
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="Xếp hạng"
+                                   Foreground="#073580"
+                                   FontSize="36"
+                                   FontWeight="UltraBold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="78"
+                                   Width="191"
+                                   Margin="69,31,0,0" />
+                        <Border Width="100"
+                                Height="10"
+                                CornerRadius="4"
+                                BorderThickness="3"
+                                Background="#19468E"
+                                Margin="60 0 0 0" />
+                    </StackPanel>
+
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="Thống kê"
+                                   Foreground="#073580"
+                                   FontSize="36"
+                                   FontWeight="UltraBold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="78"
+                                   Width="191"
+                                   Margin="69,31,0,0" />
+                        <Border Width="100"
+                                Height="10"
+                                CornerRadius="4"
+                                BorderThickness="3"
+                                Background="#19468E"
+                                Margin="67 0 0 0" />
                     </StackPanel>
                 </StackPanel>
             </Border>
         </StackPanel>
-
     </Grid>
 </Page>
