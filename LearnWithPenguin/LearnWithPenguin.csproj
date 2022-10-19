@@ -314,5 +314,11 @@
   <ItemGroup>
     <Resource Include="UserControls\tryAgain.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\noSound.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

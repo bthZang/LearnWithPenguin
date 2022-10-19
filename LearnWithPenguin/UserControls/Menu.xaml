@@ -7,9 +7,16 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1250">
-    <Grid>
+    <StackPanel Background="#660C0C0C"
+                HorizontalAlignment="Stretch"
+        
+        Height="800"
+        >
+
+
         <Border Background="White"
                 Width="400"
+                Height="800"
                 HorizontalAlignment="Left"
                 CornerRadius="0 31.2 31.2 0">
             <StackPanel>
@@ -68,10 +75,36 @@
                 <StackPanel Orientation="Horizontal"
                             Margin="76.65 31.25 0 0">
 
-                    <Image Source="/UserControls/Volume.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
+                    <Button Command="{Binding VolumeButtom}"
+                            x:Name="NoneBlur"
+                            
+                            Background="Transparent"
+                            BorderThickness="0"
+                            DataContext="{StaticResource MenuVM}"
+                           >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Grid >
+
+                            <Image 
+                                   Width="39.06"
+                                   Height="39.06"
+                                   Margin="0,0,0,0"
+                                   Source="{Binding ImageVolume, UpdateSourceTrigger=PropertyChanged}"
+                                   Stretch="Uniform">
+
+                            </Image>
+                        </Grid>
+
+
+                    </Button>
+
+                    
+                    
                     <TextBlock TextAlignment="Left"
                                Text="Âm thanh"
                                Foreground="#2D3D8F"
@@ -87,10 +120,32 @@
 
                 <StackPanel Orientation="Horizontal"
                             Margin="76.65 31.25 0 0">
-                    <Image Source="/UserControls/Sound.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
+
+                    <Button Command="{Binding SoundButtom}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            DataContext="{StaticResource MenuVM}">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Grid>
+
+                            <Image Width="39.06"
+                                   Height="39.06"
+                                   Margin="0,0,0,0"
+                                   Source="{Binding ImageSound, UpdateSourceTrigger=PropertyChanged}"
+                                   Stretch="Uniform">
+
+                            </Image>
+                        </Grid>
+
+
+                    </Button>
+
+                 
                     <TextBlock TextAlignment="Left"
                                Text="Âm nhạc"
                                Foreground="#2D3D8F"
@@ -160,5 +215,5 @@
             </StackPanel>
 
         </Border>
-    </Grid>
+    </StackPanel>
 </UserControl>

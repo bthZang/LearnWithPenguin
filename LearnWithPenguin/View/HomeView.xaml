@@ -18,11 +18,13 @@
             <localUC:Menu />
         </DataTemplate>
     </Page.Resources>
+
     <Grid Background="#FFA0C4FF">
+        <ContentControl Panel.ZIndex="999" DataContext="{StaticResource HomeVM}" Content="{Binding Menu}" />
+
         <StackPanel 
             DataContext="{StaticResource HomeVM}"
             Orientation="Horizontal">
-            <ContentControl Content="{Binding Menu}" />
 
             <localUC:Icon Width="63.28"
                           Height="63.28"
