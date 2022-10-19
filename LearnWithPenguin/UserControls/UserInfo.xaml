@@ -5,8 +5,66 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="670" d:DesignWidth="1125">
+    <StackPanel 
+        Orientation="Horizontal"
+                Background="#A0C4FF">
+        <StackPanel 
+            Orientation="Vertical"
+            Width="405">
+            <Image 
+                Source="/images/User.png"
+                HorizontalAlignment="Center"
+                Height="156"
+                Width="156"
+                Margin="0 31 0 0"></Image>
+            <TextBox
+                BorderThickness="0"
+                BorderBrush="#A0C4FF"
+                Background="#A0C4FF"
+                Foreground="#073580"
+                Text="Biệt danh"
+                FontSize="41.7956"
+                FontFamily="Baloo2-Bold"
+                FontWeight="ExtraBold"
+                Width="200"
+                Height="66"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="106.55 18"></TextBox>
+            <TextBox BorderThickness="0"
+                     BorderBrush="#A0C4FF"
+                     Background="#A0C4FF"
+                     Foreground="#073580"
+                     Text="Tuổi"
+                     FontSize="23"
+                     FontFamily="Baloo2-Bold"
+                     FontWeight="ExtraBold"
+                     Width="55"
+                     Height="36"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="106.55 0 252 0"></TextBox>
+        </StackPanel>
+
+        <StackPanel>
+            <Border
+                HorizontalAlignment="Left"
+                Width="457"
+                Height="164"
+                Margin="0 80 27 27"
+                Background="White"
+                CornerRadius="15">
+                <StackPanel>
+                    
+                </StackPanel>
+            </Border>
+            <Border
+                    HorizontalAlignment="Left"
+                    Width="631"
+                    Height="314"
+                    Background="White"
+                    CornerRadius="15"></Border>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
