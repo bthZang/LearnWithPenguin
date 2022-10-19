@@ -26,6 +26,10 @@
     <viewmodel:BadResultViewModel x:Key="BadResultVM"></viewmodel:BadResultViewModel>
     <viewmodel:GoodResultViewModel x:Key="GoodResultVM"></viewmodel:GoodResultViewModel>
 
+    <viewmodel:UserViewModel x:Key="GoodResultVM"></viewmodel:UserViewModel>
+    <viewmodel:UserInfoViewModel x:Key="UserInfoVM"></viewmodel:UserInfoViewModel>
+    <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
+    <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
 
 
 

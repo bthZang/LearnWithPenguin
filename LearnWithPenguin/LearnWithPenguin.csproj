@@ -81,6 +81,15 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserRanking.xaml.cs">
+      <DependentUpon>UserRanking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserStatistic.xaml.cs">
+      <DependentUpon>UserStatistic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
@@ -91,6 +100,10 @@
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\UserRankingViewModel.cs" />
+    <Compile Include="ViewModel\UserStatisticViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
@@ -110,6 +123,9 @@
     </Compile>
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
@@ -138,6 +154,18 @@
     <Page Include="View\CodingView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserRanking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\HomeView.xaml">
       <SubType>Designer</SubType>
@@ -194,6 +222,10 @@
     <Page Include="View\WriteView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +351,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\noSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\userNameDecorate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Frame 20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
