@@ -149,7 +149,7 @@
                                   Text="Chưa xác định"
                                   FontFamily="Baloo2-Bold"
                                   FontWeight="ExtraBold"
-                                  FontSize="23"
+                                  FontSize="20"
                                   Foreground="#073580"
                                   BorderThickness="0">
                             <ComboBoxItem>
@@ -186,15 +186,14 @@
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center">
                         <TextBlock Foreground="#073580"
-                                   Text="Thành tựu"
-                                   FontSize="23"
+                                   Text="THÀNH TỰU"
+                                   FontSize="30"
                                    FontFamily="Baloo2-Bold"
                                    FontWeight="ExtraBold"
-                                   Margin="0 0 0 0"
+                                   Margin="20 240 0 0"
                                    Width="342"
                                    Height="48"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Center"
+                                   
                                                                 >
                             <TextBlock.RenderTransform>
                                 <RotateTransform Angle="270" />
@@ -219,7 +218,7 @@
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontSize="23"
-                                           FontFamily="Baloo2-Bold"
+                                           FontFamily="Baloo-Regular"
                                            FontWeight="ExtraBold"
                                            Foreground="#073580"
                                            Text="Tập đọc"
@@ -241,7 +240,8 @@
                                            FontWeight="ExtraBold"
                                            Foreground="#073580"
                                            Text="Trò chơi"
-                                           Margin="0 15 25 10"></TextBlock>
+                                           Margin="0 15 25 10"
+                                           FontStyle="Normal"></TextBlock>
                             </StackPanel>
 
                             <Image
