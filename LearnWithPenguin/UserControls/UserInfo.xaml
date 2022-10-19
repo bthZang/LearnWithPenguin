@@ -116,7 +116,7 @@
 
                     <StackPanel Orientation="Horizontal"
                                 VerticalAlignment="Center" 
-                                Margin="70 10 0 0">
+                                Margin="70 4 0 0">
                         <TextBlock Height="30"
                                    Foreground="#073580"
                                    FontFamily="Baloo2-Bold"
@@ -175,10 +175,87 @@
             <Border
                     HorizontalAlignment="Left"
                     Width="631"
-                    Height="314"
+                    Height="342"
                     Background="White"
                     CornerRadius="15"
-                    ></Border>
+                    >
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                Width="117"
+                                Height="342"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center">
+                        <TextBlock Foreground="#073580"
+                                   Text="Thành tựu"
+                                   FontSize="23"
+                                   FontFamily="Baloo2-Bold"
+                                   FontWeight="ExtraBold"
+                                   Margin="0 0 0 0"
+                                   Width="342"
+                                   Height="48"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                                                >
+                            <TextBlock.RenderTransform>
+                                <RotateTransform Angle="270" />
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Border Width="199"
+                                Height="1"
+                                Background="Black"
+                                BorderThickness="200">
+                            <Border.RenderTransform>
+                                <RotateTransform Angle="270" />
+                            </Border.RenderTransform>
+                        </Border>
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Vertical"
+                        Width="510"
+                        Height="342">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="23"
+                                           FontFamily="Baloo2-Bold"
+                                           FontWeight="ExtraBold"
+                                           Foreground="#073580"
+                                           Text="Tập đọc"
+                                           Margin="15 15 40 10"></TextBlock>
+                                <TextBlock FontSize="23"
+                                           FontFamily="Baloo2-Bold"
+                                           FontWeight="ExtraBold"
+                                           Foreground="#073580"
+                                           Text="Tập viết"
+                                           Margin="-10 15 40 10"></TextBlock>
+                                <TextBlock FontSize="23"
+                                           FontFamily="Baloo2-Bold"
+                                           FontWeight="ExtraBold"
+                                           Foreground="#073580"
+                                           Text="Nhận biết"
+                                           Margin="-10 15 25 10"></TextBlock>
+                                <TextBlock FontSize="23"
+                                           FontFamily="Baloo2-Bold"
+                                           FontWeight="ExtraBold"
+                                           Foreground="#073580"
+                                           Text="Trò chơi"
+                                           Margin="0 15 25 10"></TextBlock>
+                            </StackPanel>
+
+                            <Image
+                                Source="/images/Frame 20.png"
+                                Width="514"
+                                Height="280">
+                                
+                            </Image>
+                            
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </StackPanel>
 </UserControl>
