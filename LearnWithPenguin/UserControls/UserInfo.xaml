@@ -8,7 +8,8 @@
              d:DesignHeight="670" d:DesignWidth="1125">
     <StackPanel 
         Orientation="Horizontal"
-                Background="#A0C4FF">
+        Background="#A0C4FF"
+        Style="{StaticResource Baloo2-Bold}">
         <StackPanel 
             Orientation="Vertical"
             Width="405">
@@ -25,8 +26,9 @@
                 Foreground="#073580"
                 Text="Biệt danh"
                 FontSize="41.7956"
-                FontFamily="Baloo2-Bold"
-                FontWeight="ExtraBold"
+                FontStyle="Normal"
+                FontWeight="Bold"
+                Style="{StaticResource Baloo2-Bold}"
                 Width="200"
                 Height="66"
                 HorizontalAlignment="Center"
@@ -38,8 +40,9 @@
                      Foreground="#073580"
                      Text="Tuổi"
                      FontSize="23"
-                     FontFamily="Baloo2-Bold"
-                     FontWeight="ExtraBold"
+                     FontStyle="Normal"
+                     FontWeight="Bold"
+                     Style="{StaticResource Baloo2-Bold}"
                      Width="55"
                      Height="36"
                      HorizontalAlignment="Center"
@@ -61,13 +64,14 @@
                                 Margin="70 10 0 0">
                         <TextBlock Height="30"
                                    Foreground="#073580"
-                                   FontFamily="Baloo2-Bold"
-                                   FontWeight="ExtraBold"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    Text="Tên :"
                                    FontSize="23"
                                    HorizontalAlignment="Center"
                                    Width="70"
-                                   Margin="0 10 0 0"></TextBlock>
+                                   Margin="0 0 0 0"></TextBlock>
                         <Image Source="/images/userNameDecorate.jpg"
                                Width="25.44"
                                Height="34.69"></Image>
@@ -83,9 +87,10 @@
                                      BorderThickness="0"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
+                                     Style="{StaticResource Baloo2-Bold}"
                                      Background="Transparent"
                                      TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}"
+                                     
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Họ và tên bé"
@@ -119,36 +124,41 @@
                                 Margin="70 4 0 0">
                         <TextBlock Height="30"
                                    Foreground="#073580"
-                                   FontFamily="Baloo2-Bold"
-                                   FontWeight="ExtraBold"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    Text="Ngày sinh :"
                                    FontSize="23"
                                    HorizontalAlignment="Center"
                                    Width="130"
                                    Margin="0 5 0 0"></TextBlock>
                         <DatePicker SelectedDate="1/1/2000"
-                                    FontFamily="Baloo2-Bold"
-                                    FontWeight="ExtraBold"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Style="{StaticResource Baloo2-Bold}"
                                     FontSize="23"
                                     BorderThickness="0"
-                                    Height="25"
-                                    Foreground="#073580"></DatePicker>
+                                    Height="30"
+                                    Foreground="#073580"
+                                    Margin="0 3 0 0"></DatePicker>
                     </StackPanel>
 
                     <StackPanel VerticalAlignment="Top"
                                 Orientation="Horizontal"
                                 Margin="70 15 0 0">
 
-                        <TextBlock FontFamily="Baloo2-Bold"
-                                   FontWeight="ExtraBold"
+                        <TextBlock FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    FontSize="23"
                                    Foreground="#073580"
                                    >Giới tính:</TextBlock>
                         <ComboBox IsEditable="True"
                                   IsReadOnly="True"
                                   Text="Chưa xác định"
-                                  FontFamily="Baloo2-Bold"
-                                  FontWeight="ExtraBold"
+                                  FontStyle="Normal"
+                                  FontWeight="Bold"
+                                  Style="{StaticResource Baloo2-Bold}"
                                   FontSize="20"
                                   Foreground="#073580"
                                   BorderThickness="0">
@@ -188,8 +198,9 @@
                         <TextBlock Foreground="#073580"
                                    Text="THÀNH TỰU"
                                    FontSize="30"
-                                   FontFamily="Baloo2-Bold"
+                                   FontStyle="Normal"
                                    FontWeight="ExtraBold"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    Margin="20 240 0 0"
                                    Width="342"
                                    Height="48"
@@ -218,30 +229,34 @@
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontSize="23"
-                                           FontFamily="Baloo-Regular"
-                                           FontWeight="ExtraBold"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Tập đọc"
-                                           Margin="15 15 40 10"></TextBlock>
+                                           Margin="25 15 40 10"></TextBlock>
                                 <TextBlock FontSize="23"
-                                           FontFamily="Baloo2-Bold"
-                                           FontWeight="ExtraBold"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Tập viết"
-                                           Margin="-10 15 40 10"></TextBlock>
+                                           Margin="0 15 40 10"></TextBlock>
                                 <TextBlock FontSize="23"
-                                           FontFamily="Baloo2-Bold"
-                                           FontWeight="ExtraBold"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Nhận biết"
-                                           Margin="-10 15 25 10"></TextBlock>
+                                           Margin="0 15 25 10"></TextBlock>
                                 <TextBlock FontSize="23"
-                                           FontFamily="Baloo2-Bold"
-                                           FontWeight="ExtraBold"
+                                           FontStyle="Normal"
+                                           FontWeight="Bold"
+                                           Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Trò chơi"
-                                           Margin="0 15 25 10"
-                                           FontStyle="Normal"></TextBlock>
+                                           Margin="10 15 25 10"
+                                           ></TextBlock>
                             </StackPanel>
 
                             <Image
