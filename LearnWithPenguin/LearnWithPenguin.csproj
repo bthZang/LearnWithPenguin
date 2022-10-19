@@ -310,5 +310,8 @@
   <ItemGroup>
     <Resource Include="UserControls\tryAgain.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\userNameDecorate.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
