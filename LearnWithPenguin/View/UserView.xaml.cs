@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LearnWithPenguin.View
@@ -17,7 +18,7 @@ namespace LearnWithPenguin.View
     /// <summary>
     /// Interaction logic for UserView.xaml
     /// </summary>
-    public partial class UserView : Window
+    public partial class UserView : Page
     {
         public UserView()
         {

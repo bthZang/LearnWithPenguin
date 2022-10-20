@@ -6,7 +6,19 @@
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="62.55" d:DesignWidth="62.55">
-    <Image Source="/UserControls/menu.png">
-            
-    </Image>
+   
+    <Button Background="Transparent"
+            BorderThickness="0"
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Command="{Binding Command, RelativeSource={RelativeSource AncestorType=UserControl}}">
+        <Button.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="Border.CornerRadius"
+                        Value="13 13 13 13" />
+            </Style>
+        </Button.Resources>
+        <Image Source="/UserControls/menu.png"
+               Width="62.55"
+               Height="62.55"></Image>
+    </Button>
 </UserControl>

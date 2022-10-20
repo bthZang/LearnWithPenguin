@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class CodingViewModel: BaseViewModel
+    public class CodingViewModel: BaseViewModel
     {
     }
 }

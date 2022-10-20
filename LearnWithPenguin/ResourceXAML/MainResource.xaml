@@ -26,6 +26,7 @@
 
 
 
+
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
     <viewmodel:IconViewModel x:Key="IconVM"></viewmodel:IconViewModel>
     <viewmodel:BackViewModel x:Key="BackVM"></viewmodel:BackViewModel>
@@ -33,6 +34,9 @@
     <viewmodel:BadResultViewModel x:Key="BadResultVM"></viewmodel:BadResultViewModel>
     <viewmodel:GoodResultViewModel x:Key="GoodResultVM"></viewmodel:GoodResultViewModel>
 
+    <viewmodel:UserInfoViewModel x:Key="UserInfoVM"></viewmodel:UserInfoViewModel>
+    <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
+    <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
 
 
 

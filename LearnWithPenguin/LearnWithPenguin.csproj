@@ -96,7 +96,15 @@
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
-
+    <Compile Include="UserControls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserRanking.xaml.cs">
+      <DependentUpon>UserRanking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserStatistic.xaml.cs">
+      <DependentUpon>UserStatistic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
  master
@@ -109,12 +117,33 @@
     <Compile Include="ViewModel\ReadViewModel.cs" />
 
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
- master
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\UserRankingViewModel.cs" />
+    <Compile Include="ViewModel\UserStatisticViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
+    <Compile Include="View\CodingView.xaml.cs">
+      <DependentUpon>CodingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
-
+    <Compile Include="View\PuzzleView.xaml.cs">
+      <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadView.xaml.cs">
+      <DependentUpon>ReadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WriteView.xaml.cs">
+      <DependentUpon>WriteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +168,22 @@
 
     <Page Include="UserControls\TermAndCondition.xaml">
  master
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CodingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserRanking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserStatistic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,8 +227,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-
- master
+    <Page Include="View\PuzzleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ReadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WriteView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -304,32 +367,16 @@
     <Resource Include="UserControls\tryAgain.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\female.jpg" />
-    <Resource Include="images\male.jpg" />
-    <Resource Include="images\unknownGender.jpg" />
+    <Resource Include="UserControls\Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\noSound.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="images\userNameDecorate.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\anonymousUser.jpg" />
-    <Resource Include="images\mix.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Stick.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\3 medals p1.jpg" />
+    <Resource Include="images\Frame 20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
