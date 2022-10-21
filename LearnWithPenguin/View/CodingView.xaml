@@ -14,7 +14,7 @@
             <StackPanel 
                 HorizontalAlignment="Left"
                 Orientation="Vertical">
-                
+
 
                 <TextBlock Text="VỀ ĐÍCH"
                            Foreground="#FF073580"
@@ -49,7 +49,7 @@
                     Margin="75, 21, 682.15, 112.57"
                 />
             </StackPanel>
-              
+
             <StackPanel>
                 <TextBlock></TextBlock>
             </StackPanel>
