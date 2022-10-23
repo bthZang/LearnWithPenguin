@@ -198,7 +198,7 @@
             </Button>
         </StackPanel>
         <Button DataContext="{StaticResource MainVM}"
-                Command="{Binding NavigatetoHome}"
+                Command="{Binding Transform}"
                 Height="34.99"
                 Width="97.13"
                 Background="Transparent"
