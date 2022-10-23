@@ -358,5 +358,14 @@
   <ItemGroup>
     <Resource Include="images\Frame 20.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\whiteRectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\puzzleSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\nextIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

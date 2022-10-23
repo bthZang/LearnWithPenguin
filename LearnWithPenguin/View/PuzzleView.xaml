@@ -1,14 +1,148 @@
 ﻿<Page x:Class="LearnWithPenguin.View.PuzzleView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
+      mc:Ignorable="d"
+      d:DesignHeight="800"
+      d:DesignWidth="1125"
       Title="PuzzleView">
 
-    <Grid>
-        
+    <Grid Background="#FFA0C4FF">
+        <StackPanel>
+            <localUC:Icon Width="63.28"
+                          Height="63.28"
+                          Margin="50 35.16 1018.75 701.72"
+                          DataContext="{StaticResource HomeVM}"
+                          Command="{Binding ShowMenu}">
+                <Image Stretch="Uniform"
+                       Source="../images/menu.png"
+                       Width="63.28"
+                       Height="63.28" />
+            </localUC:Icon>
+            <StackPanel Margin="0 -1450 0 0"
+                        Height="74.19"
+                        Width="448.28">
+                <localUC:Back Height="68"
+                              Margin="0 0 350 0">
+                    <Image Stretch="Uniform"
+                           Source="/UserControls/backIcon.png"
+                           Width="59.46"
+                           Height="59.46" />
+                </localUC:Back>
+                
+                <localUC:Back Height="68"
+                              Margin="350 -68 0 0">
+                    <Image Stretch="Uniform"
+                           Source="/images/nextIcon.png"
+                           Width="59.46"
+                           Height="59.46" />
+
+                </localUC:Back>
+                <TextBlock Text="Bai..."
+                           Margin="110 -69 110 0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="#2D3D8F"
+                           FontSize="36.09"
+                           TextWrapping="Wrap"
+                           FontStyle="Normal"
+                           LineStackingStrategy="MaxHeight"
+                           Style="{StaticResource ResourceKey=Baloo2-Bold}">
+
+                </TextBlock>
+            </StackPanel>
+            <StackPanel  Margin="-400 -640 0 200"
+                         Width="309.38">
+                <Button DataContext="{StaticResource MainVM}"
+                        Height="191.84"
+                        Width="309.38"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/whiteRectangle.png"
+                           Height="191.84"
+                           Width="309.38" />
+                </Button>
+
+                <Button DataContext="{StaticResource MainVM}"
+                        Height="191.84"
+                        Width="309.38"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Margin="0 57.38 0 0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/whiteRectangle.png"
+                           Height="191.84"
+                           Width="309.38" />
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="550.94 -640 150 200"
+                        Width="309.38">
+                <Button DataContext="{StaticResource MainVM}"
+                        Height="191.84"
+                        Width="309.38"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/whiteRectangle.png"
+                           Height="191.84"
+                           Width="309.38" />
+                </Button>
+                <Button Command="{Binding TransformToCoding}"
+                        Height="191.84"
+                        Width="309.38"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Margin="0 57.38 0 0"
+                        >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+                    <Button.DataContext>
+                        <StaticResource ResourceKey="MainVM" />
+                    </Button.DataContext>
+                    <Image Stretch="Uniform"
+                           Source="../images/whiteRectangle.png"
+                           Height="191.84"
+                           Width="309.38" />
+                </Button>
+            </StackPanel>
+            <Image Stretch="Uniform"
+                   Source="../images/puzzleSound.png"
+                   Height="77.38"
+                   Width="77.38" 
+                   Margin="0 -250 0 0"/>
+            <localUC:Back Height="68"
+                          Margin="50 -100 1024.87 0">
+                <Image Stretch="Uniform"
+                       Source="/UserControls/backIcon.png"
+                       Width="59.46"
+                       Height="59.46" />
+            </localUC:Back>
+        </StackPanel>
     </Grid>
 </Page>
