@@ -18,6 +18,215 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUC:Menu />
         </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
+            <localUC:Back></localUC:Back>
+        </DataTemplate-->
+    </Page.Resources>
+    <StackPanel Background="#FFA0C4FF">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource HomeVM}"
+                        Content="{Binding Menu}" />
+
+
+        <Button Margin="50 35.16 1018.75 701.72"
+                Width="63.28"
+                Height="63.28"
+                Background="Transparent"
+                BorderThickness="0"
+                DataContext="{StaticResource HomeVM}"
+                Command="{Binding ShowMenu}">
+            <localUC:Icon Width="63.28"
+                          Height="63.28">
+                <Image Stretch="Uniform"
+                       Source="../images/menu.png"
+                       Width="63.28"
+                       Height="63.28" />
+            </localUC:Icon>
+        </Button>
+        <TextBlock Text="CHỦ ĐỀ"
+                   Foreground="#FF073580"
+                   FontSize="80"
+                   FontWeight="Bold"
+                   FontStyle="Normal"
+                   LineStackingStrategy="MaxHeight"
+                   Style="{StaticResource Baloo2-Bold}"
+                   Margin="53 -650 112 825"
+                   Width="290"
+                   Height="126"
+                   HorizontalAlignment="Left" />
+
+        <TextBlock TextWrapping="Wrap"
+                   Text="Hãy chọn một chủ để giải đố cùng Penguin nhé !"
+                   Foreground="#2D3D8F"
+                   FontSize="36"
+                   FontStyle="Normal"
+                   LineStackingStrategy="MaxHeight"
+                   Style="{StaticResource Baloo2-Regular}"
+                   Margin="53 -1500 0 0"
+                   Width="473"
+                   Height="123"
+                   HorizontalAlignment="Left" />
+        <Image Stretch="Uniform"
+               Source="../images/QuizzSubjectView.png"
+               Height="657"
+               Width="417"
+               Margin="22 -1100 0 0"
+               RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="1.171" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <StackPanel     Margin="300 -1300 0 0"
+                        Width="224"
+                        Height="600">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToPuzzle}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178.12"
+                       Width="143.75" />
+            </Button>
+            <Button Command="{Binding TransformToCoding}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 0 0 0"
+                    VerticalAlignment="Top">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178.12"
+                       Width="143.75" />
+            </Button>
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToPuzzle}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178.12"
+                       Width="143.75" />
+            </Button>
+        </StackPanel>
+        <StackPanel     Margin="800 -1300 0 0"
+                        Width="224"
+                        Height="600">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToPuzzle}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178"
+                       Width="145" />
+            </Button>
+            <Button Command="{Binding TransformToCoding}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 0 0 0"
+                    VerticalAlignment="Top">
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178.12"
+                       Width="143.75" />
+            </Button>
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToPuzzle}"
+                    Height="178.12"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/DoVuiFixed.png"
+                       Height="178.12"
+                       Width="143.75" />
+            </Button>
+        </StackPanel>
+        <Button DataContext="{StaticResource MainVM}"
+                Command="{Binding TransformToHome}"
+                Height="34.99"
+                Width="97.13"
+                Background="Transparent"
+                BorderThickness="0"
+                Margin="-895 -700 0 0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Border.CornerRadius"
+                            Value="13 13 13 13" />
+                </Style>
+            </Button.Resources>
+            <Image Stretch="Uniform"
+                   Source="../images/HomeIcon.png"
+                   Height="34.99"
+                   Width="97.13" />
+        </Button>
+    </StackPanel>
+
+    <!--<Page.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
+            <localUC:Icon />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
+            <localUC:Menu />
+        </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
             <localUC:Back></localUC:Back>
         </DataTemplate>
@@ -173,5 +382,5 @@
                        Height="59.46" />
             </localUC:Back>
         </Button>
-    </StackPanel>
+    </StackPanel>-->
 </Page>

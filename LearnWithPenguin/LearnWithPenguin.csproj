@@ -373,5 +373,11 @@
   <ItemGroup>
     <Resource Include="images\TroChoiFixed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\QuizzSubjectView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HomeIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
