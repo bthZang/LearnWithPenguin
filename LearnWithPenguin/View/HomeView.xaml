@@ -32,6 +32,10 @@
                           DataContext="{StaticResource HomeVM}"
                           Command="{Binding ShowMenu}"
                           >
+                <Image Stretch="Uniform"
+                       Source="../images/menu.png"
+                       Width="63.28"
+                       Height="63.28" />
 
             </localUC:Icon>
 
