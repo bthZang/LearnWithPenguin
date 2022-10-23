@@ -367,5 +367,11 @@
   <ItemGroup>
     <Resource Include="images\nextIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiFixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiFixed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
