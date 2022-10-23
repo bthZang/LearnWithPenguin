@@ -13,10 +13,10 @@ using System.Windows.Shapes;
 
 namespace LearnWithPenguin.ViewModel
 {
-    public class PuzzleViewModel: BaseViewModel
+    public class PuzzleViewModel : BaseViewModel
     {
-        protected BackViewModel _navigateHome;
-        public BackViewModel NavigateHome
+        protected BaseViewModel _navigateHome;
+        public BaseViewModel NavigateHome
         {
             get
             {
@@ -25,6 +25,19 @@ namespace LearnWithPenguin.ViewModel
             set
             {
                 _navigateHome = value;
+                OnPropertyChanged();
+            }
+        }
+        protected BaseViewModel _navigateToQuizzView1;
+        public BaseViewModel NavigateToQuizzView1
+        {
+            get
+            {
+                return _navigateToQuizzView1;
+            }
+            set
+            {
+                _navigateToQuizzView1 = value;
                 OnPropertyChanged();
             }
         }

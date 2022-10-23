@@ -84,8 +84,9 @@
         <StackPanel     Margin="300 -1300 0 0"
                         Width="224"
                         Height="600">
+            <!--con vat-->
             <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToPuzzle}"
+                    Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
                     Width="143.75"
                     Background="Transparent"
@@ -101,7 +102,8 @@
                        Height="178.12"
                        Width="143.75" />
             </Button>
-            <Button Command="{Binding TransformToCoding}"
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
                     Width="143.75"
                     Background="Transparent"
@@ -114,16 +116,14 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Button.DataContext>
-                    <StaticResource ResourceKey="MainVM" />
-                </Button.DataContext>
+               
                 <Image Stretch="Uniform"
                        Source="../images/DoVuiFixed.png"
                        Height="178.12"
                        Width="143.75" />
             </Button>
             <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToPuzzle}"
+                    Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
                     Width="143.75"
                     Background="Transparent"
@@ -144,7 +144,7 @@
                         Width="224"
                         Height="600">
             <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToPuzzle}"
+                    Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
                     Width="143.75"
                     Background="Transparent"
@@ -160,7 +160,8 @@
                        Height="178"
                        Width="145" />
             </Button>
-            <Button Command="{Binding TransformToCoding}"
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
                     Width="143.75"
                     Background="Transparent"
@@ -174,18 +175,14 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Button.DataContext>
-                    <StaticResource ResourceKey="MainVM" />
-                </Button.DataContext>
                 <Image Stretch="Uniform"
                        Source="../images/DoVuiFixed.png"
                        Height="178.12"
                        Width="143.75" />
             </Button>
-            <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToPuzzle}"
-                    Height="178.12"
-                    Width="143.75"
+            <Button  DataContext="{StaticResource MainVM}"
+                     Command="{Binding TransformToQuizzView1}"
+                     Width="143.75"
                     Background="Transparent"
                     BorderThickness="0">
                 <Button.Resources>
@@ -201,7 +198,7 @@
             </Button>
         </StackPanel>
         <Button DataContext="{StaticResource MainVM}"
-                Command="{Binding TransformToHome}"
+                Command="{Binding NavigatetoHome}"
                 Height="34.99"
                 Width="97.13"
                 Background="Transparent"
