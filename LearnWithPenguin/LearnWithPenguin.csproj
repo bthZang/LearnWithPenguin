@@ -57,6 +57,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Back.xaml.cs">
+      <DependentUpon>Back.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BadResult.xaml.cs">
+      <DependentUpon>BadResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GoodResult.xaml.cs">
+      <DependentUpon>GoodResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Icon.xaml.cs">
+      <DependentUpon>Icon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BackForward.xaml.cs">
       <DependentUpon>BackForward.xaml</DependentUpon>
     </Compile>
@@ -66,13 +78,36 @@
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TermAndCondition.xaml.cs">
+      <DependentUpon>TermAndCondition.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TextOnBoarding.xaml.cs">
       <DependentUpon>TextOnBoarding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserRanking.xaml.cs">
+      <DependentUpon>UserRanking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserStatistic.xaml.cs">
+      <DependentUpon>UserStatistic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\BackViewModel.cs" />
+    <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
+    <Compile Include="ViewModel\GoodResultViewModel.cs" />
+    <Compile Include="ViewModel\IconViewModel.cs" />
+    <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
+    <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\UserRankingViewModel.cs" />
+    <Compile Include="ViewModel\UserStatisticViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
@@ -86,9 +121,31 @@
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\Back.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\GoodResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Icon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\BackForward.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,7 +154,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\TermAndCondition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CodingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserRanking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserStatistic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,14 +215,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PuzzleView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ReadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WriteView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,19 +280,90 @@
     <Resource Include="images\iconGoogle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\HomeScreen.png" />
+    <Resource Include="images\LogOut.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\Mute.png" />
+    <Resource Include="images\noSound.png" />
+    <Resource Include="images\People.png" />
+    <Resource Include="images\Rate.png" />
+    <Resource Include="images\Sound.png" />
+    <Resource Include="images\User.png" />
+    <Resource Include="images\Volume.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\TapViet.png" />
+    <Resource Include="UserControls\Volume.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\TapDoc.png" />
+    <Resource Include="UserControls\Sound.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\LapTrinh.png" />
+    <Resource Include="UserControls\Rate.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\DoVui.png" />
+    <Resource Include="UserControls\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\share%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\BlurNext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TongKet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\HomeView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TapDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\TapViet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\DoVui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\userEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\whiteStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\badResult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\goodResult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\tryAgain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\noSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\userNameDecorate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Frame 20.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Coding.png" />

@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class CodingViewModel: BaseViewModel
+    public class CodingViewModel: BaseViewModel
     {
 
     }

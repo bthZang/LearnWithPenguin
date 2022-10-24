@@ -52,7 +52,79 @@ namespace LearnWithPenguin.ViewModel
         public OnBoardingViewModel()
         {
             this.PartOnBoarding = new TextOnBoardingViewModel();
+            this.PartOnBoardingTerm = new TermAndConditionViewModel();
+
 
         }
+
+        private BaseViewModel _partOnBoardingTerm;
+
+        public BaseViewModel PartOnBoardingTerm
+        {
+            get
+            {
+                return _partOnBoardingTerm;
+            }
+            set
+            {
+                _partOnBoardingTerm = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand ShowTerm
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    PartOnBoarding = new TermAndConditionViewModel();
+                });
+            }
+
+            set { }
+        }
+        public ICommand HideTerm
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    PartOnBoarding = new TextOnBoardingViewModel();
+                });
+            }
+
+            set { }
+        }
+
+
+        //private BaseViewModel _;
+
+        //public BaseViewModel PartOnBoarding
+        //{
+        //    get
+        //    {
+        //        return _PartOnBoarding;
+        //    }
+        //    set
+        //    {
+        //        _PartOnBoarding = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+
+        //public ICommand Show
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            PartOnBoarding = new TermAndConditionViewModel();
+        //        });
+        //    }
+
+        //    set { }
+        //}
+
     }
 }

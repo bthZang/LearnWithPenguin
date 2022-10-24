@@ -104,5 +104,21 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
+
+        public ICommand TransformToUser
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new UserViewModel();
+                });
+            }
+
+            set { }
+        }
+
+
     }
 }

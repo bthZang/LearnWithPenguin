@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class ReadViewModel: BaseViewModel
+    public class ReadViewModel: BaseViewModel
     {
 
     }

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.Icon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="62.55" d:DesignWidth="62.55">
+   
+    <Button Background="Transparent"
+            BorderThickness="0"
+            DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Command="{Binding Command, RelativeSource={RelativeSource AncestorType=UserControl}}">
+        <Button.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="Border.CornerRadius"
+                        Value="13 13 13 13" />
+            </Style>
+        </Button.Resources>
+        <Image Source="/UserControls/menu.png"
+               Width="62.55"
+               Height="62.55"></Image>
+    </Button>
+</UserControl>

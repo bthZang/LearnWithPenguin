@@ -22,7 +22,7 @@ namespace LearnWithPenguin.View
     {
         public CodingView()
         {
-            InitializeComponent();
+           
         }
     }
 }

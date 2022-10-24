@@ -15,6 +15,22 @@
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
     <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
+    <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
+
+
+
+    <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>
+    <viewmodel:IconViewModel x:Key="IconVM"></viewmodel:IconViewModel>
+    <viewmodel:BackViewModel x:Key="BackVM"></viewmodel:BackViewModel>
+    <viewmodel:TermAndConditionViewModel x:Key="TermAndConditionVM"></viewmodel:TermAndConditionViewModel>
+    <viewmodel:BadResultViewModel x:Key="BadResultVM"></viewmodel:BadResultViewModel>
+    <viewmodel:GoodResultViewModel x:Key="GoodResultVM"></viewmodel:GoodResultViewModel>
+
+    <viewmodel:UserInfoViewModel x:Key="UserInfoVM"></viewmodel:UserInfoViewModel>
+    <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
+    <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
+
+
 
 
 
