@@ -18,11 +18,13 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for BackForward.xaml
     /// </summary>
-    public partial class BackForward : UserControl
+    public partial class BackForward : System.Windows.Controls.UserControl
     {
-        public BackForward()
+        public BackForward() 
         {
             InitializeComponent();
         }
+
+        
     }
 }

@@ -2,20 +2,23 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:viewmodelTOB="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
+      xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
+      
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200"
-      Title="CodingView">
+      DataContext="{StaticResource CodingVM}"
+      Title="CodingView" 
+>
 
+    
     <Grid Background="#A0C4FF">
         <StackPanel Orientation="Horizontal">
-
             <StackPanel 
                 HorizontalAlignment="Left"
                 Orientation="Vertical">
-
-
                 <TextBlock Text="VỀ ĐÍCH"
                            Foreground="#FF073580"
                            FontSize="80"
@@ -28,7 +31,6 @@
                            Height="126"
                            HorizontalAlignment="Left"
                 />
-
                 <TextBlock TextWrapping="Wrap"
                                Text="Hãy giúp Penguin tìm
                            được cá nhé!"
@@ -42,17 +44,19 @@
                                Height="123"
                                HorizontalAlignment="Left"
                 />
-
                 <Image
                     Source="D:\LearnWithPenguin\LearnWithPenguin\LearnWithPenguin\images\Coding.png"
                     Width="367.85"
-                    Margin="75, 21, 682.15, 112.57"
+                    Margin="75, 21, 100, 112.57"
                 />
             </StackPanel>
-
-            <StackPanel>
-                <TextBlock></TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        Width="642">
+                <localUser:BackForward
+                    Margin="0, 0, 0, 0"></localUser:BackForward>
+                
             </StackPanel>
         </StackPanel>
     </Grid>
+
 </Page>

@@ -216,5 +216,22 @@
   <ItemGroup>
     <Resource Include="images\Coding.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LogOut.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\Mute.png" />
+    <Resource Include="images\noSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\People.png" />
+    <Resource Include="images\Rate.png" />
+    <Resource Include="images\Sound.png" />
+    <Resource Include="images\User.png" />
+    <Resource Include="images\Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Back.png" />
+    <Resource Include="images\Forward.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
