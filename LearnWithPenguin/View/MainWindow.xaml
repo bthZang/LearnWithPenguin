@@ -36,6 +36,9 @@
             <DataTemplate DataType="{x:Type viewmodelHome:CodingViewModel}">
                 <Frame Source="CodingView.xaml"></Frame>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:UserViewModel}">
+                <Frame Source="UserView.xaml"></Frame>
+            </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
 
