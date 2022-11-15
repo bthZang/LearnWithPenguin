@@ -7,213 +7,250 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1250">
-    <StackPanel Background="#660C0C0C"
+    <DockPanel Background="#660C0C0C"
                 HorizontalAlignment="Stretch"
-        
-        Height="800"
-        >
+                Height="800">
+
+        <StackPanel Orientation="Horizontal">
+            <Border Background="White"
+                    Width="400"
+                    Height="800"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0 31.2 31.2 0">
+                <StackPanel>
+
+                    <Image Source="/UserControls/User.png"
+                           Width="182.03"
+                           Height="182.03"
+                           Margin="89,59,89,-10"></Image>
+                    <TextBlock TextAlignment="Center"
+                               Text="Display name"
+                               Foreground="#2D3D8F"
+                               FontSize="28.12"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Height="44"
+                               Width="172"
+                               Margin="0,0,0,0" />
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 38.81 0 0">
+
+                        <Image Source="/UserControls/userEdit.png"
+                               Width="39.06"
+                               Height="39.06"
+                               Margin="0,0,0,0"></Image>
+                        <Button Background="Transparent"
+                                DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformToUser}"
+                                Width="168"
+                                Height="45"
+                                BorderThickness="0"
+                                Margin="37.5,0,0,0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <TextBlock TextAlignment="Left"
+                                       Text="Hồ sơ của tôi"
+                                       Foreground="#2D3D8F"
+                                       FontSize="28.12"
+                                       FontWeight="Bold"
+                                       FontStyle="Normal"
+                                       LineStackingStrategy="MaxHeight"
+                                       Style="{StaticResource Baloo2-Bold}"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Stretch"
+                                       Height="45"
+                                       Margin="0,0,0,0" />
+                        </Button>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 31.25 0 0">
+
+                        <Button Command="{Binding VolumeButtom}"
+                                x:Name="NoneBlur"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                DataContext="{StaticResource MenuVM}">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Grid>
+
+                                <Image Width="39.06"
+                                       Height="39.06"
+                                       Margin="0,0,0,0"
+                                       Source="{Binding ImageVolume, UpdateSourceTrigger=PropertyChanged}"
+                                       Stretch="Uniform">
+
+                                </Image>
+                            </Grid>
 
 
-        <Border Background="White"
-                Width="400"
-                Height="800"
-                HorizontalAlignment="Left"
-                CornerRadius="0 31.2 31.2 0">
-            <StackPanel>
+                        </Button>
 
-                <Image Source="/UserControls/User.png"
-                       Width="182.03"
-                       Height="182.03"
-                       Margin="89,59,89,-10"></Image>
-                <TextBlock TextAlignment="Center"
-                           Text="Display name"
-                           Foreground="#2D3D8F"
-                           FontSize="28.12"
-                           FontWeight="Bold"
-                           FontStyle="Normal"
-                           LineStackingStrategy="MaxHeight"
-                           Style="{StaticResource Baloo2-Bold}"
-                           Height="44"
-                           Width="172"
-                           Margin="0,0,0,0" />
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 38.81 0 0">
 
-                    <Image Source="/UserControls/userEdit.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
-                    <Button Background="Transparent"
-                            DataContext="{StaticResource MainVM}"
-                            Command="{Binding TransformToUser}"
-                            Width="168"
-                            Height="45"
-                            BorderThickness="0"
-                            Margin="37.5,0,0,0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
+
                         <TextBlock TextAlignment="Left"
-                                   Text="Hồ sơ của tôi"
+                                   Text="Âm thanh"
                                    Foreground="#2D3D8F"
                                    FontSize="28.12"
                                    FontWeight="Bold"
                                    FontStyle="Normal"
                                    LineStackingStrategy="MaxHeight"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Stretch"
+                                   Height="44.53"
+                                   Width="131.25"
+                                   Margin="37.5,0,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 31.25 0 0">
+
+                        <Button Command="{Binding SoundButtom}"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                DataContext="{StaticResource MenuVM}">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Grid>
+
+                                <Image Width="39.06"
+                                       Height="39.06"
+                                       Margin="0,0,0,0"
+                                       Source="{Binding ImageSound, UpdateSourceTrigger=PropertyChanged}"
+                                       Stretch="Uniform">
+
+                                </Image>
+                            </Grid>
+
+
+                        </Button>
+
+
+                        <TextBlock TextAlignment="Left"
+                                   Text="Âm nhạc"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.12"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="44.53"
+                                   Width="131.25"
+                                   Margin="37.5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 31.25 0 0">
+                        <Image Source="/UserControls/Rate.png"
+                               Width="39.06"
+                               Height="39.06"
+                               Margin="0,0,0,0"></Image>
+                        <TextBlock TextAlignment="Left"
+                                   Text="Đánh giá"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.12"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="44.53"
+                                   Width="131.25"
+                                   Margin="37.5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 31.25 0 0">
+                        <Image Source="/UserControls/People.png"
+                               Width="39.06"
+                               Height="39.06"
+                               Margin="0,0,0,0"></Image>
+                        <TextBlock TextAlignment="Left"
+                                   Text="Về chúng tôi"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.12"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    Height="45"
-                                   Margin="0,0,0,0" />
-                    </Button>
-
+                                   Width="164"
+                                   Margin="37.5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="76.65 31.25 0 0">
+                        <Image Source="/UserControls/share@2x.png"
+                               Width="39.06"
+                               Height="39.06"
+                               Margin="0,0,0,0"></Image>
+                        <TextBlock TextAlignment="Left"
+                                   Text="Đăng xuất"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.12"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="44.53"
+                                   Width="131.25"
+                                   Margin="37.5,0,0,0" />
+                    </StackPanel>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 31.25 0 0">
-
-                    <Button Command="{Binding VolumeButtom}"
-                            x:Name="NoneBlur"
-                            
-                            Background="Transparent"
-                            BorderThickness="0"
-                            DataContext="{StaticResource MenuVM}"
-                           >
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
-                        <Grid >
-
-                            <Image 
-                                   Width="39.06"
-                                   Height="39.06"
-                                   Margin="0,0,0,0"
-                                   Source="{Binding ImageVolume, UpdateSourceTrigger=PropertyChanged}"
-                                   Stretch="Uniform">
-
-                            </Image>
-                        </Grid>
-
-
-                    </Button>
-
+            </Border>
+            <Button Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+                    BorderThickness="0"
                     
-                    
-                    <TextBlock TextAlignment="Left"
-                               Text="Âm thanh"
-                               Foreground="#2D3D8F"
-                               FontSize="28.12"
-                               FontWeight="Bold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="44.53"
-                               Width="131.25"
-                               Margin="37.5,0,0,0" />
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 31.25 0 0">
-
-                    <Button Command="{Binding SoundButtom}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            DataContext="{StaticResource MenuVM}">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
-                        <Grid>
-
-                            <Image Width="39.06"
-                                   Height="39.06"
-                                   Margin="0,0,0,0"
-                                   Source="{Binding ImageSound, UpdateSourceTrigger=PropertyChanged}"
-                                   Stretch="Uniform">
-
-                            </Image>
-                        </Grid>
-
-
-                    </Button>
-
-                 
-                    <TextBlock TextAlignment="Left"
-                               Text="Âm nhạc"
-                               Foreground="#2D3D8F"
-                               FontSize="28.12"
-                               FontWeight="Bold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="44.53"
-                               Width="131.25"
-                               Margin="37.5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 31.25 0 0">
-                    <Image Source="/UserControls/Rate.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
-                    <TextBlock TextAlignment="Left"
-                               Text="Đánh giá"
-                               Foreground="#2D3D8F"
-                               FontSize="28.12"
-                               FontWeight="Bold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="44.53"
-                               Width="131.25"
-                               Margin="37.5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 31.25 0 0">
-                    <Image Source="/UserControls/People.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
-                    <TextBlock TextAlignment="Left"
-                               Text="Về chúng tôi"
-                               Foreground="#2D3D8F"
-                               FontSize="28.12"
-                               FontWeight="Bold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="45"
-                               Width="164"
-                               Margin="37.5,0,0,0" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal"
-                            Margin="76.65 31.25 0 0">
-                    <Image Source="/UserControls/share@2x.png"
-                           Width="39.06"
-                           Height="39.06"
-                           Margin="0,0,0,0"></Image>
-                    <TextBlock TextAlignment="Left"
-                               Text="Đăng xuất"
-                               Foreground="#2D3D8F"
-                               FontSize="28.12"
-                               FontWeight="Bold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="44.53"
-                               Width="131.25"
-                               Margin="37.5,0,0,0" />
-                </StackPanel>
-            </StackPanel>
-
-        </Border>
-    </StackPanel>
+                    Background="Transparent"
+                    DataContext="{StaticResource MainVM}"
+                    Command="{Binding HideMenu}"
+                    >
+                <Button.Resources>
+                    <Style x:Key="FocusVisual">
+                        <Setter Property="Control.Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Rectangle Margin="2"
+                                               SnapsToDevicePixels="true"
+                                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                                               StrokeThickness="10"
+                                               StrokeDashArray="1 2" />
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                    <SolidColorBrush x:Key="Button.Static.Background"
+                                     Color="#FFDDDDDD" />
+                    <SolidColorBrush x:Key="Button.Static.Border"
+                                     Color="#FF707070" />
+                    <SolidColorBrush x:Key="Button.MouseOver.Background"
+                                     Color="Ivory" />
+                    <SolidColorBrush x:Key="Button.MouseOver.Border"
+                                     Color="Black" />
+                    <SolidColorBrush x:Key="Button.Pressed.Background"
+                                     Color="#FFC4E5F6" />
+                    <SolidColorBrush x:Key="Button.Pressed.Border"
+                                     Color="Beige" />
+                    <SolidColorBrush x:Key="Button.Disabled.Background"
+                                     Color="#FFF4F4F4" />
+                    <SolidColorBrush x:Key="Button.Disabled.Border"
+                                     Color="#FFADB2B5" />
+                    <SolidColorBrush x:Key="Button.Disabled.Foreground"
+                                     Color="#FF838383" />
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </DockPanel>
 </UserControl>

@@ -150,7 +150,7 @@
                                     BorderBrush="#000000"
                                     VerticalAlignment="Top">
                                 <TextBlock Width="158"
-                                           VerticalAlignment="Center"
+                                           VerticalAlignment="Bottom"
                                            HorizontalAlignment="Center"
                                            Foreground="#000000"
                                            FontSize="21.88"
@@ -159,7 +159,8 @@
                                            Background="#FFFFFF"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Text="Đăng nhập" />
+                                           Text="Đăng nhập"
+                                           Margin="0,0,0,8" />
                             </Border>
                         </Button>
                     </Grid>

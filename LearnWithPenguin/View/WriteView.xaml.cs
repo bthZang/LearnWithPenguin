@@ -22,6 +22,7 @@ namespace LearnWithPenguin.View
     {
         public WriteView()
         {
+        
         }
     }
 }

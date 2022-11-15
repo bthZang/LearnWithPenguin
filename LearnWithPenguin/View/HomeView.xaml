@@ -20,7 +20,8 @@
     </Page.Resources>
 
     <Grid Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="999" DataContext="{StaticResource HomeVM}" Content="{Binding Menu}" />
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource MainVM}" Content="{Binding Menu}" />
 
         <StackPanel 
             DataContext="{StaticResource HomeVM}"
@@ -29,10 +30,9 @@
             <localUC:Icon Width="63.28"
                           Height="63.28"
                           Margin="42.97,-645.16,0,0"
-                          DataContext="{StaticResource HomeVM}"
+                          DataContext="{StaticResource MainVM}"
                           Command="{Binding ShowMenu}"
                           >
-
             </localUC:Icon>
 
             <StackPanel  Margin="156.35 196.88 74.9 0">

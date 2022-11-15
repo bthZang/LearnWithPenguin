@@ -79,33 +79,8 @@ namespace LearnWithPenguin.ViewModel
 
         // navigate icon to menu UC
 
-        private BaseViewModel _menu;
 
-        public BaseViewModel Menu
-        {
-            get
-            {
-                return _menu;
-            }
-            set
-            {
-                _menu = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public ICommand ShowMenu
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    Menu = new MenuViewModel();
-                });
-            }
-
-            set { }
-        }
+        
 
     }
 }

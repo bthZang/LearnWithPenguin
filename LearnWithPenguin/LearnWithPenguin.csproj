@@ -66,6 +66,9 @@
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HomeIcon.xaml.cs">
+      <DependentUpon>HomeIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,7 @@
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
+    <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
@@ -136,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\GoodResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HomeIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -357,6 +365,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Frame 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
