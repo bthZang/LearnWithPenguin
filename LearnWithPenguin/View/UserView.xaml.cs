@@ -18,11 +18,11 @@ namespace LearnWithPenguin.View
     /// <summary>
     /// Interaction logic for UserView.xaml
     /// </summary>
-    public partial class UserView : Page
+    public partial class UserView : System.Windows.Controls.Page
     {
         public UserView()
         {
-            InitializeComponent();
+         
         }
     }
 }

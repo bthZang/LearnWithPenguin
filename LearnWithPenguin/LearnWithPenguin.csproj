@@ -104,7 +104,6 @@
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="ViewModel\UserRankingViewModel.cs" />
     <Compile Include="ViewModel\UserStatisticViewModel.cs" />
@@ -130,9 +129,6 @@
     </Compile>
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserView.xaml.cs">
-      <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
@@ -238,10 +234,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\UserView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -260,6 +252,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
@@ -288,15 +281,10 @@
     <Resource Include="images\iconGoogle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\LogOut.png" />
-    <Resource Include="images\menu.png" />
     <Resource Include="images\Mute.png" />
-    <Resource Include="images\noSound.png" />
     <Resource Include="images\People.png" />
     <Resource Include="images\Rate.png" />
     <Resource Include="images\Sound.png" />
-    <Resource Include="images\User.png" />
-    <Resource Include="images\Volume.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\Volume.png" />
@@ -379,13 +367,9 @@
   <ItemGroup>
     <Resource Include="images\LogOut.png" />
     <Resource Include="images\menu.png" />
-    <Resource Include="images\Mute.png" />
     <Resource Include="images\noSound.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\People.png" />
-    <Resource Include="images\Rate.png" />
-    <Resource Include="images\Sound.png" />
     <Resource Include="images\User.png" />
     <Resource Include="images\Volume.png" />
   </ItemGroup>
@@ -394,17 +378,7 @@
     <Resource Include="images\Forward.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\Game\penguinPlay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Game\iceStand.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Game\fish.png" />
-    <Resource Include="images\Game\iceJump1.png" />
-    <Resource Include="images\Game\iceJump2.png" />
-    <Resource Include="images\Game\iceJump3.png" />
-    <Resource Include="images\Game\iceJump4.png" />
+    <Resource Include="View\Coding.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,14 +37,14 @@
                         <StackPanel>
                             
                         </StackPanel>
-                        <StackPanel
+                        <Border
                             Background="Olive"
-                            Orientation="Horizontal"
                             Margin="0, 210, 0, 0"
                             Width="685"
                             Height="70"
-                            Visibility="Visible">
-                        </StackPanel>
+                            CornerRadius="0, 0, 30, 30"
+                            >
+                        </Border>
                     </StackPanel>
                 </Border>
             </StackPanel>

@@ -16,9 +16,6 @@
             <StackPanel
                 HorizontalAlignment="Left"
                 Orientation="Vertical">
-                <StackPanel>
-
-                </StackPanel>
                 <TextBlock Text="VỀ ĐÍCH"
                            Foreground="#FF073580"
                            FontSize="80"
@@ -45,15 +42,72 @@
                                HorizontalAlignment="Left"
                 />
                 <Image
-                    Source="\images\Coding.png"
+                    Source="/View/Coding.png"
                     Width="367.85"
                     Margin="75, 21, 80, 112.57"
                 />
             </StackPanel>
+            
             <StackPanel Orientation="Vertical"
                         Width="643">
-                <localUser:BackForward
-                    Margin="0, 120, 0, 0"></localUser:BackForward>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="0, 50, 0, 10"
+                >
+                    <Button 
+                        x:Name="Back" 
+                        Command="{Binding BackCommand}"
+                        CommandParameter="{Binding ElementName=BacknForward}"
+                        Width="20"
+                        Background="Transparent"
+                        BorderThickness="0">
+                        <Image Source="/images/Back.png"/>
+                    </Button>
+
+                    <TextBlock
+                        Text="Bài"
+                        Foreground="#FF073580"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        FontStyle="Normal"
+                        LineStackingStrategy="MaxHeight"
+                        Style="{StaticResource Baloo2-Bold}"
+                        Width="65"
+                        Margin="10, 0, 0, 0"
+                        HorizontalAlignment="Center" 
+                        TextAlignment="Center" 
+                        VerticalAlignment="Center"
+                    />
+
+                    <TextBlock
+                        x:Name="Number"
+                        Text="{Binding PositionNumber, UpdateSourceTrigger=PropertyChanged}"
+                        Foreground="#FF073580"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        FontStyle="Normal"
+                        LineStackingStrategy="MaxHeight"
+                        Style="{StaticResource Baloo2-Bold}"
+                        Width="auto"
+                        Margin="0, 0, 20, 0"
+                        HorizontalAlignment="Center" 
+                        TextAlignment="Center"
+                        VerticalAlignment="Center">
+                    </TextBlock>
+
+                    <Button 
+                        x:Name="Forward"
+                        Command="{Binding ForwardCommand}"
+                        CommandParameter="{Binding ElementName=BacknForward}"
+                        Width="20"
+                        Background="Transparent"
+                        BorderThickness="0">
+                        <Image Source="/images/Forward.png"></Image>
+                    </Button>
+                </StackPanel>
+                
                 <Border Background="Beige"
                         BorderThickness="4, 4, 4, 4"
                         BorderBrush="#073580"
@@ -66,7 +120,7 @@
                             HorizontalAlignment="Center"
                             Margin="0, 50, 0, 50">
                     <StackPanel>
-                        <Button Command="{Binding ReviewTransform}"
+                        <Button Command="{Binding TransformToReview}"
                                 Background="Transparent"
                                 Width="auto"
                                 Height="auto"
