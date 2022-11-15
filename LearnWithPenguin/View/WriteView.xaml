@@ -40,7 +40,7 @@
                     </localUC:Icon>
                 </Grid>
                 <Grid Width="1018"
-                      VerticalAlignment="Center"
+                      
                       HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal"
                                 Width="{x:Static SystemParameters.PrimaryScreenWidth}">

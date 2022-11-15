@@ -8,8 +8,8 @@
              d:DesignHeight="800"
              d:DesignWidth="1250">
     <DockPanel Background="#660C0C0C"
-                HorizontalAlignment="Stretch"
-                Height="800">
+               HorizontalAlignment="Stretch"
+               Height="800">
 
         <StackPanel Orientation="Horizontal">
             <Border Background="White"
@@ -66,6 +66,43 @@
                                        VerticalAlignment="Stretch"
                                        Height="45"
                                        Margin="0,0,0,0" />
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+                                       
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
 
                     </StackPanel>
@@ -94,7 +131,43 @@
 
                                 </Image>
                             </Grid>
-
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+                                       
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
 
                         </Button>
 
@@ -136,7 +209,43 @@
 
                                 </Image>
                             </Grid>
-
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+                                       
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
 
                         </Button>
 
@@ -212,44 +321,48 @@
             </Border>
             <Button Width="{x:Static SystemParameters.PrimaryScreenWidth}"
                     BorderThickness="0"
-                    
                     Background="Transparent"
                     DataContext="{StaticResource MainVM}"
-                    Command="{Binding HideMenu}"
-                    >
-                <Button.Resources>
-                    <Style x:Key="FocusVisual">
-                        <Setter Property="Control.Template">
-                            <Setter.Value>
-                                <ControlTemplate>
-                                    <Rectangle Margin="2"
-                                               SnapsToDevicePixels="true"
-                                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
-                                               StrokeThickness="10"
-                                               StrokeDashArray="1 2" />
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                    <SolidColorBrush x:Key="Button.Static.Background"
-                                     Color="#FFDDDDDD" />
-                    <SolidColorBrush x:Key="Button.Static.Border"
-                                     Color="#FF707070" />
-                    <SolidColorBrush x:Key="Button.MouseOver.Background"
-                                     Color="Ivory" />
-                    <SolidColorBrush x:Key="Button.MouseOver.Border"
-                                     Color="Black" />
-                    <SolidColorBrush x:Key="Button.Pressed.Background"
-                                     Color="#FFC4E5F6" />
-                    <SolidColorBrush x:Key="Button.Pressed.Border"
-                                     Color="Beige" />
-                    <SolidColorBrush x:Key="Button.Disabled.Background"
-                                     Color="#FFF4F4F4" />
-                    <SolidColorBrush x:Key="Button.Disabled.Border"
-                                     Color="#FFADB2B5" />
-                    <SolidColorBrush x:Key="Button.Disabled.Foreground"
-                                     Color="#FF838383" />
-                </Button.Resources>
+                    Command="{Binding HideMenu}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                BorderThickness="0"
+                                Background="transparent"
+                                BorderBrush="transparent">
+                            <Border.Effect>
+                                <DropShadowEffect />
+                            </Border.Effect>
+                            <ContentPresenter Margin="2"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="transparent" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="transparent" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="transparent" />
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="transparent" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
         </StackPanel>
     </DockPanel>
