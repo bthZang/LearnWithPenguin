@@ -96,6 +96,7 @@
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
+    <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
@@ -111,6 +112,9 @@
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
@@ -171,6 +175,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -384,6 +392,19 @@
   <ItemGroup>
     <Resource Include="images\Back.png" />
     <Resource Include="images\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Game\penguinPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Game\iceStand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Game\fish.png" />
+    <Resource Include="images\Game\iceJump1.png" />
+    <Resource Include="images\Game\iceJump2.png" />
+    <Resource Include="images\Game\iceJump3.png" />
+    <Resource Include="images\Game\iceJump4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

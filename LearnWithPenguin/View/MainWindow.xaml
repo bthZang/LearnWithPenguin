@@ -39,6 +39,9 @@
             <DataTemplate DataType="{x:Type viewmodelHome:UserViewModel}">
                 <Frame Source="UserView.xaml"></Frame>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:GameViewModel}">
+                <Frame Source="GameView.xaml"></Frame>
+            </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
 

@@ -119,6 +119,19 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+        public ICommand TransformToGame
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new GameViewModel();
+                });
+            }
+
+            set { }
+        }
+
 
     }
 }

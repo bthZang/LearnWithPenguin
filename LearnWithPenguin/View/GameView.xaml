@@ -1,0 +1,55 @@
+﻿<Page x:Class="LearnWithPenguin.View.GameView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LearnWithPenguin.View"
+      xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+      xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GameView">
+
+    <Grid Background="#A0C4FF">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Background="Beige"
+                           Width="100"
+                           Height="100">
+                </TextBlock>
+
+                <localUser:BackForward
+                    Margin="40, 0, 0, 0"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"></localUser:BackForward>
+            </StackPanel>
+
+            <StackPanel>
+                <Border
+                    Background="Beige"
+                    BorderBrush="#073580"
+                    BorderThickness="4, 4, 4, 4"
+                    CornerRadius="30"
+                    Width="684"
+                    Height="284"
+                    >
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel>
+                            
+                        </StackPanel>
+                        <StackPanel
+                            Background="Olive"
+                            Orientation="Horizontal"
+                            Margin="0, 210, 0, 0"
+                            Width="685"
+                            Height="70"
+                            Visibility="Visible">
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <StackPanel></StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
