@@ -108,7 +108,6 @@
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="ViewModel\UserRankingViewModel.cs" />
     <Compile Include="ViewModel\UserStatisticViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
@@ -127,9 +126,6 @@
     </Compile>
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserView.xaml.cs">
-      <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
@@ -230,10 +226,6 @@
     <Page Include="View\WriteView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\UserView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
