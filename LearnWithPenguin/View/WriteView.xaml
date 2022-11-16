@@ -29,7 +29,7 @@
                         Content="{Binding Menu}" />
 
         <StackPanel DataContext="{StaticResource WriteVM}">
-            <DockPanel >
+            <DockPanel>
                 <Grid>
                     <localUC:Icon Width="63.28"
                                   Height="63.28"
@@ -40,7 +40,6 @@
                     </localUC:Icon>
                 </Grid>
                 <Grid Width="1018"
-                      
                       HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal"
                                 Width="{x:Static SystemParameters.PrimaryScreenWidth}">
@@ -101,34 +100,133 @@
 
                 </Border>
 
-                <Border Height="171.09"
+
+                <Button Height="171.09"
                         Width="171.09"
-                        Background="#FFFFFF"
-                        CornerRadius="31.25"
-                        BorderBrush="#073580"
                         Margin="900 -1065.34 0 0"
-                        BorderThickness="4">
+                        BorderThickness="0"
+                        Background="Transparent">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Border"
+                                    BorderThickness="0"
+                                    Background="transparent"
+                                    BorderBrush="transparent">
 
-                </Border>
-                <Border Height="593.03"
-                        Width="593.03"
-                        Background="#FFFFFF"
-                        CornerRadius="31.25"
-                        BorderBrush="#073580"
+                                <ContentPresenter Margin="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="transparent" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="transparent" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="transparent" />
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="transparent" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Border Height="171.09"
+                            Width="171.09"
+                            Background="#FFFFFF"
+                            CornerRadius="31.25"
+                            BorderBrush="#073580"
+                            BorderThickness="4">
+                        <Button Width="48"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                
+                                Height="48">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="93" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Source="/View/replay.png"></Image>
+                        </Button>
+
+                    </Border>
+                </Button>
+                <Button Height="593.03"
                         Margin="0 -565.34 0 0"
-                        BorderThickness="4">
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Width="593.03">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Border"
+                                    BorderThickness="0"
+                                    Background="transparent"
+                                    BorderBrush="transparent">
 
-                </Border>
-                <DockPanel >
-                    <Grid HorizontalAlignment="Left"
-                          >
-                    <localUC:HomeIcon Width="97.13"
-                                      Height="34.99"
-                                      Margin="42.97,21.87,0,0"
-                                      DataContext="{StaticResource MainVM}"
-                                      Command="{Binding Transform}">
+                                <ContentPresenter Margin="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="transparent" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="transparent" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="transparent" />
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="transparent" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Border Height="593.03"
+                            Width="593.03"
+                            Background="#FFFFFF"
+                            CornerRadius="31.25"
+                            BorderBrush="#073580"
+                            BorderThickness="4">
 
-                    </localUC:HomeIcon></Grid>
+                    </Border>
+                    
+                </Button>
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUC:HomeIcon Width="97.13"
+                                          Height="34.99"
+                                          Margin="42.97,21.87,0,0"
+                                          DataContext="{StaticResource MainVM}"
+                                          Command="{Binding Transform}">
+
+                        </localUC:HomeIcon>
+                    </Grid>
                 </DockPanel>
             </StackPanel>
         </StackPanel>

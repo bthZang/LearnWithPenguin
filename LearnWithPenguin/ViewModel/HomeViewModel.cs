@@ -25,8 +25,10 @@ namespace LearnWithPenguin.ViewModel
         protected BaseViewModel _navigatetoWrite;
         protected BaseViewModel _navigatetoPuzzle;
         protected BaseViewModel _navigatetoCoding;
+        protected BaseViewModel _navigatetoWarning;
 
-     
+
+
 
         public BaseViewModel NavigatetoRead
         {
@@ -77,11 +79,52 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        // navigate icon to menu UC
+        // navigate icon to Warning UC
 
+        public BaseViewModel NavigatetoWarning
+        {
+            get
+            {
+                return _navigatetoWarning;
+            }
+            set
+            {
+                _navigatetoWarning = value;
+                OnPropertyChanged();
+            }
+        }
 
-        
+        public ICommand ShowWarning
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoWarning = new WarningViewModel();
+                });
+            }
+
+            set { }
+        }
+
+        public HomeViewModel()
+        {
+            this.NavigatetoWarning = null;
+        }
+
+        public ICommand HideWarning
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoWarning = null;
+                });
+            }
+            set { }
+        }
+
 
     }
-}
+    }
 
