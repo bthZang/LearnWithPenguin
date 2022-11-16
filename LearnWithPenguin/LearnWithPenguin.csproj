@@ -362,9 +362,13 @@
     <Resource Include="images\greenBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\backIcon.png" />
-    <Resource Include="images\next.png" />
     <Resource Include="images\reReadButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\nextReadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\backReadIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

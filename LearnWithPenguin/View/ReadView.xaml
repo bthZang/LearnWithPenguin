@@ -25,7 +25,7 @@
                     </Style>
                 </Button.Resources>
 
-                <Image Source="/images/backIcon.png">
+                <Image Source="/images/backReadIcon.png">
                 </Image>
             </Button>
 
@@ -58,7 +58,7 @@
                         </Setter>
                     </Style>
                 </Button.Resources>
-                <Image Source="/images/next.png">
+                <Image Source="/images/nextReadIcon.png">
                 </Image>
             </Button>
 
@@ -81,6 +81,7 @@
                     Margin="309 50 309 300"
                     BorderThickness="2"
                     BorderBrush="Black">
+
             </Border>
 
             <TextBlock Margin="367 422 0 200"
