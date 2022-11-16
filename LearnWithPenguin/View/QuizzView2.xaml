@@ -47,22 +47,41 @@
         <StackPanel Margin="0 -1450 0 0"
                     Height="74.19"
                     Width="448.28">
-            <localUC:Back Height="68"
-                          Margin="0 0 350 0">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView2}"
+                    Height="68"
+                    Margin="0 0 350 0"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
                 <Image Stretch="Uniform"
                        Source="/UserControls/backIcon.png"
                        Width="59.46"
                        Height="59.46" />
-            </localUC:Back>
+            </Button>
 
-            <localUC:Back Height="68"
-                          Margin="350 -68 0 0">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
+                    Height="68"
+                    Margin="350 -68 0 0"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
                 <Image Stretch="Uniform"
-                       Source="/images/nextIcon.png"
+                       Source="../images/nextIcon.png"
                        Width="59.46"
                        Height="59.46" />
-
-            </localUC:Back>
+            </Button>
             <TextBlock Text="Bai..."
                        Margin="110 -69 110 0"
                        VerticalAlignment="Center"
