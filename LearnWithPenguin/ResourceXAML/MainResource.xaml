@@ -29,7 +29,6 @@
     <viewmodel:UserInfoViewModel x:Key="UserInfoVM"></viewmodel:UserInfoViewModel>
     <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
     <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
-    <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
 
 
 

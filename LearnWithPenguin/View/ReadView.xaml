@@ -15,7 +15,7 @@
         <StackPanel Orientation="Horizontal">
             <Button Width="18.58"
                     Height="32.52"
-                    Margin="348.57 46.56 0 0"
+                    Margin="348.57 46.56 5 10"
                     BorderThickness="0"
                     Background="Transparent">
                 <Button.Resources>
@@ -31,7 +31,7 @@
 
             <Button Width="73"
                     Height="56"
-                    Margin="63.06 38.05 0 0"
+                    Margin="63.06 38.05 5 10"
                     BorderThickness="0"
                     Background="#A0C4FF
                     ">
@@ -48,7 +48,7 @@
 
             <Button Width="18.58"
                     Height="32.52"
-                    Margin="63.4 46.56 444.56 0"
+                    Margin="63.4 46.56 444.56 10"
                     BorderThickness="0"
                     Background="#A0C4FF">
                 <Button.Resources>
@@ -84,8 +84,8 @@
 
             </Border>
 
-            <TextBlock Margin="367 422 0 200"
-                       HorizontalAlignment="Left"
+            <TextBlock Margin="0 422 0 200"
+                       HorizontalAlignment="Center"
                        Width="400"
                        Height="74"
                        FontSize="46.8"
