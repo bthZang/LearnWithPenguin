@@ -11,8 +11,8 @@ namespace LearnWithPenguin.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public object Thread { get; internal set; }
 
-       
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

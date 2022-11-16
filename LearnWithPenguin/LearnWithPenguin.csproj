@@ -66,6 +66,9 @@
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HomeIcon.xaml.cs">
+      <DependentUpon>HomeIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -93,11 +96,15 @@
     <Compile Include="UserControls\UserStatistic.xaml.cs">
       <DependentUpon>UserStatistic.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Warning.xaml.cs">
+      <DependentUpon>Warning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
+    <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
@@ -107,7 +114,7 @@
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="ViewModel\UserRankingViewModel.cs" />
     <Compile Include="ViewModel\UserStatisticViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
@@ -142,6 +149,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\HomeIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Icon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\TermAndCondition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Warning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -360,6 +375,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Frame 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\WarningPG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\replay.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Coding.png" />

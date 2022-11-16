@@ -33,6 +33,11 @@
     
     
 
+    <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
+    <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>
+
+
+
 
 
 
