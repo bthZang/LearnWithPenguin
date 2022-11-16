@@ -16,6 +16,7 @@
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
     
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
+    <viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>
 
 
 

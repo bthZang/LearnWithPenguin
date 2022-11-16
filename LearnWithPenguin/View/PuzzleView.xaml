@@ -1,4 +1,223 @@
-﻿<Page x:Class="LearnWithPenguin.View.PuzzleView"
+﻿<Page x:Class="LearnWithPenguin.View.QuizzSubjectView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:LearnWithPenguin.View"
+      xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+      xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
+      mc:Ignorable="d"
+      d:DesignHeight="800"
+      d:DesignWidth="1125"
+      Title="QuizzSubjectView">
+
+    <Page.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
+            <localUC:Icon />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
+            <localUC:Menu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
+            <localUC:Back></localUC:Back>
+        </DataTemplate>
+    </Page.Resources>
+
+    <StackPanel Background="#FFA0C4FF">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource HomeVM}"
+                        Content="{Binding Menu}" />
+        <Button Margin="50 35.16 1018.75 701.72"
+                Width="63.28"
+                Height="63.28"
+                Background="Transparent"
+                BorderThickness="0"
+                DataContext="{StaticResource HomeVM}"
+                Command="{Binding ShowMenu}">
+            <localUC:Icon Width="63.28"
+                          Height="63.28">
+                <Image Stretch="Uniform"
+                       Source="../images/menu.png"
+                       Width="63.28"
+                       Height="63.28"
+                       VerticalAlignment="Top" />
+            </localUC:Icon>
+        </Button>
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="53 -690 825 0">
+            <TextBlock Text="Chủ đề"
+                       Foreground="#FF073580"
+                       FontSize="56.56"
+                       FontWeight="Bold"
+                       FontStyle="Normal"
+                       LineStackingStrategy="MaxHeight"
+                       Style="{StaticResource Baloo2-Bold}"
+                       Width="245"
+                       Height="98" />
+            <StackPanel VerticalAlignment="Top"
+                        Margin="0 0 -100 0">
+                <TextBlock TextWrapping="Wrap"
+                           Text="Hãy chọn một chủ đề để giải đố cùng Penguine nhé!"
+                           Foreground="#2D3D8F"
+                           FontSize="28.13"
+                           FontStyle="Normal"
+                           LineStackingStrategy="MaxHeight"
+                           Style="{StaticResource Baloo2-Regular}"
+                           Width="362"
+                           Height="88" />
+
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="226.36 -1200 300 -500"
+                    Width="500.12"
+                    Height="800.66">
+            <Image Width="500.12"
+                   Height="800.66"
+                   Source="../images/QuizzSubjectView.png"
+                   HorizontalAlignment="Right"
+                   Stretch="Uniform" />
+        </StackPanel>
+
+        <StackPanel  Margin="628.13 -700 300 50">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapDoc.png"
+                       Height="178.13"
+                       Width="143.75" />
+            </Button>
+
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView2}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 55 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapViet.png"
+                       Height="178.13"
+                       Width="143.75"></Image>
+            </Button>
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 55 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapViet.png"
+                       Height="178.13"
+                       Width="143.75"></Image>
+            </Button>
+        </StackPanel>
+        <StackPanel  Margin="800 -700 -5 50"
+                     Width="196">
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView2}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapDoc.png"
+                       Height="178.13"
+                       Width="143.75" />
+            </Button>
+
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView1}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 55 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapViet.png"
+                       Height="178.13"
+                       Width="143.75"></Image>
+            </Button>
+            <Button DataContext="{StaticResource MainVM}"
+                    Command="{Binding TransformToQuizzView2}"
+                    Height="178.13"
+                    Width="143.75"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 55 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/TapViet.png"
+                       Height="178.13"
+                       Width="143.75"></Image>
+            </Button>
+        </StackPanel>
+
+        <Button DataContext="{StaticResource MainVM}"
+                Command="{Binding Transform}"
+                Height="34.99"
+                Width="97.13"
+                Background="Transparent"
+                BorderThickness="0"
+                Margin="-950 -160 0 0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Border.CornerRadius"
+                            Value="13 13 13 13" />
+                </Style>
+            </Button.Resources>
+            <Image Stretch="Uniform"
+                   Source="../images/HomeIcon.png"
+                   Height="34.99"
+                   Width="97.13" />
+        </Button>
+    </StackPanel>
+</Page>
+
+
+
+
+<!--<Page x:Class="LearnWithPenguin.View.PuzzleView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -18,9 +237,9 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUC:Menu />
         </DataTemplate>
-        <!--<DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
+        --><!--<DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
             <localUC:Back></localUC:Back>
-        </DataTemplate-->
+        </DataTemplate--><!--
     </Page.Resources>
     <StackPanel Background="#FFA0C4FF">
         <ContentControl Panel.ZIndex="999"
@@ -84,7 +303,7 @@
         <StackPanel     Margin="300 -1300 0 0"
                         Width="224"
                         Height="600">
-            <!--con vat-->
+            --><!--con vat--><!--
             <Button DataContext="{StaticResource MainVM}"
                     Command="{Binding TransformToQuizzView1}"
                     Height="178.12"
@@ -215,7 +434,7 @@
                    Height="34.99"
                    Width="97.13" />
         </Button>
-    </StackPanel>
+    </StackPanel>-->
 
     <!--<Page.Resources>
         <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
@@ -380,4 +599,4 @@
             </localUC:Back>
         </Button>
     </StackPanel>-->
-</Page>
+<!--</Page>-->
