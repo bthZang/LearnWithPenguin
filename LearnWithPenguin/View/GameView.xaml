@@ -11,17 +11,69 @@
       Title="GameView">
 
     <Grid Background="#A0C4FF">
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Margin="7,0,-7,0">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Background="Beige"
                            Width="100"
                            Height="100">
                 </TextBlock>
 
-                <localUser:BackForward
-                    Margin="40, 0, 0, 0"
-                    HorizontalAlignment="Center"
-                    HorizontalContentAlignment="Center"></localUser:BackForward>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                >
+                    <Button 
+                        x:Name="Back" 
+                        Command="{Binding BackCommand}"
+                        CommandParameter="{Binding ElementName=BacknForward}"
+                        Width="20"
+                        Background="Transparent"
+                        BorderThickness="0">
+                        <Image Source="/images/Back.png"/>
+                    </Button>
+
+                    <TextBlock
+                        Text="Bài"
+                        Foreground="#FF073580"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        FontStyle="Normal"
+                        LineStackingStrategy="MaxHeight"
+                        Style="{StaticResource Baloo2-Bold}"
+                        Width="65"
+                        Margin="10, 0, 0, 0"
+                        HorizontalAlignment="Center" 
+                        TextAlignment="Center" 
+                        VerticalAlignment="Center"
+                    />
+
+                    <TextBlock
+                        x:Name="Number"
+                        Text="{Binding PositionNumber, UpdateSourceTrigger=PropertyChanged}"
+                        Foreground="#FF073580"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        FontStyle="Normal"
+                        LineStackingStrategy="MaxHeight"
+                        Style="{StaticResource Baloo2-Bold}"
+                        Width="auto"
+                        Margin="0, 0, 20, 0"
+                        HorizontalAlignment="Center" 
+                        TextAlignment="Center"
+                        VerticalAlignment="Center">
+                    </TextBlock>
+
+                    <Button 
+                        x:Name="Forward"
+                        Command="{Binding ForwardCommand}"
+                        CommandParameter="{Binding ElementName=BacknForward}"
+                        Width="20"
+                        Background="Transparent"
+                        BorderThickness="0">
+                        <Image Source="/images/Forward.png"></Image>
+                    </Button>
+                </StackPanel>
             </StackPanel>
 
             <StackPanel>
@@ -32,18 +84,22 @@
                     CornerRadius="30"
                     Width="684"
                     Height="284"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     >
                     <StackPanel Orientation="Vertical">
-                        <StackPanel>
-                            
+                        <StackPanel Background="CadetBlue"
+                            Width="682"
+                            Height="205">
+
                         </StackPanel>
-                        <Border
-                            Background="Olive"
-                            Margin="0, 210, 0, 0"
-                            Width="685"
-                            Height="70"
-                            CornerRadius="0, 0, 30, 30"
-                            >
+                        <Border Background="Chocolate"
+                                CornerRadius="0, 0, 30, 30"
+                                Width="680"
+                                Height="71.22"
+                                HorizontalAlignment="Center"
+                                >
+                            <StackPanel Background="Transparent"/>
                         </Border>
                     </StackPanel>
                 </Border>
