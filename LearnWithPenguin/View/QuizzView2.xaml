@@ -78,8 +78,7 @@
         </StackPanel>
         <StackPanel  Margin="0 -654.3 0 282.03"
                      Height="279"
-                     Width="800"
-                     >
+                     Width="800">
             <Button Height="279.92"
                     Width="561.72"
                     Background="Transparent"
@@ -98,8 +97,60 @@
             <Image Stretch="Uniform"
                    Source="../images/QuizzView2.png"
                    Width="189.18"
-                   Height="319.68" 
-                   Margin="585 -265 0 0"/>
+                   Height="319.68"
+                   Margin="585 -265 0 0" />
+
+        </StackPanel>
+        <StackPanel Margin="75 -350 70.31 0"
+                    Height="188">
+            <Button Height="191.84"
+                    Width="309.38"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="-680 0 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/WhiteRectangleQuizzView2.png"
+                       Height="191.84"
+                       Width="309.38" />
+            </Button>
+            <Button Height="191.84"
+                    Width="309.38"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0 -200 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/WhiteRectangleQuizzView2.png"
+                       Height="202"
+                       Width="309" />
+            </Button>
+            <Button Height="191.84"
+                    Width="309.38"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="670 -200 0 0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Image Stretch="Uniform"
+                       Source="../images/WhiteRectangleQuizzView2.png"
+                       Height="191.84"
+                       Width="309.38" />
+            </Button>
 
         </StackPanel>
 
