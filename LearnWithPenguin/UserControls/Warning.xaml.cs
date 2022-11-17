@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for WriteView.xaml
+    /// Interaction logic for Warning.xaml
     /// </summary>
-    public partial class WriteView : System.Windows.Controls.Page
+    public partial class Warning : System.Windows.Controls.UserControl
     {
-        public WriteView()
+        public Warning()
         {
-        
+            InitializeComponent();
         }
     }
 }
