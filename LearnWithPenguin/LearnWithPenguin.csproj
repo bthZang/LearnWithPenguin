@@ -104,7 +104,6 @@
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="ViewModel\UserRankingViewModel.cs" />
     <Compile Include="ViewModel\UserStatisticViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
@@ -123,9 +122,6 @@
     </Compile>
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserView.xaml.cs">
-      <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
@@ -223,29 +219,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\UserView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
     <Resource Include="fonts\Baloo2-ExtraBold.ttf" />
