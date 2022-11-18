@@ -96,6 +96,7 @@
                            Height="251.52"
                            Width="195.66" />
                 </Button>
+                
                 <Button Command="{Binding TransformToCoding}"
                         Height="251"
                         Width="201"

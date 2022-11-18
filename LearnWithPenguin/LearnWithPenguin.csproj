@@ -132,9 +132,6 @@
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UserView.xaml.cs">
-      <DependentUpon>UserView.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
