@@ -36,141 +36,300 @@
 
         <StackPanel DataContext="{StaticResource HomeVM}"
                     Orientation="Horizontal">
-        <ContentControl Panel.ZIndex="999"
-                        DataContext="{StaticResource HomeVM}"
-                        Content="{Binding Menu}" />
+            <ContentControl Panel.ZIndex="999"
+                            DataContext="{StaticResource MainVM}"
+                            Content="{Binding Menu}" />
 
-        <StackPanel DataContext="{StaticResource HomeVM}"
-                    Orientation="Horizontal">
+            <StackPanel DataContext="{StaticResource HomeVM}"
+                        Orientation="Horizontal">
 
-            <localUC:Icon Width="63.28"
-                          Height="63.28"
-                          Margin="42.97,-645.16,0,0"
-                          DataContext="{StaticResource MainVM}"
-                          Command="{Binding ShowMenu}">
-                          DataContext="{StaticResource HomeVM}"
-                          Command="{Binding ShowMenu}">
-                <Image Source="/UserControls/menu.png"
-                       Width="62.55"
-                       Height="62.55"></Image>
-
-            </localUC:Icon>
+                <localUC:Icon Width="63.28"
+                              Height="63.28"
+                              Margin="42.97,-645.16,0,0"
+                              DataContext="{StaticResource MainVM}"
+                              Command="{Binding ShowMenu}">
+                </localUC:Icon>
 
 
-            <StackPanel  Margin="156.35 196.88 74.9 100">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToRead}"
-                        Height="251.52"
-                        Width="200"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/TapDoc.png"
-                           Height="251.52"
-                           Width="195.66" />
-                </Button>
+                <StackPanel  Margin="156.35 196.88 74.9 100">
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToRead}"
+                            Height="251.52"
+                            Width="200"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/TapDoc.png"
+                               Height="251.52"
+                               Width="195.66" />
+                    </Button>
+                    <StackPanel Margin="0 90 0 0"
+                                Width="224"
+                                Height="493">
+                        <Button DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformToPuzzle}"
+                                Height="251.52"
+                                Width="200"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Stretch="Uniform"
+                                   Source="../images/DoVuiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
 
-                <Button DataContext="{StaticResource HomeVM}"
-                        Command="{Binding ShowWarning}"
-                        Height="296"
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToWrite}"
-                        Height="251.52"
-                        Width="200"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/TapViet.png"
-                           Height="251.52"
-                           Width="195.66"></Image>
-                </Button>
+                        <Button Command="{Binding TransformToCoding}"
+                                Height="251"
+                                Width="201"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0 0 0 0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Button.DataContext>
+                                <StaticResource ResourceKey="MainVM" />
+                            </Button.DataContext>
+                            <Image Stretch="Uniform"
+                                   Source="../images/TroChoiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Margin="0 90 0 0"
+                                Width="224"
+                                Height="493">
+                        <Button DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformToPuzzle}"
+                                Height="251.52"
+                                Width="200"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Stretch="Uniform"
+                                   Source="../images/DoVuiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
+
+                        <Button Command="{Binding TransformToCoding}"
+                                Height="251"
+                                Width="201"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0 0 0 0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Button.DataContext>
+                                <StaticResource ResourceKey="MainVM" />
+                            </Button.DataContext>
+                            <Image Stretch="Uniform"
+                                   Source="../images/TroChoiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Margin="0 90 0 0"
+                                Width="224"
+                                Height="493">
+                        <Button DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformToPuzzle}"
+                                Height="251.52"
+                                Width="200"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Stretch="Uniform"
+                                   Source="../images/DoVuiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
+
+                        <Button Command="{Binding TransformToCoding}"
+                                Height="251"
+                                Width="201"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0 0 0 0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <Button.DataContext>
+                                <StaticResource ResourceKey="MainVM" />
+                            </Button.DataContext>
+                            <Image Stretch="Uniform"
+                                   Source="../images/TroChoiNoText.png"
+                                   Height="251.52"
+                                   Width="195.66" />
+                        </Button>
+                    </StackPanel>
+
+                    <!--<Button DataContext="{StaticResource HomeVM}"
+                            Command="{Binding ShowWarning}"
+                            Height="296"></Button>
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToWrite}"
+                            Height="251.52"
+                            Width="200"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/TapViet.png"
+                               Height="251.52"
+                               Width="195.66"></Image>
+                    </Button>
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToPuzzle}"
+                            Height="251.52"
+                            Width="200"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/DoVuiNoText.png"
+                               Height="251.52"
+                               Width="195.66" />
+                    </Button>
+
+                    <Button Command="{Binding TransformToCoding}"
+                            Height="251"
+                            Width="201"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Margin="0 0 0 0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Button.DataContext>
+                            <StaticResource ResourceKey="MainVM" />
+                        </Button.DataContext>
+                        <Image Stretch="Uniform"
+                               Source="../images/TroChoiNoText.png"
+                               Height="251.52"
+                               Width="195.66" />
+                    </Button>-->
+                </StackPanel>
+                <StackPanel Margin="0 90 0 0"
+                            Width="224"
+                            Height="493">
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToPuzzle}"
+                            Height="251.52"
+                            Width="200"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/DoVuiNoText.png"
+                               Height="251.52"
+                               Width="195.66" />
+                    </Button>
+
+                    <Button Command="{Binding TransformToCoding}"
+                            Height="251"
+                            Width="201"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Margin="0 0 0 0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Button.DataContext>
+                            <StaticResource ResourceKey="MainVM" />
+                        </Button.DataContext>
+                        <Image Stretch="Uniform"
+                               Source="../images/TroChoiNoText.png"
+                               Height="251.52"
+                               Width="195.66" />
+                    </Button>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Margin="0 90 0 0"
-                        Width="224"
-                        Height="493">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToPuzzle}"
-                        Height="251.52"
-                        Width="200"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/DoVuiFixed.png"
-                           Height="251.52"
-                           Width="195.66" />
-                </Button>
-                
-                <Button Command="{Binding TransformToCoding}"
-                        Height="251"
-                        Width="201"
-                        Background="Transparent"
-                        BorderThickness="0"
-                        Margin="0 0 0 0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <Button.DataContext>
-                        <StaticResource ResourceKey="MainVM" />
-                    </Button.DataContext>
-                    <Image Stretch="Uniform"
-                           Source="../images/TroChoiFixed.png"
-                           Height="251.52"
-                           Width="195.66" />
-                </Button>
-            </StackPanel>
-        </StackPanel>
 
 
-        <Image Width="454"
-               Source="../images/HomeScreen.png"
-               Margin="0,370,0,-16"
-               HorizontalAlignment="Right"
-               Stretch="Uniform" />
-        <StackPanel HorizontalAlignment="Right">
-            <StackPanel VerticalAlignment="Top"
-                        Margin="143.72 85.94 0 140.81">
-                <TextBlock Text="BẮT ĐẦU"
-                           Foreground="#FF073580"
-                           FontSize="56.56"
-                           FontWeight="Bold"
-                           FontStyle="Normal"
-                           LineStackingStrategy="MaxHeight"
-                           Style="{StaticResource Baloo2-Bold}"
-                           Width="360"
-                           Height="98" />
+            <Image Width="454"
+                   Source="../images/HomeScreen.png"
+                   Margin="0,370,0,-16"
+                   HorizontalAlignment="Right"
+                   Stretch="Uniform" />
+            <StackPanel HorizontalAlignment="Right">
                 <StackPanel VerticalAlignment="Top"
-                            Margin="0 24.12 0 0">
-                    <TextBlock TextWrapping="Wrap"
-                               Text="Hãy chọn một bài học để bắt đầu cùng Penguine nhé!"
-                               Foreground="#2D3D8F"
-                               FontSize="28.13"
+                            Margin="143.72 85.94 0 140.81">
+                    <TextBlock Text="BẮT ĐẦU"
+                               Foreground="#FF073580"
+                               FontSize="56.56"
+                               FontWeight="Bold"
                                FontStyle="Normal"
                                LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Regular}"
-                               Width="362"
-                               Height="88" />
+                               Style="{StaticResource Baloo2-Bold}"
+                               Width="360"
+                               Height="98" />
+                    <StackPanel VerticalAlignment="Top"
+                                Margin="0 24.12 0 0">
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="Hãy chọn một bài học để bắt đầu cùng Penguine nhé!"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.13"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Regular}"
+                                   Width="362"
+                                   Height="88" />
 
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

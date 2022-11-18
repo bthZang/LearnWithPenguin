@@ -421,5 +421,11 @@
   <ItemGroup>
     <Resource Include="images\WhiteRectangleQuizzView2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiNoText.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
