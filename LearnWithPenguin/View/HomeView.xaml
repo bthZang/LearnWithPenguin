@@ -31,7 +31,7 @@
               Panel.ZIndex="9999">-->
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource HomeVM}"
-                        Content="{Binding NavigatetoWarning}" />
+                        Content="{Binding NavigatetoWarning}" Margin="10,-44,-10,44" />
         <!--</Grid>-->
 
         <StackPanel DataContext="{StaticResource HomeVM}"

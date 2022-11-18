@@ -7,16 +7,26 @@
       xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1200"
       Title="GameView">
 
     <Grid Background="#A0C4FF">
-        <StackPanel Orientation="Vertical" Margin="7,0,-7,0">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Background="Beige"
-                           Width="100"
-                           Height="100">
-                </TextBlock>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal"
+                >
+                <StackPanel Background="Transparent"
+                            Margin="0, 0, 0, 0"
+                            HorizontalAlignment="Left"
+                            Width="130"
+                            Height="100">
+                    <localUser:Icon
+                                  Width="63.28"
+                                  Height="63.28"
+                                  Margin="40,35.16,0,0"
+                                  DataContext="{StaticResource MainVM}"
+                                  Command="{Binding ShowMenu}">
+                    </localUser:Icon>
+                </StackPanel>
 
                 <StackPanel
                     Orientation="Horizontal"
@@ -61,8 +71,7 @@
                         Margin="0, 0, 20, 0"
                         HorizontalAlignment="Center" 
                         TextAlignment="Center"
-                        VerticalAlignment="Center">
-                    </TextBlock>
+                        VerticalAlignment="Center"/>
 
                     <Button 
                         x:Name="Forward"
@@ -71,32 +80,51 @@
                         Width="20"
                         Background="Transparent"
                         BorderThickness="0">
-                        <Image Source="/images/Forward.png"></Image>
+                        <Image Source="/images/Forward.png"/>
                     </Button>
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel>
+            <StackPanel Margin="0, 80, 0, 0">
                 <Border
                     Background="Beige"
                     BorderBrush="#073580"
                     BorderThickness="4, 4, 4, 4"
                     CornerRadius="30"
-                    Width="684"
-                    Height="284"
+                    Width="1000"
+                    Height="500"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     >
                     <StackPanel Orientation="Vertical">
-                        <StackPanel Background="CadetBlue"
-                            Width="682"
-                            Height="205">
+                        <DockPanel Background="CadetBlue"
+                            Width="1000"
+                            Height="380">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
 
-                        </StackPanel>
+                                <Image Grid.Column="0" Grid.Row="1"
+                                       >
+                                    
+                                </Image>
+                            </Grid>
+                        </DockPanel>
                         <Border Background="Chocolate"
-                                CornerRadius="0, 0, 30, 30"
-                                Width="680"
-                                Height="71.22"
+                                CornerRadius="0, 0, 33, 33"
+                                Width="997"
+                                Height="111.95"
                                 HorizontalAlignment="Center"
                                 >
                             <StackPanel Background="Transparent"/>
