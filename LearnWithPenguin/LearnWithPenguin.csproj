@@ -369,5 +369,14 @@
   <ItemGroup>
     <Resource Include="View\replay.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\backReadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\nextReadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\reReadButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
