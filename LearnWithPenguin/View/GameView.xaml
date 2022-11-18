@@ -240,13 +240,25 @@
                                     </Image>
                                 </Border>
                                 <Border Grid.Column="6"
-                                        Background="#FFFFFF"
+                                        Background="#FAD415"
                                         BorderThickness="2, 2, 2, 2"
                                         BorderBrush="#073580"
                                         Width="130"
                                         Height="100"
-                                        CornerRadius="90">
-
+                                        CornerRadius="90"
+                                        HorizontalAlignment="Center">
+                                    <TextBlock Text="RUN"
+                                               Foreground="#FFFFFF"
+                                               FontSize="35"
+                                               FontWeight="Bold"
+                                               FontStyle="Normal"
+                                               LineStackingStrategy="MaxHeight"
+                                               Style="{StaticResource Baloo2-Bold}"
+                                               Width="auto"
+                                               Height="auto"
+                                               Margin="0, 20, 0, 0"
+                                               HorizontalAlignment="Center">
+                                    </TextBlock>
                                 </Border>
                             </Grid>
                         </Border>
