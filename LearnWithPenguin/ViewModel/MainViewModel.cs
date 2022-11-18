@@ -98,7 +98,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new HomeViewModel();                    
+                    NavigatetoHome = new HomeViewModel();
                 });
             }
 
@@ -119,6 +119,70 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+
+        //public ICommand TurnOffMenu
+        //{
+
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            if (_navigatetoHome == HomeViewModel)
+        //            {
+        //                NavigatetoHome = new UserViewModel();
+        //            }
+        //        });
+        //    }
+
+        //    set { }
+        //}
+
+        //public void SupportTurnOffMenu()
+        //{
+
+        //}
+
+        private BaseViewModel _menu;
+
+        public BaseViewModel Menu
+        {
+            get
+            {
+                return _menu;
+            }
+            set
+            {
+                _menu = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand ShowMenu
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Menu = new MenuViewModel();
+                });
+            }
+
+            set { }
+        }
+
+
+        public ICommand HideMenu
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Menu = null;
+                });
+            }
+
+            set { }
+        }
         public ICommand TransformToQuizzView1
         {
             get

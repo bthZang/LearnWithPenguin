@@ -57,7 +57,7 @@
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="Border.CornerRadius"
-                                        Value="30 30 30 30" />
+                                        Value="20" />
                             </Style>
                         </Button.Resources>
                         <Grid>

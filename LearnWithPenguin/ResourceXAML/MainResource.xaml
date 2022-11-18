@@ -31,6 +31,11 @@
     <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
     <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
 
+    <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
+    <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>
+
+
+
 
 
 

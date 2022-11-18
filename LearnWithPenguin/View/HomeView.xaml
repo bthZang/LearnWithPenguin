@@ -17,9 +17,25 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUC:Menu />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:WarningViewModel}">
+            <localUC:Warning />
+        </DataTemplate>
     </Page.Resources>
 
     <Grid Background="#FFA0C4FF">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource MainVM}"
+                        Content="{Binding Menu}" />
+        <!--<Grid Width="892"
+              Height="606"
+              Panel.ZIndex="9999">-->
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource HomeVM}"
+                        Content="{Binding NavigatetoWarning}" />
+        <!--</Grid>-->
+
+        <StackPanel DataContext="{StaticResource HomeVM}"
+                    Orientation="Horizontal">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource HomeVM}"
                         Content="{Binding Menu}" />
@@ -30,6 +46,8 @@
             <localUC:Icon Width="63.28"
                           Height="63.28"
                           Margin="42.97,-645.16,0,0"
+                          DataContext="{StaticResource MainVM}"
+                          Command="{Binding ShowMenu}">
                           DataContext="{StaticResource HomeVM}"
                           Command="{Binding ShowMenu}">
                 <Image Source="/UserControls/menu.png"
@@ -58,6 +76,9 @@
                            Width="195.66" />
                 </Button>
 
+                <Button DataContext="{StaticResource HomeVM}"
+                        Command="{Binding ShowWarning}"
+                        Height="296"
                 <Button DataContext="{StaticResource MainVM}"
                         Command="{Binding TransformToWrite}"
                         Height="251.52"
