@@ -56,7 +56,7 @@
                             </Button.Resources>
 
                             <Image Source="/View/backReadIcon.png"
-                                   Width="18.58"
+                                   Width="25"
                                    Height="32.52">
                             </Image>
                         </Button>
@@ -90,7 +90,7 @@
                                 </Style>
                             </Button.Resources>
                             <Image Source="/View/nextReadIcon.png"
-                                   Width="18.58"
+                                   Width="25"
                                    Height="32.52">
                             </Image>
                         </Button>
@@ -129,7 +129,7 @@
                            Style="{StaticResource Baloo2-Bold}"
                            TextAlignment="Center"
                            Foreground="White">
-                
+
                 </TextBlock>
 
                 <Button Height="99.05"
@@ -181,24 +181,24 @@
 
                     <Image Source="/View/reReadButton.png"
                            Height="40.51"
-                               Width="48.55">
-                        </Image>
-                    
-                </Button>
+                           Width="48.55">
+                    </Image>
 
+                </Button>
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUC:HomeIcon Width="97.13"
+                                          Height="34.99"
+                                          Margin="42.97,580.63,0,0"
+                                          DataContext="{StaticResource MainVM}"
+                                          Command="{Binding Transform}">
+
+                        </localUC:HomeIcon>
+                    </Grid>
+                </DockPanel>
 
             </Grid>
-            <DockPanel>
-                <Grid HorizontalAlignment="Left">
-                    <localUC:HomeIcon Width="97.13"
-                                      Height="34.99"
-                                      Margin="42.97,21.87,0,0"
-                                      DataContext="{StaticResource MainVM}"
-                                      Command="{Binding Transform}">
 
-                    </localUC:HomeIcon>
-                </Grid>
-            </DockPanel>
         </StackPanel>
 
     </Grid>
