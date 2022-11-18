@@ -408,5 +408,20 @@
   <ItemGroup>
     <Resource Include="View\Coding.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish.png" />
+    <Resource Include="images\iceJumpa.png" />
+    <Resource Include="images\iceJumpb.png" />
+    <Resource Include="images\iceJumpc.png" />
+    <Resource Include="images\iceJumpd.png" />
+    <Resource Include="images\iceStand.png" />
+    <Resource Include="images\left.png" />
+    <Resource Include="images\penguin.png" />
+    <Resource Include="images\right.png" />
+    <Resource Include="images\turnDown.png" />
+    <Resource Include="images\turnDR.png" />
+    <Resource Include="images\turnUp.png" />
+    <Resource Include="images\turnUR.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
