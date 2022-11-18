@@ -150,16 +150,105 @@
                                 </Image>
                                 <Image Grid.Column="5"
                                        Source="\images\fish.png"
-                                       Margin="12,41,-11,99"
+                                       Margin="32,70,-20,99"
                                        Grid.RowSpan="2" />
                             </Grid>
                         </Border>
                         <Border Background="#E7F7FD"
                                 CornerRadius="0, 0, 41, 41"
-                                Width="998"
+                                Width="996"
                                 Height="127"
                                 HorizontalAlignment="Center">
-                            <StackPanel Background="Transparent" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Grid.Column="0"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45">
+                                    <Image Source="\images\right.png"
+                                           Margin="32,27,32,27">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="1"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45">
+                                    <Image Source="\images\left.png"
+                                           Margin="32,27,32,27">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="2"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45">
+                                    <Image Source="\images\turnUR.png"
+                                           Margin="32,27,32,27">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="3"
+                                        Background="#FFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45">
+                                    <Image Source="\images\turnDR.png"
+                                           Margin="32,27,32,27">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="4"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45">
+                                    <Image Source="\images\turnUp.png"
+                                           Margin="25,20,25,20">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="5"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#754040"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="45"
+                                        Margin="6,14,6,13">
+                                    <Image Source="\images\turnDown.png"
+                                           Margin="22,18,22,18">
+                                    </Image>
+                                </Border>
+                                <Border Grid.Column="6"
+                                        Background="#FFFFFF"
+                                        BorderThickness="2, 2, 2, 2"
+                                        BorderBrush="#073580"
+                                        Width="130"
+                                        Height="100"
+                                        CornerRadius="90">
+
+                                </Border>
+                            </Grid>
                         </Border>
                     </StackPanel>
                 </Border>
