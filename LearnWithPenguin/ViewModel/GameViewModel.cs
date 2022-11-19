@@ -56,7 +56,6 @@ namespace LearnWithPenguin.ViewModel
         public GameViewModel()
         {
             PositionNumber = "1";
-
             GameTurn = new Game1();
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>

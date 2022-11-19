@@ -142,11 +142,17 @@
                 </StackPanel>
 
                 <Border Background="Beige"
-                        BorderThickness="4, 4, 4, 4"
+                        BorderThickness="4, 5, 5, 6"
                         BorderBrush="#073580"
                         CornerRadius="11.06"
                         Width="542.59"
                         Height="315">
+                    <Image Width="542"
+                           Height="314"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           DataContext="{StaticResource CodingVM}"
+                           Source="{Binding GameView}" />
                 </Border>
 
                 <StackPanel Orientation="Horizontal"

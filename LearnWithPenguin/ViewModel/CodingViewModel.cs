@@ -1,15 +1,22 @@
 ﻿
+using LearnWithPenguin.UserControls;
+using LearnWithPenguin.View;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace LearnWithPenguin.ViewModel
 {
     public class CodingViewModel : BaseViewModel
     {
+        protected BaseViewModel _navigatetoView;
+        public BaseViewModel NavigatetoView { get { return _navigatetoView; } set { _navigatetoView = value; OnPropertyChanged(); } }
         public ICommand ReviewTransform { get; set; }
         public ICommand PlayTransform { get; set; }
         public ICommand ForwardCommand { get; set; }
@@ -21,13 +28,15 @@ namespace LearnWithPenguin.ViewModel
 
         private string _GameTurn;
         public string GameTurn { get { return _GameTurn; } set { _GameTurn = value; OnPropertyChanged(); } }
+        private string _GameView;
+        public string GameView { get { return _GameView; } set { _GameView = value; OnPropertyChanged(); } }
 
         public CodingViewModel()
         {
-            ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
-            PlayTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
 
             PositionNumber = "1";
+            GameView = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+
             ForwardCommand = new RelayCommand<object>((p) =>
             {
                 return true;
@@ -37,8 +46,24 @@ namespace LearnWithPenguin.ViewModel
                 if (getNum == 3)
                     goto stopNum;
                 getNum++;
-                stopNum:
+            stopNum:
                 PositionNumber = Convert.ToString(getNum);
+
+                switch (getNum)
+                {
+                    case 1:
+                        string gv1 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+                        GameView = gv1;
+                        break;
+                    case 2:
+                        string gv2 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game2@3x.png";
+                        GameView = gv2;
+                        break;
+                    case 3:
+                        string gv3 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game3@3x.png";
+                        GameView = gv3;
+                        break;
+                }
             });
 
             BackwardCommand = new RelayCommand<object>((p) =>
@@ -50,10 +75,35 @@ namespace LearnWithPenguin.ViewModel
                 if (getNum == 1)
                     goto stopNum;
                 getNum--;
-                stopNum:
+            stopNum:
                 PositionNumber = Convert.ToString(getNum);
+                switch (getNum)
+                {
+                    case 1:
+                        string gv1 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+                        GameView = gv1;
+                        break;
+                    case 2:
+                        string gv2 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game2@3x.png";
+                        GameView = gv2;
+                        break;
+                    case 3:
+                        string gv3 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game3@3x.png";
+                        GameView = gv3;
+                        break;
+                }
             });
 
+            //ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
+
+            //this.NavigatetoView = new GameViewModel();
+            //PlayTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) =>
+            //{
+            //    return true;
+            //}, (p) =>
+            //{
+            //    NavigatetoView = new GameViewModel();
+            //});
         }
-    }
+}
 }
