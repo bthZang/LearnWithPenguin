@@ -427,5 +427,11 @@
   <ItemGroup>
     <Resource Include="images\TroChoiNoText.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapDocNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapVietNoText.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
