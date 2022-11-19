@@ -92,7 +92,8 @@
                             VerticalAlignment="Center"
                             Margin="0, 80, 0, 20">
                     <Button x:Name="Back"
-                            Command="{Binding BackCommand}"
+                            Command="{Binding BackwardCommand}"
+                            DataContext="{StaticResource CodingVM}"
                             CommandParameter="{Binding ElementName=BacknForward}"
                             Width="20"
                             Background="Transparent"
@@ -115,6 +116,7 @@
 
                     <TextBlock x:Name="Number"
                                Text="{Binding PositionNumber, UpdateSourceTrigger=PropertyChanged}"
+                               DataContext="{StaticResource CodingVM}"
                                Foreground="#FF073580"
                                FontSize="30"
                                FontWeight="Bold"
@@ -130,6 +132,7 @@
 
                     <Button x:Name="Forward"
                             Command="{Binding ForwardCommand}"
+                            DataContext="{StaticResource CodingVM}"
                             CommandParameter="{Binding ElementName=BacknForward}"
                             Width="20"
                             Background="Transparent"

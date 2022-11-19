@@ -24,5 +24,10 @@ namespace LearnWithPenguin.View
         {
             InitializeComponent();
         }
+
+        private void Game1_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+
+        }
     }
 }
