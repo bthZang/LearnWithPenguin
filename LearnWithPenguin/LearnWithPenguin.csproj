@@ -440,9 +440,43 @@
     <Resource Include="images\penguin.png" />
     <Resource Include="images\right.png" />
     <Resource Include="images\turnDown.png" />
-    <Resource Include="images\turnDR.png" />
     <Resource Include="images\turnUp.png" />
     <Resource Include="images\turnUR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\penguin%402x.png" />
+    <Resource Include="images\penguin%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish%402x.png" />
+    <Resource Include="images\fish%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\left%402x.png" />
+    <Resource Include="images\left%403x.png" />
+    <Resource Include="images\right%402x.png" />
+    <Resource Include="images\right%403x.png" />
+    <Resource Include="images\turnDown%402x.png" />
+    <Resource Include="images\turnDown%403x.png" />
+    <Resource Include="images\turnDR%402x.png" />
+    <Resource Include="images\turnDR%403x.png" />
+    <Resource Include="images\turnDR.png" />
+    <Resource Include="images\turnUp%402x.png" />
+    <Resource Include="images\turnUp%403x.png" />
+    <Resource Include="images\turnUR%402x.png" />
+    <Resource Include="images\turnUR%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\iceJumpa%402x.png" />
+    <Resource Include="images\iceJumpa%403x.png" />
+    <Resource Include="images\iceJumpb%402x.png" />
+    <Resource Include="images\iceJumpb%403x.png" />
+    <Resource Include="images\iceJumpc%402x.png" />
+    <Resource Include="images\iceJumpc%403x.png" />
+    <Resource Include="images\iceJumpd%402x.png" />
+    <Resource Include="images\iceJumpd%403x.png" />
+    <Resource Include="images\iceStand%402x.png" />
+    <Resource Include="images\iceStand%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
