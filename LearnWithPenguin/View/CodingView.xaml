@@ -16,7 +16,6 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUser:Menu />
         </DataTemplate>
-
     </Page.Resources>
 
     <Grid Background="#A0C4FF">
@@ -65,7 +64,7 @@
                 <Image Source="/View/Coding.png"
                        Width="367.85"
                        Margin="75, 21, 80, 0" />
-                <StackPanel Background="Transparent"
+                <!--<StackPanel Background="Transparent"
                             HorizontalAlignment="Left">
                     <localUser:HomeIcon Width="98"
                                         Height="34.99"
@@ -73,7 +72,17 @@
                                         DataContext="{StaticResource MainVM}"
                                         Command="{Binding Transform}">
                     </localUser:HomeIcon>
-                </StackPanel>
+                </StackPanel>-->
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUser:HomeIcon Width="97.13"
+                                            Height="34.99"
+                                            Margin="42.97,21.87,0,0"
+                                            DataContext="{StaticResource MainVM}"
+                                            Command="{Binding Transform}">
+                        </localUser:HomeIcon>
+                    </Grid>
+                </DockPanel>
             </StackPanel>
 
             <StackPanel Orientation="Vertical"

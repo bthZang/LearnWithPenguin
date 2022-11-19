@@ -11,8 +11,16 @@
       d:DesignWidth="1125"
       Title="GameView">
 
+    <Page.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
+            <localUser:Menu />
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid Background="#A0C4FF">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource MainVM}"
+                        Content="{Binding Menu}" />
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Grid>
@@ -264,9 +272,17 @@
                         </Border>
                     </StackPanel>
                 </Border>
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUser:Back Width="97.13"
+                                        Height="34.99"
+                                        Margin="42.97,21.87,0,0"
+                                        DataContext="{StaticResource MainVM}"
+                                        Command="{Binding TransformToCoding}">
+                        </localUser:Back>
+                    </Grid>
+                </DockPanel>
             </StackPanel>
-
-            <StackPanel />
         </StackPanel>
     </Grid>
 </Page>

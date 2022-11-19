@@ -63,6 +63,15 @@
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Game1.xaml.cs">
+      <DependentUpon>Game1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game2.xaml.cs">
+      <DependentUpon>Game2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game3.xaml.cs">
+      <DependentUpon>Game3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
@@ -143,6 +152,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\BadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Game1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Game2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Game3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

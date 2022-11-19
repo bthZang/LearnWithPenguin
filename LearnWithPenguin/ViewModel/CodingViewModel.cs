@@ -17,7 +17,6 @@ namespace LearnWithPenguin.ViewModel
         {
             ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => {return true;},(p) => { });
             PlayTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
-
         }
     }
 }
