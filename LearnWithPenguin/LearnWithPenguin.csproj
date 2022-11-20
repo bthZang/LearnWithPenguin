@@ -105,6 +105,8 @@
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
+    <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Include="View\PuzzleView.xaml.cs">
       <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuizzView1.xaml.cs">
+      <DependentUpon>QuizzView1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuizzView2.xaml.cs">
+      <DependentUpon>QuizzView2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -222,6 +230,14 @@
     <Page Include="View\PuzzleView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuizzView1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\QuizzView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ReadView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -368,6 +384,45 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\replay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\whiteRectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\puzzleSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\nextIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiFixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiFixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\QuizzSubjectView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\QuizzView2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\WhiteRectangleQuizzView2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapDocNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapVietNoText.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\backReadIcon.png" />

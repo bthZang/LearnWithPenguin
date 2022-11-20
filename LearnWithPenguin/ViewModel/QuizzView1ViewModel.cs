@@ -1,33 +1,14 @@
-﻿using System.Runtime.CompilerServices;
-using LearnWithPenguin.UserControl;
-using LearnWithPenguin.UserControls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LearnWithPenguin.ViewModel
 {
-    public class PuzzleViewModel : BaseViewModel
+    internal class QuizzView1ViewModel: BaseViewModel
     {
-        protected BaseViewModel _navigateHome;
-        public BaseViewModel NavigateHome
-        {
-            get
-            {
-                return _navigateHome;
-            }
-            set
-            {
-                _navigateHome = value;
-                OnPropertyChanged();
-            }
-        }
         protected BaseViewModel _navigateToQuizzView1;
         public BaseViewModel NavigateToQuizzView1
         {
@@ -81,5 +62,6 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
     }
 }
