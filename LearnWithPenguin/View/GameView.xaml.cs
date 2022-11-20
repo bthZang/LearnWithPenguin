@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for UserView.xaml
+    /// Interaction logic for GameView.xaml
     /// </summary>
-    public partial class UserView : System.Windows.Controls.Page
+    public partial class GameView : Page
     {
-        public UserView()
+        public GameView()
         {
-         
+            InitializeComponent();
+        }
+
+        private void Game1_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+
         }
     }
 }

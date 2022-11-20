@@ -44,18 +44,18 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-        public ICommand TransformToRead
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new ReadViewModel();
-                });
-            }
+        //public ICommand TransformToRead
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            NavigatetoHome = new ReadViewModel();
+        //        });
+        //    }
 
-            set { }
-        }
+        //    set { }
+        //}
         public ICommand TransformToWrite
         {
             get
@@ -113,6 +113,19 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new UserViewModel();
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand TransformToGame
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new GameViewModel();
                 });
             }
 

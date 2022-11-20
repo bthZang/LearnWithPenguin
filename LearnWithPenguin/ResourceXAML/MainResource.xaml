@@ -13,6 +13,7 @@
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
     <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
+    <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
     
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
@@ -30,6 +31,8 @@
     <viewmodel:UserInfoViewModel x:Key="UserInfoVM"></viewmodel:UserInfoViewModel>
     <viewmodel:UserStatisticViewModel x:Key="UserStatisticVM"></viewmodel:UserStatisticViewModel>
     <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
+    
+    
 
     <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
     <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>

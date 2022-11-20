@@ -27,9 +27,6 @@ namespace LearnWithPenguin.ViewModel
         protected BaseViewModel _navigatetoCoding;
         protected BaseViewModel _navigatetoWarning;
 
-
-
-
         public BaseViewModel NavigatetoRead
         {
             get
