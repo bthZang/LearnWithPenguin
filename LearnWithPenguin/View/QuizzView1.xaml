@@ -1,8 +1,8 @@
 ﻿<Page x:Class="LearnWithPenguin.View.QuizzView1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
       xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
@@ -81,7 +81,17 @@
                        Width="59.46"
                        Height="59.46" />
             </Button>
-            <TextBlock Text="Bai..."
+            <Label  Name="QuestionOrder"
+                    Margin="110 -69 110 0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Foreground="#2D3D8F"
+                    FontSize="36.09"
+                    FontStyle="Normal"
+                    Style="{StaticResource ResourceKey=Baloo2-Bold}">
+                Bài
+            </Label>
+            <!--<TextBlock Text="Bai..."
                        Margin="110 -69 110 0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
@@ -92,69 +102,77 @@
                        LineStackingStrategy="MaxHeight"
                        Style="{StaticResource ResourceKey=Baloo2-Bold}">
 
-            </TextBlock>
+            </TextBlock>-->
         </StackPanel>
         <StackPanel  Margin="-400 -640 0 200"
                      Width="309.38">
-            <Button 
+            <Button Name="ans1"
                     Height="191.84"
                     Width="309.38"
-                    Background="Transparent"
-                    BorderThickness="0">
+                    Background="White"
+                    BorderThickness="0"
+                    Click="checkAnswer"
+                    Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="Border.CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
+                <!--<Image Stretch="Uniform"
                        Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
             </Button>
 
-            <Button 
+            <Button Name="ans2"
                     Height="191.84"
                     Width="309.38"
-                    Background="Transparent"
+                    Background="White"
                     BorderThickness="0"
-                    Margin="0 57.38 0 0">
+                    Click="checkAnswer"
+                    Margin="0 57.38 0 0"
+                    Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="Border.CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
+                <!--<Image Stretch="Uniform"
                        Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
             </Button>
         </StackPanel>
         <StackPanel Margin="550.94 -640 150 200"
                     Width="309.38">
-            <Button
+            <Button Name="ans3"
                     Height="191.84"
                     Width="309.38"
-                    Background="Transparent"
-                    BorderThickness="0">
+                    Background="White"
+                    BorderThickness="0"
+                    Click="checkAnswer"
+                    Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="Border.CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
+                <!--<Image Stretch="Uniform"
                        Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
             </Button>
-            <Button
+            <Button Name="ans4"
                     Height="191.84"
                     Width="309.38"
-                    Background="Transparent"
+                    Background="White"
                     BorderThickness="0"
-                    Margin="0 57.38 0 0">
+                    Margin="0 57.38 0 0"
+                    Click="checkAnswer"
+                    Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
@@ -164,10 +182,10 @@
                 <Button.DataContext>
                     <StaticResource ResourceKey="MainVM" />
                 </Button.DataContext>
-                <Image Stretch="Uniform"
+                <!--<Image Stretch="Uniform"
                        Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
             </Button>
         </StackPanel>
         <Button Margin="0 -250 0 0"

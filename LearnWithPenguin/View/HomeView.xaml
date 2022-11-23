@@ -69,7 +69,24 @@
                            Source="../images/TapDocNoText.png"
                            Height="200"
                            Width="198" />
-                    <Button.Style>
+                    <Button.BitmapEffect>
+
+                        <BitmapEffectGroup>
+
+                            <OuterGlowBitmapEffect GlowColor="Red" GlowSize="20"></OuterGlowBitmapEffect>
+
+                            <!--<OuterGlowBitmapEffect></OuterGlowBitmapEffect>
+
+                            <OuterGlowBitmapEffect></OuterGlowBitmapEffect>
+
+                            <DropShadowBitmapEffect></DropShadowBitmapEffect>
+
+                            <BevelBitmapEffect></BevelBitmapEffect>-->
+
+                        </BitmapEffectGroup>
+
+                    </Button.BitmapEffect>
+                    <!--<Button.Style>
                         <Style TargetType="Button">
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver"
@@ -80,12 +97,12 @@
                                                 <ThicknessAnimation Duration="0:0:0.250"
                                                                     To="0"
                                                                     Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                                                --><!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
+                                                                 Storyboard.TargetProperty="Width" />--><!--
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </Trigger.EnterActions>
@@ -95,19 +112,19 @@
                                                 <ThicknessAnimation Duration="0:0:0.250"
                                                                     To="0"
                                                                     Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                                                --><!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
+                                                                 Storyboard.TargetProperty="Width" />--><!--
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </Trigger.ExitActions>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
-                    </Button.Style>
+                    </Button.Style>-->
                 </Button>
                 <Label Name="TapDoc"
                        Foreground="#2D3D8F"
