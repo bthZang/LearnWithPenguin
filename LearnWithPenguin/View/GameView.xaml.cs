@@ -20,14 +20,11 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class GameView : Page
     {
+
         public GameView()
         {
             InitializeComponent();
         }
 
-        private void Game1_SourceUpdated(object sender, DataTransferEventArgs e)
-        {
-
-        }
     }
 }

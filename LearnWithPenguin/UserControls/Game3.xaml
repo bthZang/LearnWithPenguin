@@ -27,7 +27,78 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6"
+                            Width="810"
+                            Height="70"
+                            Background="Beige"
+                            CornerRadius="20"
+                            HorizontalAlignment="Left"
+                            Margin="91,10,0,60"
+                            BorderThickness="3, 3, 3, 3"
+                            BorderBrush="MidnightBlue">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="1"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="2"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="3"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="4"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="5"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                            <Border Grid.Column="6"
+                                    Background="DeepPink"
+                                    Width="110"
+                                    Height="60"
+                                    CornerRadius="30">
+                                <Image Source="\images\right@3x.png"></Image>
+                            </Border>
+                        </Grid>
+                    </Border>
                     <Image Grid.Column="0"
                            Grid.Row="1"
                            Source="\images\iceStand@3x.png"
@@ -35,9 +106,10 @@
                            Grid.RowSpan="2" />
                     <Image Grid.Column="0"
                            Source="\images\penguin@3x.png"
-                           Margin="-4,41,4,99"
+                           Margin="-4,41,158,93"
                            Grid.RowSpan="2"
-                           RenderTransformOrigin="0.507,-0.209" />
+                           RenderTransformOrigin="0.507,-0.209"
+                           Grid.ColumnSpan="2" />
                     <Image Grid.Column="0"
                            Source="\images\iceJumpa@3x.png"
                            Margin="0,0,0,4"

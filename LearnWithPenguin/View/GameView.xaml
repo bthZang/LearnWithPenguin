@@ -10,6 +10,7 @@
       mc:Ignorable="d"
       d:DesignHeight="800"
       d:DesignWidth="1125"
+      DataContext="{StaticResource GameVM}"
       Title="GameView">
 
     <Page.Resources>
@@ -120,94 +121,189 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
-                                <Border Grid.Column="0"
-                                        Background="#FFFFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45">
-                                    <Image Source="\images\right@3x.png"
-                                           Margin="32,27,32,27">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="1"
-                                        Background="#FFFFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45">
-                                    <Image Source="\images\left@3x.png"
-                                           Margin="32,27,32,27">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="2"
-                                        Background="#FFFFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45">
-                                    <Image Source="\images\turnUR@3x.png"
-                                           Margin="32,27,32,27">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="3"
-                                        Background="#FFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45">
-                                    <Image Source="\images\turnDR@3x.png"
-                                           Margin="32,27,32,27">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="4"
-                                        Background="#FFFFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45">
-                                    <Image Source="\images\turnUp@3x.png"
-                                           Margin="25,20,25,20">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="5"
-                                        Background="#FFFFFF"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#754040"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="45"
-                                        Margin="6,14,6,13">
-                                    <Image Source="\images\turnDown@3x.png"
-                                           Margin="22,18,22,18">
-                                    </Image>
-                                </Border>
-                                <Border Grid.Column="6"
-                                        Background="#FAD415"
-                                        BorderThickness="2, 2, 2, 2"
-                                        BorderBrush="#073580"
-                                        Width="130"
-                                        Height="100"
-                                        CornerRadius="90"
-                                        HorizontalAlignment="Center">
-                                    <TextBlock Text="RUN"
-                                               Foreground="#FFFFFF"
-                                               FontSize="35"
-                                               FontWeight="Bold"
-                                               FontStyle="Normal"
-                                               LineStackingStrategy="MaxHeight"
-                                               Style="{StaticResource Baloo2-Bold}"
-                                               Width="auto"
-                                               Height="auto"
-                                               Margin="0, 20, 0, 0"
-                                               HorizontalAlignment="Center">
-                                    </TextBlock>
-                                </Border>
+                                <Button Grid.Column="0"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor1"
+                                            Grid.Column="0"
+                                            Background="#FFFFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                        <Image Source="\images\right@3x.png"
+                                               Margin="32,27,32,27">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="1"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor2"
+                                            Grid.Column="1"
+                                            Background="#FFFFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                        <Image Source="\images\left@3x.png"
+                                               Margin="32,27,32,27">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="2"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor3"
+                                            Grid.Column="2"
+                                            Background="#FFFFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                        <Image Source="\images\turnUR@3x.png"
+                                               Margin="32,27,32,27">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="3"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor4"
+                                            Grid.Column="3"
+                                            Background="#FFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                        <Image Source="\images\turnDR@3x.png"
+                                               Margin="32,27,32,27">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="4"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor5"
+                                            Grid.Column="4"
+                                            Background="#FFFFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                        <Image Source="\images\turnUp@3x.png"
+                                               Margin="25,20,25,20">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="5"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border x:Name="Bor6"
+                                            Grid.Column="5"
+                                            Background="#FFFFFF"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#754040"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="45">
+                                         <Image Source="\images\turnDown@3x.png"
+                                               Margin="22,18,22,18">
+                                        </Image>
+                                    </Border>
+                                </Button>
+                                <Button Grid.Column="6"
+                                        BorderBrush="Transparent"
+                                        Background="Transparent"
+                                        Width="auto"
+                                        Height="auto"
+                                        BorderThickness="0">
+                                    <Button.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Border.CornerRadius"
+                                                    Value="90 90 90 90" />
+                                        </Style>
+                                    </Button.Resources>
+                                    <Border Background="#FAD415"
+                                            BorderThickness="2, 2, 2, 2"
+                                            BorderBrush="#073580"
+                                            Width="130"
+                                            Height="100"
+                                            CornerRadius="90"
+                                            HorizontalAlignment="Center">
+                                        <TextBlock Text="RUN"
+                                                   Foreground="#FFFFFF"
+                                                   FontSize="35"
+                                                   FontWeight="Bold"
+                                                   FontStyle="Normal"
+                                                   LineStackingStrategy="MaxHeight"
+                                                   Style="{StaticResource Baloo2-Bold}"
+                                                   Width="auto"
+                                                   Height="auto"
+                                                   Margin="0, 20, 0, 0"
+                                                   HorizontalAlignment="Center">
+                                        </TextBlock>
+                                    </Border>
+                                </Button>
                             </Grid>
                         </Border>
                     </StackPanel>
