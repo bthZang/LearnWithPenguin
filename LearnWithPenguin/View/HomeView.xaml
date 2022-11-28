@@ -69,23 +69,23 @@
                            Source="../images/TapDocNoText.png"
                            Height="200"
                            Width="198" />
-                    <Button.BitmapEffect>
+                    <!--<Button.BitmapEffect>
 
                         <BitmapEffectGroup>
 
                             <OuterGlowBitmapEffect GlowColor="Red" GlowSize="20"></OuterGlowBitmapEffect>
 
-                            <!--<OuterGlowBitmapEffect></OuterGlowBitmapEffect>
+                            --><!--<OuterGlowBitmapEffect></OuterGlowBitmapEffect>
 
                             <OuterGlowBitmapEffect></OuterGlowBitmapEffect>
 
                             <DropShadowBitmapEffect></DropShadowBitmapEffect>
 
-                            <BevelBitmapEffect></BevelBitmapEffect>-->
+                            <BevelBitmapEffect></BevelBitmapEffect>--><!--
 
                         </BitmapEffectGroup>
 
-                    </Button.BitmapEffect>
+                    </Button.BitmapEffect>-->
                     <!--<Button.Style>
                         <Style TargetType="Button">
                             <Style.Triggers>

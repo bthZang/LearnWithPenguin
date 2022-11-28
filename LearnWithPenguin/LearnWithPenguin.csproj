@@ -83,6 +83,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\DataReader.cs" />
+    <Compile Include="Models\History.cs" />
     <Compile Include="Quizz.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -615,6 +616,10 @@
     <Resource Include="View\reReadButton.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\Artwork.png" />
+    <Resource Include="images\Vietnamshistory.png" />
+    <Resource Include="images\VietnamNature.png" />
+    <Resource Include="images\AroundTheWorld.png" />
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Quizz.Context.cs</LastGenOutput>
