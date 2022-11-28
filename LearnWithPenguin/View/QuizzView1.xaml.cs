@@ -68,13 +68,30 @@ namespace LearnWithPenguin.View
             switch (i)
             {
                 case 1:
-                    //ans1.B = "Answer 1";
+                    ans1.Content = "Answer 1";
                     ans2.Content = "Answer 2 Correct";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
                     ans2.Tag = "1";
                     break;
+                case 2:
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3 Correct";
+                    ans4.Content = "Answer 4";
+
+                    ans3.Tag = "1";
+                    break;
+                case 3:
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2 Correct";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
+
+                    ans2.Tag = "1";
+                    break;
+                    
 
             }
         }
