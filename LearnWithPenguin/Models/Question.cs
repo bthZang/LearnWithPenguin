@@ -34,13 +34,13 @@ namespace LearnWithPenguin.Models
         }
         string CleanUpQuestion(string questionText)
         {
-            if (questionText.Contains("\\Binnen\\"))
+            if (questionText.Contains("\\Within\\"))
             {
                 string[] splitQuestion = questionText.Split('{');
                 string lastPart = splitQuestion.Last().Replace("}", "");
                 string[] temp = lastPart.Split('\\');
                 lastPart = temp.Last();
-                PathToImage = "Images/Binnen/" + lastPart;
+                PathToImage = "images/Within/" + lastPart;
                 return splitQuestion.First();
             }
             else
