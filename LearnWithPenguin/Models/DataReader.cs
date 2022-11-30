@@ -9,6 +9,6 @@ namespace LearnWithPenguin.Models
     internal class DataReader
 
     { 
-        static QuizDatabaseEntities quizz = new QuizDatabaseEntities();
+        //static QuizDatabaseEntities quizz = new QuizDatabaseEntities();
     }
 }
