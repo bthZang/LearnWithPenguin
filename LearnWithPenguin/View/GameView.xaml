@@ -126,7 +126,9 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        Command="{Binding handleButtonPress}"
+                                        CommandParameter="\images\right@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"

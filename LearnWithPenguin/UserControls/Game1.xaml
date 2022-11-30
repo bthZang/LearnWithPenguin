@@ -4,9 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
-             d:DesignWidth="1000">
+             d:DesignWidth="1000"
+             >
     <Grid>
         <Border Background="#77D3D8"
                 Width="991.5"
@@ -38,40 +41,23 @@
                         BorderThickness="3, 3, 3, 3"
                         BorderBrush="MidnightBlue">
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0"
-                                Background="DeepPink"
-                                Width="110"
-                                Height="60"
-                                CornerRadius="30">
-                            <Image Source="\images\right@3x.png"></Image>
-                        </Border>
-                        <Border Grid.Column="1"
-                                Background="DeepPink"
-                                Width="110"
-                                Height="60"
-                                CornerRadius="30">
-                            <Image Source="\images\right@3x.png"></Image>
-                        </Border>
-                        <Border Grid.Column="2"
-                                Background="DeepPink"
-                                Width="110"
-                                Height="60"
-                                CornerRadius="30">
-                            <Image Source="\images\right@3x.png"></Image>
-                        </Border>
-                        <Border Grid.Column="3"
-                                Background="DeepPink"
-                                Width="110"
-                                Height="60"
-                                CornerRadius="30">
-                            <Image Source="\images\right@3x.png"></Image>
-                        </Border>
+                        <ItemsControl ItemsSource="{Binding stepQueues}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="4" Rows="1"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="DeepPink"
+                                            Width="110"
+                                            Height="60"
+                                            CornerRadius="30">
+                                        <Image Source="{Binding stepQueues}"></Image>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
                     </Grid>
                 </Border>
                 <Image Grid.Column="0"
