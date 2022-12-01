@@ -153,7 +153,10 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        Command="{Binding HandleButtonPress}"
+                                        CommandParameter="\images\left@3x.png"
+                                        BorderThickness="0"
+                                        >
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -178,7 +181,9 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        Command="{Binding HandleButtonPress}"
+                                        CommandParameter="\images\turnUR@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -203,7 +208,9 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        Command="{Binding HandleButtonPress}"
+                                        CommandParameter="\images\turnDR@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -228,7 +235,9 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        Command="{Binding HandleButtonPress}"
+                                        CommandParameter="\images\turnUp@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -253,7 +262,9 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        Command="{Binding HandleButtonPress}"
+                                        CommandParameter="\images\turnDown@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -268,7 +279,7 @@
                                             Width="130"
                                             Height="100"
                                             CornerRadius="45">
-                                         <Image Source="\images\turnDown@3x.png"
+                                        <Image Source="\images\turnDown@3x.png"
                                                Margin="22,18,22,18">
                                         </Image>
                                     </Border>
@@ -278,7 +289,8 @@
                                         Background="Transparent"
                                         Width="auto"
                                         Height="auto"
-                                        BorderThickness="0">
+                                        BorderThickness="0"
+                                        >
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"

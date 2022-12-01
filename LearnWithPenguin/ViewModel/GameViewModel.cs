@@ -76,58 +76,59 @@ namespace LearnWithPenguin.ViewModel
         {
             PositionNumber = "1";
             GameTurn = new Game1();
+
             Game1Context = new Game1ViewModel();
             StepQueues = new Queue<StepQueueObject>();
             HandleButtonPress = new RelayCommand<object>((p) => { return true; }, (p) => {
                 Console.WriteLine(p as string);
-                if (PositionNumber == "1")
+                switch(PositionNumber)
                 {
-                //    game1Context = new Game1ViewModel();
-                //    stepQueues = new Queue<StepQueueObject>();
-                if (StepQueues.Count < Game1Context.step)
-                    {
-                        StepQueueObject sqo = new StepQueueObject
+                    case "1":
                         {
-                            ImgSrc = (string)p
-                        };
-                        Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                        temp.Enqueue(sqo);
-                        StepQueues = temp;
-                    }
-                }
-
-                if (PositionNumber == "2")
-                {
-                    GameTurn = new Game2();
-                    Game2Context = new Game2ViewModel();
-                    if (StepQueues.Count < Game2Context.step)
-                    {
-                        StepQueueObject sqo = new StepQueueObject
+                            if (StepQueues.Count < Game1Context.step)
+                            {
+                                StepQueueObject sqo = new StepQueueObject
+                                {
+                                    ImgSrc = (string)p
+                                };
+                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
+                                temp.Enqueue(sqo);
+                                StepQueues = temp;
+                            }
+                        }
+                        break;
+                    case "2":
                         {
-                            ImgSrc = (string)p
-                        };
-                        Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                        temp.Enqueue(sqo);
-                        StepQueues = temp;
-                    }
-                    Console.WriteLine(StepQueues);
-                }
-
-                if (PositionNumber == "3")
-                {
-                    GameTurn = new Game3();
-                    Game3Context = new Game3ViewModel();
-                    if (StepQueues.Count < Game3Context.step)
-                    {
-                        StepQueueObject sqo = new StepQueueObject
+                            GameTurn = new Game2();
+                            Game2Context = new Game2ViewModel();
+                            if (StepQueues.Count < Game2Context.step)
+                            {
+                                StepQueueObject sqo = new StepQueueObject
+                                {
+                                    ImgSrc = (string)p
+                                };
+                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
+                                temp.Enqueue(sqo);
+                                StepQueues = temp;
+                            }
+                        }
+                        break;
+                    case "3":
                         {
-                            ImgSrc = (string)p
-                        };
-                        Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                        temp.Enqueue(sqo);
-                        StepQueues = temp;
-                    }
-                    Console.WriteLine(StepQueues);
+                            GameTurn = new Game3();
+                            Game3Context = new Game3ViewModel();
+                            if (StepQueues.Count < Game3Context.step)
+                            {
+                                StepQueueObject sqo = new StepQueueObject
+                                {
+                                    ImgSrc = (string)p
+                                };
+                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
+                                temp.Enqueue(sqo);
+                                StepQueues = temp;
+                            }
+                        }
+                        break;
                 }
             });
 
