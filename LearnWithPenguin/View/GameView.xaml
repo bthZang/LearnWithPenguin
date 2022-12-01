@@ -127,7 +127,7 @@
                                         Width="auto"
                                         Height="auto"
                                         BorderThickness="0"
-                                        Command="{Binding handleButtonPress}"
+                                        Command="{Binding HandleButtonPress}"
                                         CommandParameter="\images\right@3x.png">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">

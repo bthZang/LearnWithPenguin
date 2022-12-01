@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="1000">
@@ -39,7 +40,7 @@
                             BorderThickness="3, 3, 3, 3"
                             BorderBrush="MidnightBlue">
                         <Grid>
-                            <ItemsControl ItemsSource="{Binding stepQueues}">
+                            <ItemsControl ItemsSource="{Binding StepQueues}">
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="7"
@@ -52,7 +53,7 @@
                                                 Width="110"
                                                 Height="60"
                                                 CornerRadius="30">
-                                            <Image Source="{Binding Image}"></Image>
+                                            <Image Source="{Binding ImgSrc}"></Image>
                                         </Border>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
@@ -65,11 +66,10 @@
                            Margin="-11,6,10,134"
                            Grid.RowSpan="2" />
                     <Image Grid.Column="0"
-                           Source="\images\penguin@3x.png"
-                           Margin="-4,41,158,93"
-                           Grid.RowSpan="2"
-                           RenderTransformOrigin="0.507,-0.209"
-                           Grid.ColumnSpan="2" />
+                       Source="\images\penguin@3x.png"
+                       Margin="-4,41,4,99"
+                       Grid.RowSpan="2"
+                       RenderTransformOrigin="0.507,-0.209" />
                     <Image Grid.Column="0"
                            Source="\images\iceJumpa@3x.png"
                            Margin="0,0,0,4"

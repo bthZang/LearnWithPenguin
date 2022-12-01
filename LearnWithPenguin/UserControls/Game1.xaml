@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
              d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
@@ -41,7 +40,7 @@
                         BorderThickness="3, 3, 3, 3"
                         BorderBrush="MidnightBlue">
                     <Grid>
-                        <ItemsControl ItemsSource="{Binding stepQueues}">
+                        <ItemsControl ItemsSource="{Binding StepQueues}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <UniformGrid Columns="4" Rows="1"/>
@@ -53,7 +52,7 @@
                                             Width="110"
                                             Height="60"
                                             CornerRadius="30">
-                                        <Image Source="{Binding stepQueues}"></Image>
+                                        <Image Source="{Binding ImgSrc, UpdateSourceTrigger=PropertyChanged}"></Image>
                                     </Border>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
