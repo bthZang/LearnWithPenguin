@@ -119,7 +119,7 @@ insert into Quiz_Within values (8, N'Lễ kỉ niệm ngày nhà giáo Việt Na
 insert into Quiz_Within values (9, N'Câu hỏi vui: Ở đây có bao nhiêu chữ H? Hồ Chí Minh , hồ ao ,Hồ Quý Ly', '1', '2', '3', 'Không có đáp án nào đúng', 2)
 insert into Quiz_Within values (10, N'Ngày Bác Hồ ra đi tìm đường cứu nước vào ngày tháng năm nào?', '5-6-1911', '6-5-1911', '7-6-1989', '7-8-1997', 1)
 insert into Quiz_Within values (11, N'Con Tàu Đô đốc mà bác lên đường ra Pháp không phiên âm Hán Việt là?', N'La-tu-sơn- Tờ-rê-vin', N'Latuson torevin', N'Latouche-Trevillle', N'Latouche-Tréville', 4)
-insert into Quiz_Within values (12, N'Vị vua nào là vi vua cuối cùng của Lịch sử phong kiến Việt Nam?', N'Minh Mạng', N'Bảo Đại', N'Hàm Nghi', N'Nguyễn Ánh', 2)
+insert into Quiz_Within values (12, N'Vị vua nào là vị vua cuối cùng của Lịch sử phong kiến Việt Nam?', N'Minh Mạng', N'Bảo Đại', N'Hàm Nghi', N'Nguyễn Ánh', 2)
 insert into Quiz_Within values (13, N'Ai là vị vua nhỏ tuổi nhất Việt Nam?', N'Trần Cảnh', N'Lê Nhân Tông', N'Duy Tân', N'Đinh Toàn', 2)
 insert into Quiz_Within values (14, N'Vị vua nào được mệnh danh là "Ông vua cờ lau"?', N'Lê Hoàn', N'Ngô Quyền', N'Đinh Tiên Hoàng', N'Đinh Toàn', 3)
 insert into Quiz_Within values (15, N'Ai là vị Trạng nguyên trẻ tuổi nhất nước Việt Nam?', N'Mạc Đĩnh Chi', N'Lương Thế Vinh', N'Nguyễn Bỉnh Khiêm', N'Nguyễn Hiền', 4)

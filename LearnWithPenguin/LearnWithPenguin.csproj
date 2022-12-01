@@ -85,6 +85,13 @@
     <Compile Include="Models\DataReader.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Questionaire.cs" />
+    <Compile Include="Models\WrongAnswer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Quizz.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
