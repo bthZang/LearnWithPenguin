@@ -107,6 +107,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quizz.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Quiz_Question.cs">
+      <DependentUpon>Quizz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz_Within.cs">
+      <DependentUpon>Quizz.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
     </Compile>
@@ -352,11 +358,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <EntityDeploy Include="Quizz.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Quizz.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="packages.config" />
     <None Include="Quizz.edmx.diagram">
       <DependentUpon>Quizz.edmx</DependentUpon>
     </None>
@@ -688,19 +694,21 @@
     <Resource Include="images\Within\7.jpg" />
     <Resource Include="images\Within\8.jpg" />
     <Resource Include="images\Within\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Quizz.Context.cs</LastGenOutput>
       <DependentUpon>Quizz.edmx</DependentUpon>
+      <LastGenOutput>Quizz.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Quizz.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quizz.edmx</DependentUpon>
       <LastGenOutput>Quizz.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
