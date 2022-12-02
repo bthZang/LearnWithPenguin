@@ -27,7 +27,7 @@ namespace LearnWithPenguin.Models
                     return 0;
             }
         }
-        static public int[] GetQuestionIds(int dbID, string id)
+        static public int[] GetQuestionIds(int dbID, int id)
         {
             switch (dbID)
             {

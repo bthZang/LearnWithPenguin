@@ -178,6 +178,8 @@
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\QuestionViewModel.cs" />
+    <Compile Include="ViewModel\QuizzCommands\DelegatingCommand.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
@@ -199,6 +201,9 @@
     </Compile>
     <Compile Include="View\PuzzleView.xaml.cs">
       <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuizQuestionAside.xaml.cs">
+      <DependentUpon>QuizQuestionAside.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\QuizzView1.xaml.cs">
       <DependentUpon>QuizzView1.xaml</DependentUpon>
@@ -326,6 +331,10 @@
     <Page Include="View\PuzzleView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuizQuestionAside.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\QuizzView1.xaml">
       <SubType>Designer</SubType>

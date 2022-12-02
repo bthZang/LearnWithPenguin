@@ -14,7 +14,7 @@ namespace LearnWithPenguin
     
     public partial class Quiz_Question
     {
-        public string Question_Topic { get; set; }
+        public int Question_Topic { get; set; }
         public int Question_ID { get; set; }
     
         public virtual Quiz_Within Quiz_Within { get; set; }
