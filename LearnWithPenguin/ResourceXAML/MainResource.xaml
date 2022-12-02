@@ -15,7 +15,9 @@
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
-    
+
+    <viewmodel:QuestionViewModel x:Key="QuestionVM"></viewmodel:QuestionViewModel>
+    <viewmodel:QuizzQuestionAsideViewModel x:Key="QuizzQuestionAsideVM"></viewmodel:QuizzQuestionAsideViewModel>
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
     <viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>
 
