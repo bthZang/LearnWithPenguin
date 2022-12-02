@@ -1,4 +1,4 @@
-﻿//using FileHelpers;
+﻿using FileHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    //[DelimitedRecord(",")]
-    //[IgnoreEmptyLines()]
-    //[IgnoreFirst()]
+    [DelimitedRecord(",")]
+    [IgnoreEmptyLines()]
+    [IgnoreFirst()]
 
     public class History
     {
