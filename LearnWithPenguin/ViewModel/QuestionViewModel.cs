@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace LearnWithPenguin.ViewModel
 {
-    internal class QuestionViewModel : BaseViewModel
+    public class QuestionViewModel : BaseViewModel
     {
         // selected Questionaire
         private Questionaire questionaire;

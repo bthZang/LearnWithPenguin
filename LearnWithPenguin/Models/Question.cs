@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    internal class Question
+    public class Question
     {
         public int ID { get; set; }
         public int DBID { get; set; }
