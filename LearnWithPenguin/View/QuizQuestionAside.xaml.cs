@@ -21,17 +21,17 @@ namespace LearnWithPenguin.View
     /// <summary>
     /// Interaction logic for QuizQuestionAside.xaml
     /// </summary>
-    public partial class QuizQuestionAside : Page
+    public partial class QuizQuestionAside : System.Windows.Controls.Page
     {
-        public QuestionViewModel QuestionVM { get; set; }
-        public QuizQuestionAside(QuestionViewModel questionVM)
+        public QuizQuestionAsideViewModel QuestionVM { get; set; }
+        public QuizQuestionAside(QuizQuestionAsideViewModel questionVM)
         {
             QuestionVM = questionVM;
             InitializeComponent();
             this.DataContext = QuestionVM;
             bool result = QuestionVM.Question.Solve();
         }
-        public QuizQuestionAside(QuestionViewModel questionVM, int questionIndex)
+        public QuizQuestionAside(QuizQuestionAsideViewModel questionVM, int questionIndex)
         {
             // Instantiate the Viewmodel (and thus the old Model)
             QuestionVM = questionVM;
@@ -53,7 +53,7 @@ namespace LearnWithPenguin.View
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
         }
-        public int CompletedQuestionsCount(QuestionViewModel questionVM)
+        public int CompletedQuestionsCount(QuizQuestionAsideViewModel questionVM)
         {
             int questionsCompleted = 0;
             foreach (Question question in questionVM.Questionaire.Questions)

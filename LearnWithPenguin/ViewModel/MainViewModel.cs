@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnWithPenguin.ViewModel.QuizzCommands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,15 +47,15 @@ namespace LearnWithPenguin.ViewModel
         }
         public ICommand TransformToRead
         {
-           get
-           {
-               return new RelayCommand<object>((p) => { return true; }, (p) =>
-               {
-                   NavigatetoHome = new ReadViewModel();
-               });
-           }
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new ReadViewModel();
+                });
+            }
 
-           set { }
+            set { }
         }
         public ICommand TransformToWrite
         {
@@ -196,6 +197,7 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
         public ICommand TransformToQuizzView1
         {
             get
@@ -214,6 +216,17 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
+            set { }
+        }
+        public ICommand TransformToQuizAsideView
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizQuestionAsideViewModel();
                 });
             }
             set { }

@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using LearnWithPenguin.Models;
+﻿using LearnWithPenguin.Models;
 using LearnWithPenguin.ViewModel.QuizzCommands;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace LearnWithPenguin.ViewModel
 {
-    public class QuestionViewModel : BaseViewModel
+    public class QuizQuestionAsideViewModel: BaseViewModel
     {
         // selected Questionaire
         private Questionaire questionaire;
@@ -36,7 +38,7 @@ namespace LearnWithPenguin.ViewModel
         // Debug-Properties
         private int questionLimit;
 
-        public QuestionViewModel()
+        public QuizQuestionAsideViewModel()
         {
             // Instantiate the defaultUser for the view
             User = new User();
@@ -212,3 +214,4 @@ namespace LearnWithPenguin.ViewModel
         }
     }
 }
+

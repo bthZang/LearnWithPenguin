@@ -48,6 +48,9 @@
             <DataTemplate DataType="{x:Type viewmodelHome:QuizzView2ViewModel}">
                 <Frame Source="QuizzView2.xaml"></Frame>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:QuizQuestionAsideViewModel}">
+                <Frame Source="QuizQuestionAside.xaml"></Frame>
+            </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
 

@@ -54,6 +54,20 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        protected BaseViewModel _navigateToQuizAside;
+        public BaseViewModel NavigateQuizAside
+        {
+            get
+            {
+                return _navigateToQuizAside;
+            }
+            set
+            {
+                _navigateToQuizAside = value;
+                OnPropertyChanged();
+            }
+        }
         private BaseViewModel _menu;
 
         public BaseViewModel Menu
