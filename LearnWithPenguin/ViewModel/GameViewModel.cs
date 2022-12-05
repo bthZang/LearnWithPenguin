@@ -48,6 +48,7 @@ namespace LearnWithPenguin.ViewModel
         }
 
         public ICommand ForwardCommand { get; set; }
+        public ICommand RunGameCommand { get; set; }
         public ICommand BackwardCommand { get; set; }
 
         private string _PositionNumber;
@@ -61,8 +62,8 @@ namespace LearnWithPenguin.ViewModel
             public string ImgSrc;
         }
 
-        private Queue<StepQueueObject> _StepQueues;
-        public Queue<StepQueueObject> StepQueues
+        private Queue<string> _StepQueues;
+        public Queue<string> StepQueues
         {
             get { return _StepQueues; }
             set { _StepQueues = value; OnPropertyChanged(); }
@@ -78,7 +79,7 @@ namespace LearnWithPenguin.ViewModel
             GameTurn = new Game1();
 
             Game1Context = new Game1ViewModel();
-            StepQueues = new Queue<StepQueueObject>();
+            StepQueues = new Queue<string>();
             HandleButtonPress = new RelayCommand<object>((p) => { return true; }, (p) => {
                 Console.WriteLine(p as string);
                 switch(PositionNumber)
@@ -86,13 +87,9 @@ namespace LearnWithPenguin.ViewModel
                     case "1":
                         {
                             if (StepQueues.Count < Game1Context.step)
-                            {
-                                StepQueueObject sqo = new StepQueueObject
-                                {
-                                    ImgSrc = (string)p
-                                };
-                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                                temp.Enqueue(sqo);
+                            {   
+                                Queue<string> temp = new Queue<string>(StepQueues);
+                                temp.Enqueue((string) p);
                                 StepQueues = temp;
                             }
                         }
@@ -103,12 +100,8 @@ namespace LearnWithPenguin.ViewModel
                             Game2Context = new Game2ViewModel();
                             if (StepQueues.Count < Game2Context.step)
                             {
-                                StepQueueObject sqo = new StepQueueObject
-                                {
-                                    ImgSrc = (string)p
-                                };
-                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                                temp.Enqueue(sqo);
+                                Queue<string> temp = new Queue<string>(StepQueues);
+                                temp.Enqueue((string)p);
                                 StepQueues = temp;
                             }
                         }
@@ -119,17 +112,49 @@ namespace LearnWithPenguin.ViewModel
                             Game3Context = new Game3ViewModel();
                             if (StepQueues.Count < Game3Context.step)
                             {
-                                StepQueueObject sqo = new StepQueueObject
-                                {
-                                    ImgSrc = (string)p
-                                };
-                                Queue<StepQueueObject> temp = new Queue<StepQueueObject>(StepQueues);
-                                temp.Enqueue(sqo);
+                                Queue<string> temp = new Queue<string>(StepQueues);
+                                temp.Enqueue((string)p);
                                 StepQueues = temp;
                             }
                         }
                         break;
                 }
+            });
+
+            RunGameCommand = new RelayCommand<object>((p) => { return true; }, (p) => 
+            {
+                switch(PositionNumber)
+                {
+                    case "1":
+                        {
+                            string[] temp = new string[Game1Context.step];
+                            StepQueues.CopyTo(temp, StepQueues.Count - Game1Context.step);
+                            if (temp[0] == "/images/right@3x.png" && temp[1] == "/images/right@3x.png" && temp[2] == "/images/right@3x.png" && temp[3] == "/images/right@3x.png")
+                            {
+                                Console.WriteLine("Dung roi pan oi");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ngu");
+                            }  
+                        }
+                        break;
+                    //case "2":
+                    //    {
+                    //        string[] temp = new string[Game2Context.step];
+                    //        StepQueues.CopyTo(temp, StepQueues.Count - Game2Context.step);
+                    //        foreach (string sqo in temp) { Console.WriteLine(sqo); }
+                    //    }
+                    //    break;
+                    //case "3":
+                    //    {
+                    //        string[] temp = new string[Game3Context.step];
+                    //        StepQueues.CopyTo(temp, StepQueues.Count - Game3Context.step);
+                    //        foreach (string sqo in temp) { Console.WriteLine(sqo); }
+                    //    }
+                    //    break;
+                }
+
             });
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>

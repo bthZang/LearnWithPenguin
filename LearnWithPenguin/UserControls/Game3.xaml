@@ -53,7 +53,7 @@
                                                 Width="110"
                                                 Height="60"
                                                 CornerRadius="30">
-                                            <Image Source="{Binding ImgSrc}"></Image>
+                                            <Image Source="{Binding}"></Image>
                                         </Border>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
