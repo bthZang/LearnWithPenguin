@@ -4,10 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+             xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
              d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:GameViewModel}">
+            <localUser:ReloadGame></localUser:ReloadGame>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <StackPanel Orientation="Vertical">
             <Border Background="#77D3D8"
@@ -60,16 +67,23 @@
                             </ItemsControl>
                         </Grid>
                     </Border>
+                    <localUser:ReloadGame Grid.Column="5"
+                                          Grid.Row="0"
+                                          Width="70"
+                                          Height="70"
+                                          Margin="80,10,16,60"
+                                          Command="{Binding Reload}">
+                    </localUser:ReloadGame>
                     <Image Grid.Column="0"
                            Grid.Row="1"
                            Source="\images\iceStand@3x.png"
                            Margin="-11,6,10,134"
                            Grid.RowSpan="2" />
                     <Image Grid.Column="0"
-                       Source="\images\penguin@3x.png"
-                       Margin="-4,41,4,99"
-                       Grid.RowSpan="2"
-                       RenderTransformOrigin="0.507,-0.209" />
+                           Source="\images\penguin@3x.png"
+                           Margin="-4,41,4,99"
+                           Grid.RowSpan="2"
+                           RenderTransformOrigin="0.507,-0.209" />
                     <Image Grid.Column="0"
                            Source="\images\iceJumpa@3x.png"
                            Margin="0,0,0,4"

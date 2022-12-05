@@ -3,11 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
              xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
              d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:GameViewModel}">
+            <localUser:ReloadGame></localUser:ReloadGame>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="64*" />
@@ -65,6 +72,14 @@
                             </ItemsControl>
                         </Grid>
                     </Border>
+                    <localUser:ReloadGame Grid.Column="4"
+                                          Grid.Row="0"
+                                          Grid.ColumnSpan="2"
+                                          Width="70"
+                                          Height="70"
+                                          Margin="155,15,106,55"
+                                          Command="{Binding Reload}">
+                    </localUser:ReloadGame>
                     <Image Grid.Column="0"
                            Grid.Row="1"
                            Source="\images\iceStand@3x.png"

@@ -16,6 +16,15 @@ namespace LearnWithPenguin.ViewModel
 {
     public class GameViewModel : BaseViewModel
     {
+        static class Direction
+        {
+            public static string Left = "\\images\\left@3x.png";
+            public static string Right = "\\images\\right@3x.png";
+            public static string TurnUp = "\\images\\turnUp@3x.png";
+            public static string TurnDown = "\\images\\turnDown@3x.png";
+            public static string TurnUR = "\\images\\turnUR@3x.png";
+            public static string TurnDR = "\\images\\turnDR@3x.png";
+        }
         protected BaseViewModel _navigatetoCoding;
 
         private System.Windows.Controls.UserControl _GameTurn;
@@ -55,13 +64,6 @@ namespace LearnWithPenguin.ViewModel
         public string PositionNumber { get { return _PositionNumber; } set { _PositionNumber = value; OnPropertyChanged(); } }
         public ICommand HandleButtonPress { get; set; }
 
-        private string _ImgSrc { get; set; }
-        public string ImgSrc { get { return _ImgSrc; } set { _ImgSrc = value; OnPropertyChanged(); } }
-        public struct StepQueueObject
-        {
-            public string ImgSrc;
-        }
-
         private Queue<string> _StepQueues;
         public Queue<string> StepQueues
         {
@@ -73,6 +75,7 @@ namespace LearnWithPenguin.ViewModel
         public Game2ViewModel Game2Context;
         public Game3ViewModel Game3Context;
 
+        public ICommand Reload { get; set; }
         public GameViewModel()
         {
             PositionNumber = "1";
@@ -123,38 +126,76 @@ namespace LearnWithPenguin.ViewModel
 
             RunGameCommand = new RelayCommand<object>((p) => { return true; }, (p) => 
             {
-                switch(PositionNumber)
+                try
                 {
-                    case "1":
-                        {
-                            string[] temp = new string[Game1Context.step];
-                            StepQueues.CopyTo(temp, StepQueues.Count - Game1Context.step);
-                            if (temp[0] == "/images/right@3x.png" && temp[1] == "/images/right@3x.png" && temp[2] == "/images/right@3x.png" && temp[3] == "/images/right@3x.png")
+                    switch (PositionNumber)
+                    {
+                        case "1":
                             {
-                                Console.WriteLine("Dung roi pan oi");
+                                string[] temp = new string[Game1Context.step];
+                                StepQueues.CopyTo(temp, StepQueues.Count - Game1Context.step);
+                                if (temp[0] == Direction.Right &&
+                                    temp[1] == Direction.Right &&
+                                    temp[2] == Direction.Right &&
+                                    temp[3] == Direction.Right)
+                                {
+                                    Console.WriteLine("Dung roi pan oi");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ngu");
+                                }
                             }
-                            else
+                            break;
+                        case "2":
                             {
-                                Console.WriteLine("Ngu");
-                            }  
-                        }
-                        break;
-                    //case "2":
-                    //    {
-                    //        string[] temp = new string[Game2Context.step];
-                    //        StepQueues.CopyTo(temp, StepQueues.Count - Game2Context.step);
-                    //        foreach (string sqo in temp) { Console.WriteLine(sqo); }
-                    //    }
-                    //    break;
-                    //case "3":
-                    //    {
-                    //        string[] temp = new string[Game3Context.step];
-                    //        StepQueues.CopyTo(temp, StepQueues.Count - Game3Context.step);
-                    //        foreach (string sqo in temp) { Console.WriteLine(sqo); }
-                    //    }
-                    //    break;
+                                string[] temp = new string[Game2Context.step];
+                                StepQueues.CopyTo(temp, StepQueues.Count - Game2Context.step);
+                                if (temp[0] == Direction.Right &&
+                                    temp[1] == Direction.TurnDown &&
+                                    temp[2] == Direction.TurnDR &&
+                                    temp[3] == Direction.Right &&
+                                    temp[4] == Direction.TurnUp &&
+                                    temp[5] == Direction.TurnUR)
+                                {
+                                    Console.WriteLine("Dung roi pan oi");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ngu");
+                                }
+                            }
+                            break;
+                        case "3":
+                            {
+                                string[] temp = new string[Game3Context.step];
+                                StepQueues.CopyTo(temp, StepQueues.Count - Game3Context.step);
+                                if (temp[0] == Direction.TurnDR &&
+                                    temp[1] == Direction.Right &&
+                                    temp[2] == Direction.TurnUp &&
+                                    temp[3] == Direction.TurnUR &&
+                                    temp[4] == Direction.Right &&
+                                    temp[5] == Direction.TurnDown &&
+                                    temp[6] == Direction.TurnDR)
+                                {
+                                    Console.WriteLine("Dung roi pan oi");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ngu");
+                                }
+                            }
+                            break;
+                    }
                 }
+                catch 
+                {
+                    Console.WriteLine("hehe");
+                }
+            });
 
+            Reload = new RelayCommand<object>((p) => { return true; }, (p) => {
+                StepQueues.Clear();
             });
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
