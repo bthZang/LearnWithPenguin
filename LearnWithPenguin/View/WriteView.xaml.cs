@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnWithPenguin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace LearnWithPenguin.View
         public WriteView()
         {
         
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            media.Position = TimeSpan.FromSeconds(0);
+            media.Play();
+        }
+
+        private void media_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            var viewModelInstance = media.DataContext;
+            (viewModelInstance as WriteViewModel).IsDisplayVideo = "Hidden";
+            media.Stop();
         }
     }
 }

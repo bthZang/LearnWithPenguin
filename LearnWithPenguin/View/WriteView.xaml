@@ -46,8 +46,8 @@
                         <Button Margin="336.67 32.11 0 0"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                Width="50.13"
-                                Height="50.13">
+                                Width="50.14"
+                                Height="50.14">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -152,8 +152,9 @@
                         <Button Width="48"
                                 BorderThickness="0"
                                 Background="Transparent"
-                                
-                                Height="48">
+                                Command="{Binding ReplayVideo}"
+                                Height="48"
+                                Click="Button_Click">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -165,7 +166,21 @@
 
                     </Border>
                 </Button>
-                <Button Height="593.03"
+                <MediaElement x:Name="media"
+                              Height="593.03"
+                              LoadedBehavior="Manual"
+                              UnloadedBehavior="Manual"
+                              DataContext="{StaticResource WriteVM}"
+                              Visibility="{Binding IsDisplayVideo}"
+                              Margin="0 -565.34 0 0"
+                              Source="D:\Zangg\Penguin\UIT\HK3-II\LTTQ\Chu_Thuong\Chữ a.mp4"
+                              MediaEnded="media_MediaEnded"></MediaElement>
+
+                <!--<Button Height="593.03"
+                              RenderTransformOrigin="0.5,0.877"
+                              Loaded="Window_Loaded"
+                              LoadedBehavior="Manual"
+                
                         Margin="0 -565.34 0 0"
                         BorderThickness="0"
                         Background="Transparent"
@@ -215,7 +230,7 @@
                             BorderThickness="4">
 
                     </Border>
-                </Button>
+                </Button>-->
                 <DockPanel>
                     <Grid HorizontalAlignment="Left">
                         <localUC:HomeIcon Width="97.13"
