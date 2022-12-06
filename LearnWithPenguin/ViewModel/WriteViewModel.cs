@@ -62,6 +62,9 @@ namespace LearnWithPenguin.ViewModel
                 _number = value;
                 ConcatTitle = "";
                 ConcatVideo = "";
+                SouceDash = "";
+                SouceSolid = "";
+
                 OnPropertyChanged();
             }
         }
@@ -83,6 +86,30 @@ namespace LearnWithPenguin.ViewModel
             get
             {
                 return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Thuong\\" + _number + ".mp4";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string SouceDash
+        {
+            get
+            {
+                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Dut\\" + _number + ".png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string SouceSolid
+        {
+            get
+            {
+                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Lien\\" + _number + ".png";
             }
             set
             {

@@ -580,5 +580,11 @@
   <ItemGroup>
     <Resource Include="View\reReadButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

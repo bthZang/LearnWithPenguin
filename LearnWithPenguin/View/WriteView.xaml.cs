@@ -23,7 +23,11 @@ namespace LearnWithPenguin.View
     {
         public WriteView()
         {
-        
+            InitializeComponent();
+            MyCanvas.DefaultDrawingAttributes.Color = Colors.White;
+            MyCanvas.DefaultDrawingAttributes.Width = 20;
+            MyCanvas.DefaultDrawingAttributes.Height = 20;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
