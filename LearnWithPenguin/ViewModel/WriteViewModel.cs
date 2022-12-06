@@ -13,6 +13,11 @@ namespace LearnWithPenguin.ViewModel
     public class WriteViewModel : BaseViewModel
     {
         protected string _isDisplayVideo;
+        protected int _number;
+        protected string _nextLevel;
+        protected string _backLevel;
+
+
 
         public string IsDisplayVideo
         {
@@ -43,6 +48,101 @@ namespace LearnWithPenguin.ViewModel
         public WriteViewModel()
         {
             this.IsDisplayVideo = "Hidden";
+            this.Number = 1;
+        }
+
+        public int Number
+        {
+            get
+            {
+                return _number;
+            }
+            set
+            {
+                _number = value;
+                ConcatTitle = "";
+                ConcatVideo = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatTitle
+        {
+            get
+            {
+                return "Bài " + _number;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatVideo
+        {
+            get
+            {
+                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Thuong\\" + _number + ".mp4";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string NextLevel
+        {
+            get
+            {
+                return _nextLevel;
+            }
+            set
+            {
+                _nextLevel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string BackLevel
+        {
+            get
+            {
+                return _backLevel;
+            }
+            set
+            {
+                _backLevel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand OnclickHandleNextLevel
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Number = Number + 1;
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand OnclickHandlePreviousLevel
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    if (Number == 1)
+                        Number = 1;
+                    else
+                        Number = Number - 1;
+                });
+            }
+
+            set { }
         }
     }
 

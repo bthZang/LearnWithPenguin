@@ -47,6 +47,8 @@
                                 Background="Transparent"
                                 BorderThickness="0"
                                 Width="50.14"
+                                DataContext="{StaticResource WriteVM}"
+                                Command="{Binding OnclickHandlePreviousLevel}"
                                 Height="50.14">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
@@ -67,12 +69,15 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
+                                   DataContext="{StaticResource WriteVM}"
+                                   Text="{ Binding ConcatTitle}"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Text="Bai 1"
                                    Margin="43.13,38.49,0,8" />
                         <Button Margin="53.32 32.11 0 0"
                                 Background="Transparent"
                                 BorderThickness="0"
+                                DataContext="{StaticResource WriteVM}"
+                                Command="{Binding OnclickHandleNextLevel}"
                                 Width="50.13"
                                 Height="50.13">
                             <Button.Resources>
@@ -173,7 +178,7 @@
                               DataContext="{StaticResource WriteVM}"
                               Visibility="{Binding IsDisplayVideo}"
                               Margin="0 -565.34 0 0"
-                              Source="D:\Zangg\Penguin\UIT\HK3-II\LTTQ\Chu_Thuong\Chữ a.mp4"
+                              Source="{ Binding ConcatVideo}"
                               MediaEnded="media_MediaEnded"></MediaElement>
 
                 <!--<Button Height="593.03"
