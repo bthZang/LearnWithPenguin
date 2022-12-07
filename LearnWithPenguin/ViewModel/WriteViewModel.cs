@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
+using System.Windows.Forms;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -16,7 +17,10 @@ namespace LearnWithPenguin.ViewModel
         protected int _number;
         protected string _nextLevel;
         protected string _backLevel;
+        protected bool _submit = false;
 
+
+        protected BaseViewModel _navigatetoResult = null;
 
 
         public string IsDisplayVideo
@@ -171,6 +175,98 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
+        public bool IsMouseDown
+        {
+            get
+            {
+                //System.Windows.Input.Mouse.LeftButton == MouseButtonState.Pressed
+                if ((System.Windows.Forms.Control.MouseButtons & MouseButtons.Left) == MouseButtons.Left)
+                    return true;
+                return false;
+            }
+            set { }
+        }
+
+        public List<Point> mousePositions = new List<Point>();
+
+        public void AddPosition(Point point)
+        {
+            mousePositions.Add(point);
+        }
+
+        public bool Submit()
+        {
+            float[] _positionX;
+            float[] _positionY;
+
+            switch (_number)
+            {
+                case 1:
+                    _positionX = new float[6] { 617, 536, 425, 537, 664, 734 };
+                    _positionY = new float[6] { 509, 381, 511, 634, 632, 534 };
+                    break;
+
+                default:
+                    _positionX = new float[6] { 617, 536, 425, 537, 664, 734 };
+                    _positionY = new float[6] { 509, 381, 511, 634, 632, 534 };
+                    break;
+            }
+
+            int point = 1;
+
+            for (int i = 0; i < 6; i++)
+            {
+                bool isCorrect = false;
+
+                foreach (Point mousePoint in mousePositions)
+                {
+                    double distance = Math.Sqrt(Math.Pow(mousePoint.X - _positionX[i], 2) + Math.Pow(mousePoint.Y - _positionY[i], 2));
+                    if (distance < 10)
+                        isCorrect = true;
+                }
+
+                if (isCorrect)
+                    point += 1;
+            }
+            if (point >= 3)
+                _submit = true;
+            else
+                _submit = false;
+
+            return _submit;
+        }
+        public BaseViewModel NavigatetoResult
+        {
+            get
+            {
+                return _navigatetoResult;
+            }
+            set
+            {
+                _navigatetoResult = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand ShowResult
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Submit();
+                    if (_submit == true)
+                        NavigatetoResult = new GoodResultViewModel();
+                    else
+                        NavigatetoResult = new BadResultViewModel();
+                });
+            }
+
+            set { }
+        }
+
+
     }
 
 }

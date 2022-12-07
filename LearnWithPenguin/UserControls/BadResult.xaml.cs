@@ -22,7 +22,8 @@ namespace LearnWithPenguin.UserControls
     {
         public BadResult()
         {
-            
+            InitializeComponent();
+
         }
     }
 }

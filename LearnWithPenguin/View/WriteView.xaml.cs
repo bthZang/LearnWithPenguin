@@ -1,6 +1,7 @@
 ﻿using LearnWithPenguin.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class WriteView : System.Windows.Controls.Page
     {
+
         public WriteView()
         {
             InitializeComponent();
@@ -41,6 +43,19 @@ namespace LearnWithPenguin.View
             var viewModelInstance = media.DataContext;
             (viewModelInstance as WriteViewModel).IsDisplayVideo = "Hidden";
             media.Stop();
+        }
+
+        private void MyCanvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void MyCanvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            System.Windows.Point position = e.GetPosition(this);
+
+            var viewModelInstance = media.DataContext;
+            if (System.Windows.Input.Mouse.LeftButton == MouseButtonState.Pressed)
+                (viewModelInstance as WriteViewModel).AddPosition(position);
         }
     }
 }
