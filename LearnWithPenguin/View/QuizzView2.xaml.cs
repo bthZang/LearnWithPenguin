@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.View
 {
     /// <summary>
-    /// Interaction logic for PuzzleView.xaml
+    /// Interaction logic for QuizzView2.xaml
     /// </summary>
-    public partial class PuzzleView : System.Windows.Controls.Page
+    public partial class QuizzView2 : Page
     {
-        public PuzzleView()
+        public QuizzView2()
         {
-            
+            InitializeComponent();
         }
     }
 }

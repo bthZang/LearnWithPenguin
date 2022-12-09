@@ -1,11 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+                    xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel">
 
-    >
-    
-    
-    
+
+
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
     <viewmodel:OnBoardingViewModel x:Key="OnBoardingVM"></viewmodel:OnBoardingViewModel>
     <viewmodel:TextOnBoardingViewModel x:Key="TextOnBoardingVM"></viewmodel:TextOnBoardingViewModel>
@@ -15,6 +13,9 @@
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
     <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
+    
+    <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
+    <viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>
 
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
@@ -39,8 +40,6 @@
 
     <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
     <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>
-
-
 
 
 

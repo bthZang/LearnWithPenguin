@@ -44,18 +44,18 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-        //public ICommand TransformToRead
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
-        //        {
-        //            NavigatetoHome = new ReadViewModel();
-        //        });
-        //    }
+        public ICommand TransformToRead
+        {
+           get
+           {
+               return new RelayCommand<object>((p) => { return true; }, (p) =>
+               {
+                   NavigatetoHome = new ReadViewModel();
+               });
+           }
 
-        //    set { }
-        //}
+           set { }
+        }
         public ICommand TransformToWrite
         {
             get
@@ -194,6 +194,28 @@ namespace LearnWithPenguin.ViewModel
                 });
             }
 
+            set { }
+        }
+        public ICommand TransformToQuizzView1
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView1ViewModel();
+                });
+            }
+            set { }
+        }
+        public ICommand TransformToQuizzView2
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
             set { }
         }
     }
