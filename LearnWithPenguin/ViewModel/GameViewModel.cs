@@ -25,36 +25,14 @@ namespace LearnWithPenguin.ViewModel
             public static string TurnUR = "\\images\\turnUR@3x.png";
             public static string TurnDR = "\\images\\turnDR@3x.png";
         }
-        protected BaseViewModel _navigatetoCoding;
 
         private System.Windows.Controls.UserControl _GameTurn;
         public System.Windows.Controls.UserControl GameTurn { get { return _GameTurn; } set { _GameTurn = value; OnPropertyChanged(); } }
 
-        public BaseViewModel NavigatetoCoding
-        {
-            get
-            {
-                return _navigatetoCoding;
-            }
-            set
-            {
-                _navigatetoCoding = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public ICommand TransformToCoding
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoCoding = new CodingViewModel();
-                });
-            }
-
-            set { }
-        }
+        private System.Windows.Controls.UserControl _GameWarn;
+        public System.Windows.Controls.UserControl GameWarn { get { return _GameWarn; } set { _GameWarn = value; OnPropertyChanged(); } }
+        private string _ViString;
+        public string ViString { get { return _ViString; } set { _ViString = value; OnPropertyChanged(); } }
 
         public ICommand ForwardCommand { get; set; }
         public ICommand RunGameCommand { get; set; }
@@ -80,6 +58,8 @@ namespace LearnWithPenguin.ViewModel
         {
             PositionNumber = "1";
             GameTurn = new Game1();
+
+            ViString = "Hidden";
 
             Game1Context = new Game1ViewModel();
             StepQueues = new Queue<string>();
@@ -188,14 +168,15 @@ namespace LearnWithPenguin.ViewModel
                             break;
                     }
                 }
-                catch 
+                catch
                 {
-                    Console.WriteLine("hehe");
+                    ViString = "Visible";
                 }
             });
 
             Reload = new RelayCommand<object>((p) => { return true; }, (p) => {
                 StepQueues.Clear();
+
             });
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>

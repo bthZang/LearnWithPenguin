@@ -90,6 +90,9 @@
     <Compile Include="UserControls\Game3.xaml.cs">
       <DependentUpon>Game3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GameWarn.xaml.cs">
+      <DependentUpon>GameWarn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,7 @@
     <Compile Include="ViewModel\Game2ViewModel.cs" />
     <Compile Include="ViewModel\Game3ViewModel.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
+    <Compile Include="ViewModel\GameWarnViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
     <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
@@ -188,6 +192,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Game3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\GameWarn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

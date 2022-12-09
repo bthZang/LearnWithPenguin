@@ -60,6 +60,8 @@
                                             Width="110"
                                             Height="60"
                                             CornerRadius="30"
+                                            BorderThickness="2 2 2 2"
+                                            BorderBrush="#E97777"
                                             >
                                         <Image Source="{Binding}"></Image>
                                     </Border>

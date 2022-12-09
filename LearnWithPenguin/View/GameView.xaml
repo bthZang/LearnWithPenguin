@@ -335,5 +335,6 @@
                 </DockPanel>
             </StackPanel>
         </StackPanel>
+        <localUser:GameWarn />
     </Grid>
 </Page>

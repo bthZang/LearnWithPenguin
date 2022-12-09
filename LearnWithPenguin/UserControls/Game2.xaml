@@ -45,7 +45,7 @@
                             Grid.ColumnSpan="6"
                             Width="690"
                             Height="70"
-                            Background="Beige"
+                            Background="#FBFACD"
                             CornerRadius="20"
                             HorizontalAlignment="Left"
                             Margin="121,10,0,50"
