@@ -113,13 +113,15 @@
                 </Border>
                 <Grid Height="550"
                       Width="925"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
                       Margin="0 -560 0 0">
                     <Image DataContext="{StaticResource WriteVM}"
                            Source="{ Binding SouceDash}"
-                           Height="Auto"
+                           Height="400"
                            Opacity="0.5"
                            Width="325"
-                           Margin="66 138 0 0"></Image>
+                           Margin="66,8,0,0"></Image>
                     <InkCanvas Background="Transparent"
                                ForceCursor="True"
                                Cursor="Pen"
