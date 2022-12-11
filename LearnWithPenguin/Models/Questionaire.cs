@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace LearnWithPenguin.Models
 {
-    public class Questionaire
+    internal class Questionaire
     {
         private int answeredCorrectly;
 

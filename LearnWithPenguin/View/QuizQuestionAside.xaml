@@ -70,8 +70,7 @@
                                         Background="Transparent"
                                         BorderThickness="0"
                                         Width="50.13"
-                                        Height="50.13"
-                                        Click="BackClicked">
+                                        Height="50.13">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -110,8 +109,7 @@
                                         Background="Transparent"
                                         BorderThickness="0"
                                         Width="50.13"
-                                        Height="50.13"
-                                        Click="ForwardClicked">
+                                        Height="50.13">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -126,6 +124,7 @@
                         </Grid>
 
 
+
                     </DockPanel>
 
 
@@ -135,7 +134,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding DisplayedQuestionIndex, StringFormat=Question {0}}"
                                    Width="94"
-                                   Height="60"
+                                   Height="57"
                                    VerticalAlignment="Bottom"
                                    HorizontalAlignment="Center"
                                    Foreground="#073580"
@@ -146,42 +145,15 @@
                                    Style="{StaticResource Baloo2-Bold}" />
                         <TextBlock Text="{Binding Question.QuestionText, StringFormat=: {0}}"
                                    Margin="0 25 0 15"
-                                   VerticalAlignment="Bottom"
-                                   Foreground="#073580"
-                                   FontSize="36.09"
-                                   FontStyle="Normal"
+                                   FontSize="15"
                                    FontWeight="Bold"
-                                   TextAlignment="Center"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Width="959" />
+                                   TextWrapping="Wrap" />
                     </StackPanel>
-                    <!-- Answer -->
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Antworten -->
-                        <StackPanel>
-
-                            <!-- Answer 1 - n -->
-                            <ItemsControl ItemsSource="{Binding Answers}"
-                                          ItemTemplate="{StaticResource answerTemplate}"
-                                          Height="399" />
-                        </StackPanel>
-
-
-                        <Image Width="400"
-                               Height="400"
-                               Source="{Binding ImageSource}"
-                               Grid.Column="1" />
-                    </Grid>
                     <DockPanel>
                         <Grid HorizontalAlignment="Left">
                             <localUC:HomeIcon Width="97.13"
                                               Height="34.99"
-                                              Margin="40,100,21,38"
+                                              Margin="22,727,21,38"
                                               DataContext="{StaticResource MainVM}"
                                               Command="{Binding Transform}">
 

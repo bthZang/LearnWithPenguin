@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    public class Answer
+    internal class Answer
     {
         public int index { get; set; }
         public string text { get; set; }

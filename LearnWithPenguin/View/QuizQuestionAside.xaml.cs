@@ -1,8 +1,5 @@
-﻿using LearnWithPenguin.Models;
-using LearnWithPenguin.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +23,6 @@ namespace LearnWithPenguin.View
         public QuizQuestionAsideViewModel QuestionVM { get; set; }
         public QuizQuestionAside(QuizQuestionAsideViewModel questionVM)
         {
-            QuestionVM = questionVM;
             InitializeComponent();
             this.DataContext = QuestionVM;
             bool result = QuestionVM.Question.Solve();

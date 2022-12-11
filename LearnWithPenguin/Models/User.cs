@@ -8,7 +8,7 @@ using System.Linq;
 namespace LearnWithPenguin.Models
 {
     [DelimitedRecord(",")]
-    public class User
+    internal class User
     {
         public string Name { get; set; }
         public string Title { get; set; }
