@@ -52,7 +52,7 @@ namespace LearnWithPenguin.ViewModel
             QuestionaireIDList.Add(QuestionaireID);
 
             // create the model
-            Questionaire = new Questionaire(0, questionaireID);
+            Questionaire = new Questionaire(/*0, */questionaireID);
             // create the displayed question
             Question = Questionaire.Questions[0];
             // fills the observable collection with Answer objects
@@ -75,42 +75,42 @@ namespace LearnWithPenguin.ViewModel
 
         }
         //ctor for new userselected questionaires
-        public QuizQuestionAsideViewModel(QuizQuestionAsideViewModel oldQuestionViewModel)
-        {
-            User = oldQuestionViewModel.User;
+        //public QuizQuestionAsideViewModel(QuizQuestionAsideViewModel oldQuestionViewModel)
+        //{
+        //    User = oldQuestionViewModel.User;
 
-            // create the questionnaire id, add to list
-            QuestionaireIDList = new ObservableCollection<int>();
+        //    // create the questionnaire id, add to list
+        //    QuestionaireIDList = new ObservableCollection<int>();
 
 
-            foreach (int id in oldQuestionViewModel.User.QuestionaireIDs)
-                questionaireIDList.Add(id);
+        //    foreach (int id in oldQuestionViewModel.User.QuestionaireIDs)
+        //        questionaireIDList.Add(id);
 
-            QuestionaireID = oldQuestionViewModel.User.SelectedQuestionaire;
-            // create the model
-            int selectedID = oldQuestionViewModel.User.SelectedQuestionaire;
-            //int selectedDB = oldQuestionViewModel.User.SelectedDB;
-            QuestionLimit = oldQuestionViewModel.User.QuestionLimit;
-            Questionaire = new Questionaire(/*selectedDB, */selectedID, questionLimit);
-            // create the displayed question
-            Question = Questionaire.Questions[0];
-            // fills the observable collection with Answer objects
-            Answers = new ObservableCollection<Answer>();
-            for (int i = 0; i < Question.AnswerList.Count; i++)
-            {
-                Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer, Question.AnswerList[i].SelectedAnswer));
-            }
-            // set these counters for logic and display
-            CompletedQuestions = 0; // base 0, questions with answers selected by user, for wrapping
-            DisplayedQuestionIndex = 0; // base 0, for navigation, for wrapping
-            // image string path
-            PathToImage = Question.PathToImage;
-            // image source from string
-            ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
-            // for results page
-            WrongAnswers = new ObservableCollection<WrongAnswer>();
-            //ShowHistory();
-        }
+        //    QuestionaireID = oldQuestionViewModel.User.SelectedQuestionaire;
+        //    // create the model
+        //    int selectedID = oldQuestionViewModel.User.SelectedQuestionaire;
+        //    //int selectedDB = oldQuestionViewModel.User.SelectedDB;
+        //    QuestionLimit = oldQuestionViewModel.User.QuestionLimit;
+        //    Questionaire = new Questionaire(/*selectedDB, */selectedID, questionLimit);
+        //    // create the displayed question
+        //    Question = Questionaire.Questions[0];
+        //    // fills the observable collection with Answer objects
+        //    Answers = new ObservableCollection<Answer>();
+        //    for (int i = 0; i < Question.AnswerList.Count; i++)
+        //    {
+        //        Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer, Question.AnswerList[i].SelectedAnswer));
+        //    }
+        //    // set these counters for logic and display
+        //    CompletedQuestions = 0; // base 0, questions with answers selected by user, for wrapping
+        //    DisplayedQuestionIndex = 0; // base 0, for navigation, for wrapping
+        //    // image string path
+        //    PathToImage = Question.PathToImage;
+        //    // image source from string
+        //    ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
+        //    // for results page
+        //    WrongAnswers = new ObservableCollection<WrongAnswer>();
+        //    //ShowHistory();
+        //}
 
         //public void ShowHistory()
         //{

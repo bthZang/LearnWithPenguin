@@ -77,9 +77,7 @@
 
             <StackPanel  Margin="550 100 200 50">
 
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToQuizAsideView}"
-                        Height="200"
+                <Button Height="200"
                         Width="198"
                         Background="Transparent"
                         BorderThickness="0"
@@ -90,6 +88,7 @@
                                     Value="15 15 15 15" />
                         </Style>
                     </Button.Resources>
+                    
 
 
                     <Image Stretch="Uniform"

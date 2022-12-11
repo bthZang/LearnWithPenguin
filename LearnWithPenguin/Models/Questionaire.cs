@@ -41,23 +41,23 @@ namespace LearnWithPenguin.Models
             foreach (int shuffledID in questionIDs)
                 AddQuestion();
         }
-        public Questionaire(/*int dbID, */int id, int limit)
-        {
-            ID = id;
-            //this.dbID = dbID;
-            Results = 0;
-            Questions = new List<Question>();
-            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(/*dbID,*/ id));
-           
-            List<int> limitedIDs = new List<int>();
-            for (int i = 0; i < limit; i++)
-            {
-                limitedIDs.Add(questionIDs[i]);
-            }
-            questionIDs = limitedIDs.ToArray();
-            foreach (int shuffledID in questionIDs)
-                AddQuestion();
-        }
+        //public Questionaire(/*int dbID, */int id, int limit)
+        //{
+        //    ID = id;
+        //    //this.dbID = dbID;
+        //    Results = 0;
+        //    Questions = new List<Question>();
+        //    questionIDs = ShuffleIDs(DataReader.GetQuestionIds(/*dbID,*/ id));
+
+        //    List<int> limitedIDs = new List<int>();
+        //    for (int i = 0; i < limit; i++)
+        //    {
+        //        limitedIDs.Add(questionIDs[i]);
+        //    }
+        //    questionIDs = limitedIDs.ToArray();
+        //    foreach (int shuffledID in questionIDs)
+        //        AddQuestion();
+        //}
         public int CountCorrect()
         {
             int i = 0;

@@ -35,9 +35,14 @@
                              IsChecked="{Binding SelectedAnswer}" />
                 <TextBlock Text="{Binding Text}"
                            Margin="10 0 0 0"
-                           FontSize="15"
+                           VerticalAlignment="Bottom"
+                           HorizontalAlignment="Center"
+                           Foreground="#073580"
+                           FontSize="36.09"
+                           FontStyle="Normal"
                            FontWeight="Bold"
-                           VerticalAlignment="Center"
+                           TextAlignment="Center"
+                           Style="{StaticResource Baloo2-Bold}"
                            TextWrapping="Wrap" />
             </StackPanel>
         </DataTemplate>
@@ -70,7 +75,8 @@
                                         Background="Transparent"
                                         BorderThickness="0"
                                         Width="50.13"
-                                        Height="50.13">
+                                        Height="50.13"
+                                        Click="BackClicked">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -81,7 +87,7 @@
                                            Width="38.8"
                                            Height="42.9"></Image>
                                 </Button>
-                                <TextBlock Text="Bài"
+                                <!--<TextBlock Text="Bài"
                                            Width="94"
                                            Height="57"
                                            VerticalAlignment="Bottom"
@@ -92,9 +98,9 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Margin="30,38.49,0,8" />
-                                <TextBlock Text="{Binding QuestionaireID}"
-                                           Width="94"
+                                           Margin="30,38.49,0,8" />-->
+                                <TextBlock Text="{Binding DisplayedQuestionIndex, StringFormat= Bài {0}}"
+                                           Width="150"
                                            Height="57"
                                            VerticalAlignment="Bottom"
                                            HorizontalAlignment="Center"
@@ -104,12 +110,13 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Margin="-30 38.49 -50 8" />
+                                           Margin="30 38.49 0 8" />
                                 <Button Margin="53.32 32.11 0 0"
                                         Background="Transparent"
                                         BorderThickness="0"
                                         Width="50.13"
-                                        Height="50.13">
+                                        Height="50.13"
+                                        Click="ForwardClicked">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -131,11 +138,10 @@
 
 
                     <!-- Question -->
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding DisplayedQuestionIndex, StringFormat=Question {0}}"
-                                   Width="94"
-                                   Height="57"
-                                   VerticalAlignment="Bottom"
+                    <StackPanel Orientation="Horizontal"
+                                Margin="42 50 0 0">
+                        <TextBlock Text="Question: "
+                                   VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
                                    Foreground="#073580"
                                    FontSize="36.09"
@@ -143,23 +149,70 @@
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Style="{StaticResource Baloo2-Bold}" />
-                        <TextBlock Text="{Binding Question.QuestionText, StringFormat=: {0}}"
-                                   Margin="0 25 0 15"
-                                   FontSize="15"
+                        <TextBlock Text="{Binding Question.QuestionText}"
+                                   Margin="100 25 0 15"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="#073580"
+                                   FontSize="36.09"
+                                   FontStyle="Normal"
                                    FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   Style="{StaticResource Baloo2-Bold}"
                                    TextWrapping="Wrap" />
                     </StackPanel>
-                    <DockPanel>
+                    <!-- Answer & optionales Bild -->
+                    <Grid Margin="42 50 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Antworten -->
+                        <StackPanel>
+
+                            <!-- Answer 1 - n -->
+                            <ItemsControl ItemsSource="{Binding Answers}"
+                                          ItemTemplate="{StaticResource answerTemplate}"
+                                          Height="403"
+                                          Width="610" />
+                        </StackPanel>
+
+                        <!-- TODO: optionale Bilder einblenden in Grid.Column="1" -->
+                        <!-- Logo Kunde -->
+                        <Image Width="400"
+                               Height="400"
+                               Source="{Binding ImageSource}"
+                               Grid.Column="1" />
+                    </Grid>
+                    <Grid Height="89"
+                          Margin="42 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <localUC:HomeIcon Width="97"
+                                          Height="35"
+                                          Margin="10,27,254,27"
+                                          DataContext="{StaticResource MainVM}"
+                                          Command="{Binding Transform}" />
+
+                    </Grid>
+
+                    <!--<DockPanel>
                         <Grid HorizontalAlignment="Left">
                             <localUC:HomeIcon Width="97.13"
                                               Height="34.99"
-                                              Margin="43,564,0,201"
+                                              Margin="43,150,0,201"
                                               DataContext="{StaticResource MainVM}"
                                               Command="{Binding Transform}">
 
                             </localUC:HomeIcon>
                         </Grid>
-                    </DockPanel>
+                    </DockPanel>-->
                 </StackPanel>
             </Grid>
         </StackPanel>

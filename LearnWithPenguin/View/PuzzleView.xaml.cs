@@ -37,7 +37,7 @@ namespace LearnWithPenguin.View
         private void StartClicked(object sender, RoutedEventArgs e)
         {
             QuizQuestionAsideViewModel currentQuestionVM = QuestionVM;
-            NavigationService.Navigate(new QuizQuestionAside(new QuizQuestionAsideViewModel(currentQuestionVM)));
+            NavigationService.Navigate(new QuizQuestionAside(new QuizQuestionAsideViewModel(/*currentQuestionVM*/)));
         }
 
         private void DockPanel_Loaded(object sender, RoutedEventArgs e)
