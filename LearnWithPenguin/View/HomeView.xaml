@@ -32,7 +32,7 @@
               Panel.ZIndex="9999">-->
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource HomeVM}"
-                        Content="{Binding NavigatetoWarning}"/>
+                        Content="{Binding NavigatetoWarning}" />
         <!--</Grid>-->
 
         <StackPanel DataContext="{StaticResource HomeVM}"
@@ -53,40 +53,42 @@
             </StackPanel>
 
 
-
-            <StackPanel  Margin="45 196.88 74.9 0">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToRead}"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/TapDocNoText.png"
-                           Height="200"
-                           Width="198" />
-                    <!--<Button.BitmapEffect>
+            <DockPanel>
+                <StackPanel  Margin="45 196.88 74.9 0">
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToRead}"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="15 15 15 15" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/TapDocNoText.png"
+                               Height="200"
+                               Width="198" />
+                        <!--<Button.BitmapEffect>
 
                         <BitmapEffectGroup>
 
                             <OuterGlowBitmapEffect GlowColor="Red" GlowSize="20"></OuterGlowBitmapEffect>
 
-                            --><!--<OuterGlowBitmapEffect></OuterGlowBitmapEffect>
+                            -->
+                        <!--<OuterGlowBitmapEffect></OuterGlowBitmapEffect>
 
                             <OuterGlowBitmapEffect></OuterGlowBitmapEffect>
 
                             <DropShadowBitmapEffect></DropShadowBitmapEffect>
 
-                            <BevelBitmapEffect></BevelBitmapEffect>--><!--
+                            <BevelBitmapEffect></BevelBitmapEffect>-->
+                        <!--
 
                         </BitmapEffectGroup>
 
                     </Button.BitmapEffect>-->
-                    <!--<Button.Style>
+                        <!--<Button.Style>
                         <Style TargetType="Button">
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver"
@@ -97,12 +99,14 @@
                                                 <ThicknessAnimation Duration="0:0:0.250"
                                                                     To="0"
                                                                     Storyboard.TargetProperty="BorderThickness" />
-                                                --><!--<DoubleAnimation Duration="0:0:0.550"
+                                                -->
+                        <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
-                                                                 Storyboard.TargetProperty="Width" />--><!--
+                                                                 Storyboard.TargetProperty="Width" />-->
+                        <!--
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </Trigger.EnterActions>
@@ -112,12 +116,14 @@
                                                 <ThicknessAnimation Duration="0:0:0.250"
                                                                     To="0"
                                                                     Storyboard.TargetProperty="BorderThickness" />
-                                                --><!--<DoubleAnimation Duration="0:0:0.550"
+                                                -->
+                        <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
-                                                                 Storyboard.TargetProperty="Width" />--><!--
+                                                                 Storyboard.TargetProperty="Width" />-->
+                        <!--
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </Trigger.ExitActions>
@@ -125,89 +131,89 @@
                             </Style.Triggers>
                         </Style>
                     </Button.Style>-->
-                </Button>
-                <Label Name="TapDoc"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Tập đọc</Label>
+                    </Button>
+                    <Label Name="TapDoc"
+                           Foreground="#2D3D8F"
+                           FontSize="28.13"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           HorizontalContentAlignment="Center"
+                           Style="{StaticResource Baloo2-Regular}">Tập đọc</Label>
 
 
 
-                <Button DataContext="{StaticResource HomeVM}"
-                        Command="{Binding ShowWarning}"
-                        Height="200"
-                        Width="198"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
+                    <Button DataContext="{StaticResource HomeVM}"
+                            Command="{Binding ShowWarning}"
+                            Height="200"
+                            Width="198"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="15 15 15 15" />
+                            </Style>
+                        </Button.Resources>
 
 
-                    <Image Stretch="Uniform"
-                           Source="../images/TapVietNoText.png"
-                           Height="200"
-                           Width="198" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                        <Image Stretch="Uniform"
+                               Source="../images/TapVietNoText.png"
+                               Height="200"
+                               Width="198" />
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
 
-                </Button>
-
-
-                <Label Name="TapViet"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Tập viết</Label>
+                    </Button>
 
 
+                    <Label Name="TapViet"
+                           Foreground="#2D3D8F"
+                           FontSize="28.13"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           HorizontalContentAlignment="Center"
+                           Style="{StaticResource Baloo2-Regular}">Tập viết</Label>
 
-                <!--<Button DataContext="{StaticResource HomeVM}"
+
+
+                    <!--<Button DataContext="{StaticResource HomeVM}"
                             Command="{Binding ShowWarning}"
                             Height="296"></Button>
                     <Button DataContext="{StaticResource MainVM}"
@@ -265,154 +271,157 @@
                                Height="251.52"
                                Width="195.66" />
                     </Button>-->
-            </StackPanel>
-            <StackPanel Margin="0 200 0 0">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToPuzzle}"
-                        Background="Transparent"
-                        Height="200"
-                        Width="198"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/DoVuiNoText.png"
-                           Height="230"
-                           Width="198"
-                           Margin="0 0 0 0" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                </StackPanel>
+                <StackPanel Margin="0 200 0 0">
+                    <Button DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToPuzzle}"
+                            Background="Transparent"
+                            Height="200"
+                            Width="198"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="15 15 15 15" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Stretch="Uniform"
+                               Source="../images/DoVuiNoText.png"
+                               Height="230"
+                               Width="198"
+                               Margin="0 0 0 0" />
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
 
-                </Button>
+                    </Button>
 
-                <Label Name="DoVui"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Đố vui</Label>
+                    <Label Name="DoVui"
+                           Foreground="#2D3D8F"
+                           FontSize="28.13"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           HorizontalContentAlignment="Center"
+                           Style="{StaticResource Baloo2-Regular}">Đố vui</Label>
 
 
-                <Button Command="{Binding TransformToCoding}"
-                        Height="200"
-                        Width="198"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Button.DataContext>
-                        <StaticResource ResourceKey="MainVM" />
-                    </Button.DataContext>
-                    <Image Stretch="Uniform"
-                           Source="../images/TroChoiNoText.png"
-                           Height="230"
-                           Width="198" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                    <Button Command="{Binding TransformToCoding}"
+                            Height="200"
+                            Width="198"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius"
+                                        Value="15 15 15 15" />
+                            </Style>
+                        </Button.Resources>
+                        <Button.DataContext>
+                            <StaticResource ResourceKey="MainVM" />
+                        </Button.DataContext>
+                        <Image Stretch="Uniform"
+                               Source="../images/TroChoiNoText.png"
+                               Height="230"
+                               Width="198" />
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ThicknessAnimation Duration="0:0:0.250"
+                                                                        To="0"
+                                                                        Storyboard.TargetProperty="BorderThickness" />
+                                                    <!--<DoubleAnimation Duration="0:0:0.550"
                                                                  To="200"
                                                                  Storyboard.TargetProperty="Height" />
                                                 <DoubleAnimation Duration="0:0:0.550"
                                                                  To="198"
                                                                  Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
 
-                <Label Name="TroChoi"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Trò chơi</Label>
+                    <Label Name="TroChoi"
+                           Foreground="#2D3D8F"
+                           FontSize="28.13"
+                           FontWeight="Bold"
+                           FontStyle="Normal"
+                           HorizontalContentAlignment="Center"
+                           Style="{StaticResource Baloo2-Regular}">Trò chơi</Label>
 
-            </StackPanel>
+                </StackPanel>
+            </DockPanel>
 
 
-            <Image Width="500"
-                   Source="/View/HomeView.png"
-                   Margin="0,370,0,-16"
-                   HorizontalAlignment="Right"
-                   Stretch="Uniform" />
-            <StackPanel HorizontalAlignment="Right">
-                <StackPanel VerticalAlignment="Top"
-                            Margin="-500 85.94 0 0">
+
+            <DockPanel Margin="0 0 10 0"
+                       Width="515"
+                       VerticalAlignment="Stretch">
+                <StackPanel Margin="0 85.94 0 0"
+                            Width="500"
+                            Height="717">
+
+                    
+
                     <TextBlock Text="BẮT ĐẦU"
                                Foreground="#FF073580"
                                FontSize="56.56"
@@ -436,8 +445,14 @@
                                    HorizontalAlignment="Right" />
 
                     </StackPanel>
+                    <Image Width="500"
+                           Source="/View/HomeView.png"
+                           Stretch="Uniform" 
+                           Margin="0 50 0 0"/>
                 </StackPanel>
-            </StackPanel>
+            </DockPanel>
+
+
         </StackPanel>
 
 

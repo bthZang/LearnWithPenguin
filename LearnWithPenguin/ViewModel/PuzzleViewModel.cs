@@ -55,8 +55,9 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        protected BaseViewModel _navigateToQuizAside;
-        public BaseViewModel NavigateQuizAside
+
+        protected MainViewModel _navigateToQuizAside;
+        public MainViewModel NavigateQuizAside
         {
             get
             {
@@ -68,6 +69,8 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
+
+
         private BaseViewModel _menu;
 
         public BaseViewModel Menu

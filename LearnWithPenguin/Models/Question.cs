@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    internal class Question
+    public class Question
     {
         public int ID { get; set; }
         public int DBID { get; set; }
@@ -26,9 +26,9 @@ namespace LearnWithPenguin.Models
             AnswerList.Add(new Answer(3, answers4, false, false));
             foreach (Answer a in AnswerList)
             {
-                if (a.index == (int)correntAnswer - 1)
+                if (a.Index == (int)correntAnswer - 1)
                 {
-                    a.correctAnswer = true;
+                    a.CorrectAnswer = true;
                 }
             }
         }
@@ -49,21 +49,21 @@ namespace LearnWithPenguin.Models
         public void AnswerClicked(int index)
         {
             foreach (Answer answer in AnswerList)
-                if (answer.index != index)
-                    answer.selectedAnswer = false;
+                if (answer.Index != index)
+                    answer.SelectedAnswer = false;
                 else
-                    answer.selectedAnswer = true;
+                    answer.SelectedAnswer = true;
         }
 
         public bool Solve()
         {
             bool correct = false;
             foreach (Answer answer in AnswerList)
-                if (answer.correctAnswer && answer.selectedAnswer)
+                if (answer.CorrectAnswer && answer.SelectedAnswer)
                     correct = true;
 
             foreach (Answer answer in AnswerList)
-                Trace.WriteLine("answer.SelectedAnswer = " + answer.selectedAnswer + ", answer.CorrectAnswer = " + answer.correctAnswer);
+                Trace.WriteLine("answer.SelectedAnswer = " + answer.SelectedAnswer + ", answer.CorrectAnswer = " + answer.CorrectAnswer);
 
             Trace.WriteLine("correct = " + correct);
             return correct;

@@ -87,6 +87,7 @@
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\DataReader.cs" />
     <Compile Include="Models\History.cs" />
+    <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Questionaire.cs" />
     <Compile Include="Models\User.cs" />
@@ -95,6 +96,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Quizz.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quizz.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quizz.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quizz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quizz.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quizz.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz_Question.cs">
+      <DependentUpon>Quizz.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz_Within.cs">
+      <DependentUpon>Quizz.tt</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
@@ -351,6 +373,13 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EntityDeploy Include="Quizz.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Quizz.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Quizz.edmx.diagram">
+      <DependentUpon>Quizz.edmx</DependentUpon>
+    </None>
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
     <Resource Include="fonts\Baloo2-ExtraBold.ttf" />
@@ -682,6 +711,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Quizz.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Quizz.edmx</DependentUpon>
+      <LastGenOutput>Quizz.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Quizz.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Quizz.edmx</DependentUpon>
+      <LastGenOutput>Quizz.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

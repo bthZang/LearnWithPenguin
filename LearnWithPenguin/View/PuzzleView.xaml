@@ -28,8 +28,9 @@
                         DataContext="{StaticResource HomeVM}"
                         Content="{Binding Menu}" />
 
-        <DockPanel Margin="0,35,975,0">
-            <Grid>
+        <DockPanel>
+            <Grid  Margin="43,35,975,0"
+                   HorizontalAlignment="Left">
                 <localUC:Icon Width="63.28"
                               Height="63.28"
                               DataContext="{StaticResource MainVM}"
@@ -80,7 +81,8 @@
                         Height="200"
                         Width="198"
                         Background="Transparent"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        Click="StartClicked">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -105,11 +107,12 @@
                        Style="{StaticResource Baloo2-Regular}">Lịch sử Việt Nam</Label>
 
                 <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToQuizzAsideView}"
+                        Command="{Binding TransformToQuizAsideView}"
                         Height="220"
                         Width="200"
                         Background="Transparent"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        Click="StartClicked">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -137,12 +140,11 @@
             </StackPanel>
             <StackPanel  Margin="850 100 0 50"
                          Width="196">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToQuizzAsideView}"
-                        Height="200"
+                <Button Height="200"
                         Width="198"
                         Background="Transparent"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        Click="StartClicked">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -150,11 +152,11 @@
                         </Style>
                     </Button.Resources>
 
-
                     <Image Stretch="Uniform"
                            Source="../images/Artwork.png"
                            Height="200"
                            Width="198" />
+
                 </Button>
 
 
@@ -178,6 +180,7 @@
                                     Value="15 15 15 15" />
                         </Style>
                     </Button.Resources>
+
 
 
                     <Image Stretch="Uniform"
@@ -237,15 +240,14 @@
 
             </StackPanel>
         </Grid>
-      
+
         <DockPanel>
-            <Grid HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Left"
+                  Margin="0 -150 0 0">
                 <localUC:Back Width="97.13"
-                              Height="34.99"
-                              Margin="43 -100 0 0"
                               DataContext="{StaticResource MainVM}"
-                              Command="{Binding TransformToCoding}">
-                </localUC:Back>
+                              Command="{Binding Transform}"
+                              Margin="30,34,0,58" />
             </Grid>
         </DockPanel>
     </StackPanel>

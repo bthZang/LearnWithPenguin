@@ -153,7 +153,7 @@
                         <Grid HorizontalAlignment="Left">
                             <localUC:HomeIcon Width="97.13"
                                               Height="34.99"
-                                              Margin="22,727,21,38"
+                                              Margin="43,564,0,201"
                                               DataContext="{StaticResource MainVM}"
                                               Command="{Binding Transform}">
 

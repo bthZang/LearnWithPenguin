@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LearnWithPenguin.Models;
+using LearnWithPenguin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,22 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class PuzzleView : System.Windows.Controls.Page
     {
+        public QuizQuestionAsideViewModel QuestionVM { get; set; }
         public PuzzleView()
         {
             
+        }
+        public PuzzleView(QuizQuestionAsideViewModel questionVM)
+        {
+            QuestionVM = questionVM;
+            InitializeComponent();
+            this.DataContext = QuestionVM;
+        }
+
+        private void StartClicked(object sender, RoutedEventArgs e)
+        {
+            QuizQuestionAsideViewModel currentQuestionVM = QuestionVM;
+            NavigationService.Navigate(new QuizQuestionAside(new QuizQuestionAsideViewModel(currentQuestionVM)));
         }
     }
 }

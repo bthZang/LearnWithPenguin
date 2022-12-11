@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    internal class DataReader
+    public class DataReader
 
     { 
-        static Quizz_LearnWithPenguineEntities quizz = new Quizz_LearnWithPenguineEntities();
+        static Quizz_LearnWithPenguineEntities1 quizz = new Quizz_LearnWithPenguineEntities1();
 
         static private Byte ConvertAnserToByte(string data)
         {
@@ -27,11 +27,11 @@ namespace LearnWithPenguin.Models
                     return 0;
             }
         }
-        static public int[] GetQuestionIds(int dbID, int id)
+        static public int[] GetQuestionIds(/*int dbID,*/ int id)
         {
-            switch (dbID)
-            {
-                case 0:
+            //switch (dbID)
+            //{
+            //    case 0:
                     List<int> query = quizz.Quiz_Question.Where(x => x.Question_Topic == id).Select(y => y.Question_ID).ToList<int>();
                     List<int> result = new List<int>();
                     foreach (int q in query)
@@ -55,27 +55,27 @@ namespace LearnWithPenguin.Models
                 //        }
                 //    }
                 //    return result2.ToArray();
-                default:
-                    return new int[] { 0, 0 };
-            }
-            //this return will never happen, because of the switches default, but the compiler needs a return there..
-            return new int[] { 0, 0 };
+            //    default:
+            //        return new int[] { 0, 0 };
+            //}
+            ////this return will never happen, because of the switches default, but the compiler needs a return there..
+            //return new int[] { 0, 0 };
         }
 
-        public static Question GetQuestion(int dbID, int id)
+        public static Question GetQuestion(/*int dbID,*/ int id)
         {
-            switch (dbID)
-            {
-                case 0:
+            //switch (dbID)
+            //{
+            //    case 0:
                     LearnWithPenguin.Quiz_Within question = quizz.Quiz_Within.Where(x => x.Question_ID == id).SingleOrDefault();
-                    return new Question(question.Question_ID, question.Question, question.Answer1, question.Answer2, question.Answer3, question.Answer4, ConvertAnserToByte(question.CorrectAnswer));
+                    return new Question(question.Question_ID, question.Question, question.Answer1, question.Answer2, question.Answer3, question.Answer4, question.CorrectAnswer);
                 //case 1:
                 //    //dummy copy bitte durch ubi db ersetzen
                 //    LearnWithPenguin .T_Funk_UBI question2 = ubi.T_Funk_UBI.Where(x => x.Id == id).SingleOrDefault();
-                //    return new Question(question2.Id, question2.Frage, question2.AntwortA, question2.AntwortB, question2.AntwortC, question2.AntwortD, ConvertAnserToByte(question2.RichtigeAntwort));
-                default:
-                    return null;
-            }
+            //    //    return new Question(question2.Id, question2.Frage, question2.AntwortA, question2.AntwortB, question2.AntwortC, question2.AntwortD, ConvertAnserToByte(question2.RichtigeAntwort));
+            //    default:
+            //        return null;
+            //}
         }
     }
 }

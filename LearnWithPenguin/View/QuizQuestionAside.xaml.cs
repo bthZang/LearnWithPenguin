@@ -1,5 +1,8 @@
-﻿using System;
+﻿using LearnWithPenguin.Models;
+using LearnWithPenguin.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +26,7 @@ namespace LearnWithPenguin.View
         public QuizQuestionAsideViewModel QuestionVM { get; set; }
         public QuizQuestionAside(QuizQuestionAsideViewModel questionVM)
         {
+            QuestionVM = questionVM;
             InitializeComponent();
             this.DataContext = QuestionVM;
             bool result = QuestionVM.Question.Solve();
@@ -54,7 +58,7 @@ namespace LearnWithPenguin.View
             int questionsCompleted = 0;
             foreach (Question question in questionVM.Questionaire.Questions)
                 foreach (Answer answer in question.AnswerList)
-                    if (answer.selectedAnswer)
+                    if (answer.SelectedAnswer)
                         questionsCompleted += 1;
             return questionsCompleted;
         }
@@ -76,13 +80,13 @@ namespace LearnWithPenguin.View
                 int correctAnswerID = -1;
                 foreach (Answer answer in QuestionVM.Answers)
                 {
-                    if (answer.selectedAnswer)
-                        selectedAnswerID = answer.index;
-                    if (answer.correctAnswer)
-                        correctAnswerID = answer.index;
+                    if (answer.SelectedAnswer)
+                        selectedAnswerID = answer.Index;
+                    if (answer.CorrectAnswer)
+                        correctAnswerID = answer.Index;
                 }
                 // save AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer to history
-                QuestionVM.User.UserHistory.Add(new History(QuestionVM.User.Title, QuestionVM.User.SelectedDB, QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
+                QuestionVM.User.UserHistory.Add(new History(/*QuestionVM.User.Title,*/ /*QuestionVM.User.SelectedDB, */QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
 
                 //NavigationService.Navigate(new ResultsPage(QuestionVM));
             }
@@ -95,13 +99,13 @@ namespace LearnWithPenguin.View
                     int correctAnswerID = -1;
                     foreach (Answer answer in QuestionVM.Answers)
                     {
-                        if (answer.selectedAnswer)
-                            selectedAnswerID = answer.index;
-                        if (answer.correctAnswer)
-                            correctAnswerID = answer.index;
+                        if (answer.SelectedAnswer)
+                            selectedAnswerID = answer.Index;
+                        if (answer.CorrectAnswer)
+                            correctAnswerID = answer.Index;
                     }
                     // save AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer to history
-                    QuestionVM.User.UserHistory.Add(new History(QuestionVM.User.Title, QuestionVM.User.SelectedDB, QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
+                    QuestionVM.User.UserHistory.Add(new History(/*QuestionVM.User.Title, *//*QuestionVM.User.SelectedDB, */QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
                     // gehe zur nächsten frage
                     NavigationService.Navigate(new QuizQuestionAside(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
                 }
@@ -113,7 +117,7 @@ namespace LearnWithPenguin.View
                         bool selectedFound = false;
                         foreach (Answer answer in question.AnswerList) // go through all answered questions 
                         {
-                            if (answer.selectedAnswer)
+                            if (answer.SelectedAnswer)
                             {
                                 positionUnansweredQuestion += 1;
                                 selectedFound = true;
@@ -134,10 +138,10 @@ namespace LearnWithPenguin.View
                 {
                     NavigationService.Navigate(new QuizQuestionAside(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
                 }
-                else 
+                else
                     NavigationService.Navigate(new QuizQuestionAside(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
             }
-            else 
+            else
             {
                 // do nothing
             }

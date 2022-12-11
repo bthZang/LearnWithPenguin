@@ -8,16 +8,16 @@ using System.Diagnostics;
 
 namespace LearnWithPenguin.Models
 {
-    internal class Questionaire
+    public class Questionaire
     {
         private int answeredCorrectly;
 
         public int ID { get; set; }
-        decimal Results { get; set; }
+        public decimal Results { get; set; }
         public List<Question> Questions { get; set; }
         public string EvalMessage { get; set; }
         int[] questionIDs;
-        int dbID;
+        //int dbID;
 
         public int AnsweredCorrectly
         {
@@ -31,23 +31,24 @@ namespace LearnWithPenguin.Models
                 answeredCorrectly = CountCorrect();
             }
         }
-        public Questionaire(int dbID, int id)
+        public Questionaire(/*int dbID, */int id)
         {
             ID = id;
-            this.dbID = dbID;
+            //this.dbID = dbID;
             Results = 0;
             Questions = new List<Question>();
-            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
+            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(/*dbID, */id));
             foreach (int shuffledID in questionIDs)
                 AddQuestion();
         }
-        public Questionaire(int dbID, int id, int limit)
+        public Questionaire(/*int dbID, */int id, int limit)
         {
             ID = id;
-            this.dbID = dbID;
+            //this.dbID = dbID;
             Results = 0;
             Questions = new List<Question>();
-            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
+            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(/*dbID,*/ id));
+           
             List<int> limitedIDs = new List<int>();
             for (int i = 0; i < limit; i++)
             {
@@ -86,7 +87,7 @@ namespace LearnWithPenguin.Models
         {
             if (Questions.Count < questionIDs.Length)
             {
-                Questions.Add(DataReader.GetQuestion(dbID, SelectNextQuestion()));
+                Questions.Add(DataReader.GetQuestion(/*dbID, */SelectNextQuestion()));
             }
         }
         //public bool Evaluate(decimal passThreshhold)

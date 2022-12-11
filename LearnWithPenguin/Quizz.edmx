@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Quizz_LearnWithPenguineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Quizz_LearnWithPenguine.dbo.Quiz_Question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Quiz_Question">
+          <Key>
+            <PropertyRef Name="Question_Topic" />
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_Topic" Type="int" Nullable="false" />
+          <Property Name="Question_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Quiz_Within">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_ID" Type="int" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="500" />
+          <Property Name="Answer1" Type="nvarchar" MaxLength="500" />
+          <Property Name="Answer2" Type="nvarchar" MaxLength="500" />
+          <Property Name="Answer3" Type="nvarchar" MaxLength="500" />
+          <Property Name="Answer4" Type="nvarchar" MaxLength="500" />
+          <Property Name="CorrectAnswer" Type="tinyint" />
+        </EntityType>
+        <Association Name="Question_ID">
+          <End Role="Quiz_Within" Type="Self.Quiz_Within" Multiplicity="1" />
+          <End Role="Quiz_Question" Type="Self.Quiz_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quiz_Within">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Quiz_Question">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Quizz_LearnWithPenguineModelStoreContainer">
+          <EntitySet Name="Quiz_Within" EntityType="Self.Quiz_Within" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quiz_Question" EntityType="Self.Quiz_Question" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Quiz_Question].[Question_Topic] AS [Question_Topic], 
+    [Quiz_Question].[Question_ID] AS [Question_ID]
+    FROM [dbo].[Quiz_Question] AS [Quiz_Question]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="Question_ID" Association="Self.Question_ID">
+            <End Role="Quiz_Within" EntitySet="Quiz_Within" />
+            <End Role="Quiz_Question" EntitySet="Quiz_Question" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Quizz_LearnWithPenguineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Quiz_Within">
+          <Key>
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_ID" Type="Int32" Nullable="false" />
+          <Property Name="Question" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Answer1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Answer2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Answer3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Answer4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CorrectAnswer" Type="Byte" />
+          <NavigationProperty Name="Quiz_Question" Relationship="Self.Question_ID" FromRole="Quiz_Within" ToRole="Quiz_Question" />
+        </EntityType>
+        <EntityType Name="Quiz_Question">
+          <Key>
+            <PropertyRef Name="Question_Topic" />
+            <PropertyRef Name="Question_ID" />
+          </Key>
+          <Property Name="Question_Topic" Type="Int32" Nullable="false" />
+          <Property Name="Question_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Quiz_Within" Relationship="Self.Question_ID" FromRole="Quiz_Question" ToRole="Quiz_Within" />
+        </EntityType>
+        <Association Name="Question_ID">
+          <End Role="Quiz_Within" Type="Self.Quiz_Within" Multiplicity="1" />
+          <End Role="Quiz_Question" Type="Self.Quiz_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quiz_Within">
+              <PropertyRef Name="Question_ID" />
+            </Principal>
+            <Dependent Role="Quiz_Question">
+              <PropertyRef Name="Question_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Quizz_LearnWithPenguineEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Quiz_Within" EntityType="Self.Quiz_Within" />
+          <EntitySet Name="Quiz_Question" EntityType="Self.Quiz_Question" />
+          <AssociationSet Name="Question_ID" Association="Self.Question_ID">
+            <End Role="Quiz_Within" EntitySet="Quiz_Within" />
+            <End Role="Quiz_Question" EntitySet="Quiz_Question" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Quizz_LearnWithPenguineModelStoreContainer" CdmEntityContainer="Quizz_LearnWithPenguineEntities1">
+          <EntitySetMapping Name="Quiz_Within">
+            <EntityTypeMapping TypeName="Quizz_LearnWithPenguineModel.Quiz_Within">
+              <MappingFragment StoreEntitySet="Quiz_Within">
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+                <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+                <ScalarProperty Name="Answer3" ColumnName="Answer3" />
+                <ScalarProperty Name="Answer4" ColumnName="Answer4" />
+                <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quiz_Question">
+            <EntityTypeMapping TypeName="Quizz_LearnWithPenguineModel.Quiz_Question">
+              <MappingFragment StoreEntitySet="Quiz_Question">
+                <ScalarProperty Name="Question_Topic" ColumnName="Question_Topic" />
+                <ScalarProperty Name="Question_ID" ColumnName="Question_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

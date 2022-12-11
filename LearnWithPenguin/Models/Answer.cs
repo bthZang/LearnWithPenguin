@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.Models
 {
-    internal class Answer
+    public class Answer
     {
-        public int index { get; set; }
-        public string text { get; set; }
-        public bool correctAnswer { get; set; }
-        public bool selectedAnswer { get; set; }
+        public int Index { get; set; }
+        public string Text { get; set; }
+        public bool CorrectAnswer { get; set; }
+        public bool SelectedAnswer { get; set; }
 
-        public Answer(int index, string text, bool correctAnswer, bool selectedAnswer)
+        public Answer(int index, string text, bool correct, bool selected)
         {
-            this.index = index;
-            this.text = text;
-            this.correctAnswer = correctAnswer;
-            this.selectedAnswer = selectedAnswer;
+            Index = index;
+            Text = text;
+            CorrectAnswer = correct;
+            SelectedAnswer = selected;
         }
     }
 }
