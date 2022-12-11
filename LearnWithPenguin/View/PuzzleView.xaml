@@ -27,8 +27,9 @@
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource HomeVM}"
                         Content="{Binding Menu}" />
-
-        <DockPanel>
+        <DockPanel x:Name="dockpanel"
+                   DataContext="{StaticResource QuizQuestionAsideVM}"
+                   Loaded="DockPanel_Loaded">
             <Grid  Margin="43,35,975,0"
                    HorizontalAlignment="Left">
                 <localUC:Icon Width="63.28"
