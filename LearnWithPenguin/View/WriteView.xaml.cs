@@ -22,6 +22,12 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class WriteView : System.Windows.Controls.Page
     {
+        public void clearCanvas()
+        {
+            WriteViewModel viewmodel = media.DataContext as WriteViewModel;
+            viewmodel.NavigatetoResult = null;
+            MyCanvas.Strokes.Clear();
+        }
 
         public WriteView()
         {
@@ -30,6 +36,11 @@ namespace LearnWithPenguin.View
             MyCanvas.DefaultDrawingAttributes.Width = 20;
             MyCanvas.DefaultDrawingAttributes.Height = 20;
 
+            WriteViewModel viewmodel = media.DataContext as WriteViewModel;
+            viewmodel.Replay = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                clearCanvas();
+            });
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

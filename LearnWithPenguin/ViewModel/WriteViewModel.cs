@@ -154,6 +154,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     Number = Number + 1;
+                    NavigatetoResult = null;
                 });
             }
 
@@ -222,7 +223,7 @@ namespace LearnWithPenguin.ViewModel
                 foreach (Point mousePoint in mousePositions)
                 {
                     double distance = Math.Sqrt(Math.Pow(mousePoint.X - _positionX[i], 2) + Math.Pow(mousePoint.Y - _positionY[i], 2));
-                    if (distance < 10)
+                    if (distance < 20)
                         isCorrect = true;
                 }
 
@@ -266,7 +267,34 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+        public bool _isReplay = false;
 
+        public bool IsReplay
+        {
+            get
+            {
+                return _isReplay;
+            }
+            set
+            {
+                _isReplay = value;
+            }
+        }
+
+        private ICommand _replay;
+        public ICommand Replay
+        {
+            get
+            {
+                return _replay;
+            }
+
+            set { _replay = value; }
+        }
     }
 
 }
+
+
+
+

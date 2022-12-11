@@ -22,10 +22,15 @@
             <localUC:HomeIcon />
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:BadResultViewModel}">
-            <localUC:BadResult />
+            <localUC:BadResult DataContext="{StaticResource WriteVM}"
+                               Replay="{Binding Replay}"
+                               Next="{Binding OnclickHandleNextLevel}"/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GoodResultViewModel}">
-            <localUC:GoodResult />
+            <!--<localUC:GoodResult DataContext="{StaticResource WriteVM}"
+                                Replay="{Binding Replay}"
+                                Next="{Binding OnclickHandleNextLevel}"/>-->
+            <localUC:GoodResult></localUC:GoodResult>
         </DataTemplate>
     </Page.Resources>
 
@@ -37,7 +42,7 @@
                         DataContext="{StaticResource WriteVM}"
                         Content="{Binding NavigatetoResult}" />
         <StackPanel DataContext="{StaticResource WriteVM}">
-            
+
             <DockPanel>
                 <Grid>
                     <localUC:Icon Width="63.28"
