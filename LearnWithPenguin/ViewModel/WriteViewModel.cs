@@ -147,34 +147,26 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+        public ICommand _onclickHandleNextLevel;
         public ICommand OnclickHandleNextLevel
         {
             get
             {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    Number = Number + 1;
-                    NavigatetoResult = null;
-                });
+                return _onclickHandleNextLevel;
             }
 
-            set { }
+            set { _onclickHandleNextLevel = value; OnPropertyChanged(); }
         }
 
+        public ICommand _onclickHandlePreviousLevel;
         public ICommand OnclickHandlePreviousLevel
         {
             get
             {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    if (Number == 1)
-                        Number = 1;
-                    else
-                        Number = Number - 1;
-                });
+                return _onclickHandlePreviousLevel;
             }
 
-            set { }
+            set { _onclickHandlePreviousLevel = value; OnPropertyChanged(); }
         }
 
         public bool IsMouseDown

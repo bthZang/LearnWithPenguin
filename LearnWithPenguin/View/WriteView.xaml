@@ -27,10 +27,9 @@
                                Next="{Binding OnclickHandleNextLevel}"/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GoodResultViewModel}">
-            <!--<localUC:GoodResult DataContext="{StaticResource WriteVM}"
+            <localUC:GoodResult DataContext="{StaticResource WriteVM}"
                                 Replay="{Binding Replay}"
-                                Next="{Binding OnclickHandleNextLevel}"/>-->
-            <localUC:GoodResult></localUC:GoodResult>
+                                Next="{Binding OnclickHandleNextLevel}"/>
         </DataTemplate>
     </Page.Resources>
 

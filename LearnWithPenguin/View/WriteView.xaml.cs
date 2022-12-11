@@ -27,6 +27,7 @@ namespace LearnWithPenguin.View
             WriteViewModel viewmodel = media.DataContext as WriteViewModel;
             viewmodel.NavigatetoResult = null;
             MyCanvas.Strokes.Clear();
+            viewmodel.mousePositions.Clear();
         }
 
         public WriteView()
@@ -37,8 +38,22 @@ namespace LearnWithPenguin.View
             MyCanvas.DefaultDrawingAttributes.Height = 20;
 
             WriteViewModel viewmodel = media.DataContext as WriteViewModel;
+
             viewmodel.Replay = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
+                clearCanvas();
+            });
+
+            viewmodel.OnclickHandleNextLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                viewmodel.Number += 1;
+                clearCanvas();
+            });
+
+            viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                if (viewmodel.Number > 1)
+                viewmodel.Number -= 1;
                 clearCanvas();
             });
         }

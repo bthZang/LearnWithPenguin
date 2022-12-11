@@ -53,7 +53,6 @@
                         <Button Width="234.76"
                                 Height="91.13"
                                 Margin="65 84.18 0 0"
-                                Padding="0"
                                 Command="{Binding Replay, RelativeSource={RelativeSource AncestorType=UserControl}}">
                             <Border Background="#AB9DFF"
                                     Width="234.76"
