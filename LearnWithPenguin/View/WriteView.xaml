@@ -33,12 +33,11 @@
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
-
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource WriteVM}"
                         Content="{Binding NavigatetoResult}" />
-        <localUC:BadResult></localUC:BadResult>
         <StackPanel DataContext="{StaticResource WriteVM}">
+            
             <DockPanel>
                 <Grid>
                     <localUC:Icon Width="63.28"
