@@ -86,7 +86,8 @@
                        Source="\images\penguin@3x.png"
                        Margin="-4,41,4,99"
                        Grid.RowSpan="2"
-                       RenderTransformOrigin="0.507,-0.209" />
+                       RenderTransformOrigin="0.507,-0.209">
+                </Image>
                 <Image Grid.Column="1"
                        Source="\images\iceJumpa@3x.png"
                        Margin="0,136,0,4"

@@ -176,7 +176,8 @@ namespace LearnWithPenguin.ViewModel
 
             Reload = new RelayCommand<object>((p) => { return true; }, (p) => {
                 StepQueues.Clear();
-
+                StepQueues = null;
+                StepQueues = new Queue<string>();
             });
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
