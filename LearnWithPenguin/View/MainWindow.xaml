@@ -39,6 +39,15 @@
             <DataTemplate DataType="{x:Type viewmodelHome:UserViewModel}">
                 <Frame Source="UserView.xaml"></Frame>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:GameViewModel}">
+                <Frame Source="GameView.xaml"></Frame>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:QuizzView1ViewModel}">
+                <Frame Source="QuizzView1.xaml"></Frame>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodelHome:QuizzView2ViewModel}">
+                <Frame Source="QuizzView2.xaml"></Frame>
+            </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
 

@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +78,15 @@
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Game1.xaml.cs">
+      <DependentUpon>Game1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game2.xaml.cs">
+      <DependentUpon>Game2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Game3.xaml.cs">
+      <DependentUpon>Game3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
@@ -71,6 +95,9 @@
     </Compile>
     <Compile Include="UserControls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BackForward.xaml.cs">
+      <DependentUpon>BackForward.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -99,28 +126,40 @@
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
+    <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
     <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
+    <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
     <Compile Include="ViewModel\UserRankingViewModel.cs" />
     <Compile Include="ViewModel\UserStatisticViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PuzzleView.xaml.cs">
       <DependentUpon>PuzzleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuizzView1.xaml.cs">
+      <DependentUpon>QuizzView1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuizzView2.xaml.cs">
+      <DependentUpon>QuizzView2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -139,6 +178,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\Game1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Game2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Game3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\GoodResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -148,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Icon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BackForward.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,6 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -223,6 +282,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\QuizzView1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\QuizzView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ReadView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -240,11 +307,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -253,6 +315,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
@@ -281,15 +344,10 @@
     <Resource Include="images\iconGoogle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\LogOut.png" />
-    <Resource Include="images\menu.png" />
     <Resource Include="images\Mute.png" />
-    <Resource Include="images\noSound.png" />
     <Resource Include="images\People.png" />
     <Resource Include="images\Rate.png" />
     <Resource Include="images\Sound.png" />
-    <Resource Include="images\User.png" />
-    <Resource Include="images\Volume.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UserControls\Volume.png" />
@@ -377,6 +435,150 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\replay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Coding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LogOut.png" />
+    <Resource Include="images\menu.png" />
+    <Resource Include="images\noSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\User.png" />
+    <Resource Include="images\Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Back.png" />
+    <Resource Include="images\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Coding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish.png" />
+    <Resource Include="images\iceJumpa.png" />
+    <Resource Include="images\iceJumpb.png" />
+    <Resource Include="images\iceJumpc.png" />
+    <Resource Include="images\iceJumpd.png" />
+    <Resource Include="images\iceStand.png" />
+    <Resource Include="images\left.png" />
+    <Resource Include="images\penguin.png" />
+    <Resource Include="images\right.png" />
+    <Resource Include="images\turnDown.png" />
+    <Resource Include="images\turnUp.png" />
+    <Resource Include="images\turnUR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\penguin%402x.png" />
+    <Resource Include="images\penguin%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fish%402x.png" />
+    <Resource Include="images\fish%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\left%402x.png" />
+    <Resource Include="images\left%403x.png" />
+    <Resource Include="images\right%402x.png" />
+    <Resource Include="images\right%403x.png" />
+    <Resource Include="images\turnDown%402x.png" />
+    <Resource Include="images\turnDown%403x.png" />
+    <Resource Include="images\turnDR%402x.png" />
+    <Resource Include="images\turnDR%403x.png" />
+    <Resource Include="images\turnDR.png" />
+    <Resource Include="images\turnUp%402x.png" />
+    <Resource Include="images\turnUp%403x.png" />
+    <Resource Include="images\turnUR%402x.png" />
+    <Resource Include="images\turnUR%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\iceJumpa%402x.png" />
+    <Resource Include="images\iceJumpa%403x.png" />
+    <Resource Include="images\iceJumpb%402x.png" />
+    <Resource Include="images\iceJumpb%403x.png" />
+    <Resource Include="images\iceJumpc%402x.png" />
+    <Resource Include="images\iceJumpc%403x.png" />
+    <Resource Include="images\iceJumpd%402x.png" />
+    <Resource Include="images\iceJumpd%403x.png" />
+    <Resource Include="images\iceStand%402x.png" />
+    <Resource Include="images\iceStand%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\penguinpillow%402x.png" />
+    <Resource Include="images\penguinpillow%403x.png" />
+    <Resource Include="images\penguinpillow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\game1%402x.png" />
+    <Resource Include="images\game1%403x.png" />
+    <Resource Include="images\game1.png" />
+    <Resource Include="images\game2%402x.png" />
+    <Resource Include="images\game2%403x.png" />
+    <Resource Include="images\game2.png" />
+    <Resource Include="images\game3%402x.png" />
+    <Resource Include="images\game3%403x.png" />
+    <Resource Include="images\game3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\whiteRectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\puzzleSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\nextIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiFixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiFixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\QuizzSubjectView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\QuizzView2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\WhiteRectangleQuizzView2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DoVuiNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TroChoiNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapDocNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TapVietNoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\backReadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\nextReadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\reReadButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

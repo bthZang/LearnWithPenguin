@@ -46,15 +46,15 @@ namespace LearnWithPenguin.ViewModel
         }
         public ICommand TransformToRead
         {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new ReadViewModel();
-                });
-            }
+           get
+           {
+               return new RelayCommand<object>((p) => { return true; }, (p) =>
+               {
+                   NavigatetoHome = new ReadViewModel();
+               });
+           }
 
-            set { }
+           set { }
         }
         public ICommand TransformToWrite
         {
@@ -113,6 +113,19 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new UserViewModel();
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand TransformToGame
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new GameViewModel();
                 });
             }
 
@@ -181,6 +194,28 @@ namespace LearnWithPenguin.ViewModel
                 });
             }
 
+            set { }
+        }
+        public ICommand TransformToQuizzView1
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView1ViewModel();
+                });
+            }
+            set { }
+        }
+        public ICommand TransformToQuizzView2
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
             set { }
         }
     }
