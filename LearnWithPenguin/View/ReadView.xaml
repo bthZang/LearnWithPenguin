@@ -8,7 +8,184 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ReadView">
 
-    <Grid Background="AliceBlue">
-        
+    <Grid>
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource MainVM}"
+                        Content="{Binding Menu}" />
+        <StackPanel Orientation="Vertical"
+                    DataContext="{StaticResource ReadVM}"
+                    Background="#A0C4FF">
+
+            <DockPanel>
+                <Grid>
+                    <localUC:Icon Width="63.28"
+                                  Height="63.28"
+                                  Margin="42.97,35.16,0,0"
+                                  DataContext="{StaticResource MainVM}"
+                                  Command="{Binding ShowMenu}"></localUC:Icon>
+                </Grid>
+                <Grid Width="1018"
+                      HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal"
+                                Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+
+                        <Button Width="24"
+                                Height="32.52"
+                                Margin="348.57 46.56 5 10"
+                                BorderThickness="0"
+                                Background="Transparent">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="3 3 3 3" />
+                                </Style>
+                            </Button.Resources>
+
+                            <Image Source="/View/backReadIcon.png"
+                                   Width="25"
+                                   Height="32.52">
+                            </Image>
+                        </Button>
+
+                        <Button Width="73"
+                                Height="56"
+                                Margin="63.06 38.05 5 10"
+                                BorderThickness="0"
+                                Background="#A0C4FF">
+                            <TextBlock Width="73"
+                                       Height="56"
+                                       Text="Bai 1"
+                                       Foreground="#073580"
+                                       FontSize="35.679"
+                                       FontWeight="Bold"
+                                       FontStyle="Normal"
+                                       Style="{StaticResource Baloo2-Bold}">
+                            </TextBlock>
+                        </Button>
+
+                        <Button Width="24"
+                                Height="32.52"
+                                Margin="63.4 46.56 444.56 10"
+                                BorderThickness="0"
+                                Background="#A0C4FF">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="3 3 3 3">
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Image Source="/View/nextReadIcon.png"
+                                   Width="25"
+                                   Height="32.52">
+                            </Image>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+
+            <Grid Height="700">
+                <Border Width="719.61"
+                        Height="431.42"
+                        Background="Green"
+                        CornerRadius="15"
+                        Margin="202.33 20"
+                        BorderThickness="5"
+                        BorderBrush="#073580">
+                </Border>
+
+                <Border Width="506.81"
+                        Height="300"
+                        Background="White"
+                        CornerRadius="15"
+                        Margin="309 50 309 300"
+                        BorderThickness="2"
+                        BorderBrush="Black">
+
+                </Border>
+
+                <TextBlock Margin="0 422 0 200"
+                           HorizontalAlignment="Center"
+                           Width="400"
+                           Height="74"
+                           FontSize="46.8"
+                           FontWeight="Bold"
+                           Text="Con Chim Cánh Cụt"
+                           FontStyle="Normal"
+                           Style="{StaticResource Baloo2-Bold}"
+                           TextAlignment="Center"
+                           Foreground="White">
+
+                </TextBlock>
+
+                <Button Height="99.05"
+                        Width="99.05"
+                        Margin="500 527 500 70"
+                        BorderThickness="0"
+                        Background="Transparent">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Border"
+                                    BorderThickness="0"
+                                    Width="99.05"
+                                    Height="99.05"
+                                    CornerRadius="90"
+                                    Background="White"
+                                    BorderBrush="transparent">
+
+                                <ContentPresenter Margin="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+
+
+                    <Image Source="/View/reReadButton.png"
+                           Height="40.51"
+                           Width="48.55">
+                    </Image>
+
+                </Button>
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUC:HomeIcon Width="97.13"
+                                          Height="34.99"
+                                          Margin="42.97,580.63,0,0"
+                                          DataContext="{StaticResource MainVM}"
+                                          Command="{Binding Transform}">
+
+                        </localUC:HomeIcon>
+                    </Grid>
+                </DockPanel>
+
+            </Grid>
+
+        </StackPanel>
+
     </Grid>
 </Page>
