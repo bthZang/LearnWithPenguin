@@ -586,5 +586,8 @@
   <ItemGroup>
     <Resource Include="View\1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\yellowStar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

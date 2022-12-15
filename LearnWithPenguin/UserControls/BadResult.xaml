@@ -22,11 +22,12 @@
                                     Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                            <Image Source="/UserControls/whiteStar.png"
+                            <Image Source="/UserControls/yellowStar.png"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0,0,12.9,0"></Image>
-                            <Image Source="/UserControls/whiteStar.png"
+                            <Image DataContext="{StaticResource BadResultVM}"
+                                   Source="{ Binding ChangeColor}"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
@@ -54,10 +55,48 @@
                                 Height="91.13"
                                 Margin="65 84.18 0 0"
                                 Command="{Binding Replay, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#966CE4" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#966CE4" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#966CE4" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#966CE4" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
                             <Border Background="#AB9DFF"
                                     Width="234.76"
                                     Height="91.13"
                                     CornerRadius="20,0,0,20">
+
                                 <TextBlock Width="158"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
@@ -76,6 +115,43 @@
                                 Height="91.13"
                                 Margin="87,60.24,0,0"
                                 Command="{Binding Next, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#F693EB" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#F693EB" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#F693EB" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#F693EB" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
                             <Border Background="#FF99FF"
                                     Width="212.37"
                                     Height="91.13"
