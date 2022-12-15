@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for GameView.xaml
+    /// Interaction logic for GameWarn.xaml
     /// </summary>
-    public partial class GameView : Page
+    public partial class GameWarn : System.Windows.Controls.UserControl
     {
-
-        public GameView()
+        public GameWarn()
         {
             InitializeComponent();
         }
-
     }
 }
