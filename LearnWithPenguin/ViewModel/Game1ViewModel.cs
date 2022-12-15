@@ -14,6 +14,5 @@ namespace LearnWithPenguin.ViewModel
         {
             step = 4;
         }
-
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Security.Permissions;
 using LearnWithPenguin.UserControls;
 using System.Windows.Navigation;
+using System.Windows.Threading;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -52,8 +53,12 @@ namespace LearnWithPenguin.ViewModel
         public Game1ViewModel Game1Context;
         public Game2ViewModel Game2Context;
         public Game3ViewModel Game3Context;
-
         public ICommand Reload { get; set; }
+        private string _ColumnNum;
+        public string ColumnNum { get { return _ColumnNum; } set { _ColumnNum = value; OnPropertyChanged(); } }
+        private string _RowNum;
+        public string RowNum { get { return _RowNum; } set { _RowNum = value; OnPropertyChanged(); } }
+
         public GameViewModel()
         {
             PositionNumber = "1";
@@ -63,6 +68,7 @@ namespace LearnWithPenguin.ViewModel
 
             Game1Context = new Game1ViewModel();
             StepQueues = new Queue<string>();
+            ColumnNum = "0";
             HandleButtonPress = new RelayCommand<object>((p) => { return true; }, (p) => {
                 Console.WriteLine(p as string);
                 switch(PositionNumber)
@@ -104,7 +110,7 @@ namespace LearnWithPenguin.ViewModel
                 }
             });
 
-            RunGameCommand = new RelayCommand<object>((p) => { return true; }, (p) => 
+            RunGameCommand = new RelayCommand<object>((p) => { return true; }, async (p) => 
             {
                 try
                 {
@@ -119,7 +125,15 @@ namespace LearnWithPenguin.ViewModel
                                     temp[2] == Direction.Right &&
                                     temp[3] == Direction.Right)
                                 {
+                                    int getNum = Convert.ToInt32(ColumnNum);
+                                    for (int i = 0; i <  5; i++)
+                                    {
+                                        getNum++;
+                                        ColumnNum = Convert.ToString(getNum);
+                                        await Task.Delay(500);
+                                    }
                                     Console.WriteLine("Dung roi pan oi");
+
                                 }
                                 else
                                 {
@@ -138,6 +152,46 @@ namespace LearnWithPenguin.ViewModel
                                     temp[4] == Direction.TurnUp &&
                                     temp[5] == Direction.TurnUR)
                                 {
+                                    int getCNum = Convert.ToInt32(ColumnNum);
+                                    int getRNum = Convert.ToInt32(RowNum);
+                                    for (int i = 0; i < 7; i++)
+                                    {
+                                        switch (i)
+                                        {
+                                            case 0:
+                                                getCNum = 1;
+                                                getRNum = 0;
+                                                break;
+                                            case 1:
+                                                getCNum = 2;
+                                                getRNum = 0;
+                                                break;
+                                            case 2:
+                                                getCNum = 2;
+                                                getRNum = 1;
+                                                break;
+                                            case 3: 
+                                                getCNum = 3;
+                                                getRNum = 1;
+                                                break;
+                                            case 4:
+                                                getCNum = 4;
+                                                getRNum = 1;
+                                                break;
+                                            case 5:
+                                                getCNum = 4;
+                                                getRNum = 0;
+                                                break;
+                                            case 6:
+                                                getCNum = 5;
+                                                getRNum = 0;
+                                                break;
+
+                                        }
+                                        ColumnNum = Convert.ToString(getCNum);
+                                        RowNum = Convert.ToString(getRNum);
+                                        await Task.Delay(500);
+                                    }
                                     Console.WriteLine("Dung roi pan oi");
                                 }
                                 else
@@ -158,6 +212,49 @@ namespace LearnWithPenguin.ViewModel
                                     temp[5] == Direction.TurnDown &&
                                     temp[6] == Direction.TurnDR)
                                 {
+                                    int getCNum = Convert.ToInt32(ColumnNum);
+                                    int getRNum = Convert.ToInt32(RowNum);
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        switch (i)
+                                        {
+                                            case 0:
+                                                getCNum = 0;                                                      ;
+                                                getRNum = 1;
+                                                break;
+                                            case 1:
+                                                getCNum = 1;
+                                                getRNum = 1;
+                                                break;
+                                            case 2:
+                                                getCNum = 2;
+                                                getRNum = 1;
+                                                break;
+                                            case 3:
+                                                getCNum = 2;
+                                                getRNum = 0;
+                                                break;
+                                            case 4:
+                                                getCNum = 3;
+                                                getRNum = 0;
+                                                break;
+                                            case 5:
+                                                getCNum = 4;
+                                                getRNum = 0;
+                                                break;
+                                            case 6:
+                                                getCNum = 4;
+                                                getRNum = 1;
+                                                break;
+                                            case 7:
+                                                getCNum = 5;
+                                                getRNum = 1;
+                                                break;
+                                        }
+                                        ColumnNum = Convert.ToString(getCNum);
+                                        RowNum = Convert.ToString(getRNum);
+                                        await Task.Delay(500);
+                                    }
                                     Console.WriteLine("Dung roi pan oi");
                                 }
                                 else
@@ -192,14 +289,19 @@ namespace LearnWithPenguin.ViewModel
                 {
                     case 1:
                         GameTurn = new Game1();
+                        ColumnNum = "0";
                         StepQueues.Clear();
                         break;
                     case 2:
                         GameTurn = new Game2();
+                        ColumnNum = "0";
+                        RowNum = "0";
                         StepQueues.Clear();
                         break;
                     case 3:
                         GameTurn = new Game3();
+                        ColumnNum = "0";
+                        RowNum = "0";
                         StepQueues.Clear();
                         break;
                 }
@@ -219,14 +321,19 @@ namespace LearnWithPenguin.ViewModel
                 {
                     case 1:
                         GameTurn = new Game1();
+                        ColumnNum = "0";
                         StepQueues.Clear();
                         break;
                     case 2:
                         GameTurn = new Game2();
+                        ColumnNum = "0";
+                        RowNum = "0";
                         StepQueues.Clear();
                         break;
                     case 3:
                         GameTurn = new Game3();
+                        ColumnNum = "0";
+                        RowNum = "0";
                         StepQueues.Clear();
                         break;
                 }

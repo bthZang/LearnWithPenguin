@@ -80,11 +80,6 @@
                            Margin="-11,6,10,134"
                            Grid.RowSpan="2" />
                     <Image Grid.Column="0"
-                           Source="\images\penguin@3x.png"
-                           Margin="-4,41,4,99"
-                           Grid.RowSpan="2"
-                           RenderTransformOrigin="0.507,-0.209" />
-                    <Image Grid.Column="0"
                            Source="\images\iceJumpa@3x.png"
                            Margin="0,0,0,4"
                            Grid.Row="3" />
@@ -136,8 +131,20 @@
                            HorizontalAlignment="Right"
                            Width="154"
                            Grid.Row="1" />
+                    <Image Grid.Column="{Binding ColumnNum, UpdateSourceTrigger=PropertyChanged}"
+                           Grid.Row="{Binding RowNum, UpdateSourceTrigger=PropertyChanged}"
+                           Source="\images\penguin@3x.png"
+                           Margin="-4,41,4,99"
+                           Grid.RowSpan="2"
+                           RenderTransformOrigin="0.507,-0.209" />
                 </Grid>
             </Border>
         </StackPanel>
+        <!--<Path Data="M21.4996 119C21.4996 119 -24.8134 228.175 21.4996 248C71.3148 269.324 40.57 135.279 94.4996 130C152.18 124.354 126.594 250.4 184.5 248C240.679 245.671 210.776 129.355 267 130C322.78 130.64 292.999 257 347.5 248C402 239 349.44 174.055 364.5 130C383.058 75.7101 385.27 9.56669 442.5 5.4999C500.031 1.41167 479.483 123.291 537 119C591.303 114.948 569.999 30 618 5.4999C666 -19.0002 706.346 61.1202 727 119C743.93 166.447 671 239 727 248C782.999 257 755.769 152.451 804.5 150C853.042 147.558 891.5 239 891.5 150"
+              Stroke="Black"
+              Margin="33,75,71,213"
+              Stretch="Fill">
+            
+        </Path>-->
     </Grid>
 </UserControl>

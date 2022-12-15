@@ -290,8 +290,7 @@
                                         Width="auto"
                                         Height="auto"
                                         BorderThickness="0"
-                                        Command="{Binding RunGameCommand}"
-                                        >
+                                        Command="{Binding RunGameCommand}">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
