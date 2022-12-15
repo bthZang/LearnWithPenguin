@@ -46,7 +46,7 @@
             <!--Margin="115 196.88 74.9 0"-->
             <Grid VerticalAlignment="Center"
                   HorizontalAlignment="Center">
-                <DockPanel Margin="50 50 0 0">
+                <DockPanel Margin="100 100 0 0">
                     <StackPanel VerticalAlignment="Center"
                                 HorizontalAlignment="Center">
                         <StackPanel>

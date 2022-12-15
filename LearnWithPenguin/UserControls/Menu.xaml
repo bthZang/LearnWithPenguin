@@ -5,16 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
-             d:DesignHeight="800"
+             d:DesignHeight="843.5"
              d:DesignWidth="1125">
     <DockPanel Background="#660C0C0C"
                HorizontalAlignment="Stretch"
-               Height="800">
+               Height="843.5">
 
         <StackPanel Orientation="Horizontal">
             <Border Background="White"
                     Width="400"
-                    Height="800"
                     HorizontalAlignment="Left"
                     CornerRadius="0 31.2 31.2 0">
                 <StackPanel>
