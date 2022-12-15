@@ -191,12 +191,10 @@
                                        Style="{StaticResource Baloo2-Bold}"
                                        Height="31"
                                        Margin="13.13,6,0,17" />
-<!--IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"-->
                             <Button Command="{Binding Show}"
                                     IsEnabled="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
                                     Panel.ZIndex="9000"
                                     DataContext="{StaticResource OnBoardingVM}"
-                               
                                     x:Name="NoneBlur"
                                     Width="59.46"
                                     Height="59.46"
@@ -222,20 +220,6 @@
 
 
                             </Button>
-
-                            <!--<Grid>
-                                <Grid>
-                                    <Grid.Triggers>
-                                        <DataTrigger Binding="{Binding _next}"
-                                                     Value="True">
-
-
-                                        </DataTrigger>
-                                    </Grid.Triggers>
-
-                                </Grid>
-                            </Grid>-->
-
 
                         </StackPanel>
 
