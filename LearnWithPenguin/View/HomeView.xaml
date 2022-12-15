@@ -24,483 +24,340 @@
 
     <Grid Background="#FFA0C4FF">
 
-        <ContentControl Panel.ZIndex="999"
+        <ContentControl Panel.ZIndex="99900"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
-        <!--<Grid Width="892"
-              Height="606"
-              Panel.ZIndex="9999">-->
+
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource HomeVM}"
-                        Content="{Binding NavigatetoWarning}"/>
-        <!--</Grid>-->
+                        Content="{Binding NavigatetoWarning}" />
 
-        <StackPanel DataContext="{StaticResource HomeVM}"
-                    Orientation="Horizontal">
-            <ContentControl Panel.ZIndex="999"
-                            DataContext="{StaticResource MainVM}"
-                            Content="{Binding Menu}" />
-
-            <StackPanel DataContext="{StaticResource HomeVM}"
-                        Orientation="Horizontal">
-
+        <DockPanel>
+            <Grid>
                 <localUC:Icon Width="63.28"
                               Height="63.28"
-                              Margin="42.97,-645.16,0,0"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Top"
+                              Margin="42.97,35.16,0,0"
                               DataContext="{StaticResource MainVM}"
                               Command="{Binding ShowMenu}">
                 </localUC:Icon>
-            </StackPanel>
+            </Grid>
+            <!--Margin="115 196.88 74.9 0"-->
+            <Grid VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
+                <DockPanel Margin="50 50 0 0">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
+                        <StackPanel>
+                            <Button DataContext="{StaticResource MainVM}"
+                                    Command="{Binding TransformToRead}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="15 15 15 15" />
+                                    </Style>
+                                </Button.Resources>
+                                <Image Stretch="Uniform"
+                                       Source="../images/TapDocNoText.png"
+                                       Height="200"
+                                       Width="198" />
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                BorderThickness="0"
+                                                Background="transparent"
+                                                BorderBrush="transparent">
+
+                                            <ContentPresenter Margin="0"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              RecognizesAccessKey="True" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#D4F58E" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#D4F58E" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#D4F58E" />
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#D4F58E" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Label Name="TapDoc"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.13"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   HorizontalContentAlignment="Center"
+                                   Style="{StaticResource Baloo2-Regular}">Tập đọc</Label>
+                        </StackPanel>
+
+                        <StackPanel Margin="0 30 0 0">
+                            <Button DataContext="{StaticResource HomeVM}"
+                                    Command="{Binding ShowWarning}"
+                                    Height="200"
+                                    Width="198"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="15 15 15 15" />
+                                    </Style>
+                                </Button.Resources>
 
 
+                                <Image Stretch="Uniform"
+                                       Source="../images/TapVietNoText.png"
+                                       Height="200"
+                                       Width="198" />
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                BorderThickness="0"
+                                                Background="transparent"
+                                                BorderBrush="transparent">
 
-            <StackPanel  Margin="45 196.88 74.9 0">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToRead}"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/TapDocNoText.png"
-                           Height="200"
-                           Width="198" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Label Name="TapDoc"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Tập đọc</Label>
+                                            <ContentPresenter Margin="0"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              RecognizesAccessKey="True" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#F5AC8E" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#F5AC8E" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#F5AC8E" />
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#F5AC8E" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
 
 
+                            <Label Name="TapViet"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.13"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   HorizontalContentAlignment="Center"
+                                   Style="{StaticResource Baloo2-Regular}">Tập viết</Label>
 
-                <Button DataContext="{StaticResource HomeVM}"
-                        Command="{Binding ShowWarning}"
-                        Height="200"
-                        Width="198"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
+                        </StackPanel>
+                    </StackPanel>
 
 
-                    <Image Stretch="Uniform"
-                           Source="../images/TapVietNoText.png"
-                           Height="200"
-                           Width="198" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                    <!--do va tro choi-->
 
-                </Button>
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Margin="100 0 0 0">
+                        <StackPanel>
+                            <Button DataContext="{StaticResource MainVM}"
+                                    Command="{Binding TransformToPuzzle}"
+                                    Background="Transparent"
+                                    Height="200"
+                                    Width="198"
+                                    BorderThickness="0">
+                                <Image Stretch="Uniform"
+                                       Source="../images/DoVuiNoText.png"
+                                       Height="230"
+                                       Width="198"
+                                       Margin="0 0 0 0" />
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="15 15 15 15" />
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                BorderThickness="0"
+                                                Background="transparent"
+                                                BorderBrush="transparent">
 
+                                            <ContentPresenter Margin="0"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              RecognizesAccessKey="True" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#FCF4BB" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#FCF4BB" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#FCF4BB" />
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#FCF4BB" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
 
-                <Label Name="TapViet"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Tập viết</Label>
+                            </Button>
 
+                            <Label Name="DoVui"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.13"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   HorizontalContentAlignment="Center"
+                                   Style="{StaticResource Baloo2-Regular}">Đố vui</Label>
 
+                        </StackPanel>
+                        <StackPanel Margin="0 30 0 0">
+                            <Button Command="{Binding TransformToCoding}"
+                                    DataContext="{StaticResource MainVM}"
+                                    Height="200"
+                                    Width="198"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="15 15 15 15" />
+                                    </Style>
+                                </Button.Resources>
+                                <Image Stretch="Uniform"
+                                       Source="../images/TroChoiNoText.png"
+                                       Height="230"
+                                       Width="198" />
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                BorderThickness="0"
+                                                Background="transparent"
+                                                BorderBrush="transparent">
 
-                <!--<Button DataContext="{StaticResource HomeVM}"
-                            Command="{Binding ShowWarning}"
-                            Height="296"></Button>
-                    <Button DataContext="{StaticResource MainVM}"
-                            Command="{Binding TransformToWrite}"
-                            Height="251.52"
-                            Width="200"
-                            Background="Transparent"
-                            BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
-                        <Image Stretch="Uniform"
-                               Source="../images/TapViet.png"
-                               Height="251.52"
-                               Width="195.66"></Image>
-                    </Button>
-                    <Button DataContext="{StaticResource MainVM}"
-                            Command="{Binding TransformToPuzzle}"
-                            Height="251.52"
-                            Width="200"
-                            Background="Transparent"
-                            BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
-                        <Image Stretch="Uniform"
-                               Source="../images/DoVuiNoText.png"
-                               Height="251.52"
-                               Width="195.66" />
-                    </Button>
+                                            <ContentPresenter Margin="0"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              RecognizesAccessKey="True" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#BBFCED" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#BBFCED" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="#BBFCED" />
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="#BBFCED" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
 
-                    <Button Command="{Binding TransformToCoding}"
-                            Height="251"
-                            Width="201"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Margin="0 0 0 0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius"
-                                        Value="13 13 13 13" />
-                            </Style>
-                        </Button.Resources>
-                        <Button.DataContext>
-                            <StaticResource ResourceKey="MainVM" />
-                        </Button.DataContext>
-                        <Image Stretch="Uniform"
-                               Source="../images/TroChoiNoText.png"
-                               Height="251.52"
-                               Width="195.66" />
-                    </Button>-->
-            </StackPanel>
-            <StackPanel Margin="0 200 0 0">
-                <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToPuzzle}"
-                        Background="Transparent"
-                        Height="200"
-                        Width="198"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Image Stretch="Uniform"
-                           Source="../images/DoVuiNoText.png"
-                           Height="230"
-                           Width="198"
-                           Margin="0 0 0 0" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                            <Label Name="TroChoi"
+                                   Foreground="#2D3D8F"
+                                   FontSize="28.13"
+                                   FontWeight="Bold"
+                                   FontStyle="Normal"
+                                   HorizontalContentAlignment="Center"
+                                   Style="{StaticResource Baloo2-Regular}">Trò chơi</Label>
 
-                </Button>
-
-                <Label Name="DoVui"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Đố vui</Label>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </Grid>
 
 
-                <Button Command="{Binding TransformToCoding}"
-                        Height="200"
-                        Width="198"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius"
-                                    Value="15 15 15 15" />
-                        </Style>
-                    </Button.Resources>
-                    <Button.DataContext>
-                        <StaticResource ResourceKey="MainVM" />
-                    </Button.DataContext>
-                    <Image Stretch="Uniform"
-                           Source="../images/TroChoiNoText.png"
-                           Height="230"
-                           Width="198" />
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.EnterActions>
-                                    <Trigger.ExitActions>
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Duration="0:0:0.250"
-                                                                    To="0"
-                                                                    Storyboard.TargetProperty="BorderThickness" />
-                                                <!--<DoubleAnimation Duration="0:0:0.550"
-                                                                 To="200"
-                                                                 Storyboard.TargetProperty="Height" />
-                                                <DoubleAnimation Duration="0:0:0.550"
-                                                                 To="198"
-                                                                 Storyboard.TargetProperty="Width" />-->
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </Trigger.ExitActions>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
-
-                <Label Name="TroChoi"
-                       Foreground="#2D3D8F"
-                       FontSize="28.13"
-                       FontWeight="Bold"
-                       FontStyle="Normal"
-                       HorizontalContentAlignment="Center"
-                       Style="{StaticResource Baloo2-Regular}">Trò chơi</Label>
-
-            </StackPanel>
-
-
-            <Image Width="500"
-                   Source="/View/HomeView.png"
-                   Margin="0,370,0,-16"
-                   HorizontalAlignment="Right"
-                   Stretch="Uniform" />
             <StackPanel HorizontalAlignment="Right">
                 <StackPanel VerticalAlignment="Top"
                             Margin="-500 85.94 0 0">
                     <TextBlock Text="BẮT ĐẦU"
+                               Margin="100 85.94 0 0"
                                Foreground="#FF073580"
+                               VerticalAlignment="Stretch"
+                               HorizontalAlignment="Right"
                                FontSize="56.56"
                                FontWeight="Bold"
                                FontStyle="Normal"
                                LineStackingStrategy="MaxHeight"
                                Style="{StaticResource Baloo2-Bold}"
                                Width="388" />
-                    <StackPanel Margin="0 24.12 0 0"
-                                HorizontalAlignment="Left"
-                                Width="439">
-                        <TextBlock TextWrapping="Wrap"
-                                   Text="Hãy chọn một bài học để bắt đầu cùng Penguine nhé!"
-                                   Foreground="#2D3D8F"
-                                   FontSize="28.13"
-                                   FontStyle="Normal"
-                                   LineStackingStrategy="MaxHeight"
-                                   Style="{StaticResource Baloo2-Regular}"
-                                   Width="381"
-                                   Height="88"
-                                   HorizontalAlignment="Right" />
 
-                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap"
+                               Text="Hãy chọn một bài học để bắt đầu cùng Penguine nhé!"
+                               Foreground="#2D3D8F"
+                               FontSize="28.13"
+                               Margin="0 24.12 0 0"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Regular}"
+                               Width="381"
+                               Height="88"
+                               HorizontalAlignment="Right" />
                 </StackPanel>
+                <Image Width="500"
+                       Source="/View/HomeView.png"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Stretch="Uniform" />
+
             </StackPanel>
-        </StackPanel>
-
-
-
+        </DockPanel>
     </Grid>
-
-    <!--<Grid>
-
-        <StackPanel   Background="#FFA0C4FF">
-
-            <Image Width="426"
-                   Source="../images/HomeScreen.png"
-                   HorizontalAlignment="Right"
-                   Height="674"
-                   VerticalAlignment="Bottom"
-                   Stretch="Uniform" />
-
-        </StackPanel>
-        <Grid ShowGridLines="False"
-              Margin="111,100,300,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500*"></ColumnDefinition>
-                <ColumnDefinition Width="500*"></ColumnDefinition>
-
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="500*"></RowDefinition>
-                <RowDefinition Height="500*"></RowDefinition>
-            </Grid.RowDefinitions>
-
-
-            <DockPanel Grid.Row="0"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="2">
-                <ContentControl Width="200">
-                    <Image Source="../images/TapDoc.png"
-                           Height="200"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Width="200"
-                           Stretch="Fill"
-                           Margin="-100,0,0,0" />
-                </ContentControl>
-            </DockPanel>
-            <DockPanel Grid.Row="0"
-                       Grid.Column="1">
-                <ContentControl>
-                    <Image Width="200"
-                           Source="../images/TapViet.png"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           Height="200"
-                           RenderTransformOrigin="0.603,0.487"
-                           Stretch="Fill" />
-                </ContentControl>
-            </DockPanel>
-            <DockPanel Grid.Row="1"
-                       Grid.Column="1">
-                <ContentControl>
-                    <Image Width="200"
-                           Source="../images/TongKet.png"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           Height="200"
-                           Stretch="Fill" />
-                </ContentControl>
-            </DockPanel>
-            <DockPanel Grid.Row="1"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="2"
-                       Margin="0,0,205,0">
-                <ContentControl>
-                    <Image Width="200"
-                           Source="../images/DoVui.png"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           Height="200"
-                           Stretch="Fill" />
-                </ContentControl>
-            </DockPanel>
-        </Grid>
-    </Grid>-->
 </Page>
