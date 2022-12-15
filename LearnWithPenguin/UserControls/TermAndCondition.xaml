@@ -105,7 +105,7 @@
                                       Margin="100.9 -5 13.21 0 "
                                       Cursor="Hand"
                                       Panel.ZIndex="20"
-                                      DataContext="{StaticResource TermAndConditionVM}"
+                                      DataContext="{StaticResource OnBoardingVM}"
                                       IsChecked="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
                                       Checked="CheckBox_Checked">
 
@@ -191,9 +191,12 @@
                                        Style="{StaticResource Baloo2-Bold}"
                                        Height="31"
                                        Margin="13.13,6,0,17" />
-
+<!--IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"-->
                             <Button Command="{Binding Show}"
-                                    IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"
+                                    IsEnabled="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
+                                    Panel.ZIndex="9000"
+                                    DataContext="{StaticResource OnBoardingVM}"
+                               
                                     x:Name="NoneBlur"
                                     Width="59.46"
                                     Height="59.46"
@@ -207,7 +210,7 @@
                                                 Value="13 13 13 13" />
                                     </Style>
                                 </Button.Resources>
-                                <Grid DataContext="{StaticResource TermAndConditionVM}">
+                                <Grid DataContext="{StaticResource OnBoardingVM}">
 
                                     <Image Width="59.46"
                                            Height="59.46"
