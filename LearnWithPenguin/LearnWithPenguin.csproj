@@ -606,5 +606,14 @@
     <Resource Include="images\reload%403x.png" />
     <Resource Include="images\reload.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\yellowStar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
