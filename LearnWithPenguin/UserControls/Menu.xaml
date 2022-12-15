@@ -113,7 +113,7 @@
                                 x:Name="NoneBlur"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                DataContext="{StaticResource MenuVM}">
+                                DataContext="{StaticResource MainVM}">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -191,7 +191,7 @@
                         <Button Command="{Binding SoundButtom}"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                DataContext="{StaticResource MenuVM}">
+                                DataContext="{StaticResource MainVM}">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"

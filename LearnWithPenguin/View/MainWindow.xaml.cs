@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnWithPenguin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,43 @@ namespace LearnWithPenguin
             InitializeComponent();
 
 
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var viewmodel = grid.DataContext as MainViewModel;
+            viewmodel._music.Stop();
+            viewmodel.isClosing = true;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var viewmodel = grid.DataContext as MainViewModel;
+            viewmodel._music.Play();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var viewmodel = grid.DataContext as MainViewModel;
+            viewmodel._music.Stop();
+            viewmodel.isClosing = true;
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            //var viewmodel = grid.DataContext as MainViewModel;
+            //viewmodel._sound.Position = TimeSpan.Zero;
+            //viewmodel._sound.Play();
+        }
+
+        private void Window_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var viewmodel = grid.DataContext as MainViewModel;
+            if (viewmodel.isSound)
+            {
+                viewmodel._sound.Position = TimeSpan.Zero;
+                viewmodel._sound.Play();
+            }
         }
     }
 }
