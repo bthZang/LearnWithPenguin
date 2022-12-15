@@ -8,6 +8,7 @@
       mc:Ignorable="d"
       d:DesignHeight="800"
       d:DesignWidth="1200"
+      DataContext="{StaticResource CodingVM}"
       Title="CodingView">
     <Page.Resources>
         <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
@@ -15,6 +16,9 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUser:Menu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:GameViewModel}">
+            <Frame Source="GameView.xaml"></Frame>
         </DataTemplate>
     </Page.Resources>
 
@@ -64,15 +68,6 @@
                 <Image Source="/View/Coding.png"
                        Width="367.85"
                        Margin="75, 21, 80, 0" />
-                <!--<StackPanel Background="Transparent"
-                            HorizontalAlignment="Left">
-                    <localUser:HomeIcon Width="98"
-                                        Height="34.99"
-                                        Margin="70, 0, 0, 0"
-                                        DataContext="{StaticResource MainVM}"
-                                        Command="{Binding Transform}">
-                    </localUser:HomeIcon>
-                </StackPanel>-->
                 <DockPanel>
                     <Grid HorizontalAlignment="Left">
                         <localUser:HomeIcon Width="97.13"
@@ -160,6 +155,7 @@
                             Margin="0, 70, 0, 50">
                     <StackPanel>
                         <Button Command="{Binding TransformToReview}"
+                                DataContext="{StaticResource MainVM}"
                                 Background="Transparent"
                                 Width="auto"
                                 Height="auto"
@@ -236,5 +232,5 @@
             </StackPanel>
         </StackPanel>
     </Grid>
-
+    
 </Page>

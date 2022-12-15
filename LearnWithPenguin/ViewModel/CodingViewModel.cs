@@ -1,5 +1,4 @@
-﻿
-using LearnWithPenguin.UserControls;
+﻿using LearnWithPenguin.UserControls;
 using LearnWithPenguin.View;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -18,10 +20,18 @@ namespace LearnWithPenguin.ViewModel
         protected BaseViewModel _navigatetoView;
         public BaseViewModel NavigatetoView { get { return _navigatetoView; } set { _navigatetoView = value; OnPropertyChanged(); } }
         public ICommand ReviewTransform { get; set; }
-        public ICommand PlayTransform { get; set; }
+        public ICommand PlayTransform { 
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoView = new GameViewModel();
+                });
+            } 
+            set { } 
+        }
         public ICommand ForwardCommand { get; set; }
         public ICommand BackwardCommand { get; set; }
-
 
         private string _PositionNumber;
         public string PositionNumber { get { return _PositionNumber; } set { _PositionNumber = value; OnPropertyChanged(); } }
@@ -33,9 +43,15 @@ namespace LearnWithPenguin.ViewModel
 
         public CodingViewModel()
         {
+            ///
+            ///
+
+            
+            ///
+            ///
 
             PositionNumber = "1";
-            GameView = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+            GameView = @"/images/game1@3x.png";
 
             ForwardCommand = new RelayCommand<object>((p) =>
             {
@@ -52,15 +68,15 @@ namespace LearnWithPenguin.ViewModel
                 switch (getNum)
                 {
                     case 1:
-                        string gv1 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+                        string gv1 = @"/images/game1@3x.png";
                         GameView = gv1;
                         break;
                     case 2:
-                        string gv2 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game2@3x.png";
+                        string gv2 = @"/images/game2@3x.png";
                         GameView = gv2;
                         break;
                     case 3:
-                        string gv3 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game3@3x.png";
+                        string gv3 = @"/images/game3@3x.png";
                         GameView = gv3;
                         break;
                 }
@@ -80,21 +96,21 @@ namespace LearnWithPenguin.ViewModel
                 switch (getNum)
                 {
                     case 1:
-                        string gv1 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game1@3x.png";
+                        string gv1 = @"/images/game1@3x.png";
                         GameView = gv1;
                         break;
                     case 2:
-                        string gv2 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game2@3x.png";
+                        string gv2 = @"/images/game2@3x.png";
                         GameView = gv2;
                         break;
                     case 3:
-                        string gv3 = @"D:/LWP/LearnWithPenguin/LearnWithPenguin/images/game3@3x.png";
+                        string gv3 = @"/images/game3@3x.png";
                         GameView = gv3;
                         break;
                 }
             });
 
-            //ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
+            ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
 
             //this.NavigatetoView = new GameViewModel();
             //PlayTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) =>
