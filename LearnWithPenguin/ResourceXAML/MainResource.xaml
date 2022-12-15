@@ -11,14 +11,14 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
-    <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
+    <!--<viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>-->
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
 
-    <viewmodel:QuizQuestionAsideViewModel x:Key="QuizQuestionAsideVM"></viewmodel:QuizQuestionAsideViewModel>
+    <!--<viewmodel:QuizQuestionAsideViewModel x:Key="QuizQuestionAsideVM"></viewmodel:QuizQuestionAsideViewModel>-->
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
-    <viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>
+    <!--<viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>-->
 
 
 

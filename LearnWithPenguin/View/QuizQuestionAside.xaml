@@ -12,7 +12,7 @@
       Title="QuizQuestionAside">
 
 
-    <Page.Resources>
+    <!--<Page.Resources>
         <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
             <localUC:Icon />
         </DataTemplate>
@@ -23,7 +23,7 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
 
-        <!-- Template for Answer 1 - n -->
+         Template for Answer 1 - n 
         <DataTemplate x:Key="answerTemplate">
             <StackPanel Grid.Column="0"
                         Orientation="Horizontal"
@@ -87,7 +87,7 @@
                                            Width="38.8"
                                            Height="42.9"></Image>
                                 </Button>
-                                <!--<TextBlock Text="Bài"
+                                <TextBlock Text="Bài"
                                            Width="94"
                                            Height="57"
                                            VerticalAlignment="Bottom"
@@ -98,7 +98,7 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Margin="30,38.49,0,8" />-->
+                                           Margin="30,38.49,0,8" />
                                 <TextBlock Text="{Binding DisplayedQuestionIndex, StringFormat= Bài {0}}"
                                            Width="150"
                                            Height="57"
@@ -137,7 +137,7 @@
 
 
 
-                    <!-- Question -->
+                     Question 
                     <StackPanel Orientation="Horizontal"
                                 Margin="42 50 0 0">
                         <TextBlock Text="Question: "
@@ -161,25 +161,25 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    TextWrapping="Wrap" />
                     </StackPanel>
-                    <!-- Answer & optionales Bild -->
+                     Answer & optionales Bild 
                     <Grid Margin="42 50 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Antworten -->
+                         Antworten 
                         <StackPanel>
 
-                            <!-- Answer 1 - n -->
+                             Answer 1 - n 
                             <ItemsControl ItemsSource="{Binding Answers}"
                                           ItemTemplate="{StaticResource answerTemplate}"
                                           Height="403"
                                           Width="610" />
                         </StackPanel>
 
-                        <!-- TODO: optionale Bilder einblenden in Grid.Column="1" -->
-                        <!-- Logo Kunde -->
+                         TODO: optionale Bilder einblenden in Grid.Column="1" 
+                         Logo Kunde 
                         <Image Width="400"
                                Height="400"
                                Source="{Binding ImageSource}"
@@ -202,7 +202,7 @@
 
                     </Grid>
 
-                    <!--<DockPanel>
+                    <DockPanel>
                         <Grid HorizontalAlignment="Left">
                             <localUC:HomeIcon Width="97.13"
                                               Height="34.99"
@@ -212,11 +212,11 @@
 
                             </localUC:HomeIcon>
                         </Grid>
-                    </DockPanel>-->
+                    </DockPanel>
                 </StackPanel>
             </Grid>
         </StackPanel>
-    </Grid>
+    </Grid>-->
 
 
 </Page>

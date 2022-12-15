@@ -22,96 +22,82 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
     </Page.Resources>
+   
     <StackPanel Background="#FFA0C4FF">
         <ContentControl Panel.ZIndex="999"
-                        DataContext="{StaticResource HomeVM}"
+                        DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <DockPanel>
+            <Grid>
+                <localUC:Icon Width="63.28"
+                              Height="63.28"
+                              Margin="42.97,35.16,0,0"
+                              DataContext="{StaticResource MainVM}"
+                              Command="{Binding ShowMenu}">
 
-
-        <Button Margin="50 35.16 1018.75 701.72"
-                Width="63.28"
-                Height="63.28"
-                Background="Transparent"
-                BorderThickness="0"
-                DataContext="{StaticResource HomeVM}"
-                Command="{Binding ShowMenu}">
-            <localUC:Icon Width="63.28"
-                          Height="63.28">
-                <Image Stretch="Uniform"
-                       Source="../images/menu.png"
-                       Width="63.28"
-                       Height="63.28" />
-            </localUC:Icon>
-        </Button>
-        <StackPanel Margin="0 -1450 0 0"
-                    Height="74.19"
-                    Width="448.28">
-            <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToQuizzView2}"
-                    Height="68"
-                    Margin="0 0 350 0"
-                    Background="Transparent"
-                    BorderThickness="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="/UserControls/backIcon.png"
-                       Width="59.46"
-                       Height="59.46" />
-            </Button>
-
-            <Button DataContext="{StaticResource MainVM}"
-                    Command="{Binding TransformToQuizzView1}"
-                    Height="68"
-                    Margin="350 -68 0 0"
-                    Background="Transparent"
-                    BorderThickness="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="../images/nextIcon.png"
-                       Width="59.46"
-                       Height="59.46" />
-            </Button>
-            <Label  Name="QuestionOrder"
-                    Margin="110 -69 110 0"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Foreground="#2D3D8F"
-                    FontSize="36.09"
-                    FontStyle="Normal"
-                    Style="{StaticResource ResourceKey=Baloo2-Bold}">
-                Bài
-            </Label>
-            <!--<TextBlock Text="Bai..."
-                       Margin="110 -69 110 0"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Foreground="#2D3D8F"
-                       FontSize="36.09"
-                       TextWrapping="Wrap"
-                       FontStyle="Normal"
-                       LineStackingStrategy="MaxHeight"
-                       Style="{StaticResource ResourceKey=Baloo2-Bold}">
-
-            </TextBlock>-->
-        </StackPanel>
-        <StackPanel  Margin="-400 -640 0 200"
+                </localUC:Icon>
+            </Grid>
+            <Grid Width="1018"
+                  HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal"
+                            Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+                    <Button Margin="336.67 32.11 0 0"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="50.14"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            Command="{Binding OnclickHandlePreviousLevel}"
+                            Height="50.14">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="3 3 3 3" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Source="/UserControls/backIcon.png"
+                               Width="38.8"
+                               Height="42.9"></Image>
+                    </Button>
+                    <TextBlock Width="94"
+                               Height="57"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Center"
+                               Foreground="#073580"
+                               FontSize="36.09"
+                               FontStyle="Normal"
+                               FontWeight="Bold"
+                               TextAlignment="Center"
+                               DataContext="{StaticResource QuizzView1VM}"
+                               Text="{ Binding ConcatTitle}"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Margin="43.13,38.49,0,8" />
+                    <Button Margin="53.32 32.11 0 0"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            Command="{Binding OnclickHandleNextLevel}"
+                            Width="50.13"
+                            Height="50.13">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="3 3 3 3" />
+                            </Style>
+                        </Button.Resources>
+                        <Image Source="/View/next.png"
+                               Width="38.8"
+                               Height="42.9"></Image>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+        <StackPanel  Margin="-400 30 0 200"
                      Width="309.38">
             <Button Name="ans1"
                     Height="191.84"
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -119,10 +105,6 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
             </Button>
 
             <Button Name="ans2"
@@ -130,7 +112,6 @@
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
                     Margin="0 57.38 0 0"
                     Tag="0">
                 <Button.Resources>
@@ -139,10 +120,6 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
             </Button>
         </StackPanel>
         <StackPanel Margin="550.94 -640 150 200"
@@ -152,7 +129,6 @@
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -171,7 +147,6 @@
                     Background="White"
                     BorderThickness="0"
                     Margin="0 57.38 0 0"
-                    Click="checkAnswer"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -188,27 +163,43 @@
                        Width="309.38" />-->
             </Button>
         </StackPanel>
+        <MediaElement x:Name="media"
+                      Height="80"
+                      Width="80"
+                      LoadedBehavior="Manual"
+                      Panel.ZIndex="9999"
+                      UnloadedBehavior="Manual"
+                      DataContext="{StaticResource QuizzView1VM}"
+                      Visibility="{Binding IsDisplayQuestion}"
+                      Margin="0 -250 0 0"
+                      Source="{ Binding ConcatQuestion}"
+                      ></MediaElement>
         <Button Margin="0 -250 0 0"
-                Height="77.38"
-                Width="77.38"
+                Height="80"
+                Width="80"
                 Background="Transparent"
                 BorderThickness="0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius"
+                            Value="50 50 50 50" />
+                </Style>
+            </Button.Resources>
             <Image Stretch="Uniform"
                    Source="../images/puzzleSound.png"
                    Height="77.38"
                    Width="77.38" />
         </Button>
-        <Button Margin="-1000 -120 0 0"
-                Width="59.46"
-                Height="59.46"
-                Background="Transparent"
-                BorderThickness="0">
-            <localUC:Back Height="68">
-                <Image Stretch="Uniform"
-                       Source="/UserControls/backIcon.png"
-                       Width="59.46"
-                       Height="59.46" />
-            </localUC:Back>
-        </Button>
+        <DockPanel>
+            <Grid HorizontalAlignment="Left">
+                <localUC:HomeIcon Width="97.13"
+                                  Height="34.99"
+                                  Margin="42.97,-120,0,0"
+                                  DataContext="{StaticResource MainVM}"
+                                  Command="{Binding Transform}">
+
+                </localUC:HomeIcon>
+            </Grid>
+        </DockPanel>
     </StackPanel>
 </Page>

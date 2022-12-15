@@ -75,7 +75,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new PuzzleViewModel();
+                    NavigatetoHome = new QuizzView1ViewModel();
                 });
             }
 
@@ -198,38 +198,38 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
-        public ICommand TransformToQuizzView1
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new QuizzView1ViewModel();
-                });
-            }
-            set { }
-        }
-        public ICommand TransformToQuizzView2
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new QuizzView2ViewModel();
-                });
-            }
-            set { }
-        }
-        public ICommand TransformToQuizAsideView
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoHome = new QuizQuestionAsideViewModel();
-                });
-            }
-            set { }
-        }
+        //public ICommand TransformToQuizzView1
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            NavigatetoHome = new QuizzView1ViewModel();
+        //        });
+        //    }
+        //    set { }
+        //}
+        //public ICommand TransformToQuizzView2
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            NavigatetoHome = new QuizzView2ViewModel();
+        //        });
+        //    }
+        //    set { }
+        //}
+        //public ICommand TransformToQuizAsideView
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            NavigatetoHome = new QuizQuestionAsideViewModel();
+        //        });
+        //    }
+        //    set { }
+        //}
     }
 }
