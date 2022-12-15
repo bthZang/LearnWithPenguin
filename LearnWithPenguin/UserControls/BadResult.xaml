@@ -22,12 +22,13 @@
                                     Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                            <Image Source="/UserControls/yellowStar.png"
+                            <Image DataContext="{StaticResource WriteVM}"
+                                   Source="{ Binding ChangeColor1}"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0,0,12.9,0"></Image>
-                            <Image DataContext="{StaticResource BadResultVM}"
-                                   Source="{ Binding ChangeColor}"
+                            <Image DataContext="{StaticResource WriteVM}"
+                                   Source="{ Binding ChangeColor2}"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
@@ -55,6 +56,12 @@
                                 Height="91.13"
                                 Margin="65 84.18 0 0"
                                 Command="{Binding Replay, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="20 20 20 20" />
+                                </Style>
+                            </Button.Resources>
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Border"
@@ -92,6 +99,22 @@
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Button.Template>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="True">
+                                            <Setter Property="Effect">
+                                                <Setter.Value>
+                                                    <DropShadowEffect BlurRadius="10"
+                                                                      ShadowDepth="10"
+                                                                      Color="#966CE4" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
                             <Border Background="#AB9DFF"
                                     Width="234.76"
                                     Height="91.13"
@@ -152,6 +175,28 @@
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Button.Template>
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="20 20 20 20" />
+                                </Style>
+                            </Button.Resources>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="True">
+                                            <Setter Property="Effect">
+                                                <Setter.Value>
+                                                    <DropShadowEffect BlurRadius="10"
+                                                                      ShadowDepth="10"
+                                                                      Color="#F693EB" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
                             <Border Background="#FF99FF"
                                     Width="212.37"
                                     Height="91.13"

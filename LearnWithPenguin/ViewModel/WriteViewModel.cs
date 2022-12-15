@@ -53,6 +53,13 @@ namespace LearnWithPenguin.ViewModel
         {
             this.IsDisplayVideo = "Hidden";
             this.Number = 1;
+            this._star1 = "yellow";
+            this._star2 = "white";
+            this._star3 = "white";
+            this._star4 = "white";
+            this._star5 = "white";
+
+
         }
 
         public int Number
@@ -223,9 +230,46 @@ namespace LearnWithPenguin.ViewModel
                     point += 1;
             }
             if (point >= 3)
+            {
                 _submit = true;
+
+                switch (point)
+                {
+                    case 3:
+                    case 4:
+                        _star3 = "yellow";
+                        _star4 = _star5 = "white";
+                        break;
+                    case 5:
+                        _star3 = _star4 = "yellow";
+                        _star5 = "white";
+                        break;
+                    case 6:
+                        _star3 = _star4 = _star5 = "yellow";
+                        break;
+                    default:
+                        _star3 = "yellow";
+                        _star4 = _star5 = "white";
+                        break;
+                }
+            }
             else
                 _submit = false;
+
+            switch (point)
+                {
+                    case 1:
+                        _star1 = "yellow";
+                        _star2 = "white";
+                        break;
+                    case 2:
+                        _star1 = _star2 = "yellow";
+                        break;
+                    default:
+                        _star1 = "yellow";
+                        _star2 = "white";
+                        break;
+                }
 
             return _submit;
         }
@@ -242,6 +286,154 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+
+        //star
+
+        public string _star1;
+        public string _star2;
+        public string _star3;
+        public string _star4;
+        public string _star5;
+
+
+
+        public string Star1
+        {
+            get
+            {
+                return _star1;
+            }
+            set
+            {
+
+                ChangeColor1 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor1
+        {
+            get
+            {
+                return "/UserControls/" + _star1 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star2
+        {
+            get
+            {
+                return _star2;
+            }
+            set
+            {
+
+                ChangeColor2 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor2
+        {
+            get
+            {
+                return "/UserControls/" + _star2 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star3
+        {
+            get
+            {
+                return _star3;
+            }
+            set
+            {
+
+                ChangeColor3 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor3
+        {
+            get
+            {
+                return "/UserControls/" + _star3 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star4
+        {
+            get
+            {
+                return _star4;
+            }
+            set
+            {
+
+                ChangeColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor4
+        {
+            get
+            {
+                return "/UserControls/" + _star4 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star5
+        {
+            get
+            {
+                return _star5;
+            }
+            set
+            {
+
+                ChangeColor5 = "5";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor5
+        {
+            get
+            {
+                return "/UserControls/" + _star5 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+
+        //endstar
         public ICommand ShowResult
         {
             get
