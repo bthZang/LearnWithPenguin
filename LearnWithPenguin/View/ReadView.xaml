@@ -47,7 +47,8 @@
                                 Height="32.52"
                                 Margin="348.57 46.56 5 10"
                                 BorderThickness="0"
-                                Background="Transparent">
+                                Background="Transparent"
+                                Click="PrevLesson">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -61,27 +62,29 @@
                             </Image>
                         </Button>
 
-                        <Button Width="73"
+                        <Button Width="100"
                                 Height="56"
                                 Margin="63.06 38.05 5 10"
                                 BorderThickness="0"
                                 Background="#A0C4FF">
-                            <TextBlock Width="73"
+                            <TextBlock Width="100"
                                        Height="56"
                                        Text="Bai 1"
                                        Foreground="#073580"
                                        FontSize="35.679"
                                        FontWeight="Bold"
                                        FontStyle="Normal"
-                                       Style="{StaticResource Baloo2-Bold}">
+                                       Style="{StaticResource Baloo2-Bold}"
+                                       x:Name="lessonName">
                             </TextBlock>
                         </Button>
 
                         <Button Width="18.58"
                                 Height="32.52"
-                                Margin="63.4 46.56 444.56 10"
+                                Margin="40 46.56 444.56 10"
                                 BorderThickness="0"
-                                Background="#A0C4FF">
+                                Background="#A0C4FF"
+                                Click="NextLesson">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -114,7 +117,14 @@
                         CornerRadius="15"
                         Margin="309 50 309 300"
                         BorderThickness="2"
-                        BorderBrush="Black">
+                        BorderBrush="Black"
+                        >
+                    <Image x:Name="ImgChange"
+                           Source="D:\School\testWPFfunc\FullImg\1.jpeg"
+                           Width="500"
+                           Height="290">
+                        
+                    </Image>
 
                 </Border>
 
@@ -124,11 +134,12 @@
                            Height="74"
                            FontSize="46.8"
                            FontWeight="Bold"
-                           Text="Con Chim Cánh Cụt"
+                           Text="Con ong"
                            FontStyle="Normal"
                            Style="{StaticResource Baloo2-Bold}"
                            TextAlignment="Center"
-                           Foreground="White">
+                           Foreground="White"
+                           x:Name="picName">
 
                 </TextBlock>
 
@@ -136,7 +147,8 @@
                         Width="99.05"
                         Margin="500 527 500 70"
                         BorderThickness="0"
-                        Background="Transparent">
+                        Background="Transparent"
+                        Click="ReadText">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"
