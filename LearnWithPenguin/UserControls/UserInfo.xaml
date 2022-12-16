@@ -1,66 +1,55 @@
 ﻿<UserControl x:Class="LearnWithPenguin.UserControls.UserInfo"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="670" d:DesignWidth="1125">
-    <StackPanel 
-        Orientation="Horizontal"
-        Background="#A0C4FF"
-        Style="{StaticResource Baloo2-Bold}">
-        <StackPanel 
-            Orientation="Vertical"
-            Width="405">
-            <Image 
-                Source="/images/User.png"
-                HorizontalAlignment="Center"
-                Height="156"
-                Width="156"
-                Margin="0 31 0 0"></Image>
-            <TextBox
-                BorderThickness="0"
-                BorderBrush="#A0C4FF"
-                Background="#A0C4FF"
-                Foreground="#073580"
-                Text="Biệt danh"
-                FontSize="41.7956"
-                FontStyle="Normal"
-                FontWeight="Bold"
-                Style="{StaticResource Baloo2-Bold}"
-                Width="200"
-                Height="66"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="106.55 18"></TextBox>
-            <TextBox BorderThickness="0"
-                     BorderBrush="#A0C4FF"
-                     Background="#A0C4FF"
-                     Foreground="#073580"
-                     Text="Tuổi"
-                     FontSize="23"
-                     FontStyle="Normal"
-                     FontWeight="Bold"
-                     Style="{StaticResource Baloo2-Bold}"
-                     Width="55"
-                     Height="36"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Margin="106.55 0 252 0"></TextBox>
+             mc:Ignorable="d"
+             d:DesignHeight="670"
+             d:DesignWidth="1125">
+    <DockPanel Background="#A0C4FF"
+               Style="{StaticResource Baloo2-Bold}">
+        <StackPanel Width="405">
+            <Image Source="/images/User.png"
+                   HorizontalAlignment="Center"
+                   Height="156"
+                   Width="156"
+                   Margin="0 31 0 0"></Image>
+            <TextBlock Background="#A0C4FF"
+                       Foreground="#073580"
+                       Text="Biệt danh"
+                       FontSize="41.7956"
+                       FontStyle="Normal"
+                       FontWeight="Bold"
+                       Style="{StaticResource Baloo2-Bold}"
+                       Width="200"
+                       Height="66"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Margin="16.55 18"></TextBlock>
+            <TextBlock Background="#A0C4FF"
+                       Foreground="#073580"
+                       Text="Tuổi : 7"
+                       FontSize="23"
+                       FontStyle="Normal"
+                       FontWeight="Bold"
+                       Style="{StaticResource Baloo2-Bold}"
+                       Width="300"
+                       Height="36"
+                       HorizontalAlignment="Left"
+                       Margin="105 0 252 0"></TextBlock>
         </StackPanel>
 
         <StackPanel>
-            <Border
-                HorizontalAlignment="Left"
-                Width="457"
-                Height="164"
-                Margin="0 80 27 27"
-                Background="White"
-                CornerRadius="15">
+            <Border HorizontalAlignment="Left"
+                    Width="700"
+                    Height="164"
+                    Margin="0 80 27 27"
+                    Background="White"
+                    CornerRadius="15">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Top" 
+                                VerticalAlignment="Top"
                                 Margin="70 10 0 0">
                         <TextBlock Height="30"
                                    Foreground="#073580"
@@ -72,11 +61,9 @@
                                    HorizontalAlignment="Center"
                                    Width="70"
                                    Margin="0 0 0 0"></TextBlock>
-                        <Image Source="/images/userNameDecorate.jpg"
-                               Width="25.44"
-                               Height="34.69"></Image>
+
                         <Grid>
-                            <TextBox Width="200"
+                            <TextBox Width="500"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
                                      x:Name="Username"
@@ -90,10 +77,9 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      Background="Transparent"
                                      TextAlignment="Left"
-                                     
+                                     Text="Họ và tên bé"
                                      SelectionBrush="#FF5B84C6" />
-                            <TextBlock IsHitTestVisible="False"
-                                       Text="Họ và tên bé"
+                            <!--<TextBlock IsHitTestVisible="False"
                                        VerticalAlignment="Bottom"
                                        HorizontalAlignment="Left"
                                        TextAlignment="Center"
@@ -115,12 +101,12 @@
                                         </Style.Triggers>
                                     </Style>
                                 </TextBlock.Style>
-                            </TextBlock>
+                            </TextBlock>-->
                         </Grid>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center" 
+                                VerticalAlignment="Center"
                                 Margin="70 4 0 0">
                         <TextBlock Height="30"
                                    Foreground="#073580"
@@ -151,10 +137,10 @@
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
                                    FontSize="23"
-                                   Foreground="#073580"
-                                   >Giới tính:</TextBlock>
+                                   Foreground="#073580">Giới tính:</TextBlock>
                         <ComboBox IsEditable="True"
                                   IsReadOnly="True"
+                                  Margin="20 0 0 0"
                                   Text="Chưa xác định"
                                   FontStyle="Normal"
                                   FontWeight="Bold"
@@ -178,34 +164,30 @@
                         </ComboBox>
                     </StackPanel>
                 </StackPanel>
-                
 
-                
+
+
             </Border>
-            <Border
-                    HorizontalAlignment="Left"
-                    Width="631"
+            <Border HorizontalAlignment="Left"
+                    Width="800"
                     Height="342"
                     Background="White"
-                    CornerRadius="15"
-                    >
+                    CornerRadius="15">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal"
-                                Width="117"
+                                Width="160"
                                 Height="342"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Center">
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom">
                         <TextBlock Foreground="#073580"
                                    Text="THÀNH TỰU"
-                                   FontSize="30"
+                                   FontSize="40"
                                    FontStyle="Normal"
                                    FontWeight="ExtraBold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Margin="20 240 0 0"
-                                   Width="342"
-                                   Height="48"
-                                   
-                                                                >
+                                   Margin="60 250 0 -60"
+                                   Width="300"
+                                   Height="100">
                             <TextBlock.RenderTransform>
                                 <RotateTransform Angle="270" />
                             </TextBlock.RenderTransform>
@@ -213,7 +195,9 @@
 
                         <Border Width="199"
                                 Height="1"
+                                Margin="-200 200 0 0"
                                 Background="Black"
+                                Opacity="0.7"
                                 BorderThickness="200">
                             <Border.RenderTransform>
                                 <RotateTransform Angle="270" />
@@ -222,55 +206,112 @@
 
                     </StackPanel>
 
-                    <StackPanel
-                        Orientation="Vertical"
-                        Width="510"
-                        Height="342">
+                    <StackPanel Orientation="Vertical"
+                                Width="640"
+                                Height="342">
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="23"
+                                <TextBlock FontSize="28"
+                                           Width="160"
+                                           TextAlignment="Center"
                                            FontStyle="Normal"
                                            FontWeight="Bold"
                                            Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Tập đọc"
-                                           Margin="25 15 40 10"></TextBlock>
-                                <TextBlock FontSize="23"
+                                           Margin="0 15 0 0"></TextBlock>
+                                <TextBlock FontSize="28"
+                                           Width="160"
                                            FontStyle="Normal"
                                            FontWeight="Bold"
+                                           TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Tập viết"
-                                           Margin="0 15 40 10"></TextBlock>
-                                <TextBlock FontSize="23"
+                                           Margin="0 15 0 0"></TextBlock>
+                                <TextBlock FontSize="28"
+                                           Width="160"
                                            FontStyle="Normal"
                                            FontWeight="Bold"
+                                           TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Nhận biết"
-                                           Margin="0 15 25 10"></TextBlock>
-                                <TextBlock FontSize="23"
+                                           Margin="0 15 0 0"></TextBlock>
+                                <TextBlock FontSize="28"
                                            FontStyle="Normal"
+                                           Width="160"
+                                           TextAlignment="Center"
                                            FontWeight="Bold"
                                            Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
                                            Text="Trò chơi"
-                                           Margin="10 15 25 10"
-                                           ></TextBlock>
+                                           Margin="0 15 0 0"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Width="160">
+                                    <Image Width="58.77"
+                                           Height="70.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/HoanThanhTapDoc.png"></Image>
+                                    <Image Width="58.77"
+                                           Margin="0 10 0 18"
+                                           Height="70.81"
+                                           Source="/images/medal/TotTapDoc.png"></Image>
+                                    <Image Width="58.77"
+                                           Margin="0 10 0 18"
+                                           Height="70.81"
+                                           Source="/images/medal/XuatSacTapDoc.png"></Image>
+                                </StackPanel>
+                                <StackPanel Width="160">
+                                    <Image Width="52.46"
+                                           Height="70.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/HoanThanhTapViet.png"></Image>
+                                    <Image Width="52.46"
+                                           Height="70.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/TotTapViet.png"></Image>
+                                    <Image Width="52.46"
+                                           Height="70.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/XuatSacTapViet.png"></Image>
+                                </StackPanel>
+                                <StackPanel Width="160">
+                                    <Image Width="71.69"
+                                           Height="71.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/HoanThanhNhanBiet.png"></Image>
+                                    <Image Width="71.69"
+                                           Height="71.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/TotNhanBiet.png"></Image>
+                                    <Image Width="71.69"
+                                           Height="71.81"
+                                           Margin="0 10 0 18"
+                                           Source="/images/medal/XuatSacNhanBiet.png"></Image>
+                                </StackPanel>
+                                <StackPanel Width="160">
+                                    <Image Width="60"
+                                           Height="66.01"
+                                           Margin="0 10 0 24"
+                                           Source="/images/medal/HoanThanhTroChoi.png"></Image>
+                                    <Image Width="60"
+                                           Height="66.01"
+                                           Margin="0 10 0 24"
+                                           Source="/images/medal/TotTroChoi.png"></Image>
+                                    <Image Width="60"
+                                           Height="66.01"
+                                           Margin="0 10 0 24"
+                                           Source="/images/medal/XuatSacTroChoi.png"></Image>
+                                </StackPanel>
                             </StackPanel>
 
-                            <Image
-                                Source="/images/Frame 20.png"
-                                Width="514"
-                                Height="280">
-                                
-                            </Image>
-                            
                         </StackPanel>
-                        
+
                     </StackPanel>
                 </StackPanel>
             </Border>
         </StackPanel>
-    </StackPanel>
+    </DockPanel>
 </UserControl>

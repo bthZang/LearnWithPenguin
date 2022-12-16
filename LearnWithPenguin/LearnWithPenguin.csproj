@@ -638,6 +638,30 @@
     <Resource Include="TapViet\ChuLien\7.png" />
     <Resource Include="TapViet\ChuLien\8.png" />
     <Resource Include="TapViet\ChuLien\9.png" />
+    <Resource Include="images\medal\HCHoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HCHoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HCHoanThanhTapViet.png" />
+    <Resource Include="images\medal\HCHoanThanhTroChoi.png" />
+    <Resource Include="images\medal\HCTotNhanBiet.png" />
+    <Resource Include="images\medal\HCTotTapDoc.png" />
+    <Resource Include="images\medal\HCTotTapViet.png" />
+    <Resource Include="images\medal\HCTotTrochoi.png" />
+    <Resource Include="images\medal\HCXuatSacNhanBiet.png" />
+    <Resource Include="images\medal\HCXuatSacTapDoc.png" />
+    <Resource Include="images\medal\HCXuatSacTapViet.png" />
+    <Resource Include="images\medal\HCXuatSacTroChoi.png" />
+    <Resource Include="images\medal\HoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HoanThanhTapViet.png" />
+    <Resource Include="images\medal\HoanThanhTroChoi.png" />
+    <Resource Include="images\medal\TotNhanBiet.png" />
+    <Resource Include="images\medal\TotTapDoc.png" />
+    <Resource Include="images\medal\TotTapViet.png" />
+    <Resource Include="images\medal\TotTroChoi.png" />
+    <Resource Include="images\medal\XuatSacNhanBiet.png" />
+    <Resource Include="images\medal\XuatSacTapDoc.png" />
+    <Resource Include="images\medal\XuatSacTapViet.png" />
+    <Resource Include="images\medal\XuatSacTroChoi.png" />
     <Content Include="TapViet\ChuThuong\1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -710,6 +734,8 @@
     <Resource Include="TapViet\ChuThuong\9.mp4" />
     <Resource Include="View\vidu.png" />
     <Resource Include="View\play.png" />
+    <Resource Include="UserControls\HoanThanhTapDoc.png" />
+    <Resource Include="UserControls\TotTapDoc.png" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
