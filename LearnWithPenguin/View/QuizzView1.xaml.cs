@@ -1,5 +1,10 @@
 ﻿using LearnWithPenguin.ViewModel;
 using System;
+using System.Media;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace LearnWithPenguin.View
 {
@@ -12,7 +17,7 @@ namespace LearnWithPenguin.View
 
         //int questionNumber = 0;
         //int i = 0;
-
+        //public Button;
 
         public QuizzView1()
         {
@@ -32,6 +37,62 @@ namespace LearnWithPenguin.View
                     viewmodel.Number -= 1;
             
             });
+        }
+
+        private void Sound_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            private MediaPlayer mediaPlayer = new MediaPlayer();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            mediaPlayer.Open(new Uri(
+
+
+    }
+        private void Button_Click(object sender, RoutedEventArgs e)
+
+        {
+
+            //if ((sender as Button) == targetButton)
+
+            //{
+
+            //    targetButton.Visibility = Visibility.Collapsed;
+
+            //    //and then set the next target button to be clicked
+
+            //    switch (targetButton.Content.ToString())
+
+            //    {
+
+            //        case "A":
+
+            //            targetButton = buttonB; break;
+
+            //        case "B":
+
+            //            targetButton = buttonC; break;
+
+            //        case "C":
+
+            //            targetButton = buttonD; break;
+
+            //        case "D":
+
+            //            targetButton = null; break;
+
+            //    }
+
+            //}
+
+            //else
+
+            //{
+
+            //    MessageBox.Show("Wrong");
+
+            //}
+
         }
         //private void FillQuestionNumList()
         //{
@@ -92,7 +153,7 @@ namespace LearnWithPenguin.View
 
         //            ans2.Tag = "1";
         //            break;
-                    
+
 
         //    }
         //}
