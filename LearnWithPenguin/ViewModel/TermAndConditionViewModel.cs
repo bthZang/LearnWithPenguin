@@ -11,45 +11,10 @@ namespace LearnWithPenguin.ViewModel
 {
     public class TermAndConditionViewModel : BaseViewModel
     {
-        private bool _next;
-        public bool Next
-        {
-            get { return _next; }
-            set
-            {
-                _next = value;
-                if (_next == true)
-                    obacity = "/UserControls/next.png";
-                else 
-                    obacity = "/UserControls/BlurNext.png";
-
-                OnPropertyChanged();
-            }
-        }
+        
 
 
-        private string _obacity;
-
-        public string obacity
-        {
-            get
-            {
-                return _obacity;
-
-            }
-            set
-            {
-                
-                _obacity = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public TermAndConditionViewModel()
-        {
-            obacity = "/UserControls/BlurNext.png";
-            //Back = new TermAndConditionViewModel();
-        }
+        
 
         //public System.Windows.Controls.
         //public ICommand Next

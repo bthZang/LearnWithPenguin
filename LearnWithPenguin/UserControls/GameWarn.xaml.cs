@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media;
-using System.Reflection;
-using LearnWithPenguin.Properties;
 
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for GameWarn.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class GameWarn : System.Windows.Controls.UserControl
     {
-        public Menu()
+        public GameWarn()
         {
             InitializeComponent();
-
-
-
         }
-
-
-
-
-
     }
 }
