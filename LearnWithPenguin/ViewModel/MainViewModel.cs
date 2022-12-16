@@ -37,9 +37,10 @@ namespace LearnWithPenguin.ViewModel
             ImageVolume = "/UserControls/Volume.png";
             ImageSound = "/UserControls/Sound.png";
 
-            _music.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Wii Music  Gaming Background Music HD.mp3")));
+            //MessageBox.Show(Convert.ToString(new Uri(@"../audio/y2mate.com - Wii Music  Gaming Background Music HD.mp3", UriKind.Relative)));
+            _music.Open(new Uri(@"../../audio/y2mate.com - Wii Music  Gaming Background Music HD.mp3", UriKind.Relative));
             _music.MediaEnded += ReplayMusic;
-            _sound.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Video Game Beep  Sound Effect.mp3")));
+            _sound.Open(new Uri(@"../../audio/y2mate.com - Video Game Beep  Sound Effect.mp3", UriKind.Relative));
         }
 
         public void ReplayMusic(object sender, EventArgs e)
