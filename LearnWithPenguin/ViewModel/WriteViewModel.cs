@@ -58,8 +58,6 @@ namespace LearnWithPenguin.ViewModel
             this._star3 = "white";
             this._star4 = "white";
             this._star5 = "white";
-
-
         }
 
         public int Number
@@ -96,7 +94,8 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Thuong\\" + _number + ".mp4";
+                return "./TapViet/ChuThuong" + _number + ".mp4";
+                //return "/TapViet/ChuThuong/" + _number + ".mp4";
             }
             set
             {
@@ -108,7 +107,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Dut\\" + _number + ".png";
+                return "/TapViet/ChuDut/" + _number + ".png";
             }
             set
             {
@@ -120,7 +119,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Lien\\" + _number + ".png";
+                return "/TapViet/ChuLien/" + _number + ".png";
             }
             set
             {
@@ -229,6 +228,7 @@ namespace LearnWithPenguin.ViewModel
                 if (isCorrect)
                     point += 1;
             }
+
             if (point >= 3)
             {
                 _submit = true;
@@ -237,39 +237,39 @@ namespace LearnWithPenguin.ViewModel
                 {
                     case 3:
                     case 4:
-                        _star3 = "yellow";
-                        _star4 = _star5 = "white";
+                        Star4 = Star5 = "white";
                         break;
                     case 5:
-                        _star3 = _star4 = "yellow";
-                        _star5 = "white";
+                        Star4 = "yellow";
+                        Star5 = "white";
                         break;
                     case 6:
-                        _star3 = _star4 = _star5 = "yellow";
+                        Star4 = Star5 = "yellow";
                         break;
                     default:
-                        _star3 = "yellow";
-                        _star4 = _star5 = "white";
+                        Star4 = Star5 = "yellow";
                         break;
                 }
             }
             else
+            {
                 _submit = false;
 
-            switch (point)
+                switch (point)
                 {
                     case 1:
-                        _star1 = "yellow";
-                        _star2 = "white";
+                        Star1 = "yellow";
+                        Star2 = "white";
                         break;
                     case 2:
-                        _star1 = _star2 = "yellow";
+                        Star1 = Star2 = "yellow";
                         break;
                     default:
-                        _star1 = "yellow";
-                        _star2 = "white";
+                        Star1 = "yellow";
+                        Star2 = "white";
                         break;
                 }
+            }
 
             return _submit;
         }
@@ -305,7 +305,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-
+                _star1 = value;
                 ChangeColor1 = "";
                 OnPropertyChanged();
             }
@@ -332,7 +332,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-
+                _star2= value;
                 ChangeColor2 = "";
                 OnPropertyChanged();
             }
@@ -359,7 +359,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-
+                _star3= value;
                 ChangeColor3 = "";
                 OnPropertyChanged();
             }
@@ -386,7 +386,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-
+                _star4= value;
                 ChangeColor4 = "";
                 OnPropertyChanged();
             }
@@ -413,7 +413,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-
+                _star5= value;
                 ChangeColor5 = "5";
                 OnPropertyChanged();
             }

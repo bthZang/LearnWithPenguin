@@ -30,8 +30,7 @@
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
-                            <Image DataContext="{StaticResource WriteVM}"
-                                   Source="{ Binding ChangeColor3}"
+                            <Image Source="/UserControls/yellowStar.png"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
