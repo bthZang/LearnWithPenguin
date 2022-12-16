@@ -615,5 +615,13 @@
   <ItemGroup>
     <Resource Include="UserControls\yellowStar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="y2mate.com - Wii Music  Gaming Background Music HD.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
