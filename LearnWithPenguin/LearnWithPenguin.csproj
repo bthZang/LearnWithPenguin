@@ -745,6 +745,7 @@
     <Resource Include="UserControls\10817161_19406466.jpg" />
     <Resource Include="UserControls\4650083_2458444.jpg" />
     <Resource Include="UserControls\summer-background-sea-water %281%29.jpg" />
+    <Resource Include="UserControls\Group 169.png" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

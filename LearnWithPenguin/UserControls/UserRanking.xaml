@@ -31,7 +31,7 @@
                    HorizontalAlignment="Center"
                    Width="277"></Image>
             <Grid Width="257"
-                  Height="630"
+                  Height="680"
                   Background="#7FF0F8FF"
                   Margin="0 -133 0 0"
                   VerticalAlignment="Bottom"
@@ -46,7 +46,8 @@
                        Width="240"
                        Margin="-130 70 0 0"></Image>
                 <Grid Width="257"
-                      VerticalAlignment="Bottom"
+                      VerticalAlignment="Center"
+                      Margin="0 300 0 0"
                       Height="300">
                     <Grid Width="257"
                           Height="107"
@@ -62,7 +63,7 @@
                                    Height="66"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
-                                   Margin="0 10 0 0" />
+                                   Margin="0 0 0 0" />
                         <TextBlock VerticalAlignment="Center"
                                    Foreground="#073580"
                                    Text="Tuổi : 7"
