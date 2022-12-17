@@ -347,7 +347,8 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    Height="45"
                                    Width="164"
-                                   Margin="37.5,0,0,0"><Hyperlink Foreground="#2D3D8F"  NavigateUri="https://bthzang.github.io/chim-canh-cut/"
+                                   Margin="37.5,0,0,0"><Hyperlink Foreground="#2D3D8F"
+                                                                  NavigateUri="https://bthzang.github.io/chim-canh-cut/"
                                                                   RequestNavigate="Hypelink_RequestNavigate">Về chúng tôi</Hyperlink></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"

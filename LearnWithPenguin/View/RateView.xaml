@@ -12,21 +12,11 @@
       Background="#A0C4FF"
       Title="RateView">
     <Page.Resources>
-        <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
-            <localUC:Icon />
-        </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:HomeIconViewModel}">
             <localUC:HomeIcon />
         </DataTemplate>
     </Page.Resources>
     <Grid>
-        <localUC:Back Margin="60 60 0 0"
-                      Width="100"
-                      Panel.ZIndex="100"
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Top"
-                      DataContext="{StaticResource OnBoardingVM}"
-                      Command="{Binding HideTerm}"></localUC:Back>
         <Image Source="/View/RateView.png"
                Width="350"
                Margin="0 0 0 200"></Image>
