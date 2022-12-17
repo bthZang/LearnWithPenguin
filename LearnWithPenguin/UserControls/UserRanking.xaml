@@ -9,6 +9,21 @@
              Background="#A0C4FF"
              d:DesignWidth="1125">
     <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/UserControls/summer-background-sea-water (1).jpg"
+                        Stretch="Fill"
+                        Opacity="0.4">
+            </ImageBrush>
+        </Grid.Background>
+        <Image Source="/UserControls/4650083_2458444.jpg"
+               Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+               Height="130"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0 -130 0 0"
+               Opacity="0.3"
+               Stretch="Fill" />
         <StackPanel Panel.ZIndex="10">
             <Image Source="/UserControls/IceBorder.png"
                    Panel.ZIndex="10"
@@ -17,11 +32,12 @@
                    Width="277"></Image>
             <Grid Width="257"
                   Height="630"
+                  Background="#7FF0F8FF"
                   Margin="0 -133 0 0"
-                  Background="#4963798A"
                   VerticalAlignment="Bottom"
                   Panel.ZIndex="5"
                   ClipToBounds="True">
+
                 <Image Source="/images/User.png"
                        HorizontalAlignment="Center"
                        Height="240"
@@ -34,10 +50,10 @@
                       Height="300">
                     <Grid Width="257"
                           Height="107"
-                          Background="#99D9DBDD"
-                          VerticalAlignment="Top">
-                        <TextBlock Foreground="#073580"
-                                   Text="Biệt danh"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left">
+
+                        <TextBlock Text="Biệt danh"
                                    FontSize="40"
                                    FontStyle="Normal"
                                    FontWeight="SemiBold"
@@ -46,7 +62,7 @@
                                    Height="66"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
-                                   Margin="0 10 0 0"></TextBlock>
+                                   Margin="0 10 0 0" />
                         <TextBlock VerticalAlignment="Center"
                                    Foreground="#073580"
                                    Text="Tuổi : 7"
@@ -88,9 +104,9 @@
                                HorizontalAlignment="Center"
                                Margin="0 150 0 0"></TextBlock>
                 </Grid>
+
             </Grid>
         </StackPanel>
-
         <Border Panel.ZIndex="1"
                 Margin="-645 -240 0 0"
                 Width="530">
@@ -118,7 +134,7 @@
                            Width="174"
                            Height="71"
                            HorizontalAlignment="Left"
-                           Margin="50,452,0,0"></TextBlock>
+                           Margin="91,405,0,0"></TextBlock>
             </Grid>
         </Border>
         <Border Panel.ZIndex="2"
@@ -126,7 +142,7 @@
                 Width="462">
             <Grid>
                 <Image Source="/UserControls/TapVietIce.png"></Image>
-                <TextBlock Foreground="#073580"
+                <TextBlock Foreground="#FF802607"
                            Text="5000"
                            FontSize="23"
                            FontStyle="Normal"
@@ -138,7 +154,7 @@
                            HorizontalAlignment="Center"
                            Margin="-100 -100 0 0"></TextBlock>
                 <TextBlock VerticalAlignment="Top"
-                           Foreground="#FF1059CF"
+                           Foreground="#FFCF1710"
                            TextWrapping="Wrap"
                            Text="Thật tuyệt vời!Bạn viết khéo hơn x người "
                            FontSize="20"
@@ -156,7 +172,7 @@
                 Width="407">
             <Grid>
                 <Image Source="/UserControls/TroChoiIce.png"></Image>
-                <TextBlock Foreground="#073580"
+                <TextBlock Foreground="#FFD73F9D"
                            Text="5000"
                            FontSize="23"
                            FontStyle="Normal"
@@ -168,7 +184,7 @@
                            HorizontalAlignment="Center"
                            Margin="160 -110 0 0"></TextBlock>
                 <TextBlock VerticalAlignment="Top"
-                           Foreground="#FF1059CF"
+                           Foreground="#FFD73F9D"
                            TextWrapping="Wrap"
                            Text="Trời ơi tin được không!?Bạn chơi giỏi hơn x người luôn đó "
                            FontSize="20"
@@ -186,7 +202,7 @@
                 Width="430">
             <Grid>
                 <Image Source="/UserControls/DoVuiIce.png"></Image>
-                <TextBlock Foreground="#073580"
+                <TextBlock Foreground="#FF195C50"
                            Text="5000"
                            FontSize="23"
                            FontStyle="Normal"
@@ -198,7 +214,7 @@
                            HorizontalAlignment="Center"
                            Margin="-60 -45 0 0"></TextBlock>
                 <TextBlock VerticalAlignment="Top"
-                           Foreground="#FF1059CF"
+                           Foreground="#FF195C50"
                            TextWrapping="Wrap"
                            Text="Đúng là thiên tài! Đã có x người đoán sai nhiều hơn bạn đấy"
                            FontSize="20"
