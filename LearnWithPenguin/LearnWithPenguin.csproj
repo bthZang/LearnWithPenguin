@@ -148,6 +148,7 @@
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
+    <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
@@ -173,6 +174,9 @@
     </Compile>
     <Compile Include="View\QuizzView2.xaml.cs">
       <DependentUpon>QuizzView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RateView.xaml.cs">
+      <DependentUpon>RateView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -308,6 +312,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\QuizzView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -746,6 +754,9 @@
     <Resource Include="UserControls\4650083_2458444.jpg" />
     <Resource Include="UserControls\summer-background-sea-water %281%29.jpg" />
     <Resource Include="UserControls\Group 169.png" />
+    <Resource Include="View\RateView.png" />
+    <Resource Include="View\whiteStar.png" />
+    <Resource Include="View\yellowStar.png" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

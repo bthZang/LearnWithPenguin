@@ -237,6 +237,18 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+        public ICommand TransformtoRateView
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new RateViewModel();
+                });
+            }
+            set { }
+        }
+
 
 
         //play sound + button on menu
