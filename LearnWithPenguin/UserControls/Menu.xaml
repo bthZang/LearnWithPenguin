@@ -71,7 +71,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -136,7 +136,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -214,7 +214,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -261,7 +261,7 @@
                                    Width="131.25"
                                    Margin="37.5,0,0,0" />
                     </StackPanel>
-                    
+
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
                         <Image Source="/UserControls/Rate.png"
@@ -331,7 +331,7 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        
+
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
@@ -340,8 +340,6 @@
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
                         <TextBlock TextAlignment="Left"
-                                   Text="Về chúng tôi"
-                                   Foreground="#2D3D8F"
                                    FontSize="28.12"
                                    FontWeight="Bold"
                                    FontStyle="Normal"
@@ -349,7 +347,8 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    Height="45"
                                    Width="164"
-                                   Margin="37.5,0,0,0" />
+                                   Margin="37.5,0,0,0"><Hyperlink Foreground="#2D3D8F"  NavigateUri="https://bthzang.github.io/chim-canh-cut/"
+                                                                  RequestNavigate="Hypelink_RequestNavigate">Về chúng tôi</Hyperlink></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
