@@ -8,7 +8,7 @@
              d:DesignHeight="670"
              d:DesignWidth="1125"
              Background="#A0C4FF">
-    <DockPanel >
+    <DockPanel>
         <DockPanel.Background>
             <ImageBrush ImageSource="/UserControls/10817161_19406466.jpg"
                         Opacity="0.6" />
@@ -19,7 +19,7 @@
                HorizontalAlignment="Left"
                Panel.ZIndex="2"></Image>
         <Border Background="White"
-                Width="976"
+                Width="1102"
                 Height="588"
                 CornerRadius="30"
                 Margin="-650 0 0 0">
@@ -44,10 +44,8 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Width="225"
+                                   Width="180"
                                    Height="50"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
                                    Margin="76 50 0 8"></TextBlock>
                         <TextBlock Foreground="#9D1014"
                                    Text="Tập đọc"
@@ -102,10 +100,10 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Width="225"
+                                   Width="284"
                                    Height="50"
-                                   HorizontalAlignment="Left"
-                                   Margin="76 50 0 8"></TextBlock>
+                                   TextAlignment="Center"
+                                   Margin="0 50 0 8"></TextBlock>
                         <TextBlock Foreground="#EA2E4B"
                                    Text="0"
                                    FontSize="25"
@@ -159,11 +157,10 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Width="225"
+                                   Width="284"
                                    Height="50"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Margin="76 50 0 8"></TextBlock>
+                                   TextAlignment="Center"
+                                   Margin="0 50 0 8"></TextBlock>
                         <TextBlock Foreground="#EA2E4B"
                                    Text="0"
                                    FontSize="25"
@@ -213,16 +210,15 @@
                     <!--Điểm tích luỹ-->
                     <StackPanel>
                         <TextBlock Foreground="#5A616C"
-                                   Text="Biệt danh"
+                                   Text="Điểm tích luỹ"
                                    FontSize="30"
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Width="225"
+                                   Width="284"
                                    Height="50"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Margin="76 50 0 8"></TextBlock>
+                                   TextAlignment="Center"
+                                   Margin="0 50 0 8" />
                         <TextBlock Foreground="#EA2E4B"
                                    Text="0"
                                    FontSize="25"

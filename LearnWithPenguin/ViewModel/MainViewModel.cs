@@ -130,6 +130,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new UserViewModel();
+                    Menu = null;
                 });
             }
 
