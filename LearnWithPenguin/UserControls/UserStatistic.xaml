@@ -8,7 +8,11 @@
              d:DesignHeight="670"
              d:DesignWidth="1125"
              Background="#A0C4FF">
-    <DockPanel>
+    <DockPanel >
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/UserControls/10817161_19406466.jpg"
+                        Opacity="0.6" />
+        </DockPanel.Background>
         <Image Source="/UserControls/Group 169.png"
                Height="518.44"
                VerticalAlignment="Bottom"
