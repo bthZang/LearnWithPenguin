@@ -9,7 +9,7 @@
       d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="800"
-      d:DesignWidth="1125"
+      d:DesignWidth="1200"
       DataContext="{StaticResource GameVM}"
       Title="GameView">
 
@@ -33,7 +33,7 @@
                                     Command="{Binding ShowMenu}">
                     </localUser:Icon>
                 </Grid>
-                <Grid Width="908">
+                <Grid Width="987.44">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom">
@@ -335,5 +335,6 @@
             </StackPanel>
         </StackPanel>
         <localUser:GameWarn />
+        <localUser:NoIcon />
     </Grid>
 </Page>

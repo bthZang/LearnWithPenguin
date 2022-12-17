@@ -23,6 +23,7 @@
     <viewmodel:Game2ViewModel x:Key="Game2VM"></viewmodel:Game2ViewModel>
     <viewmodel:Game3ViewModel x:Key="Game3VM"></viewmodel:Game3ViewModel>
     <viewmodel:GameWarnViewModel x:Key="GameWarnVM"></viewmodel:GameWarnViewModel>
+    <viewmodel:NoViewModel x:Key="NoVM"></viewmodel:NoViewModel>
 
 
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>

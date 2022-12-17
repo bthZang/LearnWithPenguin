@@ -116,6 +116,9 @@
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\NoIcon.xaml.cs">
+      <DependentUpon>NoIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReloadGame.xaml.cs">
       <DependentUpon>ReloadGame.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,7 @@
     <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\NoViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
@@ -229,6 +233,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\NoIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -610,6 +618,14 @@
     <Resource Include="images\reload%402x.png" />
     <Resource Include="images\reload%403x.png" />
     <Resource Include="images\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\no%402x.png" />
+    <Resource Include="images\no%403x.png" />
+    <Resource Include="images\no.png" />
+    <Resource Include="images\yes%402x.png" />
+    <Resource Include="images\yes%403x.png" />
+    <Resource Include="images\yes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

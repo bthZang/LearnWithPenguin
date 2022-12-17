@@ -30,8 +30,6 @@ namespace LearnWithPenguin.ViewModel
         private System.Windows.Controls.UserControl _GameTurn;
         public System.Windows.Controls.UserControl GameTurn { get { return _GameTurn; } set { _GameTurn = value; OnPropertyChanged(); } }
 
-        private System.Windows.Controls.UserControl _GameWarn;
-        public System.Windows.Controls.UserControl GameWarn { get { return _GameWarn; } set { _GameWarn = value; OnPropertyChanged(); } }
         private string _ViString;
         public string ViString { get { return _ViString; } set { _ViString = value; OnPropertyChanged(); } }
 
@@ -59,12 +57,19 @@ namespace LearnWithPenguin.ViewModel
         private string _RowNum;
         public string RowNum { get { return _RowNum; } set { _RowNum = value; OnPropertyChanged(); } }
 
+        private string _ViNo;
+        public string ViNo { get { return _ViNo; } set { _ViNo = value; OnPropertyChanged(); } }
+        private string _ViYes;
+        public string ViYes { get { return _ViYes; } set { _ViYes = value; OnPropertyChanged(); } }
+
         public GameViewModel()
         {
             PositionNumber = "1";
             GameTurn = new Game1();
 
             ViString = "Hidden";
+            ViNo = "Hidden";
+            ViYes = "Hidden";
 
             Game1Context = new Game1ViewModel();
             StepQueues = new Queue<string>();
@@ -132,12 +137,13 @@ namespace LearnWithPenguin.ViewModel
                                         ColumnNum = Convert.ToString(getNum);
                                         await Task.Delay(500);
                                     }
-                                    Console.WriteLine("Dung roi pan oi");
+                                    await Task.Delay(500);
+                                    ViYes = "Visible";
 
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Ngu");
+                                    ViNo = "Visible";
                                 }
                             }
                             break;
@@ -192,11 +198,12 @@ namespace LearnWithPenguin.ViewModel
                                         RowNum = Convert.ToString(getRNum);
                                         await Task.Delay(500);
                                     }
-                                    Console.WriteLine("Dung roi pan oi");
+                                    await Task.Delay(500);
+                                    ViYes = "Visible";
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Ngu");
+                                    ViNo = "Visible";
                                 }
                             }
                             break;
@@ -255,11 +262,12 @@ namespace LearnWithPenguin.ViewModel
                                         RowNum = Convert.ToString(getRNum);
                                         await Task.Delay(500);
                                     }
-                                    Console.WriteLine("Dung roi pan oi");
+                                    await Task.Delay(500);
+                                    ViYes = "Visible";
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Ngu");
+                                    ViNo = "Visible";
                                 }
                             }
                             break;
