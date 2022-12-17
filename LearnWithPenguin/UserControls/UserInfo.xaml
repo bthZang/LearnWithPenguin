@@ -42,7 +42,7 @@
 
         <StackPanel>
             <Border HorizontalAlignment="Left"
-                    Width="700"
+                    Width="800"
                     Height="164"
                     Margin="0 80 27 27"
                     Background="White"

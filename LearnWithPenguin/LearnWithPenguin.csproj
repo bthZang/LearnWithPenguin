@@ -736,6 +736,12 @@
     <Resource Include="View\play.png" />
     <Resource Include="UserControls\HoanThanhTapDoc.png" />
     <Resource Include="UserControls\TotTapDoc.png" />
+    <Resource Include="UserControls\IceBorder.png" />
+    <Resource Include="UserControls\fish.png" />
+    <Resource Include="UserControls\TapDocIce.png" />
+    <Resource Include="UserControls\TapVietIce.png" />
+    <Resource Include="UserControls\DoVuiIce.png" />
+    <Resource Include="UserControls\TroChoiIce.png" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
