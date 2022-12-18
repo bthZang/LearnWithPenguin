@@ -142,6 +142,9 @@
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GreenTick.xaml.cs">
+      <DependentUpon>GreenTick.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeIcon.xaml.cs">
       <DependentUpon>HomeIcon.xaml</DependentUpon>
     </Compile>
@@ -259,6 +262,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\GoodResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\GreenTick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -734,6 +741,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\closeIcon.png" />
+    <Resource Include="images\greenTick.png" />
     <Content Include="images\Question\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1141,6 +1150,7 @@
     <Content Include="images\Question\9.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="images\red-cross-mark.png" />
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quizz.edmx</DependentUpon>

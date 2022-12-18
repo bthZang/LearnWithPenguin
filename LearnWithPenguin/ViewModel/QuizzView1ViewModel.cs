@@ -394,8 +394,10 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+        private int point;
         public bool Answer()
         {
+
             switch (Number)
             {
                 case 1:

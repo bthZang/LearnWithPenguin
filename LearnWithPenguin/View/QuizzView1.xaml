@@ -101,17 +101,19 @@
         </DockPanel>
 
         <StackPanel  Margin="-400 100 0 200"
-                     Width="309.38">
-            <Border Height="191.84"
+                     Width="320">
+            <Border Height="200"
+                    Width="315"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor1}"
-                    Width="309.38">
-                <Button Height="191.84"
-                        Width="309.38"
+                    >
+                <Button Height="190"
+                        Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        >
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -121,21 +123,24 @@
 
                     <Image Source="{Binding ConcatSource1}"
                            DataContext="{StaticResource QuizzView1VM}"
-                           Height="191.84"
-                           Width="309.38"></Image>
+                           Height="190"
+                           Width="300"></Image>
                 </Button >
             </Border>
 
-            <Border Height="191.84"
+            <Border Height="200"
+                    Width="315"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor2}"
-                    Width="309.38">
-                <Button Height="191.84"
-                        Width="309.38"
-                        DataContext="{StaticResource QuizzView1VM}"
+                    Margin="0 20 0 0"
+                    >
+                <Button  Height="190"
+                         Width="300"
+                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                         >
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -145,21 +150,22 @@
 
                     <Image Source="{Binding ConcatSource2}"
                            DataContext="{StaticResource QuizzView1VM}"
-                           Height="191.84"
-                           Width="309.38"></Image>
+                           Height="190"
+                           Width="300"></Image>
                 </Button >
             </Border>
 
         </StackPanel>
-        <StackPanel Margin="550.94 -640 150 200"
-                    Width="309.38">
-            <Border Height="191.84"
+        <StackPanel Margin="550.94 -600 150 200"
+                    Width="320">
+            <Border Height="200"
+                    Width="315"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor3}"
-                    Width="309.38">
-                <Button Height="191.84"
-                        Width="309.38"
+                    Margin="0 -20 0 0">
+                <Button Height="190"
+                        Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
                         BorderThickness="0">
@@ -172,17 +178,18 @@
 
                     <Image Source="{Binding ConcatSource3}"
                            DataContext="{StaticResource QuizzView1VM}"
-                           Height="191.84"
-                           Width="309.38"></Image>
+                           Height="190"
+                           Width="300"></Image>
                 </Button >
             </Border>
-            <Border Height="191.84"
+            <Border Height="200"
+                    Width="315"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor4}"
-                    Width="309.38">
-                <Button Height="191.84"
-                        Width="309.38"
+                    Margin="0 20 0 0">
+                <Button Height="190"
+                        Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
                         BorderThickness="0">
@@ -195,8 +202,8 @@
 
                     <Image Source="{Binding ConcatSource4}"
                            DataContext="{StaticResource QuizzView1VM}"
-                           Height="191.84"
-                           Width="309.38"></Image>
+                           Height="190"
+                           Width="300"></Image>
                 </Button >
             </Border>
         </StackPanel>

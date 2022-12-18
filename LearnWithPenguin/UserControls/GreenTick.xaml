@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.GreenTick"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1125">
+    <Grid>
+        <Grid Margin="0 0 0 0">
+
+            <Grid Background="Black"
+                  Opacity="0.5"></Grid>
+            <Border Width="599.27"
+                    Height="395.39"
+                    CornerRadius="50.24"
+                    Background="white">
+
+                <Image Source="{Binding }"
+                       Width="210.05"
+                       Height="217.77"
+                       Margin="195,89,194,88"></Image>
+
+
+
+
+
+            </Border>
+        </Grid>
+
+    </Grid>
+</UserControl>
