@@ -22,9 +22,10 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
     </Page.Resources>
+   
     <StackPanel Background="#FFA0C4FF">
         <ContentControl Panel.ZIndex="999"
-                        DataContext="{StaticResource HomeVM}"
+                        DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
 
 
@@ -102,11 +103,13 @@
         <StackPanel  Margin="-400 100 0 200"
                      Width="309.38">
             <Button Name="ans1"
+                    DataContext= "{StaticResource QuizzView1VM}"
+                    Command="{Binding ConcatSource1}"
                     Height="191.84"
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
+                    Click= "Button_Click"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -114,19 +117,17 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
             </Button>
 
             <Button Name="ans2"
+                    DataContext="{StaticResource QuizzView1VM}"
+                    Command="{Binding ConcatSource2}"
                     Height="191.84"
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
                     Margin="0 57.38 0 0"
+                    Click="Button_Click"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -134,20 +135,18 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
             </Button>
         </StackPanel>
         <StackPanel Margin="550.94 -640 150 200"
                     Width="309.38">
             <Button Name="ans3"
+                    DataContext="{StaticResource QuizzView1VM}"
+                    Command="{Binding ConcatSource3}"
                     Height="191.84"
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
-                    Click="checkAnswer"
+                    Click="Button_Click"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -161,12 +160,14 @@
                        Width="309.38" />-->
             </Button>
             <Button Name="ans4"
+                    DataContext="{StaticResource QuizzView1VM}"
+                    Command="{Binding ConcatSource4}"
                     Height="191.84"
                     Width="309.38"
                     Background="White"
                     BorderThickness="0"
                     Margin="0 57.38 0 0"
-                    Click="checkAnswer"
+                    Click="Button_Click"
                     Tag="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -174,20 +175,32 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Button.DataContext>
-                    <StaticResource ResourceKey="MainVM" />
-                </Button.DataContext>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
+                
             </Button>
         </StackPanel>
+        <MediaElement x:Name="media"
+                      Height="80"
+                      Width="80"
+                      LoadedBehavior="Manual"
+                      Panel.ZIndex="9999"
+                      UnloadedBehavior="Manual"
+                      DataContext="{StaticResource QuizzView1VM}"
+                      Visibility="{Binding IsDisplayQuestion}"
+                      Margin="0 -250 0 0"
+                      Source="{ Binding ConcatQuestion}"
+                      RenderTransformOrigin="1,1"></MediaElement>
         <Button Margin="0 -250 0 0"
-                Height="77.38"
-                Width="77.38"
+                Height="80"
+                Width="80"
                 Background="Transparent"
-                BorderThickness="0">
+                BorderThickness="0"
+                Click="Sound_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius"
+                            Value="50 50 50 50" />
+                </Style>
+            </Button.Resources>
             <Image Stretch="Uniform"
                    Source="../images/puzzleSound.png"
                    Height="77.38"

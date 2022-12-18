@@ -21,14 +21,27 @@
         <DataTemplate DataType="{x:Type viewmodel:HomeIconViewModel}">
             <localUC:HomeIcon />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:BadResultViewModel}">
+            <localUC:BadResult DataContext="{StaticResource WriteVM}"
+                               Replay="{Binding Replay}"
+                               Next="{Binding OnclickHandleNextLevel}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:GoodResultViewModel}">
+            <localUC:GoodResult DataContext="{StaticResource WriteVM}"
+                                Replay="{Binding Replay}"
+                                Next="{Binding OnclickHandleNextLevel}"/>
+        </DataTemplate>
     </Page.Resources>
 
     <Grid Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="999"
+        <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
-
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource WriteVM}"
+                        Content="{Binding NavigatetoResult}" />
         <StackPanel DataContext="{StaticResource WriteVM}">
+
             <DockPanel>
                 <Grid>
                     <localUC:Icon Width="63.28"
@@ -46,8 +59,10 @@
                         <Button Margin="336.67 32.11 0 0"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                Width="50.13"
-                                Height="50.13">
+                                Width="50.14"
+                                DataContext="{StaticResource WriteVM}"
+                                Command="{Binding OnclickHandlePreviousLevel}"
+                                Height="50.14">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -67,12 +82,15 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
+                                   DataContext="{StaticResource WriteVM}"
+                                   Text="{ Binding ConcatTitle}"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Text="Bai 1"
                                    Margin="43.13,38.49,0,8" />
                         <Button Margin="53.32 32.11 0 0"
                                 Background="Transparent"
                                 BorderThickness="0"
+                                DataContext="{StaticResource WriteVM}"
+                                Command="{Binding OnclickHandleNextLevel}"
                                 Width="50.13"
                                 Height="50.13">
                             <Button.Resources>
@@ -90,17 +108,35 @@
             </DockPanel>
 
             <StackPanel>
-                <Border Height="517.19"
-                        Width="911.72"
-                        Background="#C5E5DA"
+                <Border Height="550"
+                        Width="962.5"
                         CornerRadius="31.25"
-                        BorderBrush="#073580"
                         Margin="0 65.34 0 0"
                         BorderThickness="8">
-
+                    <Image Source="/View/border.png"></Image>
                 </Border>
-
-
+                <Grid Height="550"
+                      Width="925"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Margin="0 -560 0 0">
+                    <Image DataContext="{StaticResource WriteVM}"
+                           Source="{ Binding SouceDash}"
+                           Height="400"
+                           Opacity="0.5"
+                           Width="325"
+                           Margin="66,8,0,0"></Image>
+                    <InkCanvas Background="Transparent"
+                               ForceCursor="True"
+                               Cursor="Pen"
+                               x:Name="MyCanvas"
+                               Margin="0,10,0,10"
+                               Panel.ZIndex="75"
+                               MinWidth="900"
+                               MinHeight="900"
+                               MouseDown="MyCanvas_MouseDown"
+                               MouseMove="MyCanvas_MouseMove" />
+                </Grid>
                 <Button Height="171.09"
                         Width="171.09"
                         Margin="900 -1065.34 0 0"
@@ -152,30 +188,45 @@
                         <Button Width="48"
                                 BorderThickness="0"
                                 Background="Transparent"
-                                
-                                Height="48">
+                                Command="{Binding ReplayVideo}"
+                                Height="48"
+                                Click="Button_Click">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
-                                            Value="93" />
+                                            Value="8" />
                                 </Style>
                             </Button.Resources>
-                            <Image Source="/View/replay.png"></Image>
+                            <Image DataContext="{StaticResource WriteVM}"
+                                   Source="{ Binding SouceSolid}"></Image>
                         </Button>
 
                     </Border>
                 </Button>
-                <Button Height="593.03"
-                        Margin="0 -565.34 0 0"
-                        BorderThickness="0"
-                        Background="Transparent"
-                        Width="593.03">
+                <MediaElement x:Name="media"
+                              Height="593.03"
+                              LoadedBehavior="Manual"
+                              Panel.ZIndex="9999"
+                              UnloadedBehavior="Manual"
+                              DataContext="{StaticResource WriteVM}"
+                              Visibility="{Binding IsDisplayVideo}"
+                              Margin="0 -565.34 0 0"
+                              Source="{ Binding ConcatVideo}"
+                              MediaEnded="media_MediaEnded"></MediaElement>
+
+                <Button Height="71.09"
+                        Width="171.09"
+                        Margin="900 -75 0 0"
+                        DataContext="{StaticResource WriteVM}"
+                        Command="{Binding ShowResult}"
+                        Background="Transparent">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"
-                                    BorderThickness="0"
-                                    Background="transparent"
-                                    BorderBrush="transparent">
+                                    BorderThickness="4"
+                                    Background="DarkSeaGreen"
+                                    CornerRadius="21.25"
+                                    BorderBrush="#073580">
 
                                 <ContentPresenter Margin="0"
                                                   HorizontalAlignment="Center"
@@ -187,40 +238,43 @@
                                          Value="true">
                                     <Setter TargetName="Border"
                                             Property="BorderBrush"
-                                            Value="transparent" />
+                                            Value="Green" />
                                 </Trigger>
                                 <Trigger Property="IsMouseOver"
                                          Value="true">
                                     <Setter TargetName="Border"
                                             Property="Background"
-                                            Value="transparent" />
+                                            Value="Green" />
                                 </Trigger>
                                 <Trigger Property="IsPressed"
                                          Value="true">
                                     <Setter TargetName="Border"
                                             Property="Background"
-                                            Value="transparent" />
+                                            Value="Green" />
                                     <Setter TargetName="Border"
                                             Property="BorderBrush"
-                                            Value="transparent" />
+                                            Value="Green" />
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
-                    <Border Height="593.03"
-                            Width="593.03"
-                            Background="#FFFFFF"
-                            CornerRadius="31.25"
-                            BorderBrush="#073580"
-                            BorderThickness="4">
-
-                    </Border>
+                    <TextBlock Width="154"
+                               Height="57"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Center"
+                               Foreground="#073580"
+                               FontSize="36.09"
+                               FontStyle="Normal"
+                               TextAlignment="Center"
+                               Text="Nộp bài"
+                               Style="{StaticResource Baloo2-Bold}" />
                 </Button>
+
                 <DockPanel>
                     <Grid HorizontalAlignment="Left">
                         <localUC:HomeIcon Width="97.13"
                                           Height="34.99"
-                                          Margin="42.97,21.87,0,0"
+                                          Margin="42.97,-18,0,0"
                                           DataContext="{StaticResource MainVM}"
                                           Command="{Binding Transform}">
 

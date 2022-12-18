@@ -14,8 +14,13 @@
         Height="800"
         Width="1125"
         WindowStartupLocation="CenterScreen"
-        >
+        Closing="Window_Closing"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown">
 
+    <Grid>
     <ContentControl Content="{Binding NavigatetoHome}">
         <ContentControl.Resources>
             <DataTemplate DataType="{x:Type viewmodelHome:OnBoardingViewModel}">
@@ -53,8 +58,10 @@
             </DataTemplate>-->
         </ContentControl.Resources>
     </ContentControl>
-
-
+    
+    <Grid x:Name="grid"
+              DataContext="{StaticResource MainVM}"></Grid>
+    </Grid>
 
 
 </Window>

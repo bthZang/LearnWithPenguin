@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+             xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
+             d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:GameViewModel}">
+            <localUser:ReloadGame></localUser:ReloadGame>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <Border Background="#77D3D8"
                 Width="991.5"
@@ -26,35 +35,76 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-
+                <Border Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="4"
+                        Width="450"
+                        Height="70"
+                        Background="Beige"
+                        CornerRadius="20"
+                        HorizontalAlignment="Center"
+                        Margin="0,10,0,50"
+                        BorderThickness="3, 3, 3, 3"
+                        BorderBrush="MidnightBlue">
+                    <Grid>
+                        <ItemsControl ItemsSource="{Binding StepQueues, UpdateSourceTrigger=PropertyChanged}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="4"
+                                                 Rows="1" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="DeepPink"
+                                            Width="110"
+                                            Height="60"
+                                            CornerRadius="30"
+                                            BorderThickness="2 2 2 2"
+                                            BorderBrush="#E97777"
+                                            >
+                                        <Image Source="{Binding}"></Image>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </Border>
+                <localUser:ReloadGame Grid.Column="4"
+                                      Grid.Row="0"
+                                      Width="70"
+                                      Height="70"
+                                      Margin="65,15,30,55"
+                                      Command="{Binding Reload}" >
+                </localUser:ReloadGame>
                 <Image Grid.Column="0"
                        Grid.Row="1"
-                       Source="\images\iceStand.png"
+                       Source="\images\iceStand@3x.png"
                        Margin="-11,6,10,134"
                        Grid.RowSpan="2" />
                 <Image Grid.Column="0"
-                       Source="\images\penguin.png"
+                       Source="\images\penguin@3x.png"
                        Margin="-4,41,4,99"
                        Grid.RowSpan="2"
                        RenderTransformOrigin="0.507,-0.209" />
                 <Image Grid.Column="1"
-                       Source="\images\iceJumpa.png"
+                       Source="\images\iceJumpa@3x.png"
                        Margin="0,136,0,4"
                        Grid.RowSpan="2" />
                 <Image Grid.Column="2"
-                       Source="\images\iceJumpb.png"
+                       Source="\images\iceJumpb@3x.png"
                        Margin="0,136,0,4"
                        Grid.RowSpan="2" />
                 <Image Grid.Column="3"
-                       Source="\images\iceJumpc.png"
+                       Source="\images\iceJumpc@3x.png"
                        Margin="0,136,0,4"
                        Grid.RowSpan="2" />
                 <Image Grid.Column="4"
-                       Source="\images\iceJumpd.png"
+                       Source="\images\iceJumpd@3x.png"
                        Margin="0,136,0,4"
                        Grid.RowSpan="2" />
                 <Image Grid.Column="4"
-                       Source="\images\iceStand.png"
+                       Source="\images\iceStand@3x.png"
                        Margin="166,10,-37,130"
                        Grid.RowSpan="2"
                        Grid.ColumnSpan="2"
@@ -70,7 +120,7 @@
                     </Image.RenderTransform>
                 </Image>
                 <Image Grid.Column="5"
-                       Source="\images\fish.png"
+                       Source="\images\fish@3x.png"
                        Margin="32,70,-20,99"
                        Grid.RowSpan="2" />
             </Grid>

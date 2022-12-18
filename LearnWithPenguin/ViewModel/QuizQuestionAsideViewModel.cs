@@ -12,7 +12,7 @@ using System.Windows.Media;
 
 namespace LearnWithPenguin.ViewModel
 {
-    public class QuizQuestionAsideViewModel: BaseViewModel
+    public class QuizQuestionAsideViewModel : BaseViewModel
     {
         // selected Questionaire
         private Questionaire questionaire;
