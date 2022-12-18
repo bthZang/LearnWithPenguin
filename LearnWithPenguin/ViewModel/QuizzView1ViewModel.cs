@@ -288,48 +288,6 @@ namespace LearnWithPenguin.ViewModel
 
         private BaseViewModel _menu;
 
-        public string ConcatTitle
-        {
-            get
-            {
-                return "Bài " + _number;
-            }
-            set
-            {
-                OnPropertyChanged();
-            }
-        }
-        public string ConcatQuestion
-        {
-            get
-            {
-                return "\\Question\\" + _number + ".mp3";
-            }
-            set
-            {
-                OnPropertyChanged();
-            }
-        }
-        public ICommand _onclickHandlePreviousLevel;
-        public ICommand OnclickHandlePreviousLevel
-        {
-            get
-            {
-                return _onclickHandlePreviousLevel;
-            }
-
-            set { _onclickHandlePreviousLevel = value; OnPropertyChanged(); }
-        }
-        public ICommand _onclickHandleNextLevel;
-        public ICommand OnclickHandleNextLevel
-        {
-            get
-            {
-                return _onclickHandleNextLevel;
-            }
-
-            set { _onclickHandleNextLevel = value; OnPropertyChanged(); }
-        }
 
     }
 }

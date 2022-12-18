@@ -131,8 +131,7 @@
                     Width="310"
                     Background="White"
                     BorderThickness="0"
-                    Margin="-670 0 0 0"
-                    Click="checkAnswer">
+                    Margin="-670 0 0 0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
@@ -152,8 +151,7 @@
                     Width="310"
                     Background="White"
                     BorderThickness="0"
-                    Margin="0 -191 0 0"
-                    Click="checkAnswer">
+                    Margin="0 -191 0 0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
@@ -173,8 +171,7 @@
                     Width="310"
                     Background="White"
                     BorderThickness="0"
-                    Margin="670 -195 0 0"
-                    Click="checkAnswer">
+                    Margin="670 -195 0 0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
