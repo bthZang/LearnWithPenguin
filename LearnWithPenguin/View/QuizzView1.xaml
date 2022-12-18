@@ -22,7 +22,7 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
     </Page.Resources>
-   
+
     <StackPanel Background="#FFA0C4FF">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
@@ -102,81 +102,103 @@
 
         <StackPanel  Margin="-400 100 0 200"
                      Width="309.38">
-            <Button Name="ans1"
-                    DataContext= "{StaticResource QuizzView1VM}"
-                    Command="{Binding ConcatSource1}"
-                    Height="191.84"
-                    Width="309.38"
-                    Background="White"
-                    BorderThickness="0"
-                    Click= "Button_Click"
-                    Tag="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-            <Button Name="ans2"
+            <Border Height="191.84"
+                    BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
-                    Command="{Binding ConcatSource2}"
-                    Height="191.84"
-                    Width="309.38"
-                    Background="White"
-                    BorderThickness="0"
-                    Margin="0 57.38 0 0"
-                    Click="Button_Click"
-                    Tag="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-            </Button>
+                    BorderBrush="{Binding ConcatColor1}"
+                    Width="309.38">
+                <Button Height="191.84"
+                        Width="309.38"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+
+                    <Image Source="{Binding ConcatSource1}"
+                           DataContext="{StaticResource QuizzView1VM}"
+                           Height="191.84"
+                           Width="309.38"></Image>
+                </Button >
+            </Border>
+
+            <Border Height="191.84"
+                    BorderThickness="4"
+                    DataContext="{StaticResource QuizzView1VM}"
+                    BorderBrush="{Binding ConcatColor2}"
+                    Width="309.38">
+                <Button Height="191.84"
+                        Width="309.38"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+
+                    <Image Source="{Binding ConcatSource2}"
+                           DataContext="{StaticResource QuizzView1VM}"
+                           Height="191.84"
+                           Width="309.38"></Image>
+                </Button >
+            </Border>
+
         </StackPanel>
         <StackPanel Margin="550.94 -640 150 200"
                     Width="309.38">
-            <Button Name="ans3"
+            <Border Height="191.84"
+                    BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
-                    Command="{Binding ConcatSource3}"
-                    Height="191.84"
-                    Width="309.38"
-                    Background="White"
-                    BorderThickness="0"
-                    Click="Button_Click"
-                    Tag="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-                <!--<Image Stretch="Uniform"
-                       Source="../images/whiteRectangle.png"
-                       Height="191.84"
-                       Width="309.38" />-->
-            </Button>
-            <Button Name="ans4"
+                    BorderBrush="{Binding ConcatColor3}"
+                    Width="309.38">
+                <Button Height="191.84"
+                        Width="309.38"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+
+                    <Image Source="{Binding ConcatSource3}"
+                           DataContext="{StaticResource QuizzView1VM}"
+                           Height="191.84"
+                           Width="309.38"></Image>
+                </Button >
+            </Border>
+            <Border Height="191.84"
+                    BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
-                    Command="{Binding ConcatSource4}"
-                    Height="191.84"
-                    Width="309.38"
-                    Background="White"
-                    BorderThickness="0"
-                    Margin="0 57.38 0 0"
-                    Click="Button_Click"
-                    Tag="0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-                
-            </Button>
+                    BorderBrush="{Binding ConcatColor4}"
+                    Width="309.38">
+                <Button Height="191.84"
+                        Width="309.38"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Border.CornerRadius"
+                                    Value="13 13 13 13" />
+                        </Style>
+                    </Button.Resources>
+
+                    <Image Source="{Binding ConcatSource4}"
+                           DataContext="{StaticResource QuizzView1VM}"
+                           Height="191.84"
+                           Width="309.38"></Image>
+                </Button >
+            </Border>
         </StackPanel>
         <MediaElement x:Name="media"
                       Height="80"

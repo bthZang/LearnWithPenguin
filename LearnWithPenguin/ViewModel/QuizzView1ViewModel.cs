@@ -12,156 +12,21 @@ namespace LearnWithPenguin.ViewModel
 {
     internal class QuizzView1ViewModel : BaseViewModel
     {
-        protected BaseViewModel _navigateToQuizzView1;
-        Number0 _number0 = new Number0();
-        Number0 _number1 = new Number0();
-        Number0 _number2 = new Number0();
-        Number0 _number3 = new Number0();
+        protected int _number;
+        protected int _number1;
+        protected int _number2;
+        protected int _number3;
+        protected int _number4;
 
-        protected int _number = 1;
+        protected string _color1;
+        protected string _color2;
+        protected string _color3;
+        protected string _color4;
 
-        public class Number0
-        {
-            public int name = 1;
-            public bool correct = false;
-        }//dap an
-       
-
-
-        protected string _isDisplayQuestion;
-        public string IsDisplayQuestion
-        {
-            get
-            {
-                return _isDisplayQuestion;
-            }
-            set
-            {
-                _isDisplayQuestion = value;
-                OnPropertyChanged();
-            }
-        }
+        protected string _nextLevel;
+        protected string _backLevel;
 
 
-        //public bool SetAnswer()
-        //{
-           
-        //    bool correct = false;
-        //    List<int> _correctAnswer = new List<int>() { 1, 5, 9, 13, 21, 25, 29, 33, 37, 41, 45 };
-        //    switch (_number)
-        //    {
-        //        case 1:
-        //            _number0.name = 1;
-        //            _number0.correct = true;
-        //            _number1.name = 3;
-        //            _number2.name = 2;
-        //            _number3.name = 4;
-        //            break;
-        //        case 2:
-        //            _number0.name = 5;
-        //            _number0.correct = true;
-        //            _number1.name = 6;
-        //            _number2.name = 7;
-        //            _number3.name = 8;
-        //            break;
-        //        case 3:
-        //            _number0.name = 11;
-        //            _number1.name = 10;
-        //            _number2.name = 9;
-        //            _number2.correct = true;
-        //            _number3.name = 12;
-        //            break;
-        //        case 4:
-        //            _number0.name = 16;
-        //            _number1.name = 14;
-        //            _number2.name = 15;
-        //            _number3.name = 13;
-        //            _number3.correct = true;
-        //            break;
-        //        case 5:
-        //            _number0.name = 18;
-        //            _number1.name = 17;
-        //            _number1.correct = true;
-        //            _number2.name = 19;
-        //            _number3.name = 20;
-        //            break;
-        //        case 6:
-        //            _number0.name = 23;
-        //            _number1.name = 22;
-        //            _number2.name = 21;
-        //            _number2.correct = true;
-        //            _number3.name = 24;
-        //            break;
-        //        case 7:
-        //            _number0.name = 28;
-        //            _number1.name = 26;
-        //            _number2.name = 27;
-        //            _number3.name = 25;
-        //            _number3.correct = true;
-        //            break;
-        //        case 8:
-        //            _number0.name = 29;
-        //            _number0.correct = true;
-        //            _number1.name = 30;
-        //            _number2.name = 31;
-        //            _number3.name = 32;
-        //            break;
-        //        case 9:
-        //            _number0.name = 35;
-        //            _number1.name = 34;
-        //            _number2.name = 33;
-        //            _number2.correct = true;
-        //            _number3.name = 36;
-        //            break;
-        //        case 10:
-        //            _number0.name = 40;
-        //            _number1.name = 38;
-        //            _number2.name = 39;
-        //            _number3.name = 37;
-        //            _number3.correct = true;
-        //            break;
-        //        case 11:
-        //            _number0.name = 41;
-        //            _number0.correct = true;
-        //            _number1.name = 42;
-        //            _number2.name = 43;
-        //            _number3.name = 44;
-        //            break;
-        //        case 12:
-        //            _number0.name = 47;
-        //            _number1.name = 46;
-        //            _number2.name = 45;
-        //            _number2.correct = true;
-        //            _number3.name = 48;
-        //            break;
-        //        case 13:
-        //            _number0.name = 50;
-        //            _number1.name = 49;
-        //            _number1.correct = true;
-        //            _number2.name = 51;
-        //            _number3.name = 52;
-        //            break;
-        //        case 14:
-        //            _number0.name = 53;
-        //            _number0.correct = true;
-        //            _number1.name = 54;
-        //            _number2.name = 55;
-        //            _number3.name = 56;
-        //            break;
-        //        case 15:
-        //            _number0.name = 60;
-        //            _number1.name = 58;
-        //            _number2.name = 59;
-        //            _number3.name = 57;
-        //            _number3.correct = true;
-        //            break;
-        //        default:
-        //            break;
-        //    }
-
-            
-
-        //}
 
         public int Number
         {
@@ -174,9 +39,208 @@ namespace LearnWithPenguin.ViewModel
                 _number = value;
                 ConcatTitle = "";
                 ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+
+
                 OnPropertyChanged();
             }
         }
+
+        public int Number1
+        {
+            get
+            {
+                return _number1;
+            }
+            set
+            {
+                _number1 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public int Number2
+        {
+            get
+            {
+                return _number2;
+            }
+            set
+            {
+                _number2 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public int Number3
+        {
+            get
+            {
+                return _number3;
+            }
+            set
+            {
+                _number3 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public int Number4
+        {
+            get
+            {
+                return _number4;
+            }
+            set
+            {
+                _number4 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string Color1
+        {
+            get
+            {
+                return _color1;
+            }
+            set
+            {
+                _color1 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string Color2
+        {
+            get
+            {
+                return _color2;
+            }
+            set
+            {
+                _color2 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public string Color3
+        {
+            get
+            {
+                return _color3;
+            }
+            set
+            {
+                _color3 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public string Color4
+        {
+            get
+            {
+                return _color4;
+            }
+            set
+            {
+                _color4 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+
+                OnPropertyChanged();
+            }
+        }
+
 
         public string ConcatTitle
         {
@@ -194,7 +258,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "E:\\Visual Programming\\LearnWithPenguin\\LearnWithPenguin\\images\\Question" + _number + ".mp3";
+                return "/images/Question/" + _number + ".mp3";
             }
             set
             {
@@ -204,9 +268,10 @@ namespace LearnWithPenguin.ViewModel
 
         public string ConcatSource1
         {
-            get 
+            get
             {
-                return "\\images\\Quiz\\" + _number0.name + ".jpg";
+                return "/images/Quiz/" + _number1 + ".jpg";
+                //return "/images/Quiz/" + _number1 + ".jpg";
             }
             set
             {
@@ -218,7 +283,8 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "images\\Quiz\\" + _number1.name + ".jpg";
+
+                return "/images/Quiz/" + _number2 + ".jpg";
             }
             set
             {
@@ -230,7 +296,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "images\\Quiz\\" + _number2.name + ".jpg";
+                return "/images/Quiz/" + _number3 + ".jpg";
             }
             set
             {
@@ -242,7 +308,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "images\\Quiz\\" + _number3.name + ".jpg";
+                return "/images/Quiz/" + _number4 + ".jpg";
             }
             set
             {
@@ -250,15 +316,161 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public BaseViewModel NavigateToQuizzView1
+        public string ConcatColor1
         {
             get
             {
-                return _menu;
+                return _color1;
             }
             set
             {
-                _menu = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatColor2
+        {
+            get
+            {
+
+                return _color2;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatColor3
+        {
+            get
+            {
+                return _color3;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatColor4
+        {
+            get
+            {
+                return _color4;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+
+        public ICommand CheckAnswer
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Answer();
+                });
+            }
+
+            set { }
+        }
+
+        public bool Answer()
+        {
+            switch (Number)
+            {
+                case 1:
+                    Color1 = "green";
+                    Color2 = "red";
+                    Color3 = "red";
+                    Color4 = "red";
+                    break;
+                case 2:
+                    
+                    Color1 = "red";
+                    Color2 = "red";
+                    Color3 = "green";
+                    Color4 = "red";
+                    break;
+
+            }
+
+            return false;
+        }
+
+        public bool Question()
+        {
+            switch (Number)
+            {
+                case 1:
+                    Number1 = 1;
+                    Number2 = 2;
+                    Number3 = 3;
+                    Number4 = 4;
+                    Color1 = "transparent";
+                    Color2 = "transparent";
+                    Color3 = "transparent";
+                    Color4 = "transparent";
+                    break;
+                case 2:
+                    Number1 = 8;
+                    Number2 = 6;
+                    Number3 = 5;
+                    Number4 = 7;
+                    Color1 = "transparent";
+                    Color2 = "transparent";
+                    Color3 = "transparent";
+                    Color4 = "transparent";
+                    break;
+                default:
+                    break;
+            }
+
+            return true;
+        }
+
+        public QuizzView1ViewModel()
+        {
+            this.Number = 1;
+            this.Number1 = 1;
+            this.Number2 = 2;
+            this.Number3 = 3;
+            this.Number4 = 4;
+
+
+            this.Color1 = "transparent";
+            this.Color2 = "transparent";
+            this.Color3 = "transparent";
+            this.Color4 = "transparent";
+        }
+
+
+        public string NextLevel
+        {
+            get
+            {
+                return _nextLevel;
+            }
+            set
+            {
+                _nextLevel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string BackLevel
+        {
+            get
+            {
+                return _backLevel;
+            }
+            set
+            {
+                _backLevel = value;
                 OnPropertyChanged();
             }
         }
@@ -284,10 +496,5 @@ namespace LearnWithPenguin.ViewModel
 
             set { _onclickHandlePreviousLevel = value; OnPropertyChanged(); }
         }
-
-
-        private BaseViewModel _menu;
-
-
     }
 }

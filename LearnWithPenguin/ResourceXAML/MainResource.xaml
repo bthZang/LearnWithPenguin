@@ -11,7 +11,7 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
-    <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
+    <!--<viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>-->
     <!--<viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>-->
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
@@ -21,8 +21,6 @@
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
     <!--<viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>-->
 
-    <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
-    <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
     <viewmodel:Game1ViewModel x:Key="Game1VM"></viewmodel:Game1ViewModel>
     <viewmodel:Game2ViewModel x:Key="Game2VM"></viewmodel:Game2ViewModel>
     <viewmodel:Game3ViewModel x:Key="Game3VM"></viewmodel:Game3ViewModel>

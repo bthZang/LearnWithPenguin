@@ -764,6 +764,7 @@
     <Content Include="images\Question\7.mp3" />
     <Content Include="images\Question\8.mp3" />
     <Content Include="images\Question\9.mp3" />
+    <Resource Include="View\1.jpg" />
     <Resource Include="images\RightAnswer\1.jpg" />
     <Resource Include="images\RightAnswer\10.jpg" />
     <Resource Include="images\RightAnswer\11.jpg" />

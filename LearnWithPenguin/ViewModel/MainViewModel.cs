@@ -230,7 +230,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new QuizzView2ViewModel();
+                    //NavigatetoHome = new QuizzView2ViewModel();
                 });
             }
             set { }
