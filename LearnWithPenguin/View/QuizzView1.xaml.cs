@@ -28,29 +28,25 @@ namespace LearnWithPenguin.View
             viewmodel.OnclickHandleNextLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 viewmodel.Number += 1;
-                
+
             });
 
             viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 if (viewmodel.Number > 1)
                     viewmodel.Number -= 1;
-            
+
             });
         }
 
         private void Sound_Click(object sender, RoutedEventArgs e)
         {
+            //private MediaPlayer mediaPlayer = new MediaPlayer();
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //mediaPlayer.Open(new Uri());
+        }
 
-
-            private MediaPlayer mediaPlayer = new MediaPlayer();
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            mediaPlayer.Open(new Uri(
-
-
-    }
         private void Button_Click(object sender, RoutedEventArgs e)
-
         {
 
             //if ((sender as Button) == targetButton)
