@@ -9,32 +9,8 @@ namespace LearnWithPenguin.ViewModel
 {
     internal class QuizzView1ViewModel: BaseViewModel
     {
-        protected BaseViewModel _navigateToQuizzView1;
-        public BaseViewModel NavigateToQuizzView1
-        {
-            get
-            {
-                return _navigateToQuizzView1;
-            }
-            set
-            {
-                _navigateToQuizzView1 = value;
-                OnPropertyChanged();
-            }
-        }
-        protected BaseViewModel _navigateToQuizzView2;
-        public BaseViewModel NavigateToQuizzView2
-        {
-            get
-            {
-                return _navigateToQuizzView2;
-            }
-            set
-            {
-                _navigateToQuizzView2 = value;
-                OnPropertyChanged();
-            }
-        }
+        protected int _number;
+      
         private BaseViewModel _menu;
 
         public BaseViewModel Menu
@@ -62,7 +38,66 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+        public int Number
+        {
+            get
+            {
+                return _number;
+            }
+            set
+            {
+                _number = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+               
 
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ConcatTitle
+        {
+            get
+            {
+                return "Bài " + _number;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string ConcatQuestion
+        {
+            get
+            {
+                return "\\Question\\" + _number + ".mp3";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public ICommand _onclickHandlePreviousLevel;
+        public ICommand OnclickHandlePreviousLevel
+        {
+            get
+            {
+                return _onclickHandlePreviousLevel;
+            }
+
+            set { _onclickHandlePreviousLevel = value; OnPropertyChanged(); }
+        }
+        public ICommand _onclickHandleNextLevel;
+        public ICommand OnclickHandleNextLevel
+        {
+            get
+            {
+                return _onclickHandleNextLevel;
+            }
+
+            set { _onclickHandleNextLevel = value; OnPropertyChanged(); }
+        }
 
     }
 }

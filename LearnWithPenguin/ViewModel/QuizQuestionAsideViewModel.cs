@@ -217,7 +217,7 @@ namespace LearnWithPenguin.ViewModel
             set
             {
                 imageSource = value;
-                OnPropertyChanged("ImageSource");
+                OnPropertyChanged("ImageSourceImageSource");
             }
         }
         public int QuestionLimit

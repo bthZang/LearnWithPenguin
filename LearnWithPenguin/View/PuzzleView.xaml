@@ -107,7 +107,7 @@
                        Style="{StaticResource Baloo2-Regular}">Lịch sử Việt Nam</Label>
 
                 <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToQuizAsideView}"
+                        Command="{Binding TransformToQuizzView1}"
                         Height="220"
                         Width="200"
                         Background="Transparent"
@@ -169,7 +169,7 @@
                        Style="{StaticResource Baloo2-Regular}">Nghệ thuật</Label>
 
                 <Button DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToQuizzView2}"
+                        Command="{Binding TransformToQuizzView}"
                         Height="200"
                         Width="198"
                         Background="Transparent"

@@ -98,20 +98,24 @@
         <StackPanel  Margin="0 -654.3 0 282.03"
                      Height="279"
                      Width="800">
-            <Button Height="279.92"
-                    Width="561.72"
-                    Background="Transparent"
-                    BorderThickness="0">
+            <Button Height="279"
+                    Width="500"
+                    Background="White"
+                    BorderThickness="0"
+                    >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
+                        <Setter Property="CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="../images/WhiteRectangleQuizzView2.png"
-                       Height="279.92"
-                       Width="561.72" />
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <!--<Image Stretch="Uniform"
+                       Source="../images/whiteRectangle.png"
+                       Height="191.84"
+                       Width="309.38" />-->
             </Button>
             <Image Stretch="Uniform"
                    Source="../images/QuizzView2.png"
@@ -120,55 +124,70 @@
                    Margin="585 -265 0 0" />
 
         </StackPanel>
-        <StackPanel Margin="75 -350 70.31 0"
-                    Height="188">
-            <Button Height="191.84"
-                    Width="309.38"
-                    Background="Transparent"
+        <StackPanel Margin="75 -375 70.31 0"
+                    Height="192">
+            <Button 
+                    Height="192"
+                    Width="310"
+                    Background="White"
                     BorderThickness="0"
-                    Margin="-680 0 0 0">
+                    Margin="-670 0 0 0"
+                    Click="checkAnswer">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
+                        <Setter Property="CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="../images/WhiteRectangleQuizzView2.png"
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <!--<Image Stretch="Uniform"
+                       Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
             </Button>
-            <Button Height="191.84"
-                    Width="309.38"
-                    Background="Transparent"
+            <Button 
+                    Height="192"
+                    Width="310"
+                    Background="White"
                     BorderThickness="0"
-                    Margin="0 -200 0 0">
+                    Margin="0 -191 0 0"
+                    Click="checkAnswer">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
+                        <Setter Property="CornerRadius"
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="../images/WhiteRectangleQuizzView2.png"
-                       Height="202"
-                       Width="309" />
-            </Button>
-            <Button Height="191.84"
-                    Width="309.38"
-                    Background="Transparent"
-                    BorderThickness="0"
-                    Margin="670 -200 0 0">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="Border.CornerRadius"
-                                Value="13 13 13 13" />
-                    </Style>
-                </Button.Resources>
-                <Image Stretch="Uniform"
-                       Source="../images/WhiteRectangleQuizzView2.png"
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <!--<Image Stretch="Uniform"
+                       Source="../images/whiteRectangle.png"
                        Height="191.84"
-                       Width="309.38" />
+                       Width="309.38" />-->
+            </Button>
+            <Button 
+                    Height="192"
+                    Width="310"
+                    Background="White"
+                    BorderThickness="0"
+                    Margin="670 -195 0 0"
+                    Click="checkAnswer">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Button.DataContext>
+                    <StaticResource ResourceKey="MainVM" />
+                </Button.DataContext>
+                <!--<Image Stretch="Uniform"
+                       Source="../images/whiteRectangle.png"
+                       Height="191.84"
+                       Width="309.38" />-->
             </Button>
 
         </StackPanel>
