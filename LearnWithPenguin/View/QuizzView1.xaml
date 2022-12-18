@@ -200,7 +200,7 @@
                 </Button >
             </Border>
         </StackPanel>
-        <MediaElement x:Name="media"
+        <!--<MediaElement x:Name="media"
                       Height="80"
                       Width="80"
                       LoadedBehavior="Manual"
@@ -210,10 +210,13 @@
                       Visibility="{Binding IsDisplayQuestion}"
                       Margin="0 -250 0 0"
                       Source="{ Binding ConcatQuestion}"
-                      RenderTransformOrigin="1,1"></MediaElement>
-        <Button Margin="0 -250 0 0"
+                      RenderTransformOrigin="1,1"></MediaElement>-->
+        <Button x:Name="button"
+                Margin="0 -250 0 0"
                 Height="80"
                 Width="80"
+                DataContext="{StaticResource QuizzView1VM}"
+                Command="{Binding SoundButtom}"
                 Background="Transparent"
                 BorderThickness="0"
                 Click="Sound_Click">

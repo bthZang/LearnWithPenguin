@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
 using System.Windows.Forms;
+using System.Windows.Media;
 using System.Security.Cryptography.X509Certificates;
 
 namespace LearnWithPenguin.ViewModel
@@ -26,7 +27,21 @@ namespace LearnWithPenguin.ViewModel
         protected string _nextLevel;
         protected string _backLevel;
 
+        public MediaPlayer _sound = new MediaPlayer();
 
+        public ICommand SoundButtom
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    _sound.Open(new Uri(@"./images/Question/" + Number + ".mp3", UriKind.Relative));
+                    _sound.Position = TimeSpan.Zero;
+                    _sound.Play();
+                });
+            }
+            set { }
+        }
 
         public int Number
         {
@@ -390,7 +405,7 @@ namespace LearnWithPenguin.ViewModel
                     Color4 = "red";
                     break;
                 case 2:
-                    
+
                     Color1 = "red";
                     Color2 = "red";
                     Color3 = "green";
@@ -446,6 +461,9 @@ namespace LearnWithPenguin.ViewModel
             this.Color2 = "transparent";
             this.Color3 = "transparent";
             this.Color4 = "transparent";
+
+            _sound.Open(new Uri(@"./images/Question/1.mp3", UriKind.Relative));
+
         }
 
 

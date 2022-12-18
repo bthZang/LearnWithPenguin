@@ -23,7 +23,7 @@ namespace LearnWithPenguin.View
         {
             InitializeComponent();
 
-            QuizzView1ViewModel viewmodel = media.DataContext as QuizzView1ViewModel;
+            QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
             viewmodel.OnclickHandleNextLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
@@ -53,6 +53,7 @@ namespace LearnWithPenguin.View
 
         }
 
+        //nhac
 
     }
 }
