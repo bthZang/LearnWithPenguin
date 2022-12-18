@@ -22,7 +22,25 @@ namespace LearnWithPenguin.UserControls
     {
         public BadResult()
         {
-            
+            InitializeComponent();
+
+        }
+
+        public static readonly DependencyProperty ReplayProperty =
+            DependencyProperty.Register("Replay", typeof(ICommand), typeof(BadResult), new UIPropertyMetadata());
+
+        public static readonly DependencyProperty NextProperty =
+            DependencyProperty.Register("Next", typeof(ICommand), typeof(BadResult), new UIPropertyMetadata());
+
+        public ICommand Replay
+        {
+            get { return (ICommand)GetValue(ReplayProperty); }
+            set { SetValue(ReplayProperty, value); }
+        }
+        public ICommand Next
+        {
+            get { return (ICommand)GetValue(NextProperty); }
+            set { SetValue(NextProperty, value); }
         }
     }
 }

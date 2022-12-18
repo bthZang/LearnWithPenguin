@@ -23,6 +23,43 @@ namespace LearnWithPenguin.ViewModel
     {
         private BaseViewModel _PartOnBoarding;
 
+        private bool _next;
+        public bool Next
+        {
+            get { return _next; }
+            set
+            {
+                _next = value;
+                if (_next == true)
+                    obacity = "/UserControls/next.png";
+                else
+                {
+
+                    obacity = "/UserControls/BlurNext.png";
+                }
+                OnPropertyChanged();
+            }
+        }
+
+        private string _obacity;
+
+        public string obacity
+        {
+            get
+            {
+                return _obacity;
+
+            }
+            set
+            {
+
+                _obacity = value;
+                OnPropertyChanged();
+            }
+        }
+
+    
+
         public BaseViewModel PartOnBoarding
         {
             get
@@ -53,6 +90,8 @@ namespace LearnWithPenguin.ViewModel
         {
             this.PartOnBoarding = new TextOnBoardingViewModel();
             this.PartOnBoardingTerm = new TermAndConditionViewModel();
+            this.obacity = "/UserControls/BlurNext.png";
+
 
 
         }

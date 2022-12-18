@@ -12,28 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media;
-using System.Reflection;
-using LearnWithPenguin.Properties;
 
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for ReloadGame.xaml
     /// </summary>
-    public partial class Menu : System.Windows.Controls.UserControl
+    public partial class ReloadGame : System.Windows.Controls.UserControl
     {
-        public Menu()
+        public ReloadGame()
         {
             InitializeComponent();
-
-
-
         }
 
+        public static readonly DependencyProperty CommandProperty =
+        DependencyProperty.Register("Command", typeof(ICommand), typeof(ReloadGame), new UIPropertyMetadata(null));
 
-
-
-
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
     }
 }

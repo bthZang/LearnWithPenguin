@@ -25,12 +25,28 @@ namespace LearnWithPenguin.ViewModel
     public class MainViewModel : BaseViewModel
     {
 
+
+
         protected BaseViewModel _navigatetoHome;
+
+        public bool isClosing = false;
+        public bool isSound = true;
 
         public MainViewModel()
         {
             this.NavigatetoHome = new OnBoardingViewModel();
+            ImageVolume = "/UserControls/Volume.png";
+            ImageSound = "/UserControls/Sound.png";
 
+            _music.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Wii Music  Gaming Background Music HD.mp3")));
+            _music.MediaEnded += ReplayMusic;
+            _sound.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Video Game Beep  Sound Effect.mp3")));
+        }
+
+        public void ReplayMusic(object sender, EventArgs e)
+        {
+            _music.Position = TimeSpan.Zero;
+            _music.Play();
         }
 
         public BaseViewModel NavigatetoHome
@@ -197,39 +213,131 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+        public ICommand TransformToQuizzView1
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView1ViewModel();
+                });
+            }
+            set { }
+        }
+        public ICommand TransformToQuizzView2
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
+            set { }
+        }
 
-        //public ICommand TransformToQuizzView1
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
-        //        {
-        //            NavigatetoHome = new QuizzView1ViewModel();
-        //        });
-        //    }
-        //    set { }
-        //}
-        //public ICommand TransformToQuizzView2
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
-        //        {
-        //            NavigatetoHome = new QuizzView2ViewModel();
-        //        });
-        //    }
-        //    set { }
-        //}
-        //public ICommand TransformToQuizAsideView
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
-        //        {
-        //            NavigatetoHome = new QuizQuestionAsideViewModel();
-        //        });
-        //    }
-        //    set { }
-        //}
+
+
+        //play sound + button on menu
+
+        public string _imageVolume;
+
+        public MediaPlayer _sound = new MediaPlayer();
+        public MediaPlayer _music = new MediaPlayer();
+
+        public string ImageVolume
+        {
+            get
+            {
+                return _imageVolume;
+
+            }
+            set
+            {
+
+                _imageVolume = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand VolumeButtom
+        {
+            get
+            {
+
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    if (ImageVolume == "/UserControls/Volume.png")
+                    {
+                        ImageVolume = "/UserControls/Mute.png";
+                        _sound.Stop();
+                        isSound = false;
+
+                    }
+                    else if (ImageVolume == "/UserControls/Mute.png")
+                    {
+                        ImageVolume = "/UserControls/Volume.png";
+                        //if (MouseAction.LeftClick(true))
+                        //{
+                        //    _sound.Play();
+                        //}
+                        _sound.Position = TimeSpan.Zero;
+
+                        _sound.Play();
+                        isSound = true;
+
+                    }
+
+                });
+            }
+
+            set { }
+        }
+
+
+        public string _imageSound;
+
+        public string ImageSound
+        {
+            get
+            {
+                return _imageSound;
+
+            }
+            set
+            {
+
+                _imageSound = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        public ICommand SoundButtom
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    if (ImageSound == "/UserControls/Sound.png")
+                    {
+                        ImageSound = "/UserControls/noSound.png";
+                        _music.Stop();
+
+                    }
+                    else if (ImageSound == "/UserControls/noSound.png")
+                    {
+                        ImageSound = "/UserControls/Sound.png";
+
+                        //  _music.Position = TimeSpan.Zero;
+                        _music.Play();
+                    }
+
+                });
+            }
+
+            set { }
+        }
     }
+
 }

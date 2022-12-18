@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+             xmlns:localUser="clr-namespace:LearnWithPenguin.UserControls"
+             d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="550"
              d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:GameViewModel}">
+            <localUser:ReloadGame></localUser:ReloadGame>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <StackPanel Orientation="Vertical">
             <Border Background="#77D3D8"
@@ -27,7 +35,45 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6"
+                            Width="810"
+                            Height="70"
+                            Background="#FBFACD"
+                            CornerRadius="20"
+                            HorizontalAlignment="Left"
+                            Margin="91,10,0,60"
+                            BorderThickness="3, 3, 3, 3"
+                            BorderBrush="MidnightBlue">
+                        <Grid>
+                            <ItemsControl ItemsSource="{Binding StepQueues}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="7"
+                                                     Rows="1" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Background="DeepPink"
+                                                Width="110"
+                                                Height="60"
+                                                CornerRadius="30">
+                                            <Image Source="{Binding}"></Image>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+                    </Border>
+                    <localUser:ReloadGame Grid.Column="5"
+                                          Grid.Row="0"
+                                          Width="70"
+                                          Height="70"
+                                          Margin="80,10,16,60"
+                                          Command="{Binding Reload}">
+                    </localUser:ReloadGame>
                     <Image Grid.Column="0"
                            Grid.Row="1"
                            Source="\images\iceStand@3x.png"
