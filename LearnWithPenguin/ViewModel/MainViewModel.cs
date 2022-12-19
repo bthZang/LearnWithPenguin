@@ -130,6 +130,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new UserViewModel();
+                    Menu = null;
                 });
             }
 
@@ -231,6 +232,18 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
+            set { }
+        }
+
+        public ICommand TransformtoRateView
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new RateViewModel();
                 });
             }
             set { }
