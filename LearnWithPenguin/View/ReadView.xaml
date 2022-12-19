@@ -69,7 +69,7 @@
                                 Background="#A0C4FF">
                             <TextBlock Width="100"
                                        Height="56"
-                                       Text="Bai 1"
+                                       Text="Bài 1"
                                        Foreground="#073580"
                                        FontSize="35.679"
                                        FontWeight="Bold"
@@ -140,12 +140,11 @@
                            TextAlignment="Center"
                            Foreground="White"
                            x:Name="picName">
-
                 </TextBlock>
 
                 <Button Height="99.05"
                         Width="99.05"
-                        Margin="500 527 500 70"
+                        Margin="100 527 500 70"
                         BorderThickness="0"
                         Background="Transparent"
                         Click="ReadText">
@@ -196,6 +195,57 @@
                            Width="48.55">
                     </Image>
 
+                </Button>
+
+                <Button x:Name="KidRead"
+                        Height="99.05"
+                        Width="99.05"
+                        Margin="700 527 320 70"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Click="KidRead_Click"
+                        Content="Talk"
+                        FontSize="40">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Border"
+                                    BorderThickness="0"
+                                    Width="99.05"
+                                    Height="99.05"
+                                    CornerRadius="90"
+                                    Background="White"
+                                    BorderBrush="transparent">
+
+                                <ContentPresenter Margin="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
                 <DockPanel>
                     <Grid HorizontalAlignment="Left">
