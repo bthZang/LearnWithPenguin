@@ -8,6 +8,7 @@ using System.Windows.Threading;
 using System.Windows.Forms;
 using System.Windows.Media;
 using System.Security.Cryptography.X509Certificates;
+using System.CodeDom;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -26,6 +27,8 @@ namespace LearnWithPenguin.ViewModel
 
         protected string _nextLevel;
         protected string _backLevel;
+
+        protected string _image;
 
         public MediaPlayer _sound = new MediaPlayer();
 
@@ -185,7 +188,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string Color2
         {
             get
@@ -256,7 +258,19 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+        public string Image
+        {
+            get
+            {
+                return _image;
+            }
+            set
+            {
+                _image = value;
 
+                OnPropertyChanged();
+            }
+        }
         public string ConcatTitle
         {
             get
@@ -268,7 +282,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatQuestion
         {
             get
@@ -280,7 +293,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatSource1
         {
             get
@@ -380,6 +392,73 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+        public string ConcatRedGreen
+        {
+            get
+            {
+                return _image;
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public bool GreenRed()
+        {
+            switch (Number1)
+            {
+
+                case 1:
+                    break;
+                case 3:
+                    break;
+                case 6:
+                    break;
+                case 8:
+                    break;
+                case 11:
+                    break;
+                case 15:
+                    break;
+                default:
+                    break;
+            }
+            switch (Number2)
+            {
+                case 10:
+                    break;
+                case 13:
+                    break;
+                default:
+                    break;
+            }
+            switch (Number3)
+            {
+                case 2:
+                    break;
+                case 4:
+                    break;
+                case 7:
+                    break;
+                case 12:
+                    break;
+                default:
+                    break;
+            }
+            switch (Number4)
+            {
+                case 5:
+                    break;
+                case 9:
+                    break;
+                case 14:
+                    break;
+
+            }
+
+            return true;
+        }
 
         public ICommand CheckAnswer
         {

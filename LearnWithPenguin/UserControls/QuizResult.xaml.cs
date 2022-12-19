@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for GreenTick.xaml
+    /// Interaction logic for QuizResult.xaml
     /// </summary>
-    public partial class GreenTick : System.Windows.Controls.UserControl
+    public partial class QuizResult : UserControl
     {
-        public GreenTick()
+        public QuizResult()
         {
             InitializeComponent();
         }
