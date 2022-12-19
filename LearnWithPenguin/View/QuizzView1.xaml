@@ -103,17 +103,17 @@
         <StackPanel  Margin="-400 100 0 200"
                      Width="320">
             <Border Height="200"
-                    Width="315"
+                    Width="310"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor1}"
-                    >
-                <Button Height="190"
-                        Width="300"
-                        DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
-                        BorderThickness="0"
-                        >
+                    CornerRadius="15">
+
+                <Button  Height="190"
+                         Width="300"
+                         DataContext="{StaticResource QuizzView1VM}"
+                         Command="{Binding CheckAnswer}"
+                         BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -129,18 +129,17 @@
             </Border>
 
             <Border Height="200"
-                    Width="315"
+                    Width="310"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor2}"
-                    Margin="0 20 0 0"
-                    >
+                    CornerRadius="15"
+                    Margin="0 20 0 0">
                 <Button  Height="190"
                          Width="300"
                          DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
-                        BorderThickness="0"
-                         >
+                         Command="{Binding CheckAnswer}"
+                         BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -159,10 +158,11 @@
         <StackPanel Margin="550.94 -600 150 200"
                     Width="320">
             <Border Height="200"
-                    Width="315"
+                    Width="310"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor3}"
+                    CornerRadius="15"
                     Margin="0 -20 0 0">
                 <Button Height="190"
                         Width="300"
@@ -183,10 +183,11 @@
                 </Button >
             </Border>
             <Border Height="200"
-                    Width="315"
+                    Width="310"
                     BorderThickness="4"
                     DataContext="{StaticResource QuizzView1VM}"
                     BorderBrush="{Binding ConcatColor4}"
+                    CornerRadius="15"
                     Margin="0 20 0 0">
                 <Button Height="190"
                         Width="300"
