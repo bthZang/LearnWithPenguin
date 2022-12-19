@@ -148,6 +148,7 @@
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
+    <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
@@ -173,6 +174,9 @@
     </Compile>
     <Compile Include="View\QuizzView2.xaml.cs">
       <DependentUpon>QuizzView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RateView.xaml.cs">
+      <DependentUpon>RateView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -308,6 +312,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\QuizzView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -616,6 +624,139 @@
     <Resource Include="UserControls\yellowStar.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="TapViet\ChuDut\1.png" />
+    <Resource Include="TapViet\ChuDut\10.png" />
+    <Resource Include="TapViet\ChuDut\11.png" />
+    <Resource Include="TapViet\ChuDut\2.png" />
+    <Resource Include="TapViet\ChuDut\3.png" />
+    <Resource Include="TapViet\ChuDut\4.png" />
+    <Resource Include="TapViet\ChuDut\5.png" />
+    <Resource Include="TapViet\ChuDut\6.png" />
+    <Resource Include="TapViet\ChuDut\7.png" />
+    <Resource Include="TapViet\ChuDut\8.png" />
+    <Resource Include="TapViet\ChuDut\9.png" />
+    <Resource Include="TapViet\ChuLien\1.png" />
+    <Resource Include="TapViet\ChuLien\10.png" />
+    <Resource Include="TapViet\ChuLien\11.png" />
+    <Resource Include="TapViet\ChuLien\2.png" />
+    <Resource Include="TapViet\ChuLien\3.png" />
+    <Resource Include="TapViet\ChuLien\4.png" />
+    <Resource Include="TapViet\ChuLien\5.png" />
+    <Resource Include="TapViet\ChuLien\6.png" />
+    <Resource Include="TapViet\ChuLien\7.png" />
+    <Resource Include="TapViet\ChuLien\8.png" />
+    <Resource Include="TapViet\ChuLien\9.png" />
+    <Resource Include="images\medal\HCHoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HCHoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HCHoanThanhTapViet.png" />
+    <Resource Include="images\medal\HCHoanThanhTroChoi.png" />
+    <Resource Include="images\medal\HCTotNhanBiet.png" />
+    <Resource Include="images\medal\HCTotTapDoc.png" />
+    <Resource Include="images\medal\HCTotTapViet.png" />
+    <Resource Include="images\medal\HCTotTrochoi.png" />
+    <Resource Include="images\medal\HCXuatSacNhanBiet.png" />
+    <Resource Include="images\medal\HCXuatSacTapDoc.png" />
+    <Resource Include="images\medal\HCXuatSacTapViet.png" />
+    <Resource Include="images\medal\HCXuatSacTroChoi.png" />
+    <Resource Include="images\medal\HoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HoanThanhTapViet.png" />
+    <Resource Include="images\medal\HoanThanhTroChoi.png" />
+    <Resource Include="images\medal\TotNhanBiet.png" />
+    <Resource Include="images\medal\TotTapDoc.png" />
+    <Resource Include="images\medal\TotTapViet.png" />
+    <Resource Include="images\medal\TotTroChoi.png" />
+    <Resource Include="images\medal\XuatSacNhanBiet.png" />
+    <Resource Include="images\medal\XuatSacTapDoc.png" />
+    <Resource Include="images\medal\XuatSacTapViet.png" />
+    <Resource Include="images\medal\XuatSacTroChoi.png" />
+    <Content Include="TapViet\ChuThuong\1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="TapViet\ChuThuong\10.mp4" />
+    <Resource Include="TapViet\ChuThuong\11.mp4" />
+    <Resource Include="TapViet\ChuThuong\12.mp4" />
+    <Resource Include="TapViet\ChuThuong\13.mp4" />
+    <Resource Include="TapViet\ChuThuong\14.mp4" />
+    <Resource Include="TapViet\ChuThuong\15.mp4" />
+    <Resource Include="TapViet\ChuThuong\16.mp4" />
+    <Resource Include="TapViet\ChuThuong\17.mp4" />
+    <Resource Include="TapViet\ChuThuong\18.mp4" />
+    <Resource Include="TapViet\ChuThuong\19.mp4" />
+    <Resource Include="TapViet\ChuThuong\2.mp4" />
+    <Resource Include="TapViet\ChuThuong\20.mp4" />
+    <Resource Include="TapViet\ChuThuong\21.mp4" />
+    <Resource Include="TapViet\ChuThuong\22.mp4" />
+    <Resource Include="TapViet\ChuThuong\23.mp4" />
+    <Resource Include="TapViet\ChuThuong\24.mp4" />
+    <Resource Include="TapViet\ChuThuong\25.mp4" />
+    <Resource Include="TapViet\ChuThuong\26.mp4" />
+    <Resource Include="TapViet\ChuThuong\27.mp4" />
+    <Resource Include="TapViet\ChuThuong\28.mp4" />
+    <Resource Include="TapViet\ChuThuong\29.mp4" />
+    <Resource Include="TapViet\ChuThuong\3.mp4" />
+    <Resource Include="TapViet\ChuThuong\30.mp4" />
+    <Resource Include="TapViet\ChuThuong\31.mp4" />
+    <Resource Include="TapViet\ChuThuong\32.mp4" />
+    <Resource Include="TapViet\ChuThuong\33.mp4" />
+    <Resource Include="TapViet\ChuThuong\34.mp4" />
+    <Resource Include="TapViet\ChuThuong\35.mp4" />
+    <Resource Include="TapViet\ChuThuong\36.mp4" />
+    <Resource Include="TapViet\ChuThuong\37.mp4" />
+    <Resource Include="TapViet\ChuThuong\38.mp4" />
+    <Resource Include="TapViet\ChuThuong\39.mp4" />
+    <Resource Include="TapViet\ChuThuong\4.mp4" />
+    <Resource Include="TapViet\ChuThuong\40.mp4" />
+    <Resource Include="TapViet\ChuThuong\41.mp4" />
+    <Resource Include="TapViet\ChuThuong\42.mp4" />
+    <Resource Include="TapViet\ChuThuong\43.mp4" />
+    <Resource Include="TapViet\ChuThuong\44.mp4" />
+    <Resource Include="TapViet\ChuThuong\45.mp4" />
+    <Resource Include="TapViet\ChuThuong\46.mp4" />
+    <Resource Include="TapViet\ChuThuong\47.mp4" />
+    <Resource Include="TapViet\ChuThuong\48.mp4" />
+    <Resource Include="TapViet\ChuThuong\49.mp4" />
+    <Resource Include="TapViet\ChuThuong\5.mp4" />
+    <Resource Include="TapViet\ChuThuong\50.mp4" />
+    <Resource Include="TapViet\ChuThuong\51.mp4" />
+    <Resource Include="TapViet\ChuThuong\52.mp4" />
+    <Resource Include="TapViet\ChuThuong\53.mp4" />
+    <Resource Include="TapViet\ChuThuong\54.mp4" />
+    <Resource Include="TapViet\ChuThuong\55.mp4" />
+    <Resource Include="TapViet\ChuThuong\56.mp4" />
+    <Resource Include="TapViet\ChuThuong\57.mp4" />
+    <Resource Include="TapViet\ChuThuong\58.avi" />
+    <Resource Include="TapViet\ChuThuong\59.mp4" />
+    <Resource Include="TapViet\ChuThuong\6.mp4" />
+    <Resource Include="TapViet\ChuThuong\60.mp4" />
+    <Resource Include="TapViet\ChuThuong\61.mp4" />
+    <Resource Include="TapViet\ChuThuong\62.mp4" />
+    <Resource Include="TapViet\ChuThuong\63.mp4" />
+    <Resource Include="TapViet\ChuThuong\64.mp4" />
+    <Resource Include="TapViet\ChuThuong\65.mp4" />
+    <Resource Include="TapViet\ChuThuong\66.mp4" />
+    <Resource Include="TapViet\ChuThuong\67.mp4" />
+    <Resource Include="TapViet\ChuThuong\68.avi" />
+    <Resource Include="TapViet\ChuThuong\7.mp4" />
+    <Resource Include="TapViet\ChuThuong\8.mp4" />
+    <Resource Include="TapViet\ChuThuong\9.mp4" />
+    <Resource Include="View\vidu.png" />
+    <Resource Include="View\play.png" />
+    <Resource Include="UserControls\HoanThanhTapDoc.png" />
+    <Resource Include="UserControls\TotTapDoc.png" />
+    <Resource Include="UserControls\IceBorder.png" />
+    <Resource Include="UserControls\fish.png" />
+    <Resource Include="UserControls\TapDocIce.png" />
+    <Resource Include="UserControls\TapVietIce.png" />
+    <Resource Include="UserControls\DoVuiIce.png" />
+    <Resource Include="UserControls\TroChoiIce.png" />
+    <Resource Include="UserControls\10817161_19406466.jpg" />
+    <Resource Include="UserControls\4650083_2458444.jpg" />
+    <Resource Include="UserControls\summer-background-sea-water %281%29.jpg" />
+    <Resource Include="UserControls\Group 169.png" />
+    <Resource Include="View\RateView.png" />
+    <Resource Include="View\whiteStar.png" />
+    <Resource Include="View\yellowStar.png" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
