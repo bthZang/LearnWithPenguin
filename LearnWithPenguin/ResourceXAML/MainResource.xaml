@@ -43,6 +43,7 @@
 
     <viewmodel:RateViewModel x:Key="RateVM"></viewmodel:RateViewModel>
 
+    <viewmodel:RegisterViewModel x:Key="RegisterVM"></viewmodel:RegisterViewModel>
 
 
 

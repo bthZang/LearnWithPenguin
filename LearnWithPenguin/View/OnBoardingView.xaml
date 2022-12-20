@@ -22,6 +22,9 @@
         <DataTemplate DataType="{x:Type viewmodel:TermAndConditionViewModel}">
             <localLorgin:TermAndCondition />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:RegisterViewModel}">
+            <localLorgin:Register />
+        </DataTemplate>
     </Page.Resources>
     <Grid>
         

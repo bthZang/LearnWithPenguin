@@ -86,6 +86,19 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
+        public ICommand TransformToRegester
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    PartOnBoarding = new RegisterViewModel();
+                });
+            }
+
+            set { }
+        }
+
         public OnBoardingViewModel()
         {
             this.PartOnBoarding = new TextOnBoardingViewModel();
