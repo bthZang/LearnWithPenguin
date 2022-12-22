@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for badResult.xaml
+    /// Interaction logic for YesIcon.xaml
     /// </summary>
-    public partial class BadResult : System.Windows.Controls.UserControl
+    public partial class YesIcon : System.Windows.Controls.UserControl
     {
-        public BadResult()
+        public YesIcon()
         {
             InitializeComponent();
         }

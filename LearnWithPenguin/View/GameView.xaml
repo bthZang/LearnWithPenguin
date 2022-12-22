@@ -336,5 +336,16 @@
         </StackPanel>
         <localUser:GameWarn />
         <localUser:NoIcon />
+        <ContentControl Height="800"
+                        Width="1500"
+                        Content="{Binding GameResult}"
+                        DataContext="{StaticResource NoVM}">
+        </ContentControl>
+        <localUser:YesIcon />
+        <ContentControl Height="800"
+                        Width="1500"
+                        Content="{Binding GameResult}"
+                        DataContext="{StaticResource YesVM}">
+        </ContentControl>
     </Grid>
 </Page>

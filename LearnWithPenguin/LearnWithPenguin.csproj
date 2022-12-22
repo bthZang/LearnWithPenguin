@@ -140,6 +140,9 @@
     <Compile Include="UserControls\Warning.xaml.cs">
       <DependentUpon>Warning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\YesIcon.xaml.cs">
+      <DependentUpon>YesIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
@@ -165,6 +168,7 @@
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
+    <Compile Include="ViewModel\YesViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
     </Compile>
@@ -249,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Warning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\YesIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

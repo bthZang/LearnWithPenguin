@@ -62,6 +62,8 @@ namespace LearnWithPenguin.ViewModel
         private string _ViYes;
         public string ViYes { get { return _ViYes; } set { _ViYes = value; OnPropertyChanged(); } }
 
+        public string S { get; private set; }
+
         public GameViewModel()
         {
             PositionNumber = "1";
@@ -131,7 +133,7 @@ namespace LearnWithPenguin.ViewModel
                                     temp[3] == Direction.Right)
                                 {
                                     int getNum = Convert.ToInt32(ColumnNum);
-                                    for (int i = 0; i <  5; i++)
+                                    for (int i = 0; i < 5; i++)
                                     {
                                         getNum++;
                                         ColumnNum = Convert.ToString(getNum);
@@ -317,7 +319,6 @@ namespace LearnWithPenguin.ViewModel
 
             BackwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
-
                 int getNum = Convert.ToInt32(PositionNumber);
                 if (getNum == 1)
                     goto stopNum;
