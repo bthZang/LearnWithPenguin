@@ -18,7 +18,7 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for QuizResult.xaml
     /// </summary>
-    public partial class QuizResult : UserControl
+    public partial class QuizResult : System.Windows.Controls.UserControl
     {
         public QuizResult()
         {
