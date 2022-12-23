@@ -10,12 +10,6 @@
     <Grid Margin="-485.5 0 0 0">
         <Grid.Resources>
 
-            <!--<DataTemplate Da>
-                <local:TextOnBoarding />
-            </DataTemplate>-->
-            <!--<DataTemplate DataType="{x:Type viewmodel:LoginViewModel}">
-                <localLorgin:Login />
-            </DataTemplate>-->
         </Grid.Resources>
         <Grid Background="Black"
               Opacity="0.5"></Grid>
@@ -32,8 +26,7 @@
                                     Width="100"
                                     Panel.ZIndex="100"
                                     DataContext="{StaticResource OnBoardingVM}"
-                                    Command="{Binding HideTerm}"
-                                    ></local:Back>
+                                    Command="{Binding HideTerm}"></local:Back>
                         <TextBlock Text="ĐIỀU KHOẢN VÀ ĐIỀU KIỆN"
                                    Foreground="#FF073580"
                                    FontSize="45.21"
@@ -66,7 +59,7 @@
                                    TextAlignment="Justify" />
 
                         <TextBlock TextWrapping="Wrap"
-                                   Text="         Vui lòng xoá bỏ vĩnh viễn Ứng dụng từ các thiết bị của bạn nếu bạn không đồng ý hoặc không mong muốn chấp thuận các Điều khoản sử dụng này."
+                                   Text="         Vui lòng xoá bỏ vĩnh viễn Ứng dụng từ các thiết bị của bạn nếu bạn không đồng ý hoặc không mong muốn chấp thuận các Điều khoản sử dụng này. "
                                    Foreground="#2D3D8F"
                                    FontSize="18.53"
                                    FontStyle="Normal"
@@ -77,7 +70,7 @@
                                    Height="55"
                                    TextAlignment="Justify" />
                         <TextBlock TextWrapping="Wrap"
-                                   Text="         VUI LÒNG ĐỌC KỸ ĐIỀU KHOẢN SỬ DỤNG NÀY, ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CÙNG CHÍNH SÁCH BẢO MẬT VÀ QUYỀN RIÊNG TƯ CỦA CHÚNG TÔI ĐƯỢC ĐĂNG TẢI CÔNG KHAI TẠI WEBSITE: www.HocCungPenguin.com   TRƯỚC KHI TẢI ỨNG DỤNG XUỐNG HOẶC ĐANG SỬ DỤNG SẢN PHẨM, DỊCH VỤ CỦA CHÚNG TÔI TRONG LẦN ĐẦU TIÊN."
+                                   xml:space="preserve"
                                    Foreground="#2D3D8F"
                                    FontSize="18.53"
                                    FontStyle="Normal"
@@ -86,7 +79,10 @@
                                    Style="{StaticResource Baloo2-Regular}"
                                    Width="816"
                                    Height="130"
-                                   TextAlignment="Justify" />
+                                   TextAlignment="Justify">         VUI LÒNG ĐỌC KỸ ĐIỀU KHOẢN SỬ DỤNG NÀY, ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CÙNG CHÍNH SÁCH BẢO MẬT VÀ QUYỀN RIÊNG TƯ CỦA CHÚNG TÔI ĐƯỢC ĐĂNG TẢI CÔNG KHAI TẠI WEBSITE <Hyperlink NavigateUri="https://bthzang.github.io/chim-canh-cut/"
+                                                                                                                                                                                                                                           RequestNavigate="Hypelink_RequestNavigate">www.HocCungPenguin.com</Hyperlink> TRƯỚC KHI TẢI ỨNG DỤNG XUỐNG HOẶC ĐANG SỬ DỤNG SẢN PHẨM, DỊCH VỤ CỦA CHÚNG TÔI TRONG LẦN ĐẦU TIÊN.
+
+                        </TextBlock>
 
                         <StackPanel Orientation="Horizontal"
                                     Width="1346"
@@ -103,7 +99,7 @@
                                       Margin="100.9 -5 13.21 0 "
                                       Cursor="Hand"
                                       Panel.ZIndex="20"
-                                      DataContext="{StaticResource TermAndConditionVM}"
+                                      DataContext="{StaticResource OnBoardingVM}"
                                       IsChecked="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
                                       Checked="CheckBox_Checked">
 
@@ -189,9 +185,10 @@
                                        Style="{StaticResource Baloo2-Bold}"
                                        Height="31"
                                        Margin="13.13,6,0,17" />
-                            
                             <Button Command="{Binding Show}"
-                                    IsEnabled="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type CheckBox}}, Path=DataContext.Next}"
+                                    IsEnabled="{Binding Next, UpdateSourceTrigger=PropertyChanged}"
+                                    Panel.ZIndex="9000"
+                                    DataContext="{StaticResource OnBoardingVM}"
                                     x:Name="NoneBlur"
                                     Width="59.46"
                                     Height="59.46"
@@ -205,7 +202,7 @@
                                                 Value="13 13 13 13" />
                                     </Style>
                                 </Button.Resources>
-                                <Grid DataContext="{StaticResource TermAndConditionVM}">
+                                <Grid DataContext="{StaticResource OnBoardingVM}">
 
                                     <Image Width="59.46"
                                            Height="59.46"
@@ -217,20 +214,6 @@
 
 
                             </Button>
-
-                            <!--<Grid>
-                                <Grid>
-                                    <Grid.Triggers>
-                                        <DataTrigger Binding="{Binding _next}"
-                                                     Value="True">
-
-
-                                        </DataTrigger>
-                                    </Grid.Triggers>
-
-                                </Grid>
-                            </Grid>-->
-
 
                         </StackPanel>
 

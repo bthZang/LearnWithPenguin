@@ -5,16 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
-             d:DesignHeight="800"
-             d:DesignWidth="1250">
+             d:DesignHeight="843.5"
+             d:DesignWidth="1125">
     <DockPanel Background="#660C0C0C"
                HorizontalAlignment="Stretch"
-               Height="800">
+               Height="843.5">
 
         <StackPanel Orientation="Horizontal">
             <Border Background="White"
                     Width="400"
-                    Height="800"
                     HorizontalAlignment="Left"
                     CornerRadius="0 31.2 31.2 0">
                 <StackPanel>
@@ -72,7 +71,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -114,7 +113,7 @@
                                 x:Name="NoneBlur"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                DataContext="{StaticResource MenuVM}">
+                                DataContext="{StaticResource MainVM}">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -137,7 +136,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -192,7 +191,7 @@
                         <Button Command="{Binding SoundButtom}"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                DataContext="{StaticResource MenuVM}">
+                                DataContext="{StaticResource MainVM}">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -215,7 +214,7 @@
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="0"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -262,23 +261,77 @@
                                    Width="131.25"
                                    Margin="37.5,0,0,0" />
                     </StackPanel>
+
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
                         <Image Source="/UserControls/Rate.png"
                                Width="39.06"
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
-                        <TextBlock TextAlignment="Left"
-                                   Text="Đánh giá"
-                                   Foreground="#2D3D8F"
-                                   FontSize="28.12"
-                                   FontWeight="Bold"
-                                   FontStyle="Normal"
-                                   LineStackingStrategy="MaxHeight"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Height="44.53"
-                                   Width="131.25"
-                                   Margin="37.5,0,0,0" />
+                        <Button Background="Transparent"
+                                DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformtoRateView}"
+                                Width="168"
+                                Height="45"
+                                BorderThickness="0"
+                                Margin="8,0,0,0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <TextBlock TextAlignment="Left"
+                                       Text="Đánh giá"
+                                       Foreground="#2D3D8F"
+                                       FontSize="28.12"
+                                       FontWeight="Bold"
+                                       FontStyle="Normal"
+                                       LineStackingStrategy="MaxHeight"
+                                       Style="{StaticResource Baloo2-Bold}"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Stretch"
+                                       Height="45"
+                                       Margin="0,0,0,0" />
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
@@ -287,8 +340,6 @@
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
                         <TextBlock TextAlignment="Left"
-                                   Text="Về chúng tôi"
-                                   Foreground="#2D3D8F"
                                    FontSize="28.12"
                                    FontWeight="Bold"
                                    FontStyle="Normal"
@@ -296,7 +347,9 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    Height="45"
                                    Width="164"
-                                   Margin="37.5,0,0,0" />
+                                   Margin="37.5,0,0,0"><Hyperlink Foreground="#2D3D8F"
+                                                                  NavigateUri="https://bthzang.github.io/chim-canh-cut/"
+                                                                  RequestNavigate="Hypelink_RequestNavigate">Về chúng tôi</Hyperlink></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="76.65 31.25 0 0">
