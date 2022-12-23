@@ -57,12 +57,13 @@ namespace LearnWithPenguin.ViewModel
         private string _RowNum;
         public string RowNum { get { return _RowNum; } set { _RowNum = value; OnPropertyChanged(); } }
 
-        private string _ViNo;
-        public string ViNo { get { return _ViNo; } set { _ViNo = value; OnPropertyChanged(); } }
-        private string _ViYes;
-        public string ViYes { get { return _ViYes; } set { _ViYes = value; OnPropertyChanged(); } }
+        //private string _ViNo;
+        //public string ViNo { get { return _ViNo; } set { _ViNo = value; OnPropertyChanged(); } }
+        //private string _ViYes;
+        //public string ViYes { get { return _ViYes; } set { _ViYes = value; OnPropertyChanged(); } }
 
-        public string S { get; private set; }
+        private System.Windows.Controls.UserControl _GameResult;
+        public System.Windows.Controls.UserControl GameResult { get { return _GameResult; } set { _GameResult = value; OnPropertyChanged(); } }
 
         public GameViewModel()
         {
@@ -70,8 +71,8 @@ namespace LearnWithPenguin.ViewModel
             GameTurn = new Game1();
 
             ViString = "Hidden";
-            ViNo = "Hidden";
-            ViYes = "Hidden";
+            //ViNo = "Hidden";
+            //ViYes = "Hidden";
 
             Game1Context = new Game1ViewModel();
             StepQueues = new Queue<string>();
@@ -140,12 +141,12 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    ViYes = "Visible";
-
+                                    GameResult = new GoodResult();
                                 }
                                 else
                                 {
-                                    ViNo = "Visible";
+                                    await Task.Delay(500);
+                                    GameResult = new BadResult();
                                 }
                             }
                             break;
@@ -201,11 +202,12 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    ViYes = "Visible";
+                                    GameResult = new GoodResult();
                                 }
                                 else
                                 {
-                                    ViNo = "Visible";
+                                    await Task.Delay(500);
+                                    GameResult = new BadResult();
                                 }
                             }
                             break;
@@ -265,11 +267,12 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    ViYes = "Visible";
+                                    GameResult = new GoodResult();
                                 }
                                 else
                                 {
-                                    ViNo = "Visible";
+                                    await Task.Delay(500);
+                                    GameResult = new BadResult();
                                 }
                             }
                             break;

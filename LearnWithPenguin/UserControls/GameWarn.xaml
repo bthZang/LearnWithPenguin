@@ -13,7 +13,8 @@
              >
 
     <Grid Background="#660C0C0C"
-          HorizontalAlignment="Stretch">
+          HorizontalAlignment="Stretch"
+           >
         <Border Background="White"
                 Width="600"
                 CornerRadius="30"

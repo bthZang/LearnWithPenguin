@@ -7,7 +7,8 @@
              d:DesignHeight="800"
              d:DesignWidth="1200"
              x:Name="Yes"
-             Visibility="{Binding ViYes, Source={StaticResource GameVM}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+             Visibility="{Binding ViYes, Source={StaticResource GameVM}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+             >
 
     <Grid       Background="Transparent"
                 HorizontalAlignment="Center"
