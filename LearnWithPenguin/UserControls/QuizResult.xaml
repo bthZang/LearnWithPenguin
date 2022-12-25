@@ -203,7 +203,7 @@
                     Background="white">
 
 
-                <Image  Source="{Binding ConcatSource1}"
+                <Image  Source="{Binding ConcatRedGreen}"
                         DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"

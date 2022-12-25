@@ -42,7 +42,7 @@
     <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
     <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>
 
-
+    <viewmodel:QuizzResultViewModel x:Key="QuizzResultVM"></viewmodel:QuizzResultViewModel>
 
 
 
