@@ -116,6 +116,7 @@
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
+                        CommandParameter="{Binding ShowResult}"
                         BorderThickness="0"
                         Click="checkAnswer"
                         Tag="0">

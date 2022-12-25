@@ -484,18 +484,7 @@ namespace LearnWithPenguin.ViewModel
             return true;
         }
 
-        public ICommand CheckAnswer
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    Answer();
-                });
-            }
 
-            set { }
-        }
 
         public bool Answer()
         {
@@ -852,6 +841,18 @@ namespace LearnWithPenguin.ViewModel
                     Result = new QuizResultViewModel();
                 });
             }
+        }
+        public ICommand CheckAnswer
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Answer();
+                });
+            }
+
+            set { }
         }
     }
 }
