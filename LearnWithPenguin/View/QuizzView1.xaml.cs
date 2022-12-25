@@ -1,10 +1,14 @@
 ﻿using LearnWithPenguin.ViewModel;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
+using Button = System.Windows.Controls.Button;
 
 namespace LearnWithPenguin.View
 {
@@ -13,22 +17,25 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class QuizzView1 : System.Windows.Controls.Page
     {
-        //List<int> questionNumbers = new List<int>();
-
-        //int questionNumber = 0;
-        //int i = 0;
-        //public Button;
+        private int score;
+        private int qNum = 0;
+        private int i;
+        List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
         public QuizzView1()
         {
             InitializeComponent();
 
+
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
             viewmodel.OnclickHandleNextLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
-                viewmodel.Number += 1;
-                viewmodel.Question();
+                if (viewmodel.Number < 15)
+                {
+                    viewmodel.Number += 1;
+                    viewmodel.Question();
+                }
             });
 
             viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -39,6 +46,7 @@ namespace LearnWithPenguin.View
                     viewmodel.Question();
                 }
             });
+            NextQuestion();
         }
 
         private void Sound_Click(object sender, RoutedEventArgs e)
@@ -53,7 +61,143 @@ namespace LearnWithPenguin.View
 
         }
 
-        //nhac
+
+        //checkanswer
+        private void checkAnswer(object sender, RoutedEventArgs e)
+        {
+            Button senderButton = sender as Button;
+            if (senderButton.Tag.ToString() == "1")
+            {
+                score++;
+            }
+            if (qNum < 0)
+            {
+                qNum = 0;
+            }
+            else
+            {
+                qNum++;
+            }
+            scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
+            NextQuestion();
+        }
+
+        private void NextQuestion()
+        {
+            if (qNum < questionNumbers.Count)
+            {
+                i = questionNumbers[qNum];
+            }
+            else
+            {
+                score = 0;
+                qNum = -1;
+                i = 0;
+            }
+
+            //ans1.Tag = "0";
+            //ans2.Tag = "0";
+            //ans3.Tag = "0";
+            //ans4.Tag = "0";
+
+            switch (i)
+            {
+                case 1:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 2:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans4.Tag = "0";
+                    ans3.Tag = "1";
+                    break;
+                case 3:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 4:
+                    ans1.Tag = "0";
+                    ans3.Tag = "1";
+                    ans2.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 5:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "1";
+                    break;
+                case 6:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 7:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans3.Tag = "1";
+                    ans4.Tag = "0";
+                    break;
+                case 8:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 9:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "1";
+                    break;
+                case 10:
+                    ans1.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    ans2.Tag = "1";
+                    break;
+                case 11:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 12:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans3.Tag = "1";
+                    ans4.Tag = "0";
+                    break;
+                case 13:
+                    ans1.Tag = "0";
+                    ans2.Tag = "1";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                case 14:
+                    ans1.Tag = "0";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "1";
+                    break;
+                case 15:
+                    ans1.Tag = "1";
+                    ans2.Tag = "0";
+                    ans3.Tag = "0";
+                    ans4.Tag = "0";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
 
     }
 }

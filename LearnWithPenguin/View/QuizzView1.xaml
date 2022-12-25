@@ -23,7 +23,8 @@
         </DataTemplate>
     </Page.Resources>
 
-    <StackPanel Background="#FFA0C4FF">
+    <StackPanel Background="#FFA0C4FF"
+                >
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
@@ -101,7 +102,8 @@
         </DockPanel>
 
         <StackPanel  Margin="-400 100 0 200"
-                     Width="320">
+                     Width="320"
+                     Name="leftStack">
             <Border Height="200"
                     Width="310"
                     BorderThickness="4"
@@ -109,11 +111,14 @@
                     BorderBrush="{Binding ConcatColor1}"
                     CornerRadius="15">
 
-                <Button  Height="190"
-                         Width="300"
-                         DataContext="{StaticResource QuizzView1VM}"
-                         Command="{Binding CheckAnswer}"
-                         BorderThickness="0">
+                <Button Name="ans1"
+                        Height="190"
+                        Width="300"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0"
+                        Click="checkAnswer"
+                        Tag="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -135,11 +140,14 @@
                     BorderBrush="{Binding ConcatColor2}"
                     CornerRadius="15"
                     Margin="0 20 0 0">
-                <Button  Height="190"
-                         Width="300"
-                         DataContext="{StaticResource QuizzView1VM}"
-                         Command="{Binding CheckAnswer}"
-                         BorderThickness="0">
+                <Button Name="ans2"
+                        Height="190"
+                        Width="300"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding CheckAnswer}"
+                        BorderThickness="0"
+                        Click="checkAnswer"
+                        Tag="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -156,7 +164,8 @@
 
         </StackPanel>
         <StackPanel Margin="550.94 -600 150 200"
-                    Width="320">
+                    Width="320"
+                    Name="rightSatck">
             <Border Height="200"
                     Width="310"
                     BorderThickness="4"
@@ -164,11 +173,14 @@
                     BorderBrush="{Binding ConcatColor3}"
                     CornerRadius="15"
                     Margin="0 -20 0 0">
-                <Button Height="190"
+                <Button Name="ans3"
+                        Height="190"
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        Click="checkAnswer"
+                        Tag="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -189,11 +201,14 @@
                     BorderBrush="{Binding ConcatColor4}"
                     CornerRadius="15"
                     Margin="0 20 0 0">
-                <Button Height="190"
+                <Button Name="ans4"
+                        Height="190"
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        BorderThickness="0">
+                        BorderThickness="0"
+                        Click="checkAnswer"
+                        Tag="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -243,12 +258,25 @@
             <Grid HorizontalAlignment="Left">
                 <localUC:HomeIcon Width="97.13"
                                   Height="34.99"
-                                  Margin="42.97,-100,0,0"
+                                  Margin="42.97,-150,0,0"
                                   DataContext="{StaticResource MainVM}"
                                   Command="{Binding Transform}">
 
                 </localUC:HomeIcon>
             </Grid>
+            <DockPanel>
+                <Grid HorizontalAlignment="Right">
+                    <Label Name="scoreText"
+                           Foreground="#073580"
+                           FontSize="18"
+                           FontStyle="Normal"
+                           FontWeight="Bold"
+                           Style="{StaticResource Baloo2-Bold}"
+                           Margin="720,-110,44,0"
+                           Height="112">Số câu trả lời đúng: 0/15</Label>
+                </Grid>
+            </DockPanel>
+
         </DockPanel>
     </StackPanel>
 </Page>
