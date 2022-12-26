@@ -118,10 +118,10 @@
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        CommandParameter="{Binding ShowResult}"
                         BorderThickness="0"
                         Click="checkAnswer"
-                        Tag="0">
+                        Tag="0"
+                        IsEnabled="True">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -148,10 +148,10 @@
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
-                        CommandParameter="{Binding ShowResult}"
                         BorderThickness="0"
                         Click="checkAnswer"
-                        Tag="0">
+                        Tag="0"
+                        IsEnabled="True">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -184,7 +184,8 @@
                         Command="{Binding CheckAnswer}"
                         BorderThickness="0"
                         Click="checkAnswer"
-                        Tag="0">
+                        Tag="0"
+                        IsEnabled="True">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
@@ -212,7 +213,8 @@
                         Command="{Binding CheckAnswer}"
                         BorderThickness="0"
                         Click="checkAnswer"
-                        Tag="0">
+                        Tag="0"
+                        IsEnabled="True">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
