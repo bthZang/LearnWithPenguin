@@ -21,10 +21,12 @@
         <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
             <localUC:Back></localUC:Back>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:QuizzResultViewModel}">
+            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}" />
+        </DataTemplate>
     </Page.Resources>
 
-    <StackPanel Background="#FFA0C4FF"
-                >
+    <StackPanel Background="#FFA0C4FF">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
@@ -146,6 +148,7 @@
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
                         Command="{Binding CheckAnswer}"
+                        CommandParameter="{Binding ShowResult}"
                         BorderThickness="0"
                         Click="checkAnswer"
                         Tag="0">
