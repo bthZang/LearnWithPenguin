@@ -113,231 +113,95 @@ namespace LearnWithPenguin.View
             switch (i)
             {
                 case 1:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 2:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans4.Tag = "0";
                     ans3.Tag = "1";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 3:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 4:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans3.Tag = "1";
                     ans2.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 5:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "1";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 6:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 7:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans3.Tag = "1";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 8:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 9:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "1";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 10:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
                     ans2.Tag = "1";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
-
                     break;
                 case 11:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
 
                 case 12:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans3.Tag = "1";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 13:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "1";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 14:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "0";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "1";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 case 15:
-
-                    ans1.IsEnabled = true;
-                    ans2.IsEnabled = true;
-                    ans3.IsEnabled = true;
-                    ans4.IsEnabled = true;
                     ans1.Tag = "1";
                     ans2.Tag = "0";
                     ans3.Tag = "0";
                     ans4.Tag = "0";
-                    ans1.IsEnabled = false;
-                    ans2.IsEnabled = false;
-                    ans3.IsEnabled = false;
-                    ans4.IsEnabled = false;
                     break;
                 default:
                     break;

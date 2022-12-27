@@ -818,16 +818,17 @@ namespace LearnWithPenguin.ViewModel
 
 
 
-        private QuizResultViewModel _result;
-        public QuizResultViewModel Result
+        protected BaseViewModel _navigatetoResult = null;
+
+        public BaseViewModel NavigatetoResult
         {
             get
             {
-                return _result;
+                return _navigatetoResult;
             }
             set
             {
-                _result = value;
+                _navigatetoResult = value;
                 OnPropertyChanged();
             }
         }
@@ -838,9 +839,21 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    Result = new QuizResultViewModel();
+                    NavigatetoResult = new QuizResultViewModel();
                 });
             }
+        }
+        public ICommand HideResult
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoResult = null;
+                });
+            }
+
+            set { }
         }
         public ICommand CheckAnswer
         {

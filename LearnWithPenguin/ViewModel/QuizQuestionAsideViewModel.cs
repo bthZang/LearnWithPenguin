@@ -239,13 +239,13 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public ICommand AnswerClickedCommand
-        {
-            get
-            {
-                return new DelegatingCommand(o => AnswerClicked((int)o));
-            }
-        }
+        //public ICommand AnswerClickedCommand
+        //{
+        //    //get
+        //    //{
+        //    //    //return new DelegatingCommand(o => AnswerClicked((int)o));
+        //    //}
+        //}
         public void AnswerClicked(int o)
         {
             Question.AnswerClicked(o);

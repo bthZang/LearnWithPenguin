@@ -11,8 +11,8 @@
 
         <Button BorderThickness="0"
                 Background="Transparent"
-                DataContext="{StaticResource MainVM}"
-                Command="{Binding HideMenu}"
+                DataContext="{StaticResource QuizzView1VM}"
+                Command="{Binding HideResult}"
                 Margin="867,0,0,0">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -57,8 +57,8 @@
 
         <Button BorderThickness="0"
                 Background="Transparent"
-                DataContext="{StaticResource MainVM}"
-                Command="{Binding HideMenu}"
+                DataContext="{StaticResource QuizzView1VM}"
+                Command="{Binding HideResult}"
                 Margin="0,0,867,0">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -103,8 +103,8 @@
 
         <Button BorderThickness="0"
                 Background="Transparent"
-                DataContext="{StaticResource MainVM}"
-                Command="{Binding HideMenu}"
+                DataContext="{StaticResource QuizzView1VM}"
+                Command="{Binding HideResult}"
                 Margin="258,0,263,602">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -149,9 +149,9 @@
 
         <Button BorderThickness="0"
                 Background="Transparent"
-                DataContext="{StaticResource MainVM}"
-                Command="{Binding HideMenu}"
-                Margin="258,602,263,0">
+                Margin="258,602,263,0"
+                DataContext="{StaticResource QuizzView1VM}"
+                Command="{Binding HideResult}">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="Border"
@@ -203,15 +203,11 @@
                     Background="white">
 
 
-                <Image  Source="{Binding ConcatRedGreen}"
+                <!--<Image  Source="{Binding ConcatRedGreen}"
                         DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"
-                        Margin="195,89,194,88"></Image>
-
-
-
-
+                        Margin="195,89,194,88"></Image>-->
 
             </Border>
         </Grid>

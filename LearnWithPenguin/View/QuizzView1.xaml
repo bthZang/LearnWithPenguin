@@ -22,14 +22,17 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:QuizzResultViewModel}">
-            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}" />
+            <localUC:QuizResult></localUC:QuizResult>
         </DataTemplate>
     </Page.Resources>
 
     <StackPanel Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="999"
+        <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Content="{Binding NavigatetoResult}" />
 
 
         <DockPanel>
@@ -117,7 +120,7 @@
                         Height="190"
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
+                        Command="{Binding ShowResult}"
                         BorderThickness="0"
                         Click="checkAnswer"
                         Tag="0"
@@ -129,7 +132,7 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Source="{Binding ConcatSource1}"
+                    <Image Name ="ans1Image" Source="{Binding ConcatSource1}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
@@ -159,7 +162,8 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Source="{Binding ConcatSource2}"
+                    <Image Name ="ans2Image"
+                           Source="{Binding ConcatSource2}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
@@ -193,7 +197,8 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Source="{Binding ConcatSource3}"
+                    <Image Name="ans3Image"
+                       Source="{Binding ConcatSource3}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
@@ -222,7 +227,8 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Source="{Binding ConcatSource4}"
+                    <Image Name ="ans4Image"
+                        Source="{Binding ConcatSource4}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
