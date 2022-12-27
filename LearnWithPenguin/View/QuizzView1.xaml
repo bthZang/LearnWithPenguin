@@ -21,7 +21,7 @@
         <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
             <localUC:Back></localUC:Back>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:QuizzResultViewModel}">
+        <DataTemplate DataType="{x:Type viewmodel:QuizResultViewModel}">
             <localUC:QuizResult></localUC:QuizResult>
         </DataTemplate>
     </Page.Resources>

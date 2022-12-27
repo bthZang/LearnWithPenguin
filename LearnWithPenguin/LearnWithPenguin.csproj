@@ -195,10 +195,8 @@
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
-    <Compile Include="ViewModel\QuizzCommands\DelegatingCommand.cs" />
     <Compile Include="ViewModel\QuizQuestionAsideViewModel.cs" />
     <Compile Include="ViewModel\QuizResultViewModel.cs" />
-    <Compile Include="ViewModel\QuizzResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />

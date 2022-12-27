@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Security.Cryptography.X509Certificates;
 using System.CodeDom;
-using LearnWithPenguin.ViewModel.QuizzCommands;
 
 namespace LearnWithPenguin.ViewModel
 {
