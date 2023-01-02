@@ -65,6 +65,144 @@ namespace LearnWithPenguin.ViewModel
         private System.Windows.Controls.UserControl _GameResult;
         public System.Windows.Controls.UserControl GameResult { get { return _GameResult; } set { _GameResult = value; OnPropertyChanged(); } }
 
+        public string _star1;
+        public string _star2;
+        public string _star3;
+        public string _star4;
+        public string _star5;
+
+        public ICommand NextGame { get; set; }
+        public ICommand ReplayGame { get; set; }
+
+        public string Star1
+        {
+            get
+            {
+                return _star1;
+            }
+            set
+            {
+                _star1 = value;
+                ChangeColor1 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ChangeColor1
+        {
+            get
+            {
+                return "/UserControls/" + _star1 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Star2
+        {
+            get
+            {
+                return _star2;
+            }
+            set
+            {
+                _star2 = value;
+                ChangeColor2 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor2
+        {
+            get
+            {
+                return "/UserControls/" + _star2 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star3
+        {
+            get
+            {
+                return _star3;
+            }
+            set
+            {
+                _star3 = value;
+                ChangeColor3 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ChangeColor3
+        {
+            get
+            {
+                return "/UserControls/" + _star3 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Star4
+        {
+            get
+            {
+                return _star4;
+            }
+            set
+            {
+                _star4 = value;
+                ChangeColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ChangeColor4
+        {
+            get
+            {
+                return "/UserControls/" + _star4 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star5
+        {
+            get
+            {
+                return _star5;
+            }
+            set
+            {
+                _star5 = value;
+                ChangeColor5 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ChangeColor5
+        {
+            get
+            {
+                return "/UserControls/" + _star5 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
         public GameViewModel()
         {
             PositionNumber = "1";
@@ -141,12 +279,16 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    GameResult = new GoodResult();
+                                    Star4 = "yellow";
+                                    Star5 = "yellow";
+                                    GameResult = new GRforGame();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
-                                    GameResult = new BadResult();
+                                    Star1 = "yellow";
+                                    Star2 = "white";
+                                    GameResult = new BRforGame();
                                 }
                             }
                             break;
@@ -202,12 +344,16 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    GameResult = new GoodResult();
+                                    Star4 = "yellow";
+                                    Star5 = "yellow";
+                                    GameResult = new GRforGame();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
-                                    GameResult = new BadResult();
+                                    Star1 = "yellow";
+                                    Star2 = "white";
+                                    GameResult = new BRforGame();
                                 }
                             }
                             break;
@@ -267,12 +413,16 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                     }
                                     await Task.Delay(500);
-                                    GameResult = new GoodResult();
+                                    Star4 = "yellow";
+                                    Star5 = "yellow";
+                                    GameResult = new GRforGame();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
-                                    GameResult = new BadResult();
+                                    Star1 = "yellow";
+                                    Star2 = "white";
+                                    GameResult = new BRforGame();
                                 }
                             }
                             break;
@@ -329,6 +479,63 @@ namespace LearnWithPenguin.ViewModel
             stopNum:
                 PositionNumber = Convert.ToString(getNum);
 
+                switch (getNum)
+                {
+                    case 1:
+                        GameTurn = new Game1();
+                        ColumnNum = "0";
+                        StepQueues.Clear();
+                        break;
+                    case 2:
+                        GameTurn = new Game2();
+                        ColumnNum = "0";
+                        RowNum = "0";
+                        StepQueues.Clear();
+                        break;
+                    case 3:
+                        GameTurn = new Game3();
+                        ColumnNum = "0";
+                        RowNum = "0";
+                        StepQueues.Clear();
+                        break;
+                }
+            });
+
+            NextGame = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                int getNum = Convert.ToInt32(PositionNumber);
+                if (getNum == 3)
+                    goto stopNum;
+                getNum++;
+            stopNum:
+                PositionNumber = Convert.ToString(getNum);
+                switch (getNum)
+                {
+                    case 1:
+                        GameTurn = new Game1();
+                        ColumnNum = "0";
+                        StepQueues.Clear();
+                        GameResult = null;
+                        break;
+                    case 2:
+                        GameTurn = new Game2();
+                        ColumnNum = "0";
+                        RowNum = "0";
+                        StepQueues.Clear();
+                        break;
+                    case 3:
+                        GameTurn = new Game3();
+                        ColumnNum = "0";
+                        RowNum = "0";
+                        StepQueues.Clear();
+                        break;
+                }
+            });
+
+            ReplayGame = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                int getNum = Convert.ToInt32(PositionNumber);
+                PositionNumber = Convert.ToString(getNum);
                 switch (getNum)
                 {
                     case 1:

@@ -17,6 +17,7 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUser:Menu />
         </DataTemplate>
+        
     </Page.Resources>
 
     <Grid Background="#A0C4FF">

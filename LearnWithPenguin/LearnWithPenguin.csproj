@@ -86,6 +86,9 @@
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BRforGame.xaml.cs">
+      <DependentUpon>BRforGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Game1.xaml.cs">
       <DependentUpon>Game1.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,9 @@
     </Compile>
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GRforGame.xaml.cs">
+      <DependentUpon>GRforGame.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HomeIcon.xaml.cs">
       <DependentUpon>HomeIcon.xaml</DependentUpon>
@@ -208,6 +214,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\BRforGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Game1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -225,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\GoodResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\GRforGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -295,8 +295,6 @@ namespace LearnWithPenguin.ViewModel
         public string _star4;
         public string _star5;
 
-
-
         public string Star1
         {
             get
@@ -310,8 +308,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
-       
 
         public string ChangeColor1
         {
@@ -414,7 +410,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-                _star5= value;
+                _star5 = value;
                 ChangeColor5 = "5";
                 OnPropertyChanged();
             }
