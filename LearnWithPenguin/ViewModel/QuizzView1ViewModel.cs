@@ -267,7 +267,7 @@ namespace LearnWithPenguin.ViewModel
             set
             {
                 _image = value;
-
+              
                 OnPropertyChanged();
             }
         }
@@ -392,17 +392,17 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public string ConcatRedGreen
-        {
-            get
-            {
-                return _image;
-            }
-            set
-            {
-                OnPropertyChanged();
-            }
-        }
+        //public string ConcatRedGreen
+        //{
+        //    get
+        //    {
+        //        return _image;
+        //    }
+        //    set
+        //    {
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public bool GreenRed()
         {
@@ -410,72 +410,72 @@ namespace LearnWithPenguin.ViewModel
             {
 
                 case 1:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 3:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 6:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 8:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 11:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 15:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 default:
-                    Image = "redCross.png";
+                    Image = "/images/redCross.png";
                     break;
             }
             switch (Number2)
             {
                 case 10:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 13:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 default:
-                    Image = "redCross.png";
+                    Image = "/images/redCross.png";
 
                     break;
             }
             switch (Number3)
             {
                 case 2:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 4:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 7:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 12:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 default:
-                    Image = "redCross.png";
+                    Image = "/images/redCross.png";
 
                     break;
             }
             switch (Number4)
             {
                 case 5:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 9:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 case 14:
-                    Image = "greenTick.png";
+                    Image = "/images/greenTick.png";
                     break;
                 default:
-                    Image = "redCross.png";
+                    Image = "/images/redCross.png";
                     break;
 
             }

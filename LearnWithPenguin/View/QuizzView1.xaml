@@ -27,7 +27,7 @@
     </Page.Resources>
 
     <StackPanel Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="9999"
+        <ContentControl Panel.ZIndex="99900"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
         <ContentControl Panel.ZIndex="9999"
@@ -35,7 +35,7 @@
                         Content="{Binding NavigatetoResult}" />
 
 
-        <DockPanel>
+        <DockPanel Panel.ZIndex="8000">
             <Grid>
                 <localUC:Icon Width="63.28"
                               Height="63.28"

@@ -8,36 +8,14 @@ namespace LearnWithPenguin.ViewModel
 {
     public class QuizResultViewModel : BaseViewModel
     {
-        protected string _greenTick;
-        protected string _redCross;
+       
 
         public QuizResultViewModel()
         {
             
         }
 
-        public string ConcatGreen
-        {
-            get
-            {
-                return "/images/greenTick.png";
-            }
-            set
-            {
-                OnPropertyChanged();
-            }
-        }
-        public string ConcatRed
-        {
-            get
-            {
-                return "/images/redCross.png";
-            }
-            set
-            { 
-                OnPropertyChanged(); 
-            }
-        }
+       
 
 
     }

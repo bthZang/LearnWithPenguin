@@ -63,14 +63,71 @@
             </Button.Template>
         </Button>
 
-      
+        <Button Width="180"
+                Height="70"
+                Margin="420 0 0 0"
+                Command="{Binding Next, RelativeSource={RelativeSource AncestorType=UserControl}}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border"
+                            BorderThickness="0"
+                            Background="transparent"
+                            BorderBrush="transparent">
+    
+                        <ContentPresenter Margin="0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="#AB9DFF" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="#AB9DFF" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="#AB9DFF" />
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="#AB9DFF" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Border Width="180"
+                    Height="65"
+                    Background="#AB9DFF"
+                    CornerRadius="20,0,0,20">
+                <TextBlock Width="158"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="#19468E"
+                           FontSize="21.88"
+                           FontStyle="Normal"
+                           FontWeight="Bold"
+                           TextAlignment="Center"
+                           Style="{StaticResource Baloo2-Bold}"
+                           Text="Bài tiếp" />
 
-        
-        <Image  Source="{Binding ConcatRedGreen}"
+            </Border>
+        </Button>
+
+
+        <Image          Source="{Binding Image}"
                         DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"
-                        Margin="195,89,194,88"></Image>
+                        Margin="346,291,569,291"></Image>
 
     </Grid>
 

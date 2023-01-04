@@ -24,5 +24,12 @@ namespace LearnWithPenguin.UserControls
         {
             InitializeComponent();
         }
+        public static readonly DependencyProperty NextProperty =
+          DependencyProperty.Register("Next", typeof(ICommand), typeof(GoodResult), new UIPropertyMetadata());
+        public ICommand Next
+        {
+            get { return (ICommand)GetValue(NextProperty); }
+            set { SetValue(NextProperty, value); }
+        }
     }
 }
