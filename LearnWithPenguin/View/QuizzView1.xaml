@@ -22,8 +22,10 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:QuizResultViewModel}">
-            <localUC:QuizResult></localUC:QuizResult>
+            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}"
+                                NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
+
     </Page.Resources>
 
     <StackPanel Background="#FFA0C4FF">
@@ -132,7 +134,8 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Name ="ans1Image" Source="{Binding ConcatSource1}"
+                    <Image Name="ans1Image"
+                           Source="{Binding ConcatSource1}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
@@ -162,7 +165,7 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Name ="ans2Image"
+                    <Image Name="ans2Image"
                            Source="{Binding ConcatSource2}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
@@ -198,7 +201,7 @@
                     </Button.Resources>
 
                     <Image Name="ans3Image"
-                       Source="{Binding ConcatSource3}"
+                           Source="{Binding ConcatSource3}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>
@@ -227,8 +230,8 @@
                         </Style>
                     </Button.Resources>
 
-                    <Image Name ="ans4Image"
-                        Source="{Binding ConcatSource4}"
+                    <Image Name="ans4Image"
+                           Source="{Binding ConcatSource4}"
                            DataContext="{StaticResource QuizzView1VM}"
                            Height="190"
                            Width="300"></Image>

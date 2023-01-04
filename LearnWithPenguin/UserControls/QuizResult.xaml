@@ -66,7 +66,7 @@
         <Button Width="180"
                 Height="70"
                 Margin="420 0 0 0"
-                Command="{Binding Next, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                Command="{Binding NextLevel, RelativeSource={RelativeSource AncestorType=UserControl}}">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="Border"
