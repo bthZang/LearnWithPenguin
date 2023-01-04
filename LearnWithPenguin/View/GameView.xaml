@@ -17,13 +17,26 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUser:Menu />
         </DataTemplate>
-        
+        <DataTemplate DataType="{x:Type viewmodel:BRforGameViewModel}">
+            <localUser:BRforGame DataContext="{StaticResource GameVM}"
+                                 NextGame="{Binding NextGame}"
+                                 ReplayGame="{Binding ReplayGame}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:GRforGameViewModel}">
+            <localUser:GRforGame DataContext="{StaticResource GameVM}"
+                                 NextGame="{Binding NextGame}"
+                                 ReplayGame="{Binding ReplayGame}"/>
+        </DataTemplate>
+
     </Page.Resources>
 
     <Grid Background="#A0C4FF">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource GameVM}"
+                        Content="{Binding NavigatetoResult}" />
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Grid>

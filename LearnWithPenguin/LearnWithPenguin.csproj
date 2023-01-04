@@ -151,6 +151,7 @@
     </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
+    <Compile Include="ViewModel\BRforGameViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\GameWarnViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
+    <Compile Include="ViewModel\GRforGameViewModel.cs" />
     <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />

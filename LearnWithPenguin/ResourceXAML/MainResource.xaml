@@ -26,6 +26,8 @@
     <viewmodel:GameWarnViewModel x:Key="GameWarnVM"></viewmodel:GameWarnViewModel>
     <viewmodel:NoViewModel x:Key="NoVM"></viewmodel:NoViewModel>
     <viewmodel:YesViewModel x:Key="YesVM"></viewmodel:YesViewModel>
+    <viewmodel:GRforGameViewModel x:Key="GRGameVM"></viewmodel:GRforGameViewModel>
+    <viewmodel:BRforGameViewModel x:Key="BRGameVM"></viewmodel:BRforGameViewModel>
 
 
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>

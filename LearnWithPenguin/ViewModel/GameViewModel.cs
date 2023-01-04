@@ -62,27 +62,30 @@ namespace LearnWithPenguin.ViewModel
         //private string _ViYes;
         //public string ViYes { get { return _ViYes; } set { _ViYes = value; OnPropertyChanged(); } }
 
-        private System.Windows.Controls.UserControl _GameResult;
-        public System.Windows.Controls.UserControl GameResult { get { return _GameResult; } set { _GameResult = value; OnPropertyChanged(); } }
+        protected BaseViewModel _NavigatetoResult = null;
+        public BaseViewModel NavigatetoResult { get { return _NavigatetoResult; } set { _NavigatetoResult = value; OnPropertyChanged(); } }
 
-        public string _star1;
-        public string _star2;
-        public string _star3;
-        public string _star4;
-        public string _star5;
+        public string _Star1;
+        public string _Star2;
+        public string _Star3;
+        public string _Star4;
+        public string _Star5;
 
-        public ICommand NextGame { get; set; }
-        public ICommand ReplayGame { get; set; }
+        public ICommand _NextGame;
+        public ICommand NextGame { get { return _NextGame; } set { _NextGame = value; } }
+        public ICommand _ReplayGame;
+        public ICommand ReplayGame { get { return _ReplayGame; } set { _ReplayGame = value; } }
+
 
         public string Star1
         {
             get
             {
-                return _star1;
+                return _Star1;
             }
             set
             {
-                _star1 = value;
+                _Star1 = value;
                 ChangeColor1 = "";
                 OnPropertyChanged();
             }
@@ -92,7 +95,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star1 + "Star.png";
+                return "/UserControls/" + _Star1 + "Star.png";
             }
             set
             {
@@ -103,11 +106,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star2;
+                return _Star2;
             }
             set
             {
-                _star2 = value;
+                _Star2 = value;
                 ChangeColor2 = "";
                 OnPropertyChanged();
             }
@@ -118,7 +121,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star2 + "Star.png";
+                return "/UserControls/" + _Star2 + "Star.png";
             }
             set
             {
@@ -130,11 +133,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star3;
+                return _Star3;
             }
             set
             {
-                _star3 = value;
+                _Star3 = value;
                 ChangeColor3 = "";
                 OnPropertyChanged();
             }
@@ -144,7 +147,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star3 + "Star.png";
+                return "/UserControls/" + _Star3 + "Star.png";
             }
             set
             {
@@ -155,11 +158,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star4;
+                return _Star4;
             }
             set
             {
-                _star4 = value;
+                _Star4 = value;
                 ChangeColor4 = "";
                 OnPropertyChanged();
             }
@@ -169,7 +172,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star4 + "Star.png";
+                return "/UserControls/" + _Star4 + "Star.png";
             }
             set
             {
@@ -181,11 +184,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star5;
+                return _Star5;
             }
             set
             {
-                _star5 = value;
+                _Star5 = value;
                 ChangeColor5 = "";
                 OnPropertyChanged();
             }
@@ -195,7 +198,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star5 + "Star.png";
+                return "/UserControls/" + _Star5 + "Star.png";
             }
             set
             {
@@ -281,14 +284,14 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star4 = "yellow";
                                     Star5 = "yellow";
-                                    GameResult = new GRforGame();
+                                    NavigatetoResult = new GRforGameViewModel();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    GameResult = new BRforGame();
+                                    NavigatetoResult= new BRforGameViewModel();
                                 }
                             }
                             break;
@@ -346,14 +349,14 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star4 = "yellow";
                                     Star5 = "yellow";
-                                    GameResult = new GRforGame();
+                                    NavigatetoResult = new GRforGameViewModel();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    GameResult = new BRforGame();
+                                    NavigatetoResult = new BRforGameViewModel();
                                 }
                             }
                             break;
@@ -415,14 +418,14 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star4 = "yellow";
                                     Star5 = "yellow";
-                                    GameResult = new GRforGame();
+                                    NavigatetoResult = new GRforGameViewModel();
                                 }
                                 else
                                 {
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    GameResult = new BRforGame();
+                                    NavigatetoResult = new BRforGameViewModel();
                                 }
                             }
                             break;
@@ -509,13 +512,13 @@ namespace LearnWithPenguin.ViewModel
                 getNum++;
             stopNum:
                 PositionNumber = Convert.ToString(getNum);
+                NavigatetoResult = null;
                 switch (getNum)
                 {
                     case 1:
                         GameTurn = new Game1();
                         ColumnNum = "0";
                         StepQueues.Clear();
-                        GameResult = null;
                         break;
                     case 2:
                         GameTurn = new Game2();
@@ -536,6 +539,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 int getNum = Convert.ToInt32(PositionNumber);
                 PositionNumber = Convert.ToString(getNum);
+                NavigatetoResult = null;
                 switch (getNum)
                 {
                     case 1:

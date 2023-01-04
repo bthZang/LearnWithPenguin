@@ -24,5 +24,22 @@ namespace LearnWithPenguin.UserControls
         {
             InitializeComponent();
         }
+
+        public static readonly DependencyProperty ReplayGameProperty =
+    DependencyProperty.Register("ReplayGame", typeof(ICommand), typeof(GRforGame), new UIPropertyMetadata());
+
+        public static readonly DependencyProperty NextGameProperty =
+            DependencyProperty.Register("NextGame", typeof(ICommand), typeof(GRforGame), new UIPropertyMetadata());
+
+        public ICommand ReplayGame
+        {
+            get { return (ICommand)GetValue(ReplayGameProperty); }
+            set { SetValue(ReplayGameProperty, value); }
+        }
+        public ICommand NextGame
+        {
+            get { return (ICommand)GetValue(NextGameProperty); }
+            set { SetValue(NextGameProperty, value); }
+        }
     }
 }

@@ -10,7 +10,7 @@
              d:DesignWidth="1200"
              d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}">
 
-    <Grid Margin="-400 0 0 0">
+    <Grid Margin="0 0 0 0">
         <Grid Background="#660C0C0C"
               Opacity="0.5"></Grid>
         <Border Width="599.27"
@@ -57,8 +57,7 @@
                         <Button Width="234.76"
                                 Height="91.13"
                                 Margin="65 84.18 0 0"
-                                Command="{Binding ReplayGame}"
-                                DataContext="{StaticResource GameVM}">
+                                Command="{Binding ReplayGame, RelativeSource={RelativeSource AncestorType=UserControl}}">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="Border.CornerRadius"
@@ -140,8 +139,7 @@
                         <Button Width="212.37"
                                 Height="91.13"
                                 Margin="87,60.24,0,0"
-                                Command="{Binding NextGame}"
-                                DataContext="{StaticResource GameVM }">
+                                Command="{Binding NextGame, RelativeSource={RelativeSource AncestorType=UserControl}}">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Border"
