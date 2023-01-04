@@ -39,15 +39,17 @@
                         Content="{Binding NavigatetoResult}" />
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Grid>
+                <StackPanel>
                     <localUser:Icon Width="63.28"
                                     Height="63.28"
                                     Margin="28,35,15,0"
                                     DataContext="{StaticResource MainVM}"
                                     Command="{Binding ShowMenu}">
                     </localUser:Icon>
-                </Grid>
-                <Grid Width="987.44">
+                </StackPanel>
+                <StackPanel Width="987.44"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom">
@@ -98,11 +100,11 @@
                             <Image Source="/images/Forward.png" />
                         </Button>
                     </StackPanel>
-                </Grid>
-                <Grid Width="63.28"
+                </StackPanel>
+                <StackPanel Width="63.28"
                       Height="63.28"
                       Margin="28,35,15,0">
-                </Grid>
+                </StackPanel>
             </StackPanel>
             <StackPanel Margin="0, 30, 0, 0">
                 <Border Background="Beige"

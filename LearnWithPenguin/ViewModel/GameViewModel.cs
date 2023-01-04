@@ -17,6 +17,7 @@ namespace LearnWithPenguin.ViewModel
 {
     public class GameViewModel : BaseViewModel
     {
+        static public int point = 0;
         static class Direction
         {
             public static string Left = "\\images\\left@3x.png";
@@ -266,167 +267,337 @@ namespace LearnWithPenguin.ViewModel
                     switch (PositionNumber)
                     {
                         case "1":
-                            {
+                            { 
                                 string[] temp = new string[Game1Context.step];
                                 StepQueues.CopyTo(temp, StepQueues.Count - Game1Context.step);
-                                if (temp[0] == Direction.Right &&
-                                    temp[1] == Direction.Right &&
-                                    temp[2] == Direction.Right &&
-                                    temp[3] == Direction.Right)
+
+                                bool result;
+                                int getNum = Convert.ToInt32(ColumnNum);
+                                ColumnNum = Convert.ToString(getNum);
+                                await Task.Delay(500);
+                                Star1 = "white";
+                                Star2 = "white";
+
+                                if (temp[0] == Direction.Right)
                                 {
-                                    int getNum = Convert.ToInt32(ColumnNum);
-                                    for (int i = 0; i < 5; i++)
-                                    {
-                                        getNum++;
-                                        ColumnNum = Convert.ToString(getNum);
-                                        await Task.Delay(500);
-                                    }
-                                    await Task.Delay(500);
-                                    Star4 = "yellow";
-                                    Star5 = "yellow";
-                                    NavigatetoResult = new GRforGameViewModel();
-                                }
-                                else
-                                {
+                                    getNum = Convert.ToInt32(ColumnNum);
+                                    getNum++;
+                                    ColumnNum = Convert.ToString(getNum);
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    NavigatetoResult= new BRforGameViewModel();
+
+                                    if (temp[1] == Direction.Right)
+                                    {
+                                        getNum = Convert.ToInt32(ColumnNum);
+                                        getNum++;
+                                        ColumnNum = Convert.ToString(getNum);
+                                        await Task.Delay(500);
+                                        Star1 = "yellow";
+                                        Star2 = "yellow";
+
+                                        if (temp[2] == Direction.Right)
+                                        {
+                                            getNum = Convert.ToInt32(ColumnNum);
+                                            getNum++;
+                                            ColumnNum = Convert.ToString(getNum);
+                                            await Task.Delay(500);
+                                            Star4 = "yellow";
+                                            Star5 = "white";
+
+                                            if (temp[3] == Direction.Right)
+                                            {
+                                                getNum = Convert.ToInt32(ColumnNum);
+                                                getNum++;
+                                                ColumnNum = Convert.ToString(getNum);
+                                                await Task.Delay(500);
+
+                                                getNum = Convert.ToInt32(ColumnNum);
+                                                getNum++;
+                                                ColumnNum = Convert.ToString(getNum);
+                                                await Task.Delay(500);
+
+                                                Star4 = "yellow";
+                                                Star5 = "yellow";
+
+                                                result = true;
+                                            }
+                                            else
+                                                result = true;
+                                        }
+                                        else
+                                            result = false;
+                                    }
+                                    else
+                                        result = false;
                                 }
+                                else 
+                                    result = false;
+
+                                if (result)
+                                    NavigatetoResult = new GRforGameViewModel();
+                                else
+                                    NavigatetoResult= new BRforGameViewModel();
                             }
+
                             break;
                         case "2":
                             {
                                 string[] temp = new string[Game2Context.step];
                                 StepQueues.CopyTo(temp, StepQueues.Count - Game2Context.step);
-                                if (temp[0] == Direction.Right &&
-                                    temp[1] == Direction.TurnDown &&
-                                    temp[2] == Direction.TurnDR &&
-                                    temp[3] == Direction.Right &&
-                                    temp[4] == Direction.TurnUp &&
-                                    temp[5] == Direction.TurnUR)
-                                {
-                                    int getCNum = Convert.ToInt32(ColumnNum);
-                                    int getRNum = Convert.ToInt32(RowNum);
-                                    for (int i = 0; i < 7; i++)
-                                    {
-                                        switch (i)
-                                        {
-                                            case 0:
-                                                getCNum = 1;
-                                                getRNum = 0;
-                                                break;
-                                            case 1:
-                                                getCNum = 2;
-                                                getRNum = 0;
-                                                break;
-                                            case 2:
-                                                getCNum = 2;
-                                                getRNum = 1;
-                                                break;
-                                            case 3: 
-                                                getCNum = 3;
-                                                getRNum = 1;
-                                                break;
-                                            case 4:
-                                                getCNum = 4;
-                                                getRNum = 1;
-                                                break;
-                                            case 5:
-                                                getCNum = 4;
-                                                getRNum = 0;
-                                                break;
-                                            case 6:
-                                                getCNum = 5;
-                                                getRNum = 0;
-                                                break;
 
-                                        }
-                                        ColumnNum = Convert.ToString(getCNum);
-                                        RowNum = Convert.ToString(getRNum);
-                                        await Task.Delay(500);
-                                    }
-                                    await Task.Delay(500);
-                                    Star4 = "yellow";
-                                    Star5 = "yellow";
-                                    NavigatetoResult = new GRforGameViewModel();
-                                }
-                                else
+                                bool result;
+                                int getCNum = Convert.ToInt32(ColumnNum);
+                                int getRNum = Convert.ToInt32(RowNum);
+                                getCNum = 0;
+                                getRNum = 0;
+                                ColumnNum = Convert.ToString(getCNum);
+                                RowNum = Convert.ToString(getRNum);
+                                await Task.Delay(500);
+                                Star1 = "white";
+                                Star2 = "white";
+
+                                if (temp[0] == Direction.Right)
                                 {
+                                    getCNum = Convert.ToInt32(ColumnNum);
+                                    getRNum = Convert.ToInt32(RowNum);
+                                    getCNum = 1;
+                                    getRNum = 0;
+                                    ColumnNum = Convert.ToString(getCNum);
+                                    RowNum = Convert.ToString(getRNum);
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    NavigatetoResult = new BRforGameViewModel();
+
+                                    if (temp[1] == Direction.TurnDown)
+                                    {
+                                        getCNum = Convert.ToInt32(ColumnNum);
+                                        getCNum = Convert.ToInt32(RowNum);
+                                        getCNum = 2;
+                                        getRNum = 0;
+                                        ColumnNum = Convert.ToString(getCNum);
+                                        RowNum = Convert.ToString(getRNum);
+                                        await Task.Delay(500);
+                                        Star1 = "yellow";
+                                        Star2 = "yellow";
+
+                                        if (temp[2] == Direction.TurnDR)
+                                        {
+                                            getCNum = Convert.ToInt32(ColumnNum);
+                                            getCNum = Convert.ToInt32(RowNum);
+                                            getCNum = 2;
+                                            getRNum = 1;
+                                            ColumnNum = Convert.ToString(getCNum);
+                                            RowNum = Convert.ToString(getRNum);
+                                            await Task.Delay(500);
+                                            Star1 = "yellow";
+                                            Star2 = "yellow";
+
+                                            if (temp[3] == Direction.Right)
+                                            {
+                                                getCNum = Convert.ToInt32(ColumnNum);
+                                                getCNum = Convert.ToInt32(RowNum);
+                                                getCNum = 3;
+                                                getRNum = 1;
+                                                ColumnNum = Convert.ToString(getCNum);
+                                                RowNum = Convert.ToString(getRNum);
+                                                await Task.Delay(500);
+                                                Star4 = "white";
+                                                Star5 = "white";
+
+                                                if (temp[4] == Direction.TurnUp)
+                                                {
+                                                    getCNum = Convert.ToInt32(ColumnNum);
+                                                    getRNum = Convert.ToInt32(RowNum);
+                                                    getCNum = 4;
+                                                    getRNum = 1;
+                                                    ColumnNum = Convert.ToString(getCNum);
+                                                    RowNum = Convert.ToString(getRNum);
+                                                    await Task.Delay(500);
+                                                    Star4 = "yellow";
+                                                    Star5 = "white";
+
+                                                    if (temp[5] == Direction.TurnUR)
+                                                    {
+                                                        getCNum = Convert.ToInt32(ColumnNum);
+                                                        getCNum = Convert.ToInt32(RowNum);
+                                                        getCNum = 4;
+                                                        getRNum = 0;
+                                                        ColumnNum = Convert.ToString(getCNum);
+                                                        RowNum = Convert.ToString(getRNum);
+                                                        await Task.Delay(500);
+
+                                                        getCNum = Convert.ToInt32(ColumnNum);
+                                                        getCNum = Convert.ToInt32(RowNum);
+                                                        getCNum = 5;
+                                                        getRNum = 0;
+                                                        ColumnNum = Convert.ToString(getCNum);
+                                                        RowNum = Convert.ToString(getRNum);
+                                                        await Task.Delay(500);
+
+                                                        Star4 = "yellow";
+                                                        Star5 = "yellow";
+                                                        result = true;
+                                                    }
+                                                    else
+                                                        result = true;
+                                                }
+                                                else
+                                                    result = true;
+                                            }
+                                            else
+                                                result = false;
+                                        }
+                                        else
+                                            result = false;
+                                    }
+                                    else
+                                        result = false;
                                 }
+                                else 
+                                    result = false;
+              
+                                if (result)
+                                    NavigatetoResult = new GRforGameViewModel();
+                                else
+                                    NavigatetoResult = new BRforGameViewModel();
                             }
                             break;
                         case "3":
                             {
                                 string[] temp = new string[Game3Context.step];
                                 StepQueues.CopyTo(temp, StepQueues.Count - Game3Context.step);
-                                if (temp[0] == Direction.TurnDR &&
-                                    temp[1] == Direction.Right &&
-                                    temp[2] == Direction.TurnUp &&
-                                    temp[3] == Direction.TurnUR &&
-                                    temp[4] == Direction.Right &&
-                                    temp[5] == Direction.TurnDown &&
-                                    temp[6] == Direction.TurnDR)
+
+                                bool result;
+                                int getCNum = Convert.ToInt32(ColumnNum);
+                                int getRNum = Convert.ToInt32(RowNum);
+                                getCNum = 0;
+                                getRNum = 0;
+                                ColumnNum = Convert.ToString(getCNum);
+                                RowNum = Convert.ToString(getRNum);
+                                await Task.Delay(500);
+                                Star1 = "white";
+                                Star2 = "white";
+
+                                if (temp[0] == Direction.TurnDR)
                                 {
-                                    int getCNum = Convert.ToInt32(ColumnNum);
-                                    int getRNum = Convert.ToInt32(RowNum);
-                                    for (int i = 0; i < 8; i++)
-                                    {
-                                        switch (i)
-                                        {
-                                            case 0:
-                                                getCNum = 0;                                                      ;
-                                                getRNum = 1;
-                                                break;
-                                            case 1:
-                                                getCNum = 1;
-                                                getRNum = 1;
-                                                break;
-                                            case 2:
-                                                getCNum = 2;
-                                                getRNum = 1;
-                                                break;
-                                            case 3:
-                                                getCNum = 2;
-                                                getRNum = 0;
-                                                break;
-                                            case 4:
-                                                getCNum = 3;
-                                                getRNum = 0;
-                                                break;
-                                            case 5:
-                                                getCNum = 4;
-                                                getRNum = 0;
-                                                break;
-                                            case 6:
-                                                getCNum = 4;
-                                                getRNum = 1;
-                                                break;
-                                            case 7:
-                                                getCNum = 5;
-                                                getRNum = 1;
-                                                break;
-                                        }
-                                        ColumnNum = Convert.ToString(getCNum);
-                                        RowNum = Convert.ToString(getRNum);
-                                        await Task.Delay(500);
-                                    }
-                                    await Task.Delay(500);
-                                    Star4 = "yellow";
-                                    Star5 = "yellow";
-                                    NavigatetoResult = new GRforGameViewModel();
-                                }
-                                else
-                                {
+                                    getCNum = Convert.ToInt32(ColumnNum);
+                                    getRNum = Convert.ToInt32(RowNum);
+                                    getCNum = 0;
+                                    getRNum = 1;
+                                    ColumnNum = Convert.ToString(getCNum);
+                                    RowNum = Convert.ToString(getRNum);
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    NavigatetoResult = new BRforGameViewModel();
+
+                                    if (temp[1] == Direction.Right)
+                                    {
+                                        getCNum = Convert.ToInt32(ColumnNum);
+                                        getCNum = Convert.ToInt32(RowNum);
+                                        getCNum = 1;
+                                        getRNum = 1;
+                                        ColumnNum = Convert.ToString(getCNum);
+                                        RowNum = Convert.ToString(getRNum);
+                                        await Task.Delay(500);
+                                        Star1 = "yellow";
+                                        Star2 = "yellow";
+
+                                        if (temp[2] == Direction.TurnUp)
+                                        {
+                                            getCNum = Convert.ToInt32(ColumnNum);
+                                            getCNum = Convert.ToInt32(RowNum);
+                                            getCNum = 2;
+                                            getRNum = 1;
+                                            ColumnNum = Convert.ToString(getCNum);
+                                            RowNum = Convert.ToString(getRNum);
+                                            await Task.Delay(500);
+                                            Star1 = "yellow";
+                                            Star2 = "yellow";
+
+                                            if (temp[3] == Direction.TurnUR)
+                                            {
+                                                getCNum = Convert.ToInt32(ColumnNum);
+                                                getCNum = Convert.ToInt32(RowNum);
+                                                getCNum = 2;
+                                                getRNum = 0;
+                                                ColumnNum = Convert.ToString(getCNum);
+                                                RowNum = Convert.ToString(getRNum);
+                                                await Task.Delay(500);
+                                                Star4 = "white";
+                                                Star5 = "white";
+
+                                                if (temp[4] == Direction.Right)
+                                                {
+                                                    getCNum = Convert.ToInt32(ColumnNum);
+                                                    getRNum = Convert.ToInt32(RowNum);
+                                                    getCNum = 3;
+                                                    getRNum = 0;
+                                                    ColumnNum = Convert.ToString(getCNum);
+                                                    RowNum = Convert.ToString(getRNum);
+                                                    await Task.Delay(500);
+                                                    Star4 = "white";
+                                                    Star5 = "white";
+
+                                                    if (temp[5] == Direction.TurnDown)
+                                                    {
+                                                        getCNum = Convert.ToInt32(ColumnNum);
+                                                        getRNum = Convert.ToInt32(RowNum);
+                                                        getCNum = 4;
+                                                        getRNum = 0;
+                                                        ColumnNum = Convert.ToString(getCNum);
+                                                        RowNum = Convert.ToString(getRNum);
+                                                        await Task.Delay(500);
+                                                        Star4 = "yellow";
+                                                        Star5 = "white";
+
+                                                        if (temp[6] == Direction.TurnDR)
+                                                        {
+                                                            getCNum = Convert.ToInt32(ColumnNum);
+                                                            getCNum = Convert.ToInt32(RowNum);
+                                                            getCNum = 4;
+                                                            getRNum = 1;
+                                                            ColumnNum = Convert.ToString(getCNum);
+                                                            RowNum = Convert.ToString(getRNum);
+                                                            await Task.Delay(500);
+
+                                                            getCNum = Convert.ToInt32(ColumnNum);
+                                                            getCNum = Convert.ToInt32(RowNum);
+                                                            getCNum = 5;
+                                                            getRNum = 1;
+                                                            ColumnNum = Convert.ToString(getCNum);
+                                                            RowNum = Convert.ToString(getRNum);
+                                                            await Task.Delay(500);
+
+                                                            Star4 = "yellow";
+                                                            Star5 = "yellow";
+                                                            result = true;
+                                                        }
+                                                        else
+                                                            result = true;
+                                                    }
+                                                    else
+                                                        result = true;
+                                                }
+                                                else
+                                                    result = true;
+                                            }
+                                            else
+                                                result = false;
+                                        }
+                                        else
+                                            result = false;
+                                    }
+                                    else
+                                        result = false;
                                 }
+                                else 
+                                    result = false;
+
+                                if (result)
+                                    NavigatetoResult = new GRforGameViewModel();
+                                else
+                                    NavigatetoResult = new BRforGameViewModel();
                             }
                             break;
                     }
