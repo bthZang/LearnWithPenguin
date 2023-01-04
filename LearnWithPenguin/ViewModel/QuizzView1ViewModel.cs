@@ -258,7 +258,7 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-      
+
         public string ConcatTitle
         {
             get
@@ -394,79 +394,93 @@ namespace LearnWithPenguin.ViewModel
         }
         public bool GreenRed()
         {
-            switch (Number1)
+            switch (Number)
             {
 
                 case 1:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 3:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 6:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 8:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 11:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 15:
-                    Image = "/images/greenTick.png";
-                    break;
-                default:
-                    Image = "/images/redCross.png";
-                    break;
-            }
-            switch (Number2)
-            {
-                case 10:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 13:
-                    Image = "/images/greenTick.png";
-                    break;
-                default:
-                    Image = "/images/redCross.png";
+                    switch(Number1)
+                    {
+                        default:
+                            Image = "/images/greenTick.png";
+                            break;
+                    }    
 
                     break;
             }
-            switch (Number3)
-            {
-                case 2:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 4:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 7:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 12:
-                    Image = "/images/greenTick.png";
-                    break;
-                default:
-                    Image = "/images/redCross.png";
+            //switch (Number1)
+            //{
 
-                    break;
-            }
-            switch (Number4)
-            {
-                case 5:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 9:
-                    Image = "/images/greenTick.png";
-                    break;
-                case 14:
-                    Image = "/images/greenTick.png";
-                    break;
-                default:
-                    Image = "/images/redCross.png";
-                    break;
+            //    case 1:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 3:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 6:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 8:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 11:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 15:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    default:
+            //        Image = "/images/redCross.png";
+            //        break;
+            //}
+            //switch (Number2)
+            //{
+            //    case 10:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 13:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    default:
+            //        Image = "/images/redCross.png";
 
-            }
+            //        break;
+            //}
+            //switch (Number3)
+            //{
+            //    case 2:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 4:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 7:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 12:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    default:
+            //        Image = "/images/redCross.png";
+
+            //        break;
+            //}
+            //switch (Number4)
+            //{
+            //    case 5:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 9:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    case 14:
+            //        Image = "/images/greenTick.png";
+            //        break;
+            //    default:
+            //        Image = "/images/redCross.png";
+            //        break;
+
+            //}
+
 
             return true;
         }
@@ -740,6 +754,7 @@ namespace LearnWithPenguin.ViewModel
         public QuizzView1ViewModel()
         {
             this.Number = 1;
+
             this.Number1 = 1;
             this.Number2 = 2;
             this.Number3 = 3;
