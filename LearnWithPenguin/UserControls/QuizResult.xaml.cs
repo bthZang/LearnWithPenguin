@@ -25,7 +25,7 @@ namespace LearnWithPenguin.UserControls
             InitializeComponent();
         }
         public static readonly DependencyProperty NextProperty =
-          DependencyProperty.Register("NextLevel", typeof(ICommand), typeof(GoodResult), new UIPropertyMetadata());
+          DependencyProperty.Register("NextLevel", typeof(ICommand), typeof(QuizResult), new UIPropertyMetadata());
 
         public ICommand NextLevel
         {
