@@ -258,19 +258,7 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public string Image
-        {
-            get
-            {
-                return _image;
-            }
-            set
-            {
-                _image = value;
-              
-                OnPropertyChanged();
-            }
-        }
+      
         public string ConcatTitle
         {
             get
@@ -391,19 +379,19 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
+        public string Image
+        {
+            get
+            {
+                return _image;
+            }
+            set
+            {
+                _image = value;
 
-        //public string ConcatRedGreen
-        //{
-        //    get
-        //    {
-        //        return _image;
-        //    }
-        //    set
-        //    {
-        //        OnPropertyChanged();
-        //    }
-        //}
-
+                OnPropertyChanged();
+            }
+        }
         public bool GreenRed()
         {
             switch (Number1)
@@ -600,6 +588,7 @@ namespace LearnWithPenguin.ViewModel
                     Color2 = "transparent";
                     Color3 = "transparent";
                     Color4 = "transparent";
+                    Image = "";
                     break;
                 case 2:
                     Number1 = 8;
@@ -838,6 +827,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    GreenRed();
                     NavigatetoResult = new QuizResultViewModel();
                 });
             }
