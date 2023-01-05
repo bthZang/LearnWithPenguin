@@ -10,27 +10,27 @@ namespace LearnWithPenguin.ViewModel
 {
     public class BackViewModel : BaseViewModel
     {
-        private int _PositionNumber;
-        public int PositionNumber { get { return _PositionNumber; } set { _PositionNumber = value; OnPropertyChanged(); } }
-        public ICommand BackCommand { get; set; }
-        public ICommand ForwardCommand { get; set; }
+        //private int _PositionNumber;
+        //public int PositionNumber { get { return _PositionNumber; } set { _PositionNumber = value; OnPropertyChanged(); } }
+        //public ICommand BackCommand { get; set; }
+        //public ICommand ForwardCommand { get; set; }
 
-        public BackViewModel()
-        {
-            PositionNumber = 1;
+        //public BackViewModel()
+        //{
+        //    PositionNumber = 1;
 
-            BackCommand = new RelayCommand<System.Windows.Controls.UserControl>((p) => { 
-                if (PositionNumber == 1)
-                    return false;
-                return true;
-            }, 
+        //    BackCommand = new RelayCommand<System.Windows.Controls.UserControl>((p) => { 
+        //        if (PositionNumber == 1)
+        //            return false;
+        //        return true;
+        //    }, 
                 
-            (p) => {
-                PositionNumber--;
-            });
-            ForwardCommand = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => {
-                PositionNumber++;
-            });
-        }
+        //    (p) => {
+        //        PositionNumber--;
+        //    });
+        //    ForwardCommand = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => {
+        //        PositionNumber++;
+        //    });
+        //}
     }
 }

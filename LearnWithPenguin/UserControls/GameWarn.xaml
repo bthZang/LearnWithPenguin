@@ -9,10 +9,12 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1125"
-             Visibility="{Binding ViString, Mode=TwoWay, Source={StaticResource GameVM}, UpdateSourceTrigger=PropertyChanged}">
+             Visibility="{Binding ViString, Mode=TwoWay, Source={StaticResource GameVM}, UpdateSourceTrigger=PropertyChanged}"
+             >
 
     <Grid Background="#660C0C0C"
-          HorizontalAlignment="Stretch">
+          HorizontalAlignment="Stretch"
+           >
         <Border Background="White"
                 Width="600"
                 CornerRadius="30"

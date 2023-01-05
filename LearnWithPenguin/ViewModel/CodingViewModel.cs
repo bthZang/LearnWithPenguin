@@ -43,20 +43,10 @@ namespace LearnWithPenguin.ViewModel
 
         public CodingViewModel()
         {
-            ///
-            ///
-
-            
-            ///
-            ///
-
             PositionNumber = "1";
             GameView = @"/images/game1@3x.png";
 
-            ForwardCommand = new RelayCommand<object>((p) =>
-            {
-                return true;
-            }, (p) =>
+            ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 int getNum = Convert.ToInt32(PositionNumber);
                 if (getNum == 3)
@@ -82,10 +72,7 @@ namespace LearnWithPenguin.ViewModel
                 }
             });
 
-            BackwardCommand = new RelayCommand<object>((p) =>
-            {
-                return true;
-            }, (p) =>
+            BackwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 int getNum = Convert.ToInt32(PositionNumber);
                 if (getNum == 1)
@@ -110,7 +97,7 @@ namespace LearnWithPenguin.ViewModel
                 }
             });
 
-            ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
+            //ReviewTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) => { return true; }, (p) => { });
 
             //this.NavigatetoView = new GameViewModel();
             //PlayTransform = new RelayCommand<System.Windows.Controls.UserControl>((p) =>

@@ -9,7 +9,7 @@
       d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="800"
-      d:DesignWidth="1125"
+      d:DesignWidth="1200"
       DataContext="{StaticResource GameVM}"
       Title="GameView">
 
@@ -17,23 +17,39 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUser:Menu />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:BRforGameViewModel}">
+            <localUser:BRforGame DataContext="{StaticResource GameVM}"
+                                 NextGame="{Binding NextGame}"
+                                 ReplayGame="{Binding ReplayGame}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:GRforGameViewModel}">
+            <localUser:GRforGame DataContext="{StaticResource GameVM}"
+                                 NextGame="{Binding NextGame}"
+                                 ReplayGame="{Binding ReplayGame}"/>
+        </DataTemplate>
+
     </Page.Resources>
 
     <Grid Background="#A0C4FF">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource GameVM}"
+                        Content="{Binding NavigatetoResult}" />
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Grid>
+                <StackPanel>
                     <localUser:Icon Width="63.28"
                                     Height="63.28"
                                     Margin="28,35,15,0"
                                     DataContext="{StaticResource MainVM}"
                                     Command="{Binding ShowMenu}">
                     </localUser:Icon>
-                </Grid>
-                <Grid Width="908">
+                </StackPanel>
+                <StackPanel Width="987.44"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom">
@@ -84,11 +100,11 @@
                             <Image Source="/images/Forward.png" />
                         </Button>
                     </StackPanel>
-                </Grid>
-                <Grid Width="63.28"
+                </StackPanel>
+                <StackPanel Width="63.28"
                       Height="63.28"
                       Margin="28,35,15,0">
-                </Grid>
+                </StackPanel>
             </StackPanel>
             <StackPanel Margin="0, 30, 0, 0">
                 <Border Background="Beige"
@@ -100,7 +116,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                     <StackPanel Orientation="Vertical">
-                        <ContentControl Content="{Binding GameTurn}"
+                        <ContentControl Content="{Binding GameTurn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                                         DataContext="{StaticResource GameVM}">
                         </ContentControl>
                         <Border Background="#E7F7FD"
@@ -290,8 +306,7 @@
                                         Width="auto"
                                         Height="auto"
                                         BorderThickness="0"
-                                        Command="{Binding RunGameCommand}"
-                                        >
+                                        Command="{Binding RunGameCommand}">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -336,5 +351,10 @@
             </StackPanel>
         </StackPanel>
         <localUser:GameWarn />
+        <ContentControl Height="800"
+                        Width="1500"
+                        Content="{Binding GameResult}"
+                        DataContext="{StaticResource GameVM}">
+        </ContentControl>
     </Grid>
 </Page>

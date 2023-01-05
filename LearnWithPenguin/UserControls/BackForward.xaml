@@ -17,7 +17,7 @@
 
         <Button 
             x:Name="Back" 
-            Command="{Binding BackCommand}"
+            Command="{Binding BackwardCommand}"
             CommandParameter="{Binding ElementName=BacknForward}"
             Width="20"
             Background="Transparent"

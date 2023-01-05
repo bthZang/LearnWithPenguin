@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{510195DB-F127-4AB3-94E0-4A6ADC8BA248}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>LearnWithPenguin</RootNamespace>
     <AssemblyName>LearnWithPenguin</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -75,11 +75,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BRforGame.xaml.cs">
+      <DependentUpon>BRforGame.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Game1.xaml.cs">
       <DependentUpon>Game1.xaml</DependentUpon>
@@ -96,6 +104,9 @@
     <Compile Include="UserControls\GoodResult.xaml.cs">
       <DependentUpon>GoodResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GRforGame.xaml.cs">
+      <DependentUpon>GRforGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeIcon.xaml.cs">
       <DependentUpon>HomeIcon.xaml</DependentUpon>
     </Compile>
@@ -110,6 +121,9 @@
     </Compile>
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NoIcon.xaml.cs">
+      <DependentUpon>NoIcon.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ReloadGame.xaml.cs">
       <DependentUpon>ReloadGame.xaml</DependentUpon>
@@ -132,8 +146,12 @@
     <Compile Include="UserControls\Warning.xaml.cs">
       <DependentUpon>Warning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\YesIcon.xaml.cs">
+      <DependentUpon>YesIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
+    <Compile Include="ViewModel\BRforGameViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
@@ -141,9 +159,11 @@
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\GameWarnViewModel.cs" />
     <Compile Include="ViewModel\GoodResultViewModel.cs" />
+    <Compile Include="ViewModel\GRforGameViewModel.cs" />
     <Compile Include="ViewModel\HomeIconViewModel.cs" />
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\NoViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
@@ -157,6 +177,7 @@
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="ViewModel\WriteViewModel.cs" />
+    <Compile Include="ViewModel\YesViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
     </Compile>
@@ -195,6 +216,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\BRforGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Game1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -215,6 +240,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\GRforGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\HomeIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,6 +260,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\NoIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\ReloadGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -240,6 +273,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Warning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\YesIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
