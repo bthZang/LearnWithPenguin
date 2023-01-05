@@ -134,7 +134,7 @@
                            Height="74"
                            FontSize="46.8"
                            FontWeight="Bold"
-                           Text="Con ong"
+                           Text="A"
                            FontStyle="Normal"
                            Style="{StaticResource Baloo2-Bold}"
                            TextAlignment="Center"
@@ -200,11 +200,10 @@
                 <Button x:Name="KidRead"
                         Height="99.05"
                         Width="99.05"
-                        Margin="700 527 320 70"
+                        Margin="320 527 320 70"
                         BorderThickness="0"
                         Background="Transparent"
                         Click="KidRead_Click"
-                        Content="Talk"
                         FontSize="40">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -246,6 +245,64 @@
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
+                    <Image Source="/View/speakButton.jpg"
+                           Height="70"
+                           Width="70">
+                    </Image>
+                </Button>
+
+                <Button x:Name="check_rs"
+                        Height="99.05"
+                        Width="99.05"
+                        Margin="700 527 320 70"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Click="Check_Click"
+                        FontSize="40">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Border"
+                                    BorderThickness="0"
+                                    Width="99.05"
+                                    Height="99.05"
+                                    CornerRadius="90"
+                                    Background="White"
+                                    BorderBrush="transparent">
+
+                                <ContentPresenter Margin="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsPressed"
+                                         Value="true">
+                                    <Setter TargetName="Border"
+                                            Property="Background"
+                                            Value="White" />
+                                    <Setter TargetName="Border"
+                                            Property="BorderBrush"
+                                            Value="White" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="/images/tickCheck.jpg"
+                           Height="70"
+                           Width="70">
+                    </Image>
                 </Button>
                 <DockPanel>
                     <Grid HorizontalAlignment="Left">

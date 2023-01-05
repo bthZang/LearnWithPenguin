@@ -25,20 +25,28 @@ namespace LearnWithPenguin.View
     /// <summary>
     /// Interaction logic for ReadView.xaml
     /// </summary>
+    
     public partial class ReadView : System.Windows.Controls.Page
     {
+        public int currentLevel = 1;
+        public string read_Result = "";
         public ReadView()
         {
             InitializeComponent();
             this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+            loadStartData();
         }
-        public int currentLevel = 1;
-        public int currentIndex = 0;
-        private Storyboard myStoryboard;
-
+        void loadStartData ()
+        {
+            //load start img
+            string pathImage = "D:\\School\\testWPFfunc\\FullImg\\1.png";
+            Uri uri = new Uri(pathImage);
+            ImgChange.Source = new BitmapImage(uri);
+        }
+        
         private void NextLesson(object sender, RoutedEventArgs e)
         {
-            if (currentLevel == 50)
+            if (currentLevel == 26)
             {
                 currentLevel = 1;
             }
@@ -50,12 +58,10 @@ namespace LearnWithPenguin.View
             lessonName.Text = "Bài " + currentLevel;
 
             //picture name
-            string pathText = "D:\\School\\testWPFfunc\\FullText\\" + currentLevel + ".txt";
-            string text = System.IO.File.ReadAllText(pathText);
-            picName.Text = text;
+            picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
 
             //image
-            string pathImage = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".jpeg";
+            string pathImage = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".png";
             Uri uri = new Uri(pathImage);
             ImgChange.Source = new BitmapImage(uri);
 
@@ -65,7 +71,7 @@ namespace LearnWithPenguin.View
         {
             if (currentLevel == 1)
             {
-                currentLevel = 50;
+                currentLevel = 26;
             }
             else
             {
@@ -75,12 +81,10 @@ namespace LearnWithPenguin.View
             lessonName.Text = "Bai " + currentLevel;
 
             //picture name
-            string pathText = "D:\\School\\testWPFfunc\\FullText\\" + currentLevel + ".txt";
-            string text = System.IO.File.ReadAllText(pathText);
-            picName.Text = text;
+            picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
 
             //picture
-            string path = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".jpeg";
+            string path = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".png";
             Uri uri = new Uri(path);
             ImgChange.Source = new BitmapImage(uri);
         }
@@ -122,7 +126,7 @@ namespace LearnWithPenguin.View
                                       where o.Culture.Equals(Thread.CurrentThread.CurrentCulture)
                                       select o).FirstOrDefault();
             srecog = new SpeechRecognitionEngine(selectedRecognizer);
-            srecog.SpeechHypothesized += new EventHandler<SpeechHypothesizedEventArgs>(recognizer_SpeechHypothesized);
+            srecog.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
             synth = new SpeechSynthesizer();
         }
 
@@ -179,6 +183,7 @@ namespace LearnWithPenguin.View
             {
                 case State.Off:
                     RecogState = State.Accepting;
+                    read_Result = "";
                     KidRead.Content = "Stop";
                     srecog.RecognizeAsync(RecognizeMode.Multiple);
                     break;
@@ -191,33 +196,18 @@ namespace LearnWithPenguin.View
             }
         }
         // recognize words
-        private int Hypothesized = 0;
-        private void recognizer_SpeechHypothesized(object sender, SpeechHypothesizedEventArgs e)
-        {
-            Hypothesized++;
-            var myDoubleAnimation = new DoubleAnimation();
-            myDoubleAnimation.From = 1.0;
-            myDoubleAnimation.To = 0.0;
-            myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
-            myStoryboard = new Storyboard();
-            myStoryboard.Children.Add(myDoubleAnimation);
-            Storyboard.SetTargetName(myDoubleAnimation, picName.Text);
-            Storyboard.SetTargetProperty(myDoubleAnimation, new PropertyPath(picName.Text));
-            picName.Loaded += new RoutedEventHandler(picNameloaded);
-            
-
-        }
-        private void picNameloaded(object sender, RoutedEventArgs e)
-        {
-            myStoryboard.Begin(this);
-        }
         private void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             
             if (RecogState == State.Off)
                 return;
             float accuracy = (float)e.Result.Confidence;
-            string phrase = e.Result.Text;
+            read_Result = e.Result.Text;
+        }
+
+        private void Check_Click (object sender, RoutedEventArgs e)
+        {
+            
         }
 
 
