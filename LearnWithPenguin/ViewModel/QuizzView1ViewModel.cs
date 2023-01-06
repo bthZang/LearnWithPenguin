@@ -28,7 +28,11 @@ namespace LearnWithPenguin.ViewModel
         protected string _nextLevel;
         protected string _backLevel;
 
-        protected string _image;
+
+        protected string _image1;
+        protected string _image2;
+        protected string _image3;
+        protected string _image4;
 
         public MediaPlayer _sound = new MediaPlayer();
 
@@ -270,6 +274,7 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
+
         public string ConcatQuestion
         {
             get
@@ -281,6 +286,7 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
+
         public string ConcatSource1
         {
             get
@@ -293,7 +299,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatSource2
         {
             get
@@ -306,7 +311,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatSource3
         {
             get
@@ -318,7 +322,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatSource4
         {
             get
@@ -342,7 +345,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatColor2
         {
             get
@@ -355,7 +357,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatColor3
         {
             get
@@ -367,7 +368,6 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public string ConcatColor4
         {
             get
@@ -379,34 +379,272 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-        public string Image
+
+        public string Res1
         {
             get
             {
-                return _image;
+                return _image1;
             }
             set
             {
-                _image = value;
+                _image1 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+
+                ConcatRes1 = "";
+                ConcatRes2 = "";
+                ConcatRes3 = "";
+                ConcatRes4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public string Res2
+        {
+            get
+            {
+                return _image2;
+            }
+            set
+            {
+                _image2 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+
+                ConcatRes1 = "";
+                ConcatRes2 = "";
+                ConcatRes3 = "";
+                ConcatRes4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public string Res3
+        {
+            get
+            {
+                return _image3;
+            }
+            set
+            {
+                _image3 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                ConcatRes1 = "";
+                ConcatRes2 = "";
+                ConcatRes3 = "";
+                ConcatRes4 = "";
+                OnPropertyChanged();
+            }
+        }
+        public string Res4
+        {
+            get
+            {
+                return _image4;
+            }
+            set
+            {
+                _image4 = value;
+                ConcatTitle = "";
+                ConcatQuestion = "";
+                ConcatSource1 = "";
+                ConcatSource2 = "";
+                ConcatSource3 = "";
+                ConcatSource4 = "";
+
+                ConcatColor1 = "";
+                ConcatColor2 = "";
+                ConcatColor3 = "";
+                ConcatColor4 = "";
+                ConcatRes1 = "";
+                ConcatRes2 = "";
+                ConcatRes3 = "";
+                ConcatRes4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConcatRes1
+        {
+            get
+            {
+                return _image1;
+            }
+            set
+            {
+                _image1 = value;
 
                 OnPropertyChanged();
             }
         }
+        public string ConcatRes2
+        {
+            get
+            {
+                return _image2;
+            }
+            set
+            {
+                _image2 = value;
+
+                OnPropertyChanged();
+            }
+        }
+        public string ConcatRes3
+        {
+            get
+            {
+                return _image3;
+            }
+            set
+            {
+                _image3 = value;
+
+                OnPropertyChanged();
+            }
+        }
+        public string ConcatRes4
+        {
+            get
+            {
+                return _image4;
+            }
+            set
+            {
+                _image4 = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+
         public bool GreenRed()
         {
             switch (Number)
             {
-
                 case 1:
-                    switch(Number1)
-                    {
-                        default:
-                            Image = "/images/greenTick.png";
-                            break;
-                    }    
+                    Res1 = "/images/greenTick.png";
+                    Res2 = "/images/redCross.png";
+                    Res3 = "/images/redCross.png";
+                    Res4 = "/images/redCross.png";
 
                     break;
+                case 2:
+                    Res1 = "/images/redCross.png";
+                    Res2 = "/images/redCross.png";
+                    Res3 = "/images/greenTick.png";
+                    Res4 = "/images/redCross.png";
+                    break;
+                //case 3:
+                //    Color1 = "green";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 4:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "green";
+                //    Color4 = "red";
+                //    break;
+                //case 5:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "green";
+                //    break;
+                //case 6:
+                //    Color1 = "green";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 7:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "green";
+                //    Color4 = "red";
+                //    break;
+                //case 8:
+                //    Color1 = "green";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 9:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "green";
+                //    break;
+                //case 10:
+                //    Color1 = "red";
+                //    Color2 = "green";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 11:
+                //    Color1 = "green";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 12:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "green";
+                //    Color4 = "red";
+                //    break;
+                //case 13:
+                //    Color1 = "red";
+                //    Color2 = "green";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                //case 14:
+                //    Color1 = "red";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "green";
+                //    break;
+                //case 15:
+                //    Color1 = "green";
+                //    Color2 = "red";
+                //    Color3 = "red";
+                //    Color4 = "red";
+                //    break;
+                default:
+                    break;
             }
+
+            return true;
             //switch (Number1)
             //{
 
@@ -482,7 +720,6 @@ namespace LearnWithPenguin.ViewModel
             //}
 
 
-            return true;
         }
 
 
@@ -602,7 +839,7 @@ namespace LearnWithPenguin.ViewModel
                     Color2 = "transparent";
                     Color3 = "transparent";
                     Color4 = "transparent";
-                    Image = "";
+                    Res1 = "/images/greenTick.png";
                     break;
                 case 2:
                     Number1 = 8;
@@ -843,7 +1080,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     GreenRed();
-                    NavigatetoResult = new QuizResultViewModel();
+                    NavigatetoResult = new GoodQuizResultViewModel();
                 });
             }
         }

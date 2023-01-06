@@ -123,7 +123,7 @@
         </Button>
 
 
-        <Image          Source="{Binding Image}"
+        <Image          Source="/images/greenTick.jpg"
                         DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"

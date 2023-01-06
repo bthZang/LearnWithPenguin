@@ -6,18 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnWithPenguin.ViewModel
 {
-    public class QuizResultViewModel : BaseViewModel
+    internal class BadQuizResultViewModel
     {
-       
-
-        public QuizResultViewModel()
-        {
-            
-        }
-
-       
-
-
     }
-
 }

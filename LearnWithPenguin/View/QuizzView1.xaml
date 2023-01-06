@@ -22,7 +22,11 @@
         <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
             <localUC:Back></localUC:Back>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:QuizResultViewModel}">
+        <DataTemplate DataType="{x:Type viewmodel:GoodQuizResultViewModel}">
+            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}"
+                                NextLevel="{Binding OnclickHandleNextLevel}" />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:BadQuizResultViewModel}">
             <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}"
                                 NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
@@ -172,7 +176,12 @@
                                     Value="13 13 13 13" />
                         </Style>
                     </Button.Resources>
-
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <Image Name="ans2Image"
                            Source="{Binding ConcatSource2}"
                            DataContext="{StaticResource QuizzView1VM}"
@@ -207,7 +216,12 @@
                                     Value="13 13 13 13" />
                         </Style>
                     </Button.Resources>
-
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <Image Name="ans3Image"
                            Source="{Binding ConcatSource3}"
                            DataContext="{StaticResource QuizzView1VM}"
@@ -237,7 +251,12 @@
                                     Value="13 13 13 13" />
                         </Style>
                     </Button.Resources>
-
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <Image Name="ans4Image"
                            Source="{Binding ConcatSource4}"
                            DataContext="{StaticResource QuizzView1VM}"
