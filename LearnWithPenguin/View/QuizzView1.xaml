@@ -23,11 +23,11 @@
             <localUC:Back></localUC:Back>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GoodQuizResultViewModel}">
-            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}"
+            <localUC:GoodQuizResult DataContext="{StaticResource QuizzView1VM}"
                                 NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:BadQuizResultViewModel}">
-            <localUC:QuizResult DataContext="{StaticResource QuizzView1VM}"
+            <localUC:BadQuizResult DataContext="{StaticResource QuizzView1VM}"
                                 NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
 
@@ -39,7 +39,10 @@
                         Content="{Binding Menu}" />
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource QuizzView1VM}"
-                        Content="{Binding NavigatetoResult}" />
+                        Content="{Binding NavigatetoGoodResult}" />
+        <ContentControl Panel.ZIndex="9999"
+                        DataContext="{StaticResource QuizzView1VM}"
+                        Content="{Binding NavigatetoBadResult}" />
 
 
         <DockPanel Panel.ZIndex="8000">
@@ -136,7 +139,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult1}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Button.Resources>
@@ -179,7 +182,6 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans2Image"
@@ -219,7 +221,6 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans3Image"
@@ -254,7 +255,6 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans4Image"

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="LearnWithPenguin.UserControls.QuizResult"
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.GoodQuizResult"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -19,7 +19,7 @@
         <Button BorderThickness="0"
                 Background="Transparent"
                 DataContext="{StaticResource QuizzView1VM}"
-                Command="{Binding HideResult}"
+                Command="{Binding HideGoodResult}"
                 Width="1125"
                 Height="800">
             <Button.Template>
@@ -124,7 +124,6 @@
 
 
         <Image          Source="/images/greenTick.jpg"
-                        DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"
                         Margin="346,291,569,291"></Image>

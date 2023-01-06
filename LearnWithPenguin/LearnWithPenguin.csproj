@@ -232,7 +232,6 @@
     <Compile Include="ViewModel\QuizQuestionAsideViewModel.cs" />
     <Compile Include="ViewModel\GoodQuizResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
-    <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />

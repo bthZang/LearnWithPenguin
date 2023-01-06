@@ -1058,39 +1058,114 @@ namespace LearnWithPenguin.ViewModel
 
 
 
-        protected BaseViewModel _navigatetoResult = null;
+        protected BaseViewModel _navigatetoGoodResult = null;
+        protected BaseViewModel _navigatetoBadResult = null;
 
-        public BaseViewModel NavigatetoResult
+        public BaseViewModel NavigatetoGoodResult
         {
             get
             {
-                return _navigatetoResult;
+                return _navigatetoGoodResult;
             }
             set
             {
-                _navigatetoResult = value;
+                _navigatetoGoodResult = value;
+                OnPropertyChanged();
+            }
+        }
+        public BaseViewModel NavigatetoBadResult
+        {
+            get
+            {
+                return _navigatetoBadResult;
+            }
+            set
+            {
+                _navigatetoBadResult = value;
                 OnPropertyChanged();
             }
         }
 
-        public ICommand ShowResult
+        
+        public ICommand ShowResult1
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    GreenRed();
-                    NavigatetoResult = new GoodQuizResultViewModel();
+                    switch (Number)
+                    {
+                        case 1:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 2:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 3:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 4:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 5:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 6:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 7:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 8:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 9:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 10:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 11:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 12:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 13:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 14:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 15:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        default:
+                            break;
+                    }
                 });
             }
+            set { }
         }
-        public ICommand HideResult
+        public ICommand HideGoodResult
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoResult = null;
+                    NavigatetoGoodResult = null;
+                });
+            }
+
+            set { }
+        }
+        public ICommand HideBadResult
+        {
+            get
+             {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoBadResult = null;
                 });
             }
 

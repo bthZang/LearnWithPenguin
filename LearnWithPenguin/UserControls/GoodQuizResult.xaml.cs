@@ -18,14 +18,14 @@ namespace LearnWithPenguin.UserControls
     /// <summary>
     /// Interaction logic for QuizResult.xaml
     /// </summary>
-    public partial class QuizResult : System.Windows.Controls.UserControl
+    public partial class GoodQuizResult : System.Windows.Controls.UserControl
     {
-        public QuizResult()
+        public GoodQuizResult()
         {
             InitializeComponent();
         }
         public static readonly DependencyProperty NextProperty =
-          DependencyProperty.Register("NextLevel", typeof(ICommand), typeof(QuizResult), new UIPropertyMetadata());
+          DependencyProperty.Register("NextLevel", typeof(ICommand), typeof(GoodQuizResult), new UIPropertyMetadata());
 
         public ICommand NextLevel
         {

@@ -19,7 +19,7 @@
         <Button BorderThickness="0"
                 Background="Transparent"
                 DataContext="{StaticResource QuizzView1VM}"
-                Command="{Binding HideResult}"
+                Command="{Binding HideBadResult}"
                 Width="1125"
                 Height="800">
             <Button.Template>
@@ -124,7 +124,6 @@
 
 
         <Image          Source="/images/redCross.jpg"
-                        DataContext="{StaticResource QuizzView1VM}"
                         Width="210.05"
                         Height="217.77"
                         Margin="346,291,569,291"></Image>
