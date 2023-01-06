@@ -1058,34 +1058,19 @@ namespace LearnWithPenguin.ViewModel
 
 
 
-        protected BaseViewModel _navigatetoGoodResult = null;
-        protected BaseViewModel _navigatetoBadResult = null;
-
-        public BaseViewModel NavigatetoGoodResult
+        protected BaseViewModel _navigatetoResult = null;
+        public BaseViewModel NavigatetoResult
         {
             get
             {
-                return _navigatetoGoodResult;
+                return _navigatetoResult;
             }
             set
             {
-                _navigatetoGoodResult = value;
+                _navigatetoResult = value;
                 OnPropertyChanged();
             }
         }
-        public BaseViewModel NavigatetoBadResult
-        {
-            get
-            {
-                return _navigatetoBadResult;
-            }
-            set
-            {
-                _navigatetoBadResult = value;
-                OnPropertyChanged();
-            }
-        }
-
         
         public ICommand ShowResult1
         {
@@ -1096,49 +1081,49 @@ namespace LearnWithPenguin.ViewModel
                     switch (Number)
                     {
                         case 1:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 2:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 3:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 4:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 5:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 6:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 7:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 8:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 9:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 10:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 11:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 12:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 13:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 14:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         default:
                             break;
@@ -1156,49 +1141,49 @@ namespace LearnWithPenguin.ViewModel
                     switch (Number)
                     {
                         case 1:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 2:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 3:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 4:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 5:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 6:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 7:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 8:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 9:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 10:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 11:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 12:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 13:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 14:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         default:
                             break;
@@ -1216,49 +1201,49 @@ namespace LearnWithPenguin.ViewModel
                     switch (Number)
                     {
                         case 1:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 2:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 3:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 4:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 5:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 6:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 7:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 8:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 9:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 10:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 11:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 12:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 13:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 14:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         default:
                             break;
@@ -1277,49 +1262,49 @@ namespace LearnWithPenguin.ViewModel
                     switch (Number)
                     {
                         case 1:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 2:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 3:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 4:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 5:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 6:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 7:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 8:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 9:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 10:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 11:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 12:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 13:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 14:
-                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         default:
                             break;
@@ -1330,30 +1315,19 @@ namespace LearnWithPenguin.ViewModel
         }
 
 
-        public ICommand HideGoodResult
+        public ICommand HideResult
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoGoodResult = null;
+                    NavigatetoResult = null;
                 });
             }
 
             set { }
         }
-        public ICommand HideBadResult
-        {
-            get
-             {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    NavigatetoBadResult = null;
-                });
-            }
-
-            set { }
-        }
+      
         public ICommand CheckAnswer
         {
             get

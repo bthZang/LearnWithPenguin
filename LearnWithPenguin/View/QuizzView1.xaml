@@ -34,18 +34,14 @@
     </Page.Resources>
 
     <StackPanel Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="99900"
+        <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource QuizzView1VM}"
-                        Content="{Binding NavigatetoGoodResult}" />
-        <ContentControl Panel.ZIndex="9999"
-                        DataContext="{StaticResource QuizzView1VM}"
-                        Content="{Binding NavigatetoBadResult}" />
+                        Content="{Binding NavigatetoResult}" />
 
-
-        <DockPanel Panel.ZIndex="8000">
+        <DockPanel DataContext="{StaticResource QuizzView1VM}">
             <Grid>
                 <localUC:Icon Width="63.28"
                               Height="63.28"

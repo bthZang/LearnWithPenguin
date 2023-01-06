@@ -8,9 +8,9 @@
              d:DesignHeight="800"
              d:DesignWidth="1125">
     <Grid Margin="0 0 0 0">
-        
-        <Border Width="599.27"
-                Height="395.39"
+
+        <Border Width="490"
+                Height="260"
                 CornerRadius="50.24"
                 Background="White">
            
@@ -19,7 +19,7 @@
         <Button BorderThickness="0"
                 Background="Transparent"
                 DataContext="{StaticResource QuizzView1VM}"
-                Command="{Binding HideGoodResult}"
+                Command="{Binding HideResult}"
                 Width="1125"
                 Height="800">
             <Button.Template>
@@ -65,7 +65,7 @@
 
         <Button Width="180"
                 Height="70"
-                Margin="420 0 0 0"
+                Margin="310 0 0 0"
                 Command="{Binding NextLevel, RelativeSource={RelativeSource AncestorType=UserControl}}">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

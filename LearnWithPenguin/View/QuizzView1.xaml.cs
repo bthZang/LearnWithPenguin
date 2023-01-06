@@ -35,8 +35,7 @@ namespace LearnWithPenguin.View
                 {
                     viewmodel.Number += 1;
                     viewmodel.Question();
-                    viewmodel.NavigatetoGoodResult = null;
-                    viewmodel.NavigatetoBadResult = null;
+                    viewmodel.NavigatetoResult = null;
                 }
             });
 
@@ -46,8 +45,7 @@ namespace LearnWithPenguin.View
                 {
                     viewmodel.Number -= 1;
                     viewmodel.Question();
-                    viewmodel.NavigatetoGoodResult = null;
-                    viewmodel.NavigatetoBadResult = null;
+                    viewmodel.NavigatetoResult = null;
                 }
             });
             NextQuestion();
