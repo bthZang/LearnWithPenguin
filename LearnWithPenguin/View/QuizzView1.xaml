@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:local="clr-namespace:LearnWithPenguin.View"
       xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
@@ -122,11 +123,18 @@
                         Height="190"
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
+                        
                         BorderThickness="0"
                         Click="checkAnswer"
                         Tag="0"
                         IsEnabled="True">
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="Border.CornerRadius"
