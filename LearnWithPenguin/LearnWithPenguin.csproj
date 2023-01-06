@@ -730,9 +730,6 @@
     </Content>
     <Resource Include="View\1.jpg" />
     <Resource Include="images\Quiz\1.jpg" />
-    <Resource Include="images\Quiz\10.jpg" />
-    <Resource Include="images\Quiz\11.jpg" />
-    <Resource Include="images\Quiz\12.jpg" />
     <Resource Include="images\Quiz\13.jpg" />
     <Resource Include="images\Quiz\14.jpg" />
     <Resource Include="images\Quiz\15.jpg" />
@@ -768,11 +765,10 @@
     <Resource Include="images\Quiz\46.jpg" />
     <Resource Include="images\Quiz\47.jpg" />
     <Resource Include="images\Quiz\48.jpg" />
-    <Resource Include="images\Quiz\5.jpg" />
-    <Resource Include="images\Quiz\6.jpg" />
-    <Resource Include="images\Quiz\7.jpg" />
-    <Resource Include="images\Quiz\8.jpg" />
     <Resource Include="images\Quiz\9.jpg" />
+    <Resource Include="images\Quiz\10.jpg" />
+    <Resource Include="images\Quiz\11.jpg" />
+    <Resource Include="images\Quiz\12.jpg" />
     <Content Include="images\Question\10.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -832,6 +828,10 @@
     <Resource Include="images\Quiz\58.jpg" />
     <Resource Include="images\Quiz\59.jpg" />
     <Resource Include="images\Quiz\60.jpg" />
+    <Resource Include="images\Quiz\5.jpg" />
+    <Resource Include="images\Quiz\6.jpg" />
+    <Resource Include="images\Quiz\7.jpg" />
+    <Resource Include="images\Quiz\8.jpg" />
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quizz.edmx</DependentUpon>
