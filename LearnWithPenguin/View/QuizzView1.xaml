@@ -182,6 +182,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult2}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans2Image"
@@ -221,6 +222,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult3}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans3Image"
@@ -255,6 +257,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                            <i:InvokeCommandAction Command="{Binding ShowResult4}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <Image Name="ans4Image"

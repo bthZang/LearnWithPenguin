@@ -1147,6 +1147,189 @@ namespace LearnWithPenguin.ViewModel
             }
             set { }
         }
+        public ICommand ShowResult2
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    switch (Number)
+                    {
+                        case 1:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 2:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 3:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 4:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 5:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 6:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 7:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 8:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 9:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 10:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 11:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 12:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 13:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 14:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 15:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            }
+            set { }
+        }
+        public ICommand ShowResult3
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    switch (Number)
+                    {
+                        case 1:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 2:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 3:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 4:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 5:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 6:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 7:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 8:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 9:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 10:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 11:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 12:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 13:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 14:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 15:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            }
+            set { }
+        }
+     
+        public ICommand ShowResult4
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    switch (Number)
+                    {
+                        case 1:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 2:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 3:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 4:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 5:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 6:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 7:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 8:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 9:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 10:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 11:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 12:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 13:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        case 14:
+                            NavigatetoGoodResult = new GoodQuizResultViewModel();
+                            break;
+                        case 15:
+                            NavigatetoBadResult = new BadQuizResultViewModel();
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            }
+            set { }
+        }
+
+
         public ICommand HideGoodResult
         {
             get
