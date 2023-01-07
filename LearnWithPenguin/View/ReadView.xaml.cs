@@ -19,6 +19,7 @@ using System.Speech.Recognition;
 using System.Threading;
 using System.Windows.Media.Animation;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace LearnWithPenguin.View
 {
@@ -64,7 +65,9 @@ namespace LearnWithPenguin.View
             string pathImage = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".png";
             Uri uri = new Uri(pathImage);
             ImgChange.Source = new BitmapImage(uri);
-
+            //close bad and good
+            goodResult.Visibility = Visibility.Collapsed;
+            badResult.Visibility = Visibility.Collapsed;
         }
 
         private void PrevLesson(object sender, RoutedEventArgs e)
@@ -191,7 +194,6 @@ namespace LearnWithPenguin.View
                     RecogState = State.Off;
                     KidRead.Content = "Start";
                     srecog.RecognizeAsyncStop();
-                    picName.Foreground = System.Windows.Media.Brushes.White;
                     break;
             }
         }
@@ -201,13 +203,28 @@ namespace LearnWithPenguin.View
             
             if (RecogState == State.Off)
                 return;
+            picName.Foreground = System.Windows.Media.Brushes.Red;
             float accuracy = (float)e.Result.Confidence;
             read_Result = e.Result.Text;
         }
 
+        private void stayStage (object sender, RoutedEventArgs e)
+        {
+            goodResult.Visibility = Visibility.Collapsed;
+            badResult.Visibility = Visibility.Collapsed;
+
+        }
+
         private void Check_Click (object sender, RoutedEventArgs e)
         {
-            
+            if (read_Result == picName.Text)
+            {
+                goodResult.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                badResult.Visibility = Visibility.Visible;
+            }
         }
 
 
