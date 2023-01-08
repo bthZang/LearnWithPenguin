@@ -20,6 +20,9 @@ using System.Threading;
 using System.Windows.Media.Animation;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+using System.Security.Policy;
 
 namespace LearnWithPenguin.View
 {
@@ -40,8 +43,8 @@ namespace LearnWithPenguin.View
         void loadStartData ()
         {
             //load start img
-            string pathImage = "D:\\School\\testWPFfunc\\FullImg\\1.png";
-            Uri uri = new Uri(pathImage);
+            string pathImage = "/TapDoc/img/1.png";
+            Uri uri = new Uri(pathImage, UriKind.Relative);
             ImgChange.Source = new BitmapImage(uri);
         }
         
@@ -62,12 +65,15 @@ namespace LearnWithPenguin.View
             picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
 
             //image
-            string pathImage = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".png";
-            Uri uri = new Uri(pathImage);
+            string pathImage = "/TapDoc/img/" + currentLevel + ".png";
+            Uri uri = new Uri(pathImage, UriKind.Relative);
             ImgChange.Source = new BitmapImage(uri);
             //close bad and good
             goodResult.Visibility = Visibility.Collapsed;
             badResult.Visibility = Visibility.Collapsed;
+
+            // set color
+            picName.Foreground = System.Windows.Media.Brushes.White;
         }
 
         private void PrevLesson(object sender, RoutedEventArgs e)
@@ -87,19 +93,24 @@ namespace LearnWithPenguin.View
             picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
 
             //picture
-            string path = "D:\\School\\testWPFfunc\\FullImg\\" + currentLevel + ".png";
-            Uri uri = new Uri(path);
+            string path = "/TapDoc/img/" + currentLevel + ".png";
+            Uri uri = new Uri(path, UriKind.Relative);
             ImgChange.Source = new BitmapImage(uri);
+
+            //set color
+            picName.Foreground = System.Windows.Media.Brushes.White;
         }
 
         // example read button
 
         private void ReadText(object sender, RoutedEventArgs e)
         {
-            string path = "D:\\School\\testWPFfunc\\FullRecord\\" + currentLevel + ".wav";
-            SoundPlayer player = new SoundPlayer(path);
-            player.Load();
-            player.Play();
+            MediaPlayer mplayer = new MediaPlayer();
+            string path = "./TapDoc/voicemp3/" + currentLevel + ".mp3";
+            Uri uri = new Uri(path,UriKind.Relative);
+            mplayer.Open(uri);
+            mplayer.Play();
+
         }
 
         //kid read button
@@ -130,9 +141,10 @@ namespace LearnWithPenguin.View
                                       select o).FirstOrDefault();
             srecog = new SpeechRecognitionEngine(selectedRecognizer);
             srecog.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+            
             synth = new SpeechSynthesizer();
         }
-
+        
         private bool SelectInputDevice()
         {
             bool proceedLoading = true;
@@ -186,14 +198,15 @@ namespace LearnWithPenguin.View
             {
                 case State.Off:
                     RecogState = State.Accepting;
-                    read_Result = "";
-                    KidRead.Content = "Stop";
+                    picName.Foreground = System.Windows.Media.Brushes.White;
                     srecog.RecognizeAsync(RecognizeMode.Multiple);
+                    read_Result = "";
+                    micImg.Source = new BitmapImage(new Uri("/images/readOff.png", UriKind.Relative));
                     break;
                 case State.Accepting:
                     RecogState = State.Off;
-                    KidRead.Content = "Start";
                     srecog.RecognizeAsyncStop();
+                    micImg.Source = new BitmapImage(new Uri("/images/readOn.png",UriKind.Relative));
                     break;
             }
         }
@@ -212,6 +225,7 @@ namespace LearnWithPenguin.View
         {
             goodResult.Visibility = Visibility.Collapsed;
             badResult.Visibility = Visibility.Collapsed;
+            picName.Foreground = System.Windows.Media.Brushes.White;
 
         }
 
@@ -220,10 +234,18 @@ namespace LearnWithPenguin.View
             if (read_Result == picName.Text)
             {
                 goodResult.Visibility = Visibility.Visible;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("./TapDoc/voicemp3/congrats.mp3",UriKind.Relative));
+                mp.Play();
+
             }
             else
             {
+
                 badResult.Visibility = Visibility.Visible;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("./TapDoc/voicemp3/ohno.mp3", UriKind.Relative));
+                mp.Play();
             }
         }
 

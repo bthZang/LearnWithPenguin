@@ -215,7 +215,8 @@
                                     Height="99.05"
                                     CornerRadius="90"
                                     Background="White"
-                                    BorderBrush="transparent">
+                                    BorderBrush="transparent"
+                                    >
 
                                 <ContentPresenter Margin="0"
                                                   HorizontalAlignment="Center"
@@ -247,9 +248,10 @@
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
-                    <Image Source="/View/speakButton.jpg"
+                    <Image Source="/images/readOn.png"
                            Height="70"
-                           Width="70">
+                           Width="70"
+                           x:Name="micImg">
                     </Image>
                 </Button>
 
@@ -301,7 +303,7 @@
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
-                    <Image Source="/images/tickCheck.jpg"
+                    <Image Source="/images/resultOn.png"
                            Height="70"
                            Width="70">
                     </Image>
