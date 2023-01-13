@@ -297,7 +297,7 @@ namespace LearnWithPenguin.ViewModel
                                 await Task.Delay(500);
                                 Star1 = "white";
                                 Star2 = "white";
-                                point = 0;
+                                Point = 0;
 
                                 if (temp[0] == Direction.Right)
                                 {
@@ -307,7 +307,7 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    point = 1;
+                                    Point = 1;
 
                                     if (temp[1] == Direction.Right)
                                     {
@@ -317,7 +317,7 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                         Star1 = "yellow";
                                         Star2 = "yellow";
-                                        point = 2;
+                                        Point = 2;
 
                                         if (temp[2] == Direction.Right)
                                         {
@@ -327,7 +327,7 @@ namespace LearnWithPenguin.ViewModel
                                             await Task.Delay(500);
                                             Star4 = "yellow";
                                             Star5 = "white";
-                                            point = 4;
+                                            Point = 4;
 
                                             if (temp[3] == Direction.Right)
                                             {
@@ -343,7 +343,7 @@ namespace LearnWithPenguin.ViewModel
 
                                                 Star4 = "yellow";
                                                 Star5 = "yellow";
-                                                point = 5;
+                                                Point = 5;
 
                                                 result = true;
                                             }
@@ -381,7 +381,7 @@ namespace LearnWithPenguin.ViewModel
                                 await Task.Delay(500);
                                 Star1 = "white";
                                 Star2 = "white";
-                                point = 0;
+                                Point = 0;
 
                                 if (temp[0] == Direction.Right)
                                 {
@@ -394,7 +394,7 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    point = 1;
+                                    Point = 1;
 
                                     if (temp[1] == Direction.TurnDown)
                                     {
@@ -407,7 +407,7 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                         Star1 = "yellow";
                                         Star2 = "yellow";
-                                        point = 2;
+                                        Point = 2;
 
                                         if (temp[2] == Direction.TurnDR)
                                         {
@@ -420,7 +420,7 @@ namespace LearnWithPenguin.ViewModel
                                             await Task.Delay(500);
                                             Star1 = "yellow";
                                             Star2 = "yellow";
-                                            point = 2;
+                                            Point = 2;
 
                                             if (temp[3] == Direction.Right)
                                             {
@@ -433,7 +433,7 @@ namespace LearnWithPenguin.ViewModel
                                                 await Task.Delay(500);
                                                 Star4 = "white";
                                                 Star5 = "white";
-                                                point = 3;
+                                                Point = 3;
 
                                                 if (temp[4] == Direction.TurnUp)
                                                 {
@@ -446,7 +446,7 @@ namespace LearnWithPenguin.ViewModel
                                                     await Task.Delay(500);
                                                     Star4 = "yellow";
                                                     Star5 = "white";
-                                                    point = 4;
+                                                    Point = 4;
 
                                                     if (temp[5] == Direction.TurnUR)
                                                     {
@@ -468,7 +468,7 @@ namespace LearnWithPenguin.ViewModel
 
                                                         Star4 = "yellow";
                                                         Star5 = "yellow";
-                                                        point = 5;
+                                                        Point = 5;
                                                         result = true;
                                                     }
                                                     else
@@ -510,7 +510,7 @@ namespace LearnWithPenguin.ViewModel
                                 await Task.Delay(500);
                                 Star1 = "white";
                                 Star2 = "white";
-                                point = 0;
+                                Point = 0;
 
                                 if (temp[0] == Direction.TurnDR)
                                 {
@@ -523,7 +523,7 @@ namespace LearnWithPenguin.ViewModel
                                     await Task.Delay(500);
                                     Star1 = "yellow";
                                     Star2 = "white";
-                                    point = 1;
+                                    Point = 1;
 
                                     if (temp[1] == Direction.Right)
                                     {
@@ -536,7 +536,7 @@ namespace LearnWithPenguin.ViewModel
                                         await Task.Delay(500);
                                         Star1 = "yellow";
                                         Star2 = "yellow";
-                                        point = 2;
+                                        Point = 2;
 
                                         if (temp[2] == Direction.TurnUp)
                                         {
@@ -549,7 +549,7 @@ namespace LearnWithPenguin.ViewModel
                                             await Task.Delay(500);
                                             Star1 = "yellow";
                                             Star2 = "yellow";
-                                            point = 2;
+                                            Point = 2;
 
                                             if (temp[3] == Direction.TurnUR)
                                             {
@@ -562,7 +562,7 @@ namespace LearnWithPenguin.ViewModel
                                                 await Task.Delay(500);
                                                 Star4 = "white";
                                                 Star5 = "white";
-                                                point = 3;
+                                                Point = 3;
 
                                                 if (temp[4] == Direction.Right)
                                                 {
@@ -575,7 +575,7 @@ namespace LearnWithPenguin.ViewModel
                                                     await Task.Delay(500);
                                                     Star4 = "white";
                                                     Star5 = "white";
-                                                    point = 3;
+                                                    Point = 3;
 
                                                     if (temp[5] == Direction.TurnDown)
                                                     {
@@ -588,7 +588,7 @@ namespace LearnWithPenguin.ViewModel
                                                         await Task.Delay(500);
                                                         Star4 = "yellow";
                                                         Star5 = "white";
-                                                        point = 4;
+                                                        Point = 4;
 
                                                         if (temp[6] == Direction.TurnDR)
                                                         {
@@ -610,7 +610,7 @@ namespace LearnWithPenguin.ViewModel
 
                                                             Star4 = "yellow";
                                                             Star5 = "yellow";
-                                                            point = 5;
+                                                            Point = 5;
                                                             result = true;
                                                         }
                                                         else
