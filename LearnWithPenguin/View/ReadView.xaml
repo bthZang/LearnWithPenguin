@@ -46,7 +46,7 @@
 
                         <Button Width="18.58"
                                 Height="32.52"
-                                Margin="348.57 46.56 5 10"
+                                Margin="290 46.56 5 10"
                                 BorderThickness="0"
                                 Background="Transparent"
                                 Click="PrevLesson">
@@ -63,14 +63,14 @@
                             </Image>
                         </Button>
 
-                        <Button Width="100"
+                        <Button Width="200"
                                 Height="56"
-                                Margin="63.06 38.05 5 10"
+                                Margin="70 38.05 5 10"
                                 BorderThickness="0"
                                 Background="#A0C4FF">
-                            <TextBlock Width="100"
+                            <TextBlock Width="170"
                                        Height="56"
-                                       Text="Bài 1"
+                                       Text="Lesson 1"
                                        Foreground="#073580"
                                        FontSize="35.679"
                                        FontWeight="Bold"
@@ -82,7 +82,7 @@
 
                         <Button Width="18.58"
                                 Height="32.52"
-                                Margin="40 46.56 444.56 10"
+                                Margin="30 46.56 444.56 10"
                                 BorderThickness="0"
                                 Background="#A0C4FF"
                                 Click="NextLesson"
@@ -314,7 +314,7 @@
                                           Height="34.99"
                                           Margin="42.97,580.63,0,0"
                                           DataContext="{StaticResource MainVM}"
-                                          Command="{Binding Transform}">
+                                          Command="{Binding TransformOutRead}">
 
                         </localUC:HomeIcon>
                     </Grid>

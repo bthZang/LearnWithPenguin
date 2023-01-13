@@ -23,9 +23,6 @@ namespace LearnWithPenguin.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-
-
-
         protected BaseViewModel _navigatetoHome;
 
         public bool isClosing = false;
@@ -67,6 +64,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Stop();
                     NavigatetoHome = new ReadViewModel();
                 });
             }
@@ -104,6 +102,21 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new CodingViewModel();
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand TransformOutRead
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    _music.Position = TimeSpan.Zero;
+                    _music.Play();
+                    NavigatetoHome = new HomeViewModel();
                 });
             }
 

@@ -59,7 +59,7 @@ namespace LearnWithPenguin.View
                 currentLevel = currentLevel + 1;
             }
             //lesson nanme
-            lessonName.Text = "Bài " + currentLevel;
+            lessonName.Text = "Lesson " + currentLevel;
 
             //picture name
             picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
@@ -87,7 +87,7 @@ namespace LearnWithPenguin.View
                 currentLevel = currentLevel - 1;
             }
             //lessson name
-            lessonName.Text = "Bai " + currentLevel;
+            lessonName.Text = "Lesson " + currentLevel;
 
             //picture name
             picName.Text = Convert.ToString(Convert.ToChar(currentLevel - 1 + (int)'A'));
