@@ -288,7 +288,6 @@ namespace LearnWithPenguin.ViewModel
             get
             {
                 return "/images/Quiz/" + _number1 + ".jpg";
-                //return "/images/Quiz/" + _number1 + ".jpg";
             }
             set
             {
