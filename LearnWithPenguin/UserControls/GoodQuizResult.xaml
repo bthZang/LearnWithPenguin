@@ -126,8 +126,6 @@
 
 
         <Image          Source="/images/greenTick.jpg"
-                        Width="210.05"
-                        Height="217.77"
                         Margin="346,291,569,291"></Image>
 
     </Grid>
