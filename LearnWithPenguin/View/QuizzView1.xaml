@@ -62,6 +62,7 @@
                                 Width="50.14"
                                 DataContext="{StaticResource QuizzView1VM}"
                                 Command="{Binding OnclickHandlePreviousLevel}"
+                                Click="checkBack"
                                 Height="50.14">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">

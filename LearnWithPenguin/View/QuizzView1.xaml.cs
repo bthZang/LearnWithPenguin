@@ -40,16 +40,17 @@ namespace LearnWithPenguin.View
                 }
             });
 
-            //viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
-            //{
-            //    if (viewmodel.Number > 1)
-            //    {
-            //        viewmodel.Number -= 1;
-            //        viewmodel.Question();
-            //        viewmodel.NavigatetoResult = null;
-            //    }
-            //});
-            
+            viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                if (viewmodel.Number > 1)
+                {
+                    viewmodel.Number -= 1;
+                    viewmodel.Question();
+                    viewmodel.NavigatetoResult = null;
+                    
+                }
+            });
+
         }
 
         private void Sound_Click(object sender, RoutedEventArgs e)
@@ -75,22 +76,18 @@ namespace LearnWithPenguin.View
             {
                 score++;
             }
-            if (qNum < 0)
-            {
-                qNum = 0;
-            }
-            else
-            {
-                qNum++;
-            }
             scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
 
 
             //NextQuestion();
         }
-
-        private void NextQuestion()
+        private void checkBack(object sender, RoutedEventArgs e)
+        {
+            score--;
+            scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
+        }
+            private void NextQuestion()
         {
             //if (qNum < questionNumbers.Count)
             //{
