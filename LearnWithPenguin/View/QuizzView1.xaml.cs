@@ -18,8 +18,6 @@ namespace LearnWithPenguin.View
     public partial class QuizzView1 : System.Windows.Controls.Page
     {
         private int score;
-        private int qNum = 0;
-        private int i;
         List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
         public QuizzView1()
@@ -47,7 +45,7 @@ namespace LearnWithPenguin.View
                     viewmodel.Number -= 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    
+
                 }
             });
 
@@ -69,7 +67,6 @@ namespace LearnWithPenguin.View
         //checkanswer
         private void checkAnswer(object sender, RoutedEventArgs e)
         {
-           
 
             Button senderButton = sender as Button;
             if (senderButton.Tag.ToString() == "1")
@@ -78,139 +75,21 @@ namespace LearnWithPenguin.View
             }
             scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
-
-
-            //NextQuestion();
         }
         private void checkBack(object sender, RoutedEventArgs e)
         {
-            score--;
+            if(score > 0)
+            {
+                score--;
+            }
+            else
+            {
+                score = 0;
+            } 
             scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
         }
-            private void NextQuestion()
+        private void NextQuestion()
         {
-            //if (qNum < questionNumbers.Count)
-            //{
-            //    i = questionNumbers[qNum];
-            //}
-            //else
-            //{
-            //    score = 0;
-            //    qNum = -1;
-            //    i = 0;
-            //}
-
-            //ans1.Tag = "0";
-            //ans2.Tag = "0";
-            //ans3.Tag = "0";
-            //ans4.Tag = "0";
-
-            //ans1.IsEnabled = false;
-            //ans2.IsEnabled = false;
-            //ans3.IsEnabled = false; 
-            //ans4.IsEnabled = false;
-
-            //ans1.IsEnabled = true;
-            //ans2.IsEnabled = true;
-            //ans3.IsEnabled = true;
-            //ans4.IsEnabled = true;
-
-            //    switch (i)
-            //    {
-            //        case 1:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 2:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans4.Tag = "0";
-            //            ans3.Tag = "1";
-            //            break;
-            //        case 3:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 4:
-            //            ans1.Tag = "0";
-            //            ans3.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 5:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "1";
-            //            break;
-            //        case 6:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 7:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "1";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 8:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 9:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "1";
-            //            break;
-            //        case 10:
-            //            ans1.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            ans2.Tag = "1";
-            //            break;
-            //        case 11:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-
-            //        case 12:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "1";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 13:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "1";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        case 14:
-            //            ans1.Tag = "0";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "1";
-            //            break;
-            //        case 15:
-            //            ans1.Tag = "1";
-            //            ans2.Tag = "0";
-            //            ans3.Tag = "0";
-            //            ans4.Tag = "0";
-            //            break;
-            //        default:
-            //            break;
-            //    }
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
             switch (viewmodel.Number)
             {
@@ -309,8 +188,6 @@ namespace LearnWithPenguin.View
                     break;
             }
         }
-
-
 
     }
 }
