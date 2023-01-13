@@ -720,6 +720,7 @@
   <ItemGroup>
     <Resource Include="images\closeIcon.png" />
     <Resource Include="images\greenTick.jpg" />
+    <Resource Include="images\greenTick.png" />
     <Content Include="images\Question\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -869,6 +870,7 @@
     <Resource Include="images\Quiz\7.jpg" />
     <Resource Include="images\Quiz\8.jpg" />
     <Resource Include="images\redCross.jpg" />
+    <Resource Include="images\redCross.png" />
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quizz.edmx</DependentUpon>

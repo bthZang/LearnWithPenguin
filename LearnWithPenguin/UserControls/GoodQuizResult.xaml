@@ -8,15 +8,16 @@
              d:DesignHeight="800"
              d:DesignWidth="1125">
     <Grid Margin="0 0 0 0"
-          Background="#660C0C0C"
-          HorizontalAlignment="Stretch">
+          Background="#CC000000"
+          HorizontalAlignment="Stretch"
+          >
 
-        <Border Width="490"
+        <!--<Border Width="490"
                 Height="260"
                 CornerRadius="50.24"
                 Background="White">
            
-        </Border>
+        </Border>-->
 
         <Button BorderThickness="0"
                 Background="Transparent"
@@ -65,7 +66,7 @@
             </Button.Template>
         </Button>
 
-        <Button Width="180"
+        <!--<Button Width="180"
                 Height="70"
                 Margin="310 0 0 0"
                 Command="{Binding NextLevel, RelativeSource={RelativeSource AncestorType=UserControl}}">
@@ -122,11 +123,11 @@
                            Text="Bài tiếp" />
 
             </Border>
-        </Button>
+        </Button>-->
 
 
-        <Image          Source="/images/greenTick.jpg"
-                        Margin="346,291,569,291"></Image>
+        <Image          Source="/images/greenTick.png"
+                        Margin="450,300,450,300" />
 
     </Grid>
 

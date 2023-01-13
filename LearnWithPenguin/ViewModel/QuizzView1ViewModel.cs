@@ -34,10 +34,10 @@ namespace LearnWithPenguin.ViewModel
         protected string _image3;
         protected string _image4;
 
-        protected string _tag1;
-        protected string _tag2;
-        protected string _tag3;
-        protected string _tag4;
+        //protected string _tag1;
+        //protected string _tag2;
+        //protected string _tag3;
+        //protected string _tag4;
 
         public MediaPlayer _sound = new MediaPlayer();
 
@@ -549,284 +549,284 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public string Tag1
-        {
-            get
-            {
-                return _tag1;
-            }
-            set
-            {
-                _tag1 = value;
-                ConcatTitle = "";
-                ConcatQuestion = "";
-                ConcatSource1 = "";
-                ConcatSource2 = "";
-                ConcatSource3 = "";
-                ConcatSource4 = "";
+        //public string Tag1
+        //{
+        //    get
+        //    {
+        //        return _tag1;
+        //    }
+        //    set
+        //    {
+        //        _tag1 = value;
+        //        ConcatTitle = "";
+        //        ConcatQuestion = "";
+        //        ConcatSource1 = "";
+        //        ConcatSource2 = "";
+        //        ConcatSource3 = "";
+        //        ConcatSource4 = "";
 
-                ConcatColor1 = "";
-                ConcatColor2 = "";
-                ConcatColor3 = "";
-                ConcatColor4 = "";
+        //        ConcatColor1 = "";
+        //        ConcatColor2 = "";
+        //        ConcatColor3 = "";
+        //        ConcatColor4 = "";
 
-                ConcatRes1 = "";
-                ConcatRes2 = "";
-                ConcatRes3 = "";
-                ConcatRes4 = "";
-                OnPropertyChanged();
-            }
-        }
-        public string Tag2
-        {
-            get
-            {
-                return _tag2;
-            }
-            set
-            {
-                _tag2 = value;
-                ConcatTitle = "";
-                ConcatQuestion = "";
-                ConcatSource1 = "";
-                ConcatSource2 = "";
-                ConcatSource3 = "";
-                ConcatSource4 = "";
+        //        ConcatRes1 = "";
+        //        ConcatRes2 = "";
+        //        ConcatRes3 = "";
+        //        ConcatRes4 = "";
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string Tag2
+        //{
+        //    get
+        //    {
+        //        return _tag2;
+        //    }
+        //    set
+        //    {
+        //        _tag2 = value;
+        //        ConcatTitle = "";
+        //        ConcatQuestion = "";
+        //        ConcatSource1 = "";
+        //        ConcatSource2 = "";
+        //        ConcatSource3 = "";
+        //        ConcatSource4 = "";
 
-                ConcatColor1 = "";
-                ConcatColor2 = "";
-                ConcatColor3 = "";
-                ConcatColor4 = "";
+        //        ConcatColor1 = "";
+        //        ConcatColor2 = "";
+        //        ConcatColor3 = "";
+        //        ConcatColor4 = "";
 
-                ConcatRes1 = "";
-                ConcatRes2 = "";
-                ConcatRes3 = "";
-                ConcatRes4 = "";
-                OnPropertyChanged();
-            }
-        }
-        public string Tag3
-        {
-            get
-            {
-                return _tag3;
-            }
-            set
-            {
-                _tag3 = value;
-                ConcatTitle = "";
-                ConcatQuestion = "";
-                ConcatSource1 = "";
-                ConcatSource2 = "";
-                ConcatSource3 = "";
-                ConcatSource4 = "";
+        //        ConcatRes1 = "";
+        //        ConcatRes2 = "";
+        //        ConcatRes3 = "";
+        //        ConcatRes4 = "";
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string Tag3
+        //{
+        //    get
+        //    {
+        //        return _tag3;
+        //    }
+        //    set
+        //    {
+        //        _tag3 = value;
+        //        ConcatTitle = "";
+        //        ConcatQuestion = "";
+        //        ConcatSource1 = "";
+        //        ConcatSource2 = "";
+        //        ConcatSource3 = "";
+        //        ConcatSource4 = "";
 
-                ConcatColor1 = "";
-                ConcatColor2 = "";
-                ConcatColor3 = "";
-                ConcatColor4 = "";
+        //        ConcatColor1 = "";
+        //        ConcatColor2 = "";
+        //        ConcatColor3 = "";
+        //        ConcatColor4 = "";
 
-                ConcatRes1 = "";
-                ConcatRes2 = "";
-                ConcatRes3 = "";
-                ConcatRes4 = "";
-                OnPropertyChanged();
-            }
-        }
-        public string Tag4
-        {
-            get
-            {
-                return _tag4;
-            }
-            set
-            {
-                _tag4 = value;
-                ConcatTitle = "";
-                ConcatQuestion = "";
-                ConcatSource1 = "";
-                ConcatSource2 = "";
-                ConcatSource3 = "";
-                ConcatSource4 = "";
+        //        ConcatRes1 = "";
+        //        ConcatRes2 = "";
+        //        ConcatRes3 = "";
+        //        ConcatRes4 = "";
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string Tag4
+        //{
+        //    get
+        //    {
+        //        return _tag4;
+        //    }
+        //    set
+        //    {
+        //        _tag4 = value;
+        //        ConcatTitle = "";
+        //        ConcatQuestion = "";
+        //        ConcatSource1 = "";
+        //        ConcatSource2 = "";
+        //        ConcatSource3 = "";
+        //        ConcatSource4 = "";
 
-                ConcatColor1 = "";
-                ConcatColor2 = "";
-                ConcatColor3 = "";
-                ConcatColor4 = "";
+        //        ConcatColor1 = "";
+        //        ConcatColor2 = "";
+        //        ConcatColor3 = "";
+        //        ConcatColor4 = "";
 
-                ConcatRes1 = "";
-                ConcatRes2 = "";
-                ConcatRes3 = "";
-                ConcatRes4 = "";
-                OnPropertyChanged();
-            }
-        }
+        //        ConcatRes1 = "";
+        //        ConcatRes2 = "";
+        //        ConcatRes3 = "";
+        //        ConcatRes4 = "";
+        //        OnPropertyChanged();
+        //    }
+        //}
 
-        public string ConcatTag1
-        {
-            get
-            {
-                return _tag1;
-            }
-            set
-            {
-                _tag1 = value;
+        //public string ConcatTag1
+        //{
+        //    get
+        //    {
+        //        return _tag1;
+        //    }
+        //    set
+        //    {
+        //        _tag1 = value;
 
-                OnPropertyChanged();
-            }
-        }
-        public string ConcatTag2
-        {
-            get
-            {
-                return _tag2;
-            }
-            set
-            {
-                _tag2 = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string ConcatTag2
+        //{
+        //    get
+        //    {
+        //        return _tag2;
+        //    }
+        //    set
+        //    {
+        //        _tag2 = value;
 
-                OnPropertyChanged();
-            }
-        }
-        public string ConcatTag3
-        {
-            get
-            {
-                return _tag3;
-            }
-            set
-            {
-                _tag3 = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string ConcatTag3
+        //{
+        //    get
+        //    {
+        //        return _tag3;
+        //    }
+        //    set
+        //    {
+        //        _tag3 = value;
 
-                OnPropertyChanged();
-            }
-        }
-        public string ConcatTag4
-        {
-            get
-            {
-                return _tag4;
-            }
-            set
-            {
-                _tag4 = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public string ConcatTag4
+        //{
+        //    get
+        //    {
+        //        return _tag4;
+        //    }
+        //    set
+        //    {
+        //        _tag4 = value;
 
-                OnPropertyChanged();
-            }
-        }
+        //        OnPropertyChanged();
+        //    }
+        //}
 
-        public bool Tag()
-        {
-            switch (Number)
-            {
-                case 1:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                case 2:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "1";
-                    break;
-                case 3:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                case 4:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "1";
-                    Tag4 = "0";
-                    break;
-                case 5:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "1";
-                    break;
-                case 6:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                case 7:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "1";
-                    Tag4 = "0";
-                    break;
-                case 8:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                case 9:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "1";
-                    break;
-                case 10:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "1";
-                    break;
-                case 11:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
+        //public bool Tag()
+        //{
+        //    switch (Number)
+        //    {
+        //        case 1:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        case 2:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "1";
+        //            break;
+        //        case 3:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        case 4:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "1";
+        //            Tag4 = "0";
+        //            break;
+        //        case 5:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "1";
+        //            break;
+        //        case 6:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        case 7:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "1";
+        //            Tag4 = "0";
+        //            break;
+        //        case 8:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        case 9:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "1";
+        //            break;
+        //        case 10:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "1";
+        //            break;
+        //        case 11:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
 
-                case 12:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "1";
-                    Tag4 = "0";
-                    break;
-                case 13:
-                    Tag1 = "0";
-                    Tag2 = "1";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                case 14:
-                    Tag1 = "0";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "1";
-                    break;
-                case 15:
-                    Tag1 = "1";
-                    Tag2 = "0";
-                    Tag3 = "0";
-                    Tag4 = "0";
-                    break;
-                default:
-                    break;
-            }
-            return true;
-        }
-        public ICommand ShowTag
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    Tag();
-                });
-            }
+        //        case 12:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "1";
+        //            Tag4 = "0";
+        //            break;
+        //        case 13:
+        //            Tag1 = "0";
+        //            Tag2 = "1";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        case 14:
+        //            Tag1 = "0";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "1";
+        //            break;
+        //        case 15:
+        //            Tag1 = "1";
+        //            Tag2 = "0";
+        //            Tag3 = "0";
+        //            Tag4 = "0";
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return true;
+        //}
+        //public ICommand ShowTag
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            Tag();
+        //        });
+        //    }
 
-            set { }
-        }
+        //    set { }
+        //}
         public bool Answer()
         {
 
