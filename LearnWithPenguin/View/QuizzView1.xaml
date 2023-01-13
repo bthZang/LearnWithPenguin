@@ -19,9 +19,6 @@
         <DataTemplate DataType="{x:Type viewmodel:MenuViewModel}">
             <localUC:Menu />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:BackViewModel}">
-            <localUC:Back></localUC:Back>
-        </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GoodQuizResultViewModel}">
             <localUC:GoodQuizResult DataContext="{StaticResource QuizzView1VM}"
                                 NextLevel="{Binding OnclickHandleNextLevel}" />
@@ -34,10 +31,10 @@
     </Page.Resources>
 
     <StackPanel Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="9999"
+        <ContentControl Panel.ZIndex="999900"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
-        <ContentControl Panel.ZIndex="9999"
+        <ContentControl Panel.ZIndex="999900"
                         DataContext="{StaticResource QuizzView1VM}"
                         Content="{Binding NavigatetoResult}" />
 
@@ -126,7 +123,6 @@
                         Height="190"
                         Width="300"
                         DataContext="{StaticResource QuizzView1VM}"
-                        
                         BorderThickness="0"
                         Click="checkAnswer"
                         Tag="0"
