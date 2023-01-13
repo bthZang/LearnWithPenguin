@@ -40,20 +40,18 @@
                         Content="{Binding NavigatetoResult}" />
         <StackPanel Orientation="Vertical">
             <!--Heading-->
-            <StackPanel Orientation="Horizontal">
-                <localUC:Icon Width="63.28"
-                              Height="63.28"
-                              Margin="28,35,15,0"
-                              DataContext="{StaticResource MainVM}"
-                              Command="{Binding ShowMenu}">
-                </localUC:Icon>
-                <StackPanel>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="63*" />
-                            <RowDefinition Height="40*" />
-                        </Grid.RowDefinitions>
-                    </Grid>
+            <DockPanel>
+                <Grid>
+                    <localUC:Icon Width="63.28"
+                                  Height="63.28"
+                                  Margin="28,35,15,0"
+                                  DataContext="{StaticResource MainVM}"
+                                  Command="{Binding ShowMenu}">
+                    </localUC:Icon>
+                </Grid>
+                
+             
+                <Grid>
                     <StackPanel Orientation="Horizontal"
                                 Width="{x:Static SystemParameters.PrimaryScreenWidth}"
                                 Margin="0,0,-518,0"
@@ -106,12 +104,10 @@
                                    Height="42.9"></Image>
                         </Button>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Width="63.28"
-                            Height="63.28"
-                            Margin="28,35,15,0">
-                </StackPanel>
-            </StackPanel>
+                </Grid>
+                <!--</DockPanel>-->
+                
+            </DockPanel>
 
             <!--Quiz-->
             <StackPanel>
