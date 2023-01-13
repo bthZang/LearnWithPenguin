@@ -7,6 +7,7 @@
       xmlns:local="clr-namespace:LearnWithPenguin.View"
       xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
       xmlns:localUC="clr-namespace:LearnWithPenguin.UserControls"
+      d:DataContext="{d:DesignInstance Type=viewmodel:QuizzView1ViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="800"
       d:DesignWidth="1125"
@@ -21,299 +22,299 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GoodQuizResultViewModel}">
             <localUC:GoodQuizResult DataContext="{StaticResource QuizzView1VM}"
-                                NextLevel="{Binding OnclickHandleNextLevel}" />
+                                    NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:BadQuizResultViewModel}">
             <localUC:BadQuizResult DataContext="{StaticResource QuizzView1VM}"
-                                NextLevel="{Binding OnclickHandleNextLevel}" />
+                                   NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
 
     </Page.Resources>
 
-    <StackPanel Background="#FFA0C4FF">
-        <ContentControl Panel.ZIndex="999900"
+    <Grid Background="#A0C4FF">
+        <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
-        <ContentControl Panel.ZIndex="999900"
+        <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource QuizzView1VM}"
                         Content="{Binding NavigatetoResult}" />
-
-        <DockPanel DataContext="{StaticResource QuizzView1VM}">
-            <Grid>
+        <StackPanel Orientation="Vertical">
+            <!--Heading-->
+            <StackPanel Orientation="Horizontal">
                 <localUC:Icon Width="63.28"
                               Height="63.28"
-                              Margin="42.97,35.16,0,0"
+                              Margin="28,35,15,0"
                               DataContext="{StaticResource MainVM}"
                               Command="{Binding ShowMenu}">
-
                 </localUC:Icon>
-            </Grid>
-            <Grid Width="1018"
-                  HorizontalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="63*" />
-                    <RowDefinition Height="40*" />
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal"
-                            Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-                            Margin="0,0,-518,0"
-                            Grid.RowSpan="2">
-                    <Button Margin="336.67 32.11 0 0"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="50.14"
-                            DataContext="{StaticResource QuizzView1VM}"
-                            Command="{Binding OnclickHandlePreviousLevel}"
-                            Height="50.14">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="3 3 3 3" />
-                            </Style>
-                        </Button.Resources>
-                        <Image Source="/UserControls/backIcon.png"
-                               Width="38.8"
-                               Height="42.9"></Image>
-                    </Button>
-                    <TextBlock Width="94"
-                               Height="57"
-                               VerticalAlignment="Bottom"
-                               HorizontalAlignment="Center"
-                               Foreground="#073580"
-                               FontSize="36.09"
-                               FontStyle="Normal"
-                               FontWeight="Bold"
-                               TextAlignment="Center"
-                               DataContext="{StaticResource QuizzView1VM}"
-                               Text="{ Binding ConcatTitle}"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Margin="43.13,38.49,0,8" />
-                    <Button Margin="53.32 32.11 0 0"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            DataContext="{StaticResource QuizzView1VM}"
-                            Command="{Binding OnclickHandleNextLevel}"
-                            Width="50.13"
-                            Height="50.13">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="Border.CornerRadius"
-                                        Value="3 3 3 3" />
-                            </Style>
-                        </Button.Resources>
-                        <Image Source="/View/next.png"
-                               Width="38.8"
-                               Height="42.9"></Image>
-                    </Button>
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="63*" />
+                            <RowDefinition Height="40*" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal"
+                                Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+                                Margin="0,0,-518,0"
+                                Grid.RowSpan="2">
+                        <Button Margin="336.67 32.11 0 0"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Width="50.14"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                Command="{Binding OnclickHandlePreviousLevel}"
+                                Height="50.14">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="3 3 3 3" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Source="/UserControls/backIcon.png"
+                                   Width="38.8"
+                                   Height="42.9"></Image>
+                        </Button>
+                        <TextBlock Width="94"
+                                   Height="57"
+                                   VerticalAlignment="Bottom"
+                                   HorizontalAlignment="Center"
+                                   Foreground="#073580"
+                                   FontSize="36.09"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   DataContext="{StaticResource QuizzView1VM}"
+                                   Text="{ Binding ConcatTitle}"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Margin="43.13,38.49,0,8" />
+                        <Button Margin="53.32 32.11 0 0"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                Command="{Binding OnclickHandleNextLevel}"
+                                Width="50.13"
+                                Height="50.13">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="3 3 3 3" />
+                                </Style>
+                            </Button.Resources>
+                            <Image Source="/View/next.png"
+                                   Width="38.8"
+                                   Height="42.9"></Image>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
-            </Grid>
-        </DockPanel>
+                <StackPanel Width="63.28"
+                            Height="63.28"
+                            Margin="28,35,15,0">
+                </StackPanel>
+            </StackPanel>
 
-        <StackPanel  Margin="-400 100 0 200"
-                     Width="320"
-                     Name="leftStack">
-            <Border Height="200"
-                    Width="310"
-                    BorderThickness="4"
-                    DataContext="{StaticResource QuizzView1VM}"
-                    BorderBrush="{Binding ConcatColor1}"
-                    CornerRadius="15">
+            <!--Quiz-->
+            <StackPanel>
+                <StackPanel  Margin="-400 100 0 200"
+                             Width="320"
+                             Name="leftStack">
+                    <Border Height="200"
+                            Width="310"
+                            BorderThickness="4"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            BorderBrush="{Binding ConcatColor1}"
+                            CornerRadius="15">
 
-                <Button Name="ans1"
-                        Height="190"
-                        Width="300"
+                        <Button Name="ans1"
+                                Height="190"
+                                Width="300"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                BorderThickness="0"
+                                Click="checkAnswer"
+                                Tag="0"
+                                IsEnabled="True">
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                                    <i:InvokeCommandAction Command="{Binding ShowResult1}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+
+                            <Image Name="ans1Image"
+                                   Source="{Binding ConcatSource1}"
+                                   DataContext="{StaticResource QuizzView1VM}"
+                                   Height="190"
+                                   Width="300"></Image>
+                        </Button >
+                    </Border>
+
+                    <Border Height="200"
+                            Width="310"
+                            BorderThickness="4"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            BorderBrush="{Binding ConcatColor2}"
+                            CornerRadius="15"
+                            Margin="0 20 0 0">
+                        <Button Name="ans2"
+                                Height="190"
+                                Width="300"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                Command="{Binding CheckAnswer}"
+                                BorderThickness="0"
+                                Click="checkAnswer"
+                                Tag="0"
+                                IsEnabled="True">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                                    <i:InvokeCommandAction Command="{Binding ShowResult2}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Image Name="ans2Image"
+                                   Source="{Binding ConcatSource2}"
+                                   DataContext="{StaticResource QuizzView1VM}"
+                                   Height="190"
+                                   Width="300"></Image>
+                        </Button >
+                    </Border>
+
+                </StackPanel>
+                <StackPanel Margin="550.94 -600 150 200"
+                            Width="320"
+                            Name="rightStack">
+                    <Border Height="200"
+                            Width="310"
+                            BorderThickness="4"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            BorderBrush="{Binding ConcatColor3}"
+                            CornerRadius="15"
+                            Margin="0 -20 0 0">
+                        <Button Name="ans3"
+                                Height="190"
+                                Width="300"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                Command="{Binding CheckAnswer}"
+                                BorderThickness="0"
+                                Click="checkAnswer"
+                                Tag="0"
+                                IsEnabled="True">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                                    <i:InvokeCommandAction Command="{Binding ShowResult3}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Image Name="ans3Image"
+                                   Source="{Binding ConcatSource3}"
+                                   DataContext="{StaticResource QuizzView1VM}"
+                                   Height="190"
+                                   Width="300"></Image>
+                        </Button >
+                    </Border>
+                    <Border Height="200"
+                            Width="310"
+                            BorderThickness="4"
+                            DataContext="{StaticResource QuizzView1VM}"
+                            BorderBrush="{Binding ConcatColor4}"
+                            CornerRadius="15"
+                            Margin="0 20 0 0">
+                        <Button Name="ans4"
+                                Height="190"
+                                Width="300"
+                                DataContext="{StaticResource QuizzView1VM}"
+                                Command="{Binding CheckAnswer}"
+                                BorderThickness="0"
+                                Click="checkAnswer"
+                                Tag="0"
+                                IsEnabled="True">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
+                                    <i:InvokeCommandAction Command="{Binding ShowResult4}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Image Name="ans4Image"
+                                   Source="{Binding ConcatSource4}"
+                                   DataContext="{StaticResource QuizzView1VM}"
+                                   Height="190"
+                                   Width="300"></Image>
+                        </Button >
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+
+            <!--Bottom-->
+            <StackPanel>
+                <Button x:Name="button"
+                        Margin="0 -250 0 0"
+                        Height="80"
+                        Width="80"
                         DataContext="{StaticResource QuizzView1VM}"
+                        Command="{Binding SoundButtom}"
+                        Background="Transparent"
                         BorderThickness="0"
-                        Click="checkAnswer"
-                        Tag="0"
-                        IsEnabled="True">
-
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult1}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                        Click="Sound_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
+                            <Setter Property="CornerRadius"
+                                    Value="50 50 50 50" />
                         </Style>
                     </Button.Resources>
+                    <Image Stretch="Uniform"
+                           Source="../images/puzzleSound.png"
+                           Height="77.38"
+                           Width="77.38" />
+                </Button>
 
-                    <Image Name="ans1Image"
-                           Source="{Binding ConcatSource1}"
-                           DataContext="{StaticResource QuizzView1VM}"
-                           Height="190"
-                           Width="300"></Image>
-                </Button >
-            </Border>
+                <DockPanel>
+                    <Grid HorizontalAlignment="Left">
+                        <localUC:HomeIcon Width="97.13"
+                                          Height="34.99"
+                                          Margin="42.97,-150,0,0"
+                                          DataContext="{StaticResource MainVM}"
+                                          Command="{Binding Transform}">
 
-            <Border Height="200"
-                    Width="310"
-                    BorderThickness="4"
-                    DataContext="{StaticResource QuizzView1VM}"
-                    BorderBrush="{Binding ConcatColor2}"
-                    CornerRadius="15"
-                    Margin="0 20 0 0">
-                <Button Name="ans2"
-                        Height="190"
-                        Width="300"
-                        DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
-                        BorderThickness="0"
-                        Click="checkAnswer"
-                        Tag="0"
-                        IsEnabled="True">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult2}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                    <Image Name="ans2Image"
-                           Source="{Binding ConcatSource2}"
-                           DataContext="{StaticResource QuizzView1VM}"
-                           Height="190"
-                           Width="300"></Image>
-                </Button >
-            </Border>
-
+                        </localUC:HomeIcon>
+                    </Grid>
+                    <DockPanel>
+                        <Grid HorizontalAlignment="Right">
+                            <Label Name="scoreText"
+                                   Foreground="#073580"
+                                   FontSize="18"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Margin="720,-110,44,0"
+                                   Height="112">Số câu trả lời đúng: 0/15</Label>
+                        </Grid>
+                    </DockPanel>
+                </DockPanel>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Margin="550.94 -600 150 200"
-                    Width="320"
-                    Name="rightSatck">
-            <Border Height="200"
-                    Width="310"
-                    BorderThickness="4"
-                    DataContext="{StaticResource QuizzView1VM}"
-                    BorderBrush="{Binding ConcatColor3}"
-                    CornerRadius="15"
-                    Margin="0 -20 0 0">
-                <Button Name="ans3"
-                        Height="190"
-                        Width="300"
-                        DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
-                        BorderThickness="0"
-                        Click="checkAnswer"
-                        Tag="0"
-                        IsEnabled="True">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult3}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                    <Image Name="ans3Image"
-                           Source="{Binding ConcatSource3}"
-                           DataContext="{StaticResource QuizzView1VM}"
-                           Height="190"
-                           Width="300"></Image>
-                </Button >
-            </Border>
-            <Border Height="200"
-                    Width="310"
-                    BorderThickness="4"
-                    DataContext="{StaticResource QuizzView1VM}"
-                    BorderBrush="{Binding ConcatColor4}"
-                    CornerRadius="15"
-                    Margin="0 20 0 0">
-                <Button Name="ans4"
-                        Height="190"
-                        Width="300"
-                        DataContext="{StaticResource QuizzView1VM}"
-                        Command="{Binding CheckAnswer}"
-                        BorderThickness="0"
-                        Click="checkAnswer"
-                        Tag="0"
-                        IsEnabled="True">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction Command="{Binding CheckAnswer}" />
-                            <i:InvokeCommandAction Command="{Binding ShowResult4}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                    <Image Name="ans4Image"
-                           Source="{Binding ConcatSource4}"
-                           DataContext="{StaticResource QuizzView1VM}"
-                           Height="190"
-                           Width="300"></Image>
-                </Button >
-            </Border>
-        </StackPanel>
-        <!--<MediaElement x:Name="media"
-                      Height="80"
-                      Width="80"
-                      LoadedBehavior="Manual"
-                      Panel.ZIndex="9999"
-                      UnloadedBehavior="Manual"
-                      DataContext="{StaticResource QuizzView1VM}"
-                      Visibility="{Binding IsDisplayQuestion}"
-                      Margin="0 -250 0 0"
-                      Source="{ Binding ConcatQuestion}"
-                      RenderTransformOrigin="1,1"></MediaElement>-->
-        <Button x:Name="button"
-                Margin="0 -250 0 0"
-                Height="80"
-                Width="80"
-                DataContext="{StaticResource QuizzView1VM}"
-                Command="{Binding SoundButtom}"
-                Background="Transparent"
-                BorderThickness="0"
-                Click="Sound_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius"
-                            Value="50 50 50 50" />
-                </Style>
-            </Button.Resources>
-            <Image Stretch="Uniform"
-                   Source="../images/puzzleSound.png"
-                   Height="77.38"
-                   Width="77.38" />
-        </Button>
-        <DockPanel>
-            <Grid HorizontalAlignment="Left">
-                <localUC:HomeIcon Width="97.13"
-                                  Height="34.99"
-                                  Margin="42.97,-150,0,0"
-                                  DataContext="{StaticResource MainVM}"
-                                  Command="{Binding Transform}">
-
-                </localUC:HomeIcon>
-            </Grid>
-            <DockPanel>
-                <Grid HorizontalAlignment="Right">
-                    <Label Name="scoreText"
-                           Foreground="#073580"
-                           FontSize="18"
-                           FontStyle="Normal"
-                           FontWeight="Bold"
-                           Style="{StaticResource Baloo2-Bold}"
-                           Margin="720,-110,44,0"
-                           Height="112">Số câu trả lời đúng: 0/15</Label>
-                </Grid>
-            </DockPanel>
-
-        </DockPanel>
-    </StackPanel>
+    </Grid>
 </Page>

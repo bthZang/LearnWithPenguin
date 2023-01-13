@@ -25,7 +25,7 @@ namespace LearnWithPenguin.View
         public QuizzView1()
         {
             InitializeComponent();
-
+            NextQuestion();
 
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
@@ -36,20 +36,20 @@ namespace LearnWithPenguin.View
                     viewmodel.Number += 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    
+                    NextQuestion();
                 }
             });
 
-            viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                if (viewmodel.Number > 1)
-                {
-                    viewmodel.Number -= 1;
-                    viewmodel.Question();
-                    viewmodel.NavigatetoResult = null;
-                }
-            });
-            NextQuestion();
+            //viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
+            //{
+            //    if (viewmodel.Number > 1)
+            //    {
+            //        viewmodel.Number -= 1;
+            //        viewmodel.Question();
+            //        viewmodel.NavigatetoResult = null;
+            //    }
+            //});
+            
         }
 
         private void Sound_Click(object sender, RoutedEventArgs e)
@@ -68,6 +68,8 @@ namespace LearnWithPenguin.View
         //checkanswer
         private void checkAnswer(object sender, RoutedEventArgs e)
         {
+           
+
             Button senderButton = sender as Button;
             if (senderButton.Tag.ToString() == "1")
             {
@@ -82,21 +84,24 @@ namespace LearnWithPenguin.View
                 qNum++;
             }
             scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
-            NextQuestion();
+
+
+
+            //NextQuestion();
         }
 
         private void NextQuestion()
         {
-            if (qNum < questionNumbers.Count)
-            {
-                i = questionNumbers[qNum];
-            }
-            else
-            {
-                score = 0;
-                qNum = -1;
-                i = 0;
-            }
+            //if (qNum < questionNumbers.Count)
+            //{
+            //    i = questionNumbers[qNum];
+            //}
+            //else
+            //{
+            //    score = 0;
+            //    qNum = -1;
+            //    i = 0;
+            //}
 
             //ans1.Tag = "0";
             //ans2.Tag = "0";
@@ -113,7 +118,104 @@ namespace LearnWithPenguin.View
             //ans3.IsEnabled = true;
             //ans4.IsEnabled = true;
 
-            switch (i)
+            //    switch (i)
+            //    {
+            //        case 1:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 2:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans4.Tag = "0";
+            //            ans3.Tag = "1";
+            //            break;
+            //        case 3:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 4:
+            //            ans1.Tag = "0";
+            //            ans3.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 5:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "1";
+            //            break;
+            //        case 6:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 7:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "1";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 8:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 9:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "1";
+            //            break;
+            //        case 10:
+            //            ans1.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            ans2.Tag = "1";
+            //            break;
+            //        case 11:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+
+            //        case 12:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "1";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 13:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "1";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        case 14:
+            //            ans1.Tag = "0";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "1";
+            //            break;
+            //        case 15:
+            //            ans1.Tag = "1";
+            //            ans2.Tag = "0";
+            //            ans3.Tag = "0";
+            //            ans4.Tag = "0";
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
+            switch (viewmodel.Number)
             {
                 case 1:
                     ans1.Tag = "1";
