@@ -44,6 +44,9 @@
 
     <viewmodel:GoodQuizResultViewModel x:Key="GoodQuizResultVM"></viewmodel:GoodQuizResultViewModel>
     <viewmodel:BadQuizResultViewModel x:Key="BadQuizResultVM"></viewmodel:BadQuizResultViewModel>
+    <viewmodel:EndQuizBadResultViewModel x:Key="EndQuizBadResultVM"></viewmodel:EndQuizBadResultViewModel>
+    <viewmodel:EndQuizGoodResultViewModel x:Key="EndQuizGoodResultVM"></viewmodel:EndQuizGoodResultViewModel>
+    <viewmodel:EndQuizViewModel x:Key="EndQuizVM"></viewmodel:EndQuizViewModel>
 
 
 </ResourceDictionary>

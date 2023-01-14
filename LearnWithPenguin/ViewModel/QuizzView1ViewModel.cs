@@ -933,7 +933,7 @@ namespace LearnWithPenguin.ViewModel
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoResult = new GoodQuizResultViewModel();
+                            NavigatetoResult = new EndQuizViewModel();
                             break;
                         default:
                             break;
@@ -993,7 +993,7 @@ namespace LearnWithPenguin.ViewModel
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new EndQuizBadResultViewModel();
                             break;
                         default:
                             break;
@@ -1053,7 +1053,7 @@ namespace LearnWithPenguin.ViewModel
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new EndQuizBadResultViewModel();
                             break;
                         default:
                             break;
@@ -1113,7 +1113,7 @@ namespace LearnWithPenguin.ViewModel
                             NavigatetoResult = new GoodQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoResult = new BadQuizResultViewModel();
+                            NavigatetoResult = new EndQuizBadResultViewModel();
                             break;
                         default:
                             break;
@@ -1130,6 +1130,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoResult = null;
+
                 });
             }
 
@@ -1147,5 +1148,6 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
     }
 }

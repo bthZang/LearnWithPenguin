@@ -160,6 +160,12 @@
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\EndQuizBadResult.xaml.cs">
+      <DependentUpon>EndQuizBadResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EndQuizGoodResult.xaml.cs">
+      <DependentUpon>EndQuizGoodResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Game1.xaml.cs">
       <DependentUpon>Game1.xaml</DependentUpon>
     </Compile>
@@ -218,6 +224,9 @@
     <Compile Include="ViewModel\BadQuizResultViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
+    <Compile Include="ViewModel\EndQuizBadResultViewModel.cs" />
+    <Compile Include="ViewModel\EndQuizGoodResultViewModel.cs" />
+    <Compile Include="ViewModel\EndQuizViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
     <Compile Include="ViewModel\Game3ViewModel.cs" />
@@ -242,6 +251,9 @@
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EndQuiz.xaml.cs">
+      <DependentUpon>EndQuiz.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\GameView.xaml.cs">
       <DependentUpon>GameView.xaml</DependentUpon>
@@ -279,6 +291,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\BadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EndQuizBadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EndQuizGoodResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,6 +367,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EndQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -722,6 +746,8 @@
     <Resource Include="images\closeIcon.png" />
     <Resource Include="images\greenTick.jpg" />
     <Resource Include="images\greenTick.png" />
+    <Resource Include="images\Home.png" />
+    <Resource Include="images\HomeWhite.png" />
     <Content Include="images\Question\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -872,6 +898,7 @@
     <Resource Include="images\Quiz\8.jpg" />
     <Resource Include="images\redCross.jpg" />
     <Resource Include="images\redCross.png" />
+    <Resource Include="images\ReloadQuiz.png" />
     <Content Include="Quizz.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quizz.edmx</DependentUpon>

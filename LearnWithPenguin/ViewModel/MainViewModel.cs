@@ -16,8 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-
+using LearnWithPenguin.View;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -219,6 +218,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new QuizzView1ViewModel();
+                   
                 });
             }
             set { }
