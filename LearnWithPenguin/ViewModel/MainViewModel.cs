@@ -142,6 +142,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Play();
                     NavigatetoHome = new UserViewModel();
                     Menu = null;
                 });

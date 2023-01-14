@@ -674,7 +674,18 @@
     <Resource Include="images\medal\XuatSacTroChoi.png" />
     <Resource Include="images\speakButton.jpg" />
     <Resource Include="images\tickCheck.jpg" />
-    <Resource Include="TapDoc\img\1.png" />
+    <Resource Include="images\checkSign.png" />
+    <Resource Include="images\resultOn.png" />
+    <Resource Include="images\readOn.png" />
+    <Resource Include="images\readOff.png" />
+    <Resource Include="TapDoc\img\2.png" />
+    <Resource Include="TapDoc\img\3.png" />
+    <Resource Include="TapDoc\img\4.png" />
+    <Resource Include="TapDoc\img\5.png" />
+    <Resource Include="TapDoc\img\6.png" />
+    <Resource Include="TapDoc\img\7.png" />
+    <Resource Include="TapDoc\img\8.png" />
+    <Resource Include="TapDoc\img\9.png" />
     <Resource Include="TapDoc\img\10.png" />
     <Resource Include="TapDoc\img\11.png" />
     <Resource Include="TapDoc\img\12.png" />
@@ -685,7 +696,6 @@
     <Resource Include="TapDoc\img\17.png" />
     <Resource Include="TapDoc\img\18.png" />
     <Resource Include="TapDoc\img\19.png" />
-    <Resource Include="TapDoc\img\2.png" />
     <Resource Include="TapDoc\img\20.png" />
     <Resource Include="TapDoc\img\21.png" />
     <Resource Include="TapDoc\img\22.png" />
@@ -693,17 +703,7 @@
     <Resource Include="TapDoc\img\24.png" />
     <Resource Include="TapDoc\img\25.png" />
     <Resource Include="TapDoc\img\26.png" />
-    <Resource Include="TapDoc\img\3.png" />
-    <Resource Include="TapDoc\img\4.png" />
-    <Resource Include="TapDoc\img\5.png" />
-    <Resource Include="TapDoc\img\6.png" />
-    <Resource Include="TapDoc\img\7.png" />
-    <Resource Include="TapDoc\img\8.png" />
-    <Resource Include="TapDoc\img\9.png" />
-    <Resource Include="images\checkSign.png" />
-    <Resource Include="images\resultOn.png" />
-    <Resource Include="images\readOn.png" />
-    <Resource Include="images\readOff.png" />
+    <Resource Include="TapDoc\img\1.png" />
     <Content Include="TapDoc\voicemp3\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
