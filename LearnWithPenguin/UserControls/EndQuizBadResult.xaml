@@ -14,7 +14,9 @@
         <Button BorderThickness="0"
                 Background="Transparent"
                 Width="1125"
-                Height="800">
+                Height="800"
+                Command="{Binding EndQuiz, RelativeSource={RelativeSource AncestorType=UserControl}}">
+
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="Border"
@@ -65,10 +67,10 @@
         <DockPanel Margin="25 650 0 0">
             <Grid HorizontalAlignment="Left"
                   Height="75"
-                  Width="100">
+                  Width="180">
                 <Button x:Name="button"
                         Height="75"
-                        Width="100"
+                        Width="180"
                         DataContext="{StaticResource MainVM}"
                         Command="{Binding Transform}"
                         Background="#CCFFFFFF"
