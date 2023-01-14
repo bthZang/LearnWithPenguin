@@ -31,7 +31,7 @@
         <DataTemplate DataType="{x:Type viewmodel:EndQuizBadResultViewModel}">
             <localUC:EndQuizBadResult  />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:EndQuizViewModel}">
+        <DataTemplate DataType="{x:Type viewmodel:EndQuizGoodResultViewModel}">
             <localUC:EndQuizGoodResult />
         </DataTemplate>
     </Page.Resources>
@@ -42,7 +42,8 @@
                         Content="{Binding Menu}" />
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource QuizzView1VM}"
-                        Content="{Binding NavigatetoResult}" />
+                        Content="{Binding NavigatetoResult}"
+                        Margin="-2,1,2,-1" />
         <StackPanel Orientation="Vertical">
             <!--Heading-->
             <DockPanel>

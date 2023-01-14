@@ -1,8 +1,8 @@
 ﻿<UserControl x:Class="LearnWithPenguin.UserControls.EndQuizBadResult"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="800"
@@ -67,10 +67,10 @@
         <DockPanel Margin="25 650 0 0">
             <Grid HorizontalAlignment="Left"
                   Height="75"
-                  Width="180">
+                  Width="100">
                 <Button x:Name="button"
                         Height="75"
-                        Width="180"
+                        Width="100"
                         DataContext="{StaticResource MainVM}"
                         Command="{Binding Transform}"
                         Background="#CCFFFFFF"

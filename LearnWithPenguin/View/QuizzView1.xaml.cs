@@ -112,7 +112,7 @@ namespace LearnWithPenguin.View
             else if (backClicked == true && senderButton.Tag.ToString() == "1" && tempScore + 1 == score)
             {
                 score = score;
-            }  
+            }
             //scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
         }

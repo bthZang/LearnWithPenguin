@@ -17,9 +17,7 @@
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
     <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
 
-    <!--<viewmodel:QuizQuestionAsideViewModel x:Key="QuizQuestionAsideVM"></viewmodel:QuizQuestionAsideViewModel>-->
     <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
-    <!--<viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>-->
 
     <viewmodel:Game1ViewModel x:Key="Game1VM"></viewmodel:Game1ViewModel>
     <viewmodel:Game2ViewModel x:Key="Game2VM"></viewmodel:Game2ViewModel>
@@ -46,7 +44,6 @@
     <viewmodel:BadQuizResultViewModel x:Key="BadQuizResultVM"></viewmodel:BadQuizResultViewModel>
     <viewmodel:EndQuizBadResultViewModel x:Key="EndQuizBadResultVM"></viewmodel:EndQuizBadResultViewModel>
     <viewmodel:EndQuizGoodResultViewModel x:Key="EndQuizGoodResultVM"></viewmodel:EndQuizGoodResultViewModel>
-    <viewmodel:EndQuizViewModel x:Key="EndQuizVM"></viewmodel:EndQuizViewModel>
 
 
 </ResourceDictionary>

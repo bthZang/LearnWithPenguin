@@ -933,7 +933,7 @@ namespace LearnWithPenguin.ViewModel
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 15:
-                            NavigatetoResult = new EndQuizViewModel();
+                            NavigatetoResult = new EndQuizGoodResultViewModel();
                             break;
                         default:
                             break;

@@ -197,7 +197,6 @@
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\EndQuizBadResultViewModel.cs" />
     <Compile Include="ViewModel\EndQuizGoodResultViewModel.cs" />
-    <Compile Include="ViewModel\EndQuizViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
     <Compile Include="ViewModel\Game3ViewModel.cs" />
@@ -220,9 +219,6 @@
     <Compile Include="ViewModel\WriteViewModel.cs" />
     <Compile Include="View\CodingView.xaml.cs">
       <DependentUpon>CodingView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\EndQuiz.xaml.cs">
-      <DependentUpon>EndQuiz.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\GameView.xaml.cs">
       <DependentUpon>GameView.xaml</DependentUpon>
@@ -327,10 +323,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserStatistic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\EndQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

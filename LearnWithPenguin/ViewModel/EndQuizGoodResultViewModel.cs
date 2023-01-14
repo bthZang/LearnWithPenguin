@@ -8,5 +8,7 @@ namespace LearnWithPenguin.ViewModel
 {
     internal class EndQuizGoodResultViewModel : BaseViewModel
     {
+        public EndQuizGoodResultViewModel()
+        { }    
     }
 }
