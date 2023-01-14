@@ -113,7 +113,7 @@ namespace LearnWithPenguin.View
             {
                 score = score;
             }  
-            scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
+            //scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
         }
         private void checkBack(object sender, RoutedEventArgs e)
