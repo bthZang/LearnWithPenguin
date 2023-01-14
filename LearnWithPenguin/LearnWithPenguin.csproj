@@ -117,39 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\DataReader.cs" />
-    <Compile Include="Models\History.cs" />
-    <Compile Include="Models\ObservableObject.cs" />
-    <Compile Include="Models\Question.cs" />
-    <Compile Include="Models\Questionaire.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\WrongAnswer.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Quizz.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Quizz.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Quizz.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Quizz.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Quizz.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Quizz.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Quiz_Question.cs">
-      <DependentUpon>Quizz.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Quiz_Within.cs">
-      <DependentUpon>Quizz.tt</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
@@ -237,8 +208,6 @@
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
-    <Compile Include="ViewModel\PuzzleViewModel.cs" />
-    <Compile Include="ViewModel\QuizQuestionAsideViewModel.cs" />
     <Compile Include="ViewModel\GoodQuizResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
@@ -261,17 +230,8 @@
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PuzzleView.xaml.cs">
-      <DependentUpon>PuzzleView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\QuizQuestionAside.xaml.cs">
-      <DependentUpon>QuizQuestionAside.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\QuizzView1.xaml.cs">
       <DependentUpon>QuizzView1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\QuizzView2.xaml.cs">
-      <DependentUpon>QuizzView2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -418,19 +378,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PuzzleView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\QuizQuestionAside.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\QuizzView1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\QuizzView2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -462,13 +410,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="Quizz.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Quizz.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Quizz.edmx.diagram">
-      <DependentUpon>Quizz.edmx</DependentUpon>
-    </None>
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
     <Resource Include="fonts\Baloo2-ExtraBold.ttf" />
@@ -899,16 +840,6 @@
     <Resource Include="images\redCross.jpg" />
     <Resource Include="images\redCross.png" />
     <Resource Include="images\ReloadQuiz.png" />
-    <Content Include="Quizz.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Quizz.edmx</DependentUpon>
-      <LastGenOutput>Quizz.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Quizz.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Quizz.edmx</DependentUpon>
-      <LastGenOutput>Quizz.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />
