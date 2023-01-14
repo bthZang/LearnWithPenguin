@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Button = System.Windows.Controls.Button;
 
 namespace LearnWithPenguin.View
@@ -22,6 +23,8 @@ namespace LearnWithPenguin.View
         private int tempScore;
         private string preTag = "0";
 
+        private int count = 0;
+
         private bool ans1Clicked = false;
         private bool ans2Clicked = false;
         private bool ans3Clicked = false;
@@ -33,12 +36,14 @@ namespace LearnWithPenguin.View
         public QuizzView1()
         {
             InitializeComponent();
+            GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
+
             ans1.Click += storePreAnswer;
             ans2.Click += storePreAnswer;
             ans3.Click += storePreAnswer;
             ans4.Click += storePreAnswer;
 
-
+            GoBack.Click += checkBack;
             NextQuestion();
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
@@ -46,25 +51,42 @@ namespace LearnWithPenguin.View
             {
                 if (viewmodel.Number < 15)
                 {
+                    if (count >= 3)
+                    {
+                        GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
+                    }
+                    else
+                    {
+                        GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/backIcon.png", UriKind.Relative));
+                    }
                     viewmodel.Number += 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
                     //ans1.IsEnabled = true;
                     backClicked = false;
+                    GoBack.IsEnabled = true;
                     NextQuestion();
                 }
+
             });
 
             viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 if (viewmodel.Number > 1)
                 {
-                    //backClicked = true;
-                    viewmodel.Number -= 1;
-                    viewmodel.Question();
-                    viewmodel.NavigatetoResult = null;
-                    //ans1.IsEnabled = false;
-                    NextQuestion();
+                    if (count <= 3)
+                    {
+                        backClicked = true;
+                        viewmodel.Number -= 1;
+                        viewmodel.Question();
+                        viewmodel.NavigatetoResult = null;
+                        GoBack.IsEnabled = false;
+                        //ans1.IsEnabled = false;
+                        GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
+
+                        NextQuestion();
+
+                    }
                 }
             });
 
@@ -196,7 +218,9 @@ namespace LearnWithPenguin.View
             ////}
             //scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
-            backClicked = true;
+            //backClicked = true;
+            count++;
+
 
         }
         private void NextQuestion()
