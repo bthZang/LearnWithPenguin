@@ -51,6 +51,7 @@ namespace LearnWithPenguin.View
             {
                 if (viewmodel.Number < 15)
                 {
+                  
                     if (count >= 3)
                     {
                         GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
@@ -62,11 +63,15 @@ namespace LearnWithPenguin.View
                     viewmodel.Number += 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    //ans1.IsEnabled = true;
                     backClicked = false;
                     GoBack.IsEnabled = true;
                     NextQuestion();
                 }
+                if(viewmodel.Number > 14)
+                {
+                    GoNextImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurNext.png", UriKind.Relative));
+                }
+                    
 
             });
 
@@ -81,9 +86,8 @@ namespace LearnWithPenguin.View
                         viewmodel.Question();
                         viewmodel.NavigatetoResult = null;
                         GoBack.IsEnabled = false;
-                        //ans1.IsEnabled = false;
                         GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
-
+                        GoNextImg.Source = new BitmapImage(new Uri(@"/UserControls/next.png", UriKind.Relative));
                         NextQuestion();
 
                     }
@@ -140,47 +144,47 @@ namespace LearnWithPenguin.View
             //}
 
 
-            ////if (senderButton.Tag.ToString() == "1" && backClicked == false)
-            ////{
-            ////    score++;
-            ////}
-            ////else if (backClicked == true && senderButton.Tag.ToString() == "1" && tempScore + 1 == score)
-            ////{
-            ////    score = score;
-            ////}  
-            ///
-
-            if (ans1Clicked == true)
-            {
-                preTag = ans1.Tag.ToString();
-            }
-            else if (ans2Clicked == true)
-            {
-                preTag = ans2.Tag.ToString();
-            }
-            else if (ans3Clicked == true)
-            {
-                preTag = ans3.Tag.ToString();
-            }
-            else if (ans4Clicked == true)
-            {
-                preTag = ans4.Tag.ToString();
-            }
-            else { }
-
-
-            if (senderButton.Tag.ToString() == "1" && backClicked == false && preTag == "0")
+            if (senderButton.Tag.ToString() == "1" && backClicked == false)
             {
                 score++;
             }
-            else if (backClicked == true && senderButton.Tag.ToString() == "1" && preTag == "1")
+            else if (backClicked == true && senderButton.Tag.ToString() == "1" && tempScore + 1 == score)
             {
                 score = score;
             }
-            else if (senderButton.Tag.ToString() == "1" && backClicked == false)
-            {
-                score++;
-            }
+            
+
+            //if (ans1Clicked == true)
+            //{
+            //    preTag = ans1.Tag.ToString();
+            //}
+            //else if (ans2Clicked == true)
+            //{
+            //    preTag = ans2.Tag.ToString();
+            //}
+            //else if (ans3Clicked == true)
+            //{
+            //    preTag = ans3.Tag.ToString();
+            //}
+            //else if (ans4Clicked == true)
+            //{
+            //    preTag = ans4.Tag.ToString();
+            //}
+            //else { }
+
+
+            //if (senderButton.Tag.ToString() == "1" && backClicked == false && preTag == "0")
+            //{
+            //    score++;
+            //}
+            //else if (backClicked == true && senderButton.Tag.ToString() == "1" && preTag == "1")
+            //{
+            //    score = score;
+            //}
+            //else if (senderButton.Tag.ToString() == "1" && backClicked == false)
+            //{
+            //    score++;
+            //}
 
 
 

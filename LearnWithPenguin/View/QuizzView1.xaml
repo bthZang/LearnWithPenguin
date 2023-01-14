@@ -29,7 +29,7 @@
                                    NextLevel="{Binding OnclickHandleNextLevel}" />
         </DataTemplate>
 
-        <Style x:Key="FocusVisual">
+        <!--<Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate>
@@ -135,7 +135,7 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
+        </Style>-->
     </Page.Resources>
 
     <Grid Background="#A0C4FF">
@@ -209,7 +209,8 @@
                                             Value="3 3 3 3" />
                                 </Style>
                             </Button.Resources>
-                            <Image Source="/View/next.png"
+                            <Image Name="GoNextImg"
+                                Source="/View/next.png"
                                    Width="38.8"
                                    Height="42.9"></Image>
                         </Button>
