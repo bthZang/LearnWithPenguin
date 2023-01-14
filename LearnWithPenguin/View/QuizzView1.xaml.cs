@@ -17,14 +17,14 @@ namespace LearnWithPenguin.View
     /// </summary>
     public partial class QuizzView1 : System.Windows.Controls.Page
     {
-        private int score;
+        private int score = 0;
+        private int tempScore;
         List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
         public QuizzView1()
         {
             InitializeComponent();
             NextQuestion();
-
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
             viewmodel.OnclickHandleNextLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -69,24 +69,32 @@ namespace LearnWithPenguin.View
         {
 
             Button senderButton = sender as Button;
+            tempScore = score;
+
             if (senderButton.Tag.ToString() == "1")
             {
                 score++;
             }
             scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
-
+            
         }
         private void checkBack(object sender, RoutedEventArgs e)
         {
-            if(score > 0)
+            //if (score > 0)
+            //{
+            //    tempScore = score;
+            //    tempScore--;
+            //}
+            //else
+            //{
+            //    score = 0;
+            //}
+           
+            if (score > 0 && tempScore + 1 == score)
             {
                 score--;
-            }
-            else
-            {
-                score = 0;
-            } 
-            scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
+            }    
+                scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
         }
         private void NextQuestion()
         {
