@@ -74,6 +74,9 @@ namespace LearnWithPenguin.View
 
             // set color
             picName.Foreground = System.Windows.Media.Brushes.White;
+
+            //opacity
+            mainScreen.Opacity = 1;
         }
 
         private void PrevLesson(object sender, RoutedEventArgs e)
@@ -226,6 +229,7 @@ namespace LearnWithPenguin.View
             goodResult.Visibility = Visibility.Collapsed;
             badResult.Visibility = Visibility.Collapsed;
             picName.Foreground = System.Windows.Media.Brushes.White;
+            mainScreen.Opacity = 1;
 
         }
 
@@ -233,6 +237,8 @@ namespace LearnWithPenguin.View
         {
             if (read_Result == picName.Text)
             {
+                mainScreen.Opacity = 0.2;
+                layoutScreen.Background = System.Windows.Media.Brushes.Black;
                 goodResult.Visibility = Visibility.Visible;
                 MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("./TapDoc/voicemp3/congrats.mp3",UriKind.Relative));
@@ -241,7 +247,8 @@ namespace LearnWithPenguin.View
             }
             else
             {
-
+                mainScreen.Opacity = 0.2;
+                layoutScreen.Background = System.Windows.Media.Brushes.Black;
                 badResult.Visibility = Visibility.Visible;
                 MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("./TapDoc/voicemp3/ohno.mp3", UriKind.Relative));

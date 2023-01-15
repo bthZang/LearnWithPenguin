@@ -22,14 +22,16 @@
         </DataTemplate>
     </Page.Resources>
     <!-- content -->
-    <Grid>
+    <Grid x:Name="layoutScreen">
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
         
         <StackPanel Orientation="Vertical"
                     DataContext="{StaticResource ReadVM}"
-                    Background="#A0C4FF">
+                    Background="#A0C4FF"
+                    x:Name="mainScreen"
+                    >
             
             <DockPanel>
                 <Grid>
