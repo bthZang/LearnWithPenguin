@@ -22,9 +22,6 @@ namespace LearnWithPenguin.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-
-
-
         protected BaseViewModel _navigatetoHome;
 
         public bool isClosing = false;
@@ -36,9 +33,10 @@ namespace LearnWithPenguin.ViewModel
             ImageVolume = "/UserControls/Volume.png";
             ImageSound = "/UserControls/Sound.png";
 
-            _music.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Wii Music  Gaming Background Music HD.mp3")));
+            //MessageBox.Show(Convert.ToString(new Uri(@"../audio/y2mate.com - Wii Music  Gaming Background Music HD.mp3", UriKind.Relative)));
+            _music.Open(new Uri("y2mate.com - Wii Music  Gaming Background Music HD.mp3", UriKind.Relative));
             _music.MediaEnded += ReplayMusic;
-            _sound.Open(new Uri(string.Format("D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\y2mate.com - Video Game Beep  Sound Effect.mp3")));
+            _sound.Open(new Uri("y2mate.com - Video Game Beep  Sound Effect.mp3", UriKind.Relative));
         }
 
         public void ReplayMusic(object sender, EventArgs e)
@@ -65,6 +63,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Stop();
                     NavigatetoHome = new ReadViewModel();
                 });
             }
@@ -107,6 +106,21 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
+        public ICommand TransformOutRead
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    _music.Position = TimeSpan.Zero;
+                    _music.Play();
+                    NavigatetoHome = new HomeViewModel();
+                });
+            }
+
+            set { }
+        }
         public ICommand Transform
         {
             get
@@ -127,7 +141,9 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Play();
                     NavigatetoHome = new UserViewModel();
+                    Menu = null;
                 });
             }
 
@@ -230,6 +246,18 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     //NavigatetoHome = new QuizzView2ViewModel();
+                });
+            }
+            set { }
+        }
+
+        public ICommand TransformtoRateView
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new RateViewModel();
                 });
             }
             set { }

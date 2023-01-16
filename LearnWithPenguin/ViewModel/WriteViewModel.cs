@@ -53,6 +53,11 @@ namespace LearnWithPenguin.ViewModel
         {
             this.IsDisplayVideo = "Hidden";
             this.Number = 1;
+            this._star1 = "yellow";
+            this._star2 = "white";
+            this._star3 = "white";
+            this._star4 = "white";
+            this._star5 = "white";
         }
 
         public int Number
@@ -89,7 +94,8 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Thuong\\" + _number + ".mp4";
+                return "./TapViet/ChuThuong" + _number + ".mp4";
+                //return "/TapViet/ChuThuong/" + _number + ".mp4";
             }
             set
             {
@@ -101,7 +107,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Dut\\" + _number + ".png";
+                return "/TapViet/ChuDut/" + _number + ".png";
             }
             set
             {
@@ -113,7 +119,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "D:\\Zangg\\Penguin\\UIT\\HK3-II\\LTTQ\\Chu_Lien\\" + _number + ".png";
+                return "/TapViet/ChuLien/" + _number + ".png";
             }
             set
             {
@@ -222,10 +228,48 @@ namespace LearnWithPenguin.ViewModel
                 if (isCorrect)
                     point += 1;
             }
+
             if (point >= 3)
+            {
                 _submit = true;
+
+                switch (point)
+                {
+                    case 3:
+                    case 4:
+                        Star4 = Star5 = "white";
+                        break;
+                    case 5:
+                        Star4 = "yellow";
+                        Star5 = "white";
+                        break;
+                    case 6:
+                        Star4 = Star5 = "yellow";
+                        break;
+                    default:
+                        Star4 = Star5 = "yellow";
+                        break;
+                }
+            }
             else
+            {
                 _submit = false;
+
+                switch (point)
+                {
+                    case 1:
+                        Star1 = "yellow";
+                        Star2 = "white";
+                        break;
+                    case 2:
+                        Star1 = Star2 = "yellow";
+                        break;
+                    default:
+                        Star1 = "yellow";
+                        Star2 = "white";
+                        break;
+                }
+            }
 
             return _submit;
         }
@@ -242,6 +286,155 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+
+        //star
+
+        public string _star1;
+        public string _star2;
+        public string _star3;
+        public string _star4;
+        public string _star5;
+
+
+
+        public string Star1
+        {
+            get
+            {
+                return _star1;
+            }
+            set
+            {
+                _star1 = value;
+                ChangeColor1 = "";
+                OnPropertyChanged();
+            }
+        }
+
+       
+
+        public string ChangeColor1
+        {
+            get
+            {
+                return "/UserControls/" + _star1 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star2
+        {
+            get
+            {
+                return _star2;
+            }
+            set
+            {
+                _star2= value;
+                ChangeColor2 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor2
+        {
+            get
+            {
+                return "/UserControls/" + _star2 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star3
+        {
+            get
+            {
+                return _star3;
+            }
+            set
+            {
+                _star3= value;
+                ChangeColor3 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor3
+        {
+            get
+            {
+                return "/UserControls/" + _star3 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star4
+        {
+            get
+            {
+                return _star4;
+            }
+            set
+            {
+                _star4= value;
+                ChangeColor4 = "";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor4
+        {
+            get
+            {
+                return "/UserControls/" + _star4 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+        public string Star5
+        {
+            get
+            {
+                return _star5;
+            }
+            set
+            {
+                _star5= value;
+                ChangeColor5 = "5";
+                OnPropertyChanged();
+            }
+        }
+
+
+        public string ChangeColor5
+        {
+            get
+            {
+                return "/UserControls/" + _star5 + "Star.png";
+            }
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
+
+        //endstar
         public ICommand ShowResult
         {
             get

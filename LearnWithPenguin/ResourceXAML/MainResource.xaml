@@ -44,6 +44,12 @@
     <viewmodel:BadQuizResultViewModel x:Key="BadQuizResultVM"></viewmodel:BadQuizResultViewModel>
     <viewmodel:EndQuizBadResultViewModel x:Key="EndQuizBadResultVM"></viewmodel:EndQuizBadResultViewModel>
     <viewmodel:EndQuizGoodResultViewModel x:Key="EndQuizGoodResultVM"></viewmodel:EndQuizGoodResultViewModel>
+    <viewmodel:RateViewModel x:Key="RateVM"></viewmodel:RateViewModel>
+
+
+
+
+
 
 
 </ResourceDictionary>

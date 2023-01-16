@@ -10,12 +10,6 @@
     <Grid Margin="-485.5 0 0 0">
         <Grid.Resources>
 
-            <!--<DataTemplate Da>
-                <local:TextOnBoarding />
-            </DataTemplate>-->
-            <!--<DataTemplate DataType="{x:Type viewmodel:LoginViewModel}">
-                <localLorgin:Login />
-            </DataTemplate>-->
         </Grid.Resources>
         <Grid Background="Black"
               Opacity="0.5"></Grid>

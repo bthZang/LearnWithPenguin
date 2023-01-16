@@ -20,7 +20,7 @@
                             Value="6 6 6 6" />
                 </Style>
             </Button.Resources>
-            <Image Source="/UserControls/Home.png"
+            <Image Source="/UserControls/homeMenu.jpg"
                    Width="97.13"
                    Height="34.99"></Image>
         </Button>

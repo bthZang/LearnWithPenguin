@@ -98,6 +98,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -209,6 +210,8 @@
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\GoodQuizResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
+
+    <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
@@ -228,6 +231,9 @@
     </Compile>
     <Compile Include="View\QuizzView1.xaml.cs">
       <DependentUpon>QuizzView1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RateView.xaml.cs">
+      <DependentUpon>RateView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
@@ -374,6 +380,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\RateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ReadView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -408,6 +418,7 @@
     <Resource Include="fonts\Baloo2-Medium.ttf" />
     <Resource Include="fonts\Baloo2-Regular.ttf" />
     <Resource Include="fonts\Baloo2-SemiBold.ttf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -832,6 +843,267 @@
     <Resource Include="images\redCross.jpg" />
     <Resource Include="images\redCross.png" />
     <Resource Include="images\ReloadQuiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TapViet\ChuDut\1.png" />
+    <Resource Include="TapViet\ChuDut\10.png" />
+    <Resource Include="TapViet\ChuDut\11.png" />
+    <Resource Include="TapViet\ChuDut\2.png" />
+    <Resource Include="TapViet\ChuDut\3.png" />
+    <Resource Include="TapViet\ChuDut\4.png" />
+    <Resource Include="TapViet\ChuDut\5.png" />
+    <Resource Include="TapViet\ChuDut\6.png" />
+    <Resource Include="TapViet\ChuDut\7.png" />
+    <Resource Include="TapViet\ChuDut\8.png" />
+    <Resource Include="TapViet\ChuDut\9.png" />
+    <Resource Include="TapViet\ChuLien\1.png" />
+    <Resource Include="TapViet\ChuLien\10.png" />
+    <Resource Include="TapViet\ChuLien\11.png" />
+    <Resource Include="TapViet\ChuLien\2.png" />
+    <Resource Include="TapViet\ChuLien\3.png" />
+    <Resource Include="TapViet\ChuLien\4.png" />
+    <Resource Include="TapViet\ChuLien\5.png" />
+    <Resource Include="TapViet\ChuLien\6.png" />
+    <Resource Include="TapViet\ChuLien\7.png" />
+    <Resource Include="TapViet\ChuLien\8.png" />
+    <Resource Include="TapViet\ChuLien\9.png" />
+    <Resource Include="images\medal\HCHoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HCHoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HCHoanThanhTapViet.png" />
+    <Resource Include="images\medal\HCHoanThanhTroChoi.png" />
+    <Resource Include="images\medal\HCTotNhanBiet.png" />
+    <Resource Include="images\medal\HCTotTapDoc.png" />
+    <Resource Include="images\medal\HCTotTapViet.png" />
+    <Resource Include="images\medal\HCTotTrochoi.png" />
+    <Resource Include="images\medal\HCXuatSacNhanBiet.png" />
+    <Resource Include="images\medal\HCXuatSacTapDoc.png" />
+    <Resource Include="images\medal\HCXuatSacTapViet.png" />
+    <Resource Include="images\medal\HCXuatSacTroChoi.png" />
+    <Resource Include="images\medal\HoanThanhNhanBiet.png" />
+    <Resource Include="images\medal\HoanThanhTapDoc.png" />
+    <Resource Include="images\medal\HoanThanhTapViet.png" />
+    <Resource Include="images\medal\HoanThanhTroChoi.png" />
+    <Resource Include="images\medal\TotNhanBiet.png" />
+    <Resource Include="images\medal\TotTapDoc.png" />
+    <Resource Include="images\medal\TotTapViet.png" />
+    <Resource Include="images\medal\TotTroChoi.png" />
+    <Resource Include="images\medal\XuatSacNhanBiet.png" />
+    <Resource Include="images\medal\XuatSacTapDoc.png" />
+    <Resource Include="images\medal\XuatSacTapViet.png" />
+    <Resource Include="images\medal\XuatSacTroChoi.png" />
+    <Resource Include="images\speakButton.jpg" />
+    <Resource Include="images\tickCheck.jpg" />
+    <Resource Include="images\checkSign.png" />
+    <Resource Include="images\resultOn.png" />
+    <Resource Include="images\readOn.png" />
+    <Resource Include="images\readOff.png" />
+    <Resource Include="TapDoc\img\2.png" />
+    <Resource Include="TapDoc\img\3.png" />
+    <Resource Include="TapDoc\img\4.png" />
+    <Resource Include="TapDoc\img\5.png" />
+    <Resource Include="TapDoc\img\6.png" />
+    <Resource Include="TapDoc\img\7.png" />
+    <Resource Include="TapDoc\img\8.png" />
+    <Resource Include="TapDoc\img\9.png" />
+    <Resource Include="TapDoc\img\10.png" />
+    <Resource Include="TapDoc\img\11.png" />
+    <Resource Include="TapDoc\img\12.png" />
+    <Resource Include="TapDoc\img\13.png" />
+    <Resource Include="TapDoc\img\14.png" />
+    <Resource Include="TapDoc\img\15.png" />
+    <Resource Include="TapDoc\img\16.png" />
+    <Resource Include="TapDoc\img\17.png" />
+    <Resource Include="TapDoc\img\18.png" />
+    <Resource Include="TapDoc\img\19.png" />
+    <Resource Include="TapDoc\img\20.png" />
+    <Resource Include="TapDoc\img\21.png" />
+    <Resource Include="TapDoc\img\22.png" />
+    <Resource Include="TapDoc\img\23.png" />
+    <Resource Include="TapDoc\img\24.png" />
+    <Resource Include="TapDoc\img\25.png" />
+    <Resource Include="TapDoc\img\26.png" />
+    <Resource Include="TapDoc\img\1.png" />
+    <Content Include="TapDoc\voicemp3\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\5.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\6.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\7.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\8.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\9.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\10.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\11.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\12.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\13.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\14.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\15.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\16.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\17.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\18.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\19.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\20.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\21.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\22.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\23.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\24.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\25.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\26.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\congrats.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\ohno.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapViet\ChuThuong\1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="TapViet\ChuThuong\10.mp4" />
+    <Resource Include="TapViet\ChuThuong\11.mp4" />
+    <Resource Include="TapViet\ChuThuong\12.mp4" />
+    <Resource Include="TapViet\ChuThuong\13.mp4" />
+    <Resource Include="TapViet\ChuThuong\14.mp4" />
+    <Resource Include="TapViet\ChuThuong\15.mp4" />
+    <Resource Include="TapViet\ChuThuong\16.mp4" />
+    <Resource Include="TapViet\ChuThuong\17.mp4" />
+    <Resource Include="TapViet\ChuThuong\18.mp4" />
+    <Resource Include="TapViet\ChuThuong\19.mp4" />
+    <Resource Include="TapViet\ChuThuong\2.mp4" />
+    <Resource Include="TapViet\ChuThuong\20.mp4" />
+    <Resource Include="TapViet\ChuThuong\21.mp4" />
+    <Resource Include="TapViet\ChuThuong\22.mp4" />
+    <Resource Include="TapViet\ChuThuong\23.mp4" />
+    <Resource Include="TapViet\ChuThuong\24.mp4" />
+    <Resource Include="TapViet\ChuThuong\25.mp4" />
+    <Resource Include="TapViet\ChuThuong\26.mp4" />
+    <Resource Include="TapViet\ChuThuong\27.mp4" />
+    <Resource Include="TapViet\ChuThuong\28.mp4" />
+    <Resource Include="TapViet\ChuThuong\29.mp4" />
+    <Resource Include="TapViet\ChuThuong\3.mp4" />
+    <Resource Include="TapViet\ChuThuong\30.mp4" />
+    <Resource Include="TapViet\ChuThuong\31.mp4" />
+    <Resource Include="TapViet\ChuThuong\32.mp4" />
+    <Resource Include="TapViet\ChuThuong\33.mp4" />
+    <Resource Include="TapViet\ChuThuong\34.mp4" />
+    <Resource Include="TapViet\ChuThuong\35.mp4" />
+    <Resource Include="TapViet\ChuThuong\36.mp4" />
+    <Resource Include="TapViet\ChuThuong\37.mp4" />
+    <Resource Include="TapViet\ChuThuong\38.mp4" />
+    <Resource Include="TapViet\ChuThuong\39.mp4" />
+    <Resource Include="TapViet\ChuThuong\4.mp4" />
+    <Resource Include="TapViet\ChuThuong\40.mp4" />
+    <Resource Include="TapViet\ChuThuong\41.mp4" />
+    <Resource Include="TapViet\ChuThuong\42.mp4" />
+    <Resource Include="TapViet\ChuThuong\43.mp4" />
+    <Resource Include="TapViet\ChuThuong\44.mp4" />
+    <Resource Include="TapViet\ChuThuong\45.mp4" />
+    <Resource Include="TapViet\ChuThuong\46.mp4" />
+    <Resource Include="TapViet\ChuThuong\47.mp4" />
+    <Resource Include="TapViet\ChuThuong\48.mp4" />
+    <Resource Include="TapViet\ChuThuong\49.mp4" />
+    <Resource Include="TapViet\ChuThuong\5.mp4" />
+    <Resource Include="TapViet\ChuThuong\50.mp4" />
+    <Resource Include="TapViet\ChuThuong\51.mp4" />
+    <Resource Include="TapViet\ChuThuong\52.mp4" />
+    <Resource Include="TapViet\ChuThuong\53.mp4" />
+    <Resource Include="TapViet\ChuThuong\54.mp4" />
+    <Resource Include="TapViet\ChuThuong\55.mp4" />
+    <Resource Include="TapViet\ChuThuong\56.mp4" />
+    <Resource Include="TapViet\ChuThuong\57.mp4" />
+    <Resource Include="TapViet\ChuThuong\58.avi" />
+    <Resource Include="TapViet\ChuThuong\59.mp4" />
+    <Resource Include="TapViet\ChuThuong\6.mp4" />
+    <Resource Include="TapViet\ChuThuong\60.mp4" />
+    <Resource Include="TapViet\ChuThuong\61.mp4" />
+    <Resource Include="TapViet\ChuThuong\62.mp4" />
+    <Resource Include="TapViet\ChuThuong\63.mp4" />
+    <Resource Include="TapViet\ChuThuong\64.mp4" />
+    <Resource Include="TapViet\ChuThuong\65.mp4" />
+    <Resource Include="TapViet\ChuThuong\66.mp4" />
+    <Resource Include="TapViet\ChuThuong\67.mp4" />
+    <Resource Include="TapViet\ChuThuong\68.avi" />
+    <Resource Include="TapViet\ChuThuong\7.mp4" />
+    <Resource Include="TapViet\ChuThuong\8.mp4" />
+    <Resource Include="TapViet\ChuThuong\9.mp4" />
+    <Resource Include="View\vidu.png" />
+    <Resource Include="View\play.png" />
+    <Resource Include="UserControls\HoanThanhTapDoc.png" />
+    <Resource Include="UserControls\TotTapDoc.png" />
+    <Resource Include="UserControls\IceBorder.png" />
+    <Resource Include="UserControls\fish.png" />
+    <Resource Include="UserControls\TapDocIce.png" />
+    <Resource Include="UserControls\TapVietIce.png" />
+    <Resource Include="UserControls\DoVuiIce.png" />
+    <Resource Include="UserControls\TroChoiIce.png" />
+    <Resource Include="UserControls\10817161_19406466.jpg" />
+    <Resource Include="UserControls\4650083_2458444.jpg" />
+    <Resource Include="UserControls\summer-background-sea-water %281%29.jpg" />
+    <Resource Include="UserControls\Group 169.png" />
+    <Resource Include="View\RateView.png" />
+    <Resource Include="View\whiteStar.png" />
+    <Resource Include="View\yellowStar.png" />
+    <Resource Include="View\speakButton.jpg" />
+    <Resource Include="View\tickCheck.jpg" />
+    <Resource Include="UserControls\homeMenu.png" />
+    <Resource Include="UserControls\homeMenu.jpg" />
+    <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="y2mate.com - Wii Music  Gaming Background Music HD.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />

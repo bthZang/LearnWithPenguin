@@ -20,102 +20,281 @@
         <DataTemplate DataType="{x:Type viewmodel:HomeIconViewModel}">
             <localUC:HomeIcon />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:UserInfoViewModel}">
+            <localUC:UserInfo />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:UserRankingViewModel}">
+            <localUC:UserRanking />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:UserStatisticViewModel}">
+            <localUC:UserStatistic />
+        </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="#A0C4FF">
+    <Grid Background="#A0C4FF"
+          HorizontalAlignment="Center"
+          >
         <ContentControl Panel.ZIndex="999"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <ContentControl Content="{Binding DisplayUser}"
+                        Margin="0 130 0 0"
+                        DataContext="{StaticResource UserVM}"></ContentControl>
 
-        <StackPanel DataContext="{StaticResource UserVM}">
-            <Border Background="White"
-                    Opacity="0.5"
-                    CornerRadius="0 0 20 20"
-                    Height="130"
-                    Width="{x:Static SystemParameters.PrimaryScreenWidth}">
-                <DockPanel >
-                    <Grid>
-                        <localUC:Icon Width="63.28"
-                                      Height="63.28"
-                                      Margin="45,0,0,0"
-                                      DataContext="{StaticResource MainVM}"
-                                      Command="{Binding ShowMenu}">
+        <Border Background="White"
+                Opacity="0.5"
+                CornerRadius="0 0 20 20"
+                VerticalAlignment="Top"
+                Height="130"
+                Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+            <DockPanel>
+                <Grid>
+                    <localUC:Icon Width="63.28"
+                                  Height="63.28"
+                                  Margin="45,0,0,0"
+                                  DataContext="{StaticResource MainVM}"
+                                  Command="{Binding ShowMenu}">
 
-                        </localUC:Icon>
-                    </Grid>
-                    <Grid Width="1018"
-                          HorizontalAlignment="Center"
-                          >
-                        
-                        <StackPanel Orientation="Horizontal"
-                                    Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-                                    >
-                            <StackPanel>
-                                <TextBlock TextAlignment="Center"
-                                           TextWrapping="Wrap"
+                    </localUC:Icon>
+                </Grid>
+                <Grid Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+                      HorizontalAlignment="Left"
+                      Margin="200 0 0 0">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+
+
+                        <Button Height="71.09"
+                                Width="171.09"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="100 0 0 0"
+                                DataContext="{StaticResource UserVM}"
+                                Command="{Binding ShowChosenInfor}"
+                                Background="Transparent">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="Transparent"
+                                            CornerRadius="19"
+                                            BorderBrush="Transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Grid>
+                                <TextBlock VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontSize="36.09"
+                                           FontWeight="UltraBold"
+                                           LineStackingStrategy="MaxHeight"
+                                           Height="78"
+                                           Width="191"
+                                           FontStyle="Normal"
+                                           TextAlignment="Center"
+                                           DataContext="{StaticResource UserVM}"
+                                           Foreground="{ Binding ColorInfor}"
                                            Text="Thông tin"
-                                           Foreground="#073580"
-                                           FontSize="36"
+                                           Style="{StaticResource Baloo2-Bold}" />
+                                <Border Width="100"
+                                        Height="{Binding HeightInfor}"
+                                        CornerRadius="4"
+                                        DataContext="{StaticResource UserVM}"
+                                        Background="#073580"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Bottom" />
+                            </Grid>
+                        </Button>
+
+                        <!--Xep hang-->
+
+                        <Button Height="71.09"
+                                Width="171.09"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="100 0 0 0"
+                                DataContext="{StaticResource UserVM}"
+                                Command="{Binding ShowChosenRanking}"
+                                Background="Transparent">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="Transparent"
+                                            CornerRadius="19"
+                                            BorderBrush="Transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Grid>
+                                <TextBlock VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontSize="36.09"
                                            FontWeight="UltraBold"
-                                           FontStyle="Normal"
                                            LineStackingStrategy="MaxHeight"
-                                           Style="{StaticResource Baloo2-Bold}"
                                            Height="78"
                                            Width="191"
-                                           Margin="80,20,0,0" />
-                                <Border Width="100"
-                                        Height="10"
-                                        CornerRadius="4"
-                                        BorderThickness="3"
-                                        Background="#19468E"
-                                        Margin="80 -20 0 0" />
-                            </StackPanel>
-
-                            <StackPanel>
-                                <TextBlock TextAlignment="Center"
-                                           TextWrapping="Wrap"
+                                           FontStyle="Normal"
+                                           TextAlignment="Center"
+                                           DataContext="{StaticResource UserVM}"
+                                           Foreground="{ Binding ColorRanking}"
                                            Text="Xếp hạng"
-                                           Foreground="#073580"
-                                           FontSize="36"
-                                           FontWeight="UltraBold"
-                                           FontStyle="Normal"
-                                           LineStackingStrategy="MaxHeight"
-                                           Style="{StaticResource Baloo2-Bold}"
-                                           Height="78"
-                                           Width="191"
-                                           Margin="69,20,0,0" />
+                                           Style="{StaticResource Baloo2-Bold}" />
                                 <Border Width="100"
-                                        Height="10"
+                                        Height="{Binding HeightRanking}"
                                         CornerRadius="4"
-                                        BorderThickness="3"
-                                        Background="#19468E"
-                                        Margin="60 -20 0 0" />
-                            </StackPanel>
+                                        DataContext="{StaticResource UserVM}"
+                                        Background="#073580"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Bottom" />
+                            </Grid>
+                        </Button>
 
-                            <StackPanel>
-                                <TextBlock TextAlignment="Center"
-                                           TextWrapping="Wrap"
-                                           Text="Thống kê"
-                                           Foreground="#073580"
-                                           FontSize="36"
+                        <!--thống kê-->
+                        <Button Height="71.09"
+                                Width="171.09"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Margin="100 0 0 0"
+                                DataContext="{StaticResource UserVM}"
+                                Command="{Binding ShowChosenStatistic}"
+                                Background="Transparent">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="Transparent"
+                                            CornerRadius="19"
+                                            BorderBrush="Transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#78A7F7" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#78A7F7" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Grid>
+                                <TextBlock VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontSize="36.09"
                                            FontWeight="UltraBold"
-                                           FontStyle="Normal"
                                            LineStackingStrategy="MaxHeight"
-                                           Style="{StaticResource Baloo2-Bold}"
                                            Height="78"
                                            Width="191"
-                                           Margin="69,20,0,0" />
+                                           FontStyle="Normal"
+                                           TextAlignment="Center"
+                                           DataContext="{StaticResource UserVM}"
+                                           Foreground="{ Binding ColorStatistic}"
+                                           Text="Thống kê"
+                                           Style="{StaticResource Baloo2-Bold}" />
                                 <Border Width="100"
-                                        Height="10"
+                                        Height="{Binding HeightStatistic}"
                                         CornerRadius="4"
-                                        BorderThickness="3"
-                                        Background="#19468E"
-                                        Margin="67 -20 0 0" />
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </DockPanel>
-            </Border>
-        </StackPanel>
+                                        DataContext="{StaticResource UserVM}"
+                                        Background="#073580"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Bottom" />
+                            </Grid>
+                        </Button>
+
+
+                    </StackPanel>
+                </Grid>
+
+            </DockPanel>
+        </Border>
+        <Grid HorizontalAlignment="Left">
+            <localUC:HomeIcon Width="97.13"
+                              Height="34.99"
+                              Margin="45 700 0 0"
+                              DataContext="{StaticResource MainVM}"
+                              Command="{Binding Transform}">
+
+            </localUC:HomeIcon>
+        </Grid>
     </Grid>
 </Page>
