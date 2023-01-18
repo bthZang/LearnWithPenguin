@@ -66,6 +66,7 @@ namespace LearnWithPenguin.ViewModel
 
                     string password = Password;
                     string confirmPassword = ConfirmPassword;
+                    string userName = UserName;
 
                     //if (password != confirmPassword)
                     //{

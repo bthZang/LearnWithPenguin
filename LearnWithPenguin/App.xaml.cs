@@ -33,7 +33,7 @@ namespace LearnWithPenguin
 
                     service.AddSingleton(new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey)));
 
-                    service.AddSingleton<OnBoardingView>((services) => new OnBoardingView()
+                    service.AddSingleton<MainWindow>((services) => new MainWindow()
                     {
                         DataContext = new RegisterViewModel()
                     }
