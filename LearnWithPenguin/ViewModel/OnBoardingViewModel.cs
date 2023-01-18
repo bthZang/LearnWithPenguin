@@ -95,7 +95,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    //PartOnBoarding = new RegisterViewModel(firebaseAuthProvider: Firebase.Auth.FirebaseAuthProvider);
+                    PartOnBoarding = new RegisterViewModel();
                 });
             }
 

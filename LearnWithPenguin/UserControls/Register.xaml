@@ -32,6 +32,8 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
+                                       DataContext="{StaticResource RegisterVM}"
+                                       Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
                                      x:Name="Username"
@@ -47,8 +49,6 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
-                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
@@ -84,6 +84,8 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
+                                       Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
                                      Margin="0,8,0,0"
@@ -98,8 +100,6 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
-                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
@@ -133,9 +133,13 @@
                             BorderThickness="4"
                             BorderBrush="#000000"
                             Margin="0 26.56 0 0">
+                        <!--Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />-->
+
 
                         <Grid DataContext="{StaticResource LoginVM}">
                             <TextBox Width="240"
+                                       Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                      VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      x:Name="Password"
@@ -148,11 +152,8 @@
                                      FontWeight="Bold"
                                      Background="Transparent"
                                      BorderThickness="0"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
+                                     Style="{StaticResource Baloo2-Bold}" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
-                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
@@ -180,7 +181,7 @@
                         </Grid>
 
                     </Border>
-                    
+
                     <!--confirm-->
                     <Border Background="#BDB2FF"
                             Width="300.78"
@@ -192,6 +193,8 @@
 
                         <Grid DataContext="{StaticResource LoginVM}">
                             <TextBox Width="240"
+                                       Text="{Binding ConfirmPassword, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                      VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      Margin="20,0,0,0"
@@ -203,11 +206,8 @@
                                      FontWeight="Bold"
                                      Background="Transparent"
                                      BorderThickness="0"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
+                                     Style="{StaticResource Baloo2-Bold}" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="{Binding ConfirmPassword, UpdateSourceTrigger=PropertyChanged}"
-                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
@@ -235,8 +235,12 @@
                         </Grid>
 
                     </Border>
-                    <Grid DataContext="{StaticResource MainVM}">
-                        <Button 
+                    <Grid DataContext="{StaticResource RegisterVM}">
+                        <Button Command="{Binding Register}">
+
+                        </Button>
+                        <Grid DataContext="{StaticResource MainVM}">
+                            <Button 
                                 DataContext="{StaticResource OnBoardingVM}"
                                 Command="{Binding Show}"
                                 Background="Transparent"
@@ -244,21 +248,21 @@
                                 Height="63"
                                 Margin="0 50 0 10"
                                 BorderThickness="0">
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="Border.CornerRadius"
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
                                             Value="70 70 70 70" />
-                                </Style>
-                            </Button.Resources>
+                                    </Style>
+                                </Button.Resources>
 
-                            <Border Background="#FFFFFF"
+                                <Border Background="#FFFFFF"
                                     Width="177"
                                     Height="59"
                                     CornerRadius="23.44"
                                     BorderThickness="4"
                                     BorderBrush="#000000"
                                     VerticalAlignment="Top">
-                                <TextBlock Width="158"
+                                    <TextBlock Width="158"
                                            VerticalAlignment="Bottom"
                                            HorizontalAlignment="Center"
                                            Foreground="#000000"
@@ -270,50 +274,50 @@
                                            Style="{StaticResource Baloo2-Bold}"
                                            Text="Đăng ký"
                                            Margin="0,0,0,8" />
-                            </Border>
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border x:Name="Border"
+                                </Border>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
 
-                                        <ContentPresenter Margin="2"
+                                            <ContentPresenter Margin="2"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
                                                           RecognizesAccessKey="True" />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsKeyboardFocused"
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
                                                  Value="true">
-                                            <Setter TargetName="Border"
+                                                <Setter TargetName="Border"
                                                     Property="BorderBrush"
                                                     Value="transparent" />
-                                        </Trigger>
-                                        <Trigger Property="IsMouseOver"
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
                                                  Value="true">
-                                            <Setter TargetName="Border"
+                                                <Setter TargetName="Border"
                                                     Property="Background"
                                                     Value="transparent" />
-                                        </Trigger>
-                                        <Trigger Property="IsPressed"
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
                                                  Value="true">
-                                            <Setter TargetName="Border"
+                                                <Setter TargetName="Border"
                                                     Property="Background"
                                                     Value="transparent" />
-                                            <Setter TargetName="Border"
+                                                <Setter TargetName="Border"
                                                     Property="BorderBrush"
                                                     Value="transparent" />
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
                     </Grid>
-
                 </StackPanel>
-                
-                
+
+
             </StackPanel>
         </StackPanel>
     </Grid>

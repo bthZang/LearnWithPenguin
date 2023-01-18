@@ -35,7 +35,7 @@ namespace LearnWithPenguin
 
                     service.AddSingleton<OnBoardingView>((services) => new OnBoardingView()
                     {
-                        DataContext = new RegisterViewModel(services.GetRequiredService<FirebaseAuthProvider>())
+                        DataContext = new RegisterViewModel()
                     }
                     );
                     

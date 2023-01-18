@@ -55,15 +55,48 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        public ICommand Register { get; }
+        //public ICommand Register { get; }
 
-        public RegisterViewModel(FirebaseAuthProvider firebaseAuthProvider)
+        public ICommand Register
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, async (p) =>
+                {
+
+                    string password = Password;
+                    string confirmPassword = ConfirmPassword;
+
+                    //if (password != confirmPassword)
+                    //{
+                    //    return;
+                    //}
+
+                    try
+                    {
+                        string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
+
+                        var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+                        var a = await f.CreateUserWithEmailAndPasswordAsync(Email, password, UserName);
+                    }
+                    catch (Exception e)
+                    { 
+                        throw; 
+                    }
+
+
+                });
+            }
+            set { }
+        }
+
+        public RegisterViewModel()
         {
             this.Email = "Email";
             this.Password = "Mật khẩu";
             this.UserName = "Tên người dùng";
             this.ConfirmPassword = "Xác nhận mật khẩu";
-            Register = new RegisterCommand(this, firebaseAuthProvider);
+            //Register = new RegisterCommand(this, firebaseAuthProvider);
         }
 
 
