@@ -55,8 +55,6 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-        //public ICommand Register { get; }
-
         public ICommand Register
         {
             get
@@ -68,10 +66,10 @@ namespace LearnWithPenguin.ViewModel
                     string confirmPassword = ConfirmPassword;
                     string userName = UserName;
 
-                    //if (password != confirmPassword)
-                    //{
-                    //    return;
-                    //}
+                    if (password != confirmPassword)
+                    {
+                        return;
+                    }
 
                     try
                     {
@@ -80,7 +78,7 @@ namespace LearnWithPenguin.ViewModel
                         var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
                         var a = await f.CreateUserWithEmailAndPasswordAsync(Email, password, UserName);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     { 
                         throw; 
                     }
@@ -93,11 +91,6 @@ namespace LearnWithPenguin.ViewModel
 
         public RegisterViewModel()
         {
-            this.Email = "Email";
-            this.Password = "Mật khẩu";
-            this.UserName = "Tên người dùng";
-            this.ConfirmPassword = "Xác nhận mật khẩu";
-            //Register = new RegisterCommand(this, firebaseAuthProvider);
         }
 
 
