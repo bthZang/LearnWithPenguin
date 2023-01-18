@@ -35,7 +35,7 @@ namespace LearnWithPenguin
 
                     service.AddSingleton<MainWindow>((services) => new MainWindow()
                     {
-                        DataContext = new RegisterViewModel()
+                        DataContext = new OnBoardingViewModel()
                     }
                     );
                     

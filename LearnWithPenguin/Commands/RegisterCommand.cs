@@ -11,7 +11,7 @@ namespace LearnWithPenguin.Commands
 {
     public class RegisterCommand : AsyncCommandBase
     {
-        private readonly RegisterViewModel _registerViewmodel;
+        private readonly OnBoardingViewModel _registerViewmodel;
         private readonly FirebaseAuthProvider _firebaseAuthProvider;
 
         public override async Task ExecuteAsync(object parameter)
@@ -34,9 +34,9 @@ namespace LearnWithPenguin.Commands
 
         }
 
-        public RegisterCommand(RegisterViewModel registerViewmodel, FirebaseAuthProvider firebaseAuthProvider)
+        public RegisterCommand(OnBoardingViewModel onBoardingViewmodel, FirebaseAuthProvider firebaseAuthProvider)
         {
-            _registerViewmodel = registerViewmodel;
+            _registerViewmodel = onBoardingViewmodel;
             _firebaseAuthProvider = firebaseAuthProvider;
         }
     }
