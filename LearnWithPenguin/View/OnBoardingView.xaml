@@ -25,6 +25,9 @@
         <DataTemplate DataType="{x:Type viewmodel:RegisterViewModel}">
             <localLorgin:Register />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:LoadingPanelViewModel}">
+            <localLorgin:LoadingPanel />
+        </DataTemplate>
     </Page.Resources>
     <Grid>
         
@@ -35,7 +38,12 @@
                        Height="651"
                        VerticalAlignment="Bottom"
                        Margin="-35 0" />
+            <Grid>
                 <ContentControl Content="{Binding PartOnBoarding}" />
+                <ContentControl Panel.ZIndex="9999"
+                                DataContext="{StaticResource OnBoardingVM}"
+                                Content="{Binding Snipping}" />
+            </Grid>
             </DockPanel>
 
        

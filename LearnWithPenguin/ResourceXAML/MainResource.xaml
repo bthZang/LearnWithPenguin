@@ -45,6 +45,9 @@
 
     <viewmodel:RegisterViewModel x:Key="RegisterVM"></viewmodel:RegisterViewModel>
 
+    <viewmodel:LoadingPanelViewModel x:Key="LoadingPanelVM"></viewmodel:LoadingPanelViewModel>
+
+
 
 
 
