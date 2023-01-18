@@ -228,6 +228,7 @@ namespace LearnWithPenguin.ViewModel
                     }
                     catch (Exception e)
                     {
+
                         //throw;
                     }
 
