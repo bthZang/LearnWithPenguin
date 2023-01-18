@@ -17,14 +17,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
+using LearnWithPenguin.Stores;
 
 namespace LearnWithPenguin.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-
-
-
         protected BaseViewModel _navigatetoHome;
 
         public bool isClosing = false;
@@ -66,6 +64,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Stop();
                     NavigatetoHome = new ReadViewModel();
                 });
             }
@@ -108,6 +107,21 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
+        public ICommand TransformOutRead
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    _music.Position = TimeSpan.Zero;
+                    _music.Play();
+                    NavigatetoHome = new HomeViewModel();
+                });
+            }
+
+            set { }
+        }
         public ICommand Transform
         {
             get
@@ -128,6 +142,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Play();
                     NavigatetoHome = new UserViewModel();
                     Menu = null;
                 });
@@ -349,6 +364,37 @@ namespace LearnWithPenguin.ViewModel
             }
 
             set { }
+        }
+
+
+
+        //firebase
+
+        private readonly NavigationStore _navigationStore;
+        private readonly ModalNavigationStore _modalNavigationStore;
+
+        public BaseViewModel CurrentViewModel => _navigationStore.CurrentViewModel;
+        public BaseViewModel CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
+        public bool IsOpen => _modalNavigationStore.IsOpen;
+
+        public MainViewModel(NavigationStore navigationStore, ModalNavigationStore modalNavigationStore)
+        {
+            _navigationStore = navigationStore;
+            _modalNavigationStore = modalNavigationStore;
+
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+            _modalNavigationStore.CurrentViewModelChanged += OnCurrentModalViewModelChanged;
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
+        }
+
+        private void OnCurrentModalViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentModalViewModel));
+            OnPropertyChanged(nameof(IsOpen));
         }
     }
 

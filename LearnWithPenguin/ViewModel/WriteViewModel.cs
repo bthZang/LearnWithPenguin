@@ -94,7 +94,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "./TapViet/ChuThuong" + _number + ".mp4";
+                return "/TapViet/ChuThuong/" + _number + ".mp4";
                 //return "/TapViet/ChuThuong/" + _number + ".mp4";
             }
             set

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LearnWithPenguin</RootNamespace>
     <AssemblyName>LearnWithPenguin</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -31,6 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -293,6 +294,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -316,6 +318,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\AsyncCommandBase.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\CreateCommand.cs" />
+    <Compile Include="Commands\NavigateCommand.cs" />
+    <Compile Include="Commands\RegisterCommand.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CloseModalNavigationService.cs" />
+    <Compile Include="Services\CompositeNavigationService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\ParameterNavigationService.cs" />
+    <Compile Include="Stores\NavigationStore.cs" />
+    <Compile Include="Stores\INavigationStore.cs" />
+    <Compile Include="Stores\ModalNavigationStore.cs" />
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
     </Compile>
@@ -379,6 +399,8 @@
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
+    <Compile Include="ViewModel\CreateViewModel.cs" />
+    <Compile Include="ViewModel\ErrorsViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
     <Compile Include="ViewModel\Game3ViewModel.cs" />
@@ -604,6 +626,8 @@
     <None Include="appsetting.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="MVVMEssentials.csproj" />
+    <None Include="packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -618,6 +642,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Down.png" />
@@ -923,6 +948,123 @@
     <Resource Include="images\medal\XuatSacTapDoc.png" />
     <Resource Include="images\medal\XuatSacTapViet.png" />
     <Resource Include="images\medal\XuatSacTroChoi.png" />
+    <Resource Include="images\speakButton.jpg" />
+    <Resource Include="images\tickCheck.jpg" />
+    <Resource Include="images\checkSign.png" />
+    <Resource Include="images\resultOn.png" />
+    <Resource Include="images\readOn.png" />
+    <Resource Include="images\readOff.png" />
+    <Resource Include="TapDoc\img\2.png" />
+    <Resource Include="TapDoc\img\3.png" />
+    <Resource Include="TapDoc\img\4.png" />
+    <Resource Include="TapDoc\img\5.png" />
+    <Resource Include="TapDoc\img\6.png" />
+    <Resource Include="TapDoc\img\7.png" />
+    <Resource Include="TapDoc\img\8.png" />
+    <Resource Include="TapDoc\img\9.png" />
+    <Resource Include="TapDoc\img\10.png" />
+    <Resource Include="TapDoc\img\11.png" />
+    <Resource Include="TapDoc\img\12.png" />
+    <Resource Include="TapDoc\img\13.png" />
+    <Resource Include="TapDoc\img\14.png" />
+    <Resource Include="TapDoc\img\15.png" />
+    <Resource Include="TapDoc\img\16.png" />
+    <Resource Include="TapDoc\img\17.png" />
+    <Resource Include="TapDoc\img\18.png" />
+    <Resource Include="TapDoc\img\19.png" />
+    <Resource Include="TapDoc\img\20.png" />
+    <Resource Include="TapDoc\img\21.png" />
+    <Resource Include="TapDoc\img\22.png" />
+    <Resource Include="TapDoc\img\23.png" />
+    <Resource Include="TapDoc\img\24.png" />
+    <Resource Include="TapDoc\img\25.png" />
+    <Resource Include="TapDoc\img\26.png" />
+    <Resource Include="TapDoc\img\1.png" />
+    <Content Include="nuget-scripts.txt" />
+    <Content Include="TapDoc\voicemp3\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\5.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\6.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\7.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\8.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\9.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\10.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\11.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\12.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\13.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\14.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\15.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\16.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\17.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\18.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\19.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\20.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\21.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\22.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\23.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\24.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\25.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\26.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\congrats.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TapDoc\voicemp3\ohno.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TapViet\ChuThuong\1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1010,6 +1152,11 @@
     <Resource Include="View\RateView.png" />
     <Resource Include="View\whiteStar.png" />
     <Resource Include="View\yellowStar.png" />
+    <Resource Include="View\speakButton.jpg" />
+    <Resource Include="View\tickCheck.jpg" />
+    <Resource Include="UserControls\homeMenu.png" />
+    <Resource Include="UserControls\homeMenu.jpg" />
+    <Content Include="View\1.mp4" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

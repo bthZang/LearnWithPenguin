@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              Height="800"
              Width="947">
-    <Grid Margin="110,210,50, 0">
+    <Grid Margin="110,99,50, 0">
         <StackPanel HorizontalAlignment="Left">
             <StackPanel VerticalAlignment="Center"
                         Margin="0 0 0 160.32">
@@ -47,7 +47,8 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Email đăng nhập"
+                                       Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
@@ -97,7 +98,8 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Tên người dùng"
+                                       Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
@@ -149,7 +151,8 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Mật khẩu"
+                                       Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
@@ -203,7 +206,8 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Xác nhận mật khẩu"
+                                       Text="{Binding ConfirmPassword, UpdateSourceTrigger=PropertyChanged}"
+                                       DataContext="{StaticResource RegisterVM}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"

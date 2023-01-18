@@ -1,4 +1,5 @@
 ﻿using Firebase.Auth;
+using LearnWithPenguin.View;
 using LearnWithPenguin.ViewModel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +33,12 @@ namespace LearnWithPenguin
 
                     service.AddSingleton(new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey)));
 
-                    service.AddSingleton<MainWindow>((services) => new MainWindow());
+                    service.AddSingleton<OnBoardingView>((services) => new OnBoardingView()
+                    {
+                        DataContext = new RegisterViewModel(services.GetRequiredService<FirebaseAuthProvider>())
+                    }
+                    );
+                    
                 })
                 .Build();
         }
@@ -44,8 +50,7 @@ namespace LearnWithPenguin
         private async void Application_Startup(object sender, StartupEventArgs e)
         {
 
-            MainWindow = _host.Services.GetRequiredService<MainWindow>();
-            MainWindow.Show();
+
 
             //FirebaseAuthProvider firebaseAuthProvider = _host.Services.GetRequiredService<FirebaseAuthProvider>();
             //var t = firebaseAuthProvider.CreateUserWithEmailAndPasswordAsync("hyhygiang@gmail.com", "J@nhbgvfc").Result;

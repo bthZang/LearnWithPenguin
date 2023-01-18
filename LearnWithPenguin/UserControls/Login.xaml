@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              Height="800"
              Width="947">
-    <Grid Margin="110,210,50, 0">
+    <Grid Margin="110,99,50, 0">
         <StackPanel HorizontalAlignment="Left">
             <StackPanel VerticalAlignment="Center"
                         Margin="0 0 0 160.32">

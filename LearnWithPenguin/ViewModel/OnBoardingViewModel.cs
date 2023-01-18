@@ -16,6 +16,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Firebase.Auth;
+using LearnWithPenguin.Commands;
+using LearnWithPenguin.ViewModel;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -92,7 +95,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    PartOnBoarding = new RegisterViewModel();
+                    //PartOnBoarding = new RegisterViewModel(firebaseAuthProvider: Firebase.Auth.FirebaseAuthProvider);
                 });
             }
 
@@ -148,35 +151,6 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
-
-
-        //private BaseViewModel _;
-
-        //public BaseViewModel PartOnBoarding
-        //{
-        //    get
-        //    {
-        //        return _PartOnBoarding;
-        //    }
-        //    set
-        //    {
-        //        _PartOnBoarding = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
-        //public ICommand Show
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
-        //        {
-        //            PartOnBoarding = new TermAndConditionViewModel();
-        //        });
-        //    }
-
-        //    set { }
-        //}
 
     }
 }

@@ -56,8 +56,16 @@
                 <DataTemplate DataType="{x:Type viewmodelHome:RateViewModel}">
                     <Frame Source="RateView.xaml"></Frame>
                 </DataTemplate>
+                
             </ContentControl.Resources>
         </ContentControl>
+        <!--<ContentControl>
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type localLorgin:RegisterViewModel}">
+                    <Frame Source="Register.xaml"></Frame>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>-->
 
         <Grid x:Name="grid"
               DataContext="{StaticResource MainVM}"></Grid>

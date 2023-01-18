@@ -19,6 +19,8 @@ namespace LearnWithPenguin.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public virtual void Dispose() { }
     }
     class RelayCommand<T> : ICommand
     {
