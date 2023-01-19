@@ -879,6 +879,7 @@
     <Resource Include="View\tickCheck.jpg" />
     <Resource Include="UserControls\homeMenu.png" />
     <Resource Include="UserControls\homeMenu.jpg" />
+    <Resource Include="UserControls\trangChu.jpg" />
     <Content Include="y2mate.com - Video Game Beep  Sound Effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -344,7 +344,7 @@
                     <StackPanel>
                         <Button Width="234.76"
                                 Height="91.13"
-                                Margin="65 84.18 0 0"
+                                Margin="80 84.18 0 0"
                                 Click= "NextLesson">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
@@ -418,14 +418,14 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Text="Bài tiếp" />
+                                           Text="Next Lesson" />
 
                             </Border>
                         </Button>
 
                         <Button Width="212.37"
                                 Height="91.13"
-                                Margin="87,60.24,0,0"
+                                Margin="100,60.24,0,0"
                                 Click="stayStage">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
@@ -501,7 +501,7 @@
                                                FontWeight="Bold"
                                                TextAlignment="Center"
                                                Style="{StaticResource Baloo2-Bold}"
-                                               Text="Làm lại" />
+                                               Text="Try again" />
                                     <Image Source="/UserControls/tryAgain.png"
                                            Width="34"
                                            Height="45"
@@ -538,7 +538,7 @@
                     <StackPanel>
                         <Button Width="234.76"
                                 Height="91.13"
-                                Margin="65 84.18 0 0"
+                                Margin="80 84.18 0 0"
                                 Click="NextLesson">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
@@ -612,14 +612,14 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Text="Bài tiếp" />
+                                           Text="Next lesson" />
 
                             </Border>
                         </Button>
 
                         <Button Width="212.37"
                                 Height="91.13"
-                                Margin="87,60.24,0,0"
+                                Margin="100,60.24,0,0"
                                 Click="stayStage">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
@@ -695,7 +695,7 @@
                                                FontWeight="Bold"
                                                TextAlignment="Center"
                                                Style="{StaticResource Baloo2-Bold}"
-                                               Text="Làm lại" />
+                                               Text="Try again" />
                                     <Image Source="/UserControls/tryAgain.png"
                                            Width="34"
                                            Height="45"

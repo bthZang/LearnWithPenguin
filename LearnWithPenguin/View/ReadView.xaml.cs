@@ -77,6 +77,9 @@ namespace LearnWithPenguin.View
 
             //opacity
             mainScreen.Opacity = 1;
+
+            //read result == null
+            read_Result = "";
         }
 
         private void PrevLesson(object sender, RoutedEventArgs e)
@@ -102,6 +105,9 @@ namespace LearnWithPenguin.View
 
             //set color
             picName.Foreground = System.Windows.Media.Brushes.White;
+
+            //read result == null
+            read_Result = "";
         }
 
         // example read button
@@ -226,6 +232,7 @@ namespace LearnWithPenguin.View
 
         private void stayStage (object sender, RoutedEventArgs e)
         {
+            read_Result = "";
             goodResult.Visibility = Visibility.Collapsed;
             badResult.Visibility = Visibility.Collapsed;
             picName.Foreground = System.Windows.Media.Brushes.White;
