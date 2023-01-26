@@ -333,6 +333,13 @@
                 x:Name="goodResult"
                 Visibility="Collapsed">
             <Grid>
+                <TextBlock Text="Excellent!!"
+                           FontSize="50"
+                           Margin="90 25 0 0"
+                           FontStyle="Normal"
+                           Style="{StaticResource Baloo2-Bold}"
+                           FontWeight="Bold"
+                           Foreground="#073580"></TextBlock>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="0 84.18 0 0">
                         <Image Source="/UserControls/goodResult.png"
@@ -527,6 +534,13 @@
                 x:Name="badResult"
                 Visibility="Collapsed">
             <Grid>
+                <TextBlock Text="Incorrect"
+                           FontSize="50"
+                           Margin="90 25 0 0"
+                           FontStyle="Normal"
+                           Style="{StaticResource Baloo2-Bold}"
+                           FontWeight="Bold"
+                           Foreground="#073580"></TextBlock>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="0 84.18 0 0">
                         <Image Source="/UserControls/badResult.png"
