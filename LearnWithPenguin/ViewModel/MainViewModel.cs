@@ -18,6 +18,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using LearnWithPenguin.Stores;
+using Firebase.Auth;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -132,6 +135,87 @@ namespace LearnWithPenguin.ViewModel
                 });
             }
 
+            set { }
+        }
+
+        private string _email;
+        public string Email
+        {
+            get { return _email; }
+            set
+            {
+                _email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _userName;
+        public string UserName
+        {
+            get { return _userName; }
+            set
+            {
+                _userName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _password;
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _confirmPassword;
+        public string ConfirmPassword
+        {
+            get { return _confirmPassword; }
+            set
+            {
+                _confirmPassword = value;
+                OnPropertyChanged();
+            }
+        }
+        public ICommand Login
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, async (p) =>
+                {
+                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
+                    string email = Email;
+                    string password = Password;
+                    string confirmPassword = ConfirmPassword;
+                    string userName = UserName;
+
+                    try
+                    {
+                        string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
+
+                        var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+                        var a = await f.SignInWithEmailAndPasswordAsync(email, password);
+                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                        MessageBox.Show("Đăng nhập thành công");
+
+                        NavigatetoHome = new HomeViewModel();
+
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Mật khẩu hoặc email không hợp lệ!");
+                        //throw;
+                    }
+
+
+                });
+            }
             set { }
         }
 

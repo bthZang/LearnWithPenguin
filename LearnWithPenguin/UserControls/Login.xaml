@@ -32,6 +32,8 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
+                                     DataContext="{StaticResource MainVM}"
+                                     Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
                                      x:Name="Username"
@@ -90,6 +92,8 @@
                                      x:Name="Password"
                                      Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
+                                     DataContext="{StaticResource MainVM}"
+                                     Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                                      Foreground="#FFFFFF"
                                      FontSize="51.88"
                                      Height="42"
@@ -98,7 +102,7 @@
                                      Background="Transparent"
                                      BorderThickness="0"
                                      Style="{StaticResource Baloo2-Bold}"
-                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
+                                      />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"
@@ -108,7 +112,7 @@
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
                                        TextAlignment="Center"
-                                       Width="250">
+                                       Width="250"><!--Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"-->
                                 <TextBlock.Style>
 
                                     <Style TargetType="{x:Type TextBlock}"
@@ -129,7 +133,7 @@
 
                     </Border>
                     <Grid DataContext="{StaticResource MainVM}">
-                        <Button Command="{Binding Transform}"
+                        <Button Command="{Binding Login}"
                                 Background="Transparent"
                                 Width="180"
                                 Height="63"
@@ -204,7 +208,7 @@
                     </Grid>
 
                     <!--quen mat khau-->
-                    <Button Background="Transparent"
+                    <!--<Button Background="Transparent"
                             Width="180"
                             Height="63"
                             Margin="0 20 0 10"
@@ -262,7 +266,7 @@
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Button.Template>
-                    </Button>
+                    </Button>-->
                     <!--dangky-->
                     <Grid>
                         <TextBlock Text="Bạn chưa có tài khoản ?"
