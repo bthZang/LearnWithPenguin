@@ -47,6 +47,9 @@
 
     <viewmodel:LoadingPanelViewModel x:Key="LoadingPanelVM"></viewmodel:LoadingPanelViewModel>
 
+    <viewmodel:NewAchivmViewModel x:Key="NewAchivmVM"></viewmodel:NewAchivmViewModel>
+
+
 
 
 

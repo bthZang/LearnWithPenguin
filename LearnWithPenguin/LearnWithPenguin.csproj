@@ -380,6 +380,9 @@
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\NewAchivm.xaml.cs">
+      <DependentUpon>NewAchivm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -419,6 +422,7 @@
     <Compile Include="ViewModel\IconViewModel.cs" />
     <Compile Include="ViewModel\LoadingPanelViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\NewAchivmViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\PuzzleViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
@@ -512,6 +516,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\NewAchivm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

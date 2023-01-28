@@ -201,8 +201,6 @@ namespace LearnWithPenguin.ViewModel
                         var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
                         var a = await f.SignInWithEmailAndPasswordAsync(email, password);
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
-                        MessageBox.Show("Đăng nhập thành công");
-
                         NavigatetoHome = new HomeViewModel();
 
 
