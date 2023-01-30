@@ -24,5 +24,10 @@ namespace LearnWithPenguin.UserControls
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
