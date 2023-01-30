@@ -36,7 +36,6 @@
                                      Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
-                                     x:Name="Username"
                                      Margin="0,8,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
@@ -49,7 +48,7 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Tên đăng nhập"
+                                       Text="Email đăng nhập"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"

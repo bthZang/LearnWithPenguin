@@ -97,6 +97,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     PartOnBoarding = new RegisterViewModel();
+
                 });
             }
 
@@ -199,55 +200,122 @@ namespace LearnWithPenguin.ViewModel
                 OnPropertyChanged();
             }
         }
-
         public ICommand Register
         {
             get
             {
                 return new RelayCommand<object>((p) => { return true; }, async (p) =>
                 {
-                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+                    //Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
-                    string email = Email;
-                    string password = Password;
-                    string confirmPassword = ConfirmPassword;
-                    string userName = UserName;
+                    //string email = Email;
+                    //string password = Password;
+                    //string confirmPassword = ConfirmPassword;
+                    //string userName = UserName;
 
+                    //if (email == null || password == null || confirmPassword == null || userName == null)
+                    //{
+                    //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                    //    return;
+                    //}
+                    //if (password != confirmPassword)
+                    //{
+                    //    MessageBox.Show("Xác nhận mật khẩu sai");
+                    //    //return;
+                    //}
 
-                    if (password != confirmPassword)
-                    {
-                        MessageBox.Show("Xác nhận mật khẩu sai");
-                        return;
-                    }
+                    //if (password.Length < 6)
+                    //{
+                    //    MessageBox.Show("Tài khoản chưa hợp lệ! Vui lòng nhập mật khẩu tối thiểu 6 ký tự");
+                    //    //return;
+                    //}
 
-                    if (password.Length < 6)
-                    {
-                        MessageBox.Show("Mật khẩu tối thiểu 6 ký tự");
-                        return;
-                    }
+                    //try
+                    //{
+                    //    string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
 
-                    try
-                    {
-                        string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
-
-                        var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
-                        var a = await f.CreateUserWithEmailAndPasswordAsync(email, password, userName);
-                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                    //    var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+                    //    var a = await f.CreateUserWithEmailAndPasswordAsync(email, password, userName);
+                    //    Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                    //    MessageBox.Show("Đăng ký thành công");
 
                         PartOnBoarding = new LoginViewModel();
+                    //    Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
 
-                    }
-                    catch (Exception e)
-                    {
+                    //}
+                    //catch (Exception e)
+                    //{
+                    //    MessageBox.Show("Không có đăng ký nào");
+                    //    PartOnBoarding = new LoginViewModel();
+                    //    Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
 
-                        //throw;
-                    }
+                    //    //throw;
+                    //}
 
 
                 });
             }
             set { }
         }
+
+
+        //public ICommand Register
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, async (p) =>
+        //        {
+        //            Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
+        //            string email = Email;
+        //            string password = Password;
+        //            string confirmPassword = ConfirmPassword;
+        //            string userName = UserName;
+
+        //            if (email == null || password == null || confirmPassword == null || userName == null)
+        //            {
+        //                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+        //                return;
+        //            }
+        //            if (password != confirmPassword)
+        //            {
+        //                MessageBox.Show("Xác nhận mật khẩu sai");
+        //                //return;
+        //            }
+
+        //            if (password.Length < 6)
+        //            {
+        //                MessageBox.Show("Tài khoản chưa hợp lệ! Vui lòng nhập mật khẩu tối thiểu 6 ký tự");
+        //                //return;
+        //            }
+
+        //            try
+        //            {
+        //                string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
+
+        //                var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+        //                var a = await f.CreateUserWithEmailAndPasswordAsync(email, password, userName);
+        //                Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+        //                MessageBox.Show("Đăng ký thành công");
+
+        //                PartOnBoarding = new LoginViewModel();
+        //                Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                MessageBox.Show("Không có đăng ký nào");
+        //                PartOnBoarding = new LoginViewModel();
+        //                Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+
+        //                //throw;
+        //            }
+
+
+        //        });
+        //    }
+        //    set { }
+        //}
 
         ////SNIPPING
 

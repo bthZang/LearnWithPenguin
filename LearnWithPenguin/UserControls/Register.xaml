@@ -34,11 +34,10 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
-                                     DataContext="{StaticResource OnBoardingVM}"
+                                     DataContext="{StaticResource MainVM}"
                                      Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
-                                     x:Name="Username"
                                      Margin="0,8,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
@@ -88,7 +87,7 @@
                         <Grid>
                             <TextBox Width="250"
                                      Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
-                                     DataContext="{StaticResource OnBoardingVM}"
+                                     DataContext="{StaticResource MainVM}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
                                      Margin="0,8,0,0"
@@ -101,12 +100,14 @@
                                      Background="Transparent"
                                      TextAlignment="Left"
                                      Style="{StaticResource Baloo2-Bold}"
-                                     SelectionBrush="#FF5B84C6" />
+                                     SelectionBrush="#FF5B84C6"
+                                     />
                             <TextBlock IsHitTestVisible="False"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
                                        FontSize="21.88"
+                                       Text="Tên đăng ký"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
                                        Width="250">
@@ -142,7 +143,7 @@
                         <Grid DataContext="{StaticResource LoginVM}">
                             <TextBox Width="240"
                                      Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
-                                     DataContext="{StaticResource OnBoardingVM}"
+                                     DataContext="{StaticResource MainVM}"
                                      VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      x:Name="Password"
@@ -161,6 +162,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
                                        FontSize="21.88"
+                                       Text="Mật khẩu"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
                                        TextAlignment="Center"
@@ -197,7 +199,7 @@
                         <Grid DataContext="{StaticResource LoginVM}">
                             <TextBox Width="240"
                                      Text="{Binding ConfirmPassword, UpdateSourceTrigger=PropertyChanged}"
-                                     DataContext="{StaticResource OnBoardingVM}"
+                                     DataContext="{StaticResource MainVM}"
                                      VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      Margin="20,0,0,0"
@@ -214,6 +216,8 @@
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
+                                       Text="Xác nhận mật khẩu"
+                                       
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
@@ -240,12 +244,12 @@
                     </Border>
                     <Grid >
                         <Grid DataContext="{StaticResource MainVM}">
-                            <Button DataContext="{StaticResource OnBoardingVM}"
+                            <Button DataContext="{StaticResource MainVM}"
                                     Command="{Binding Register}"
                                     Background="Transparent"
                                     Width="180"
                                     Height="63"
-                                    Margin="0 50 0 10"
+                                    Margin="200 50 0 10"
                                     
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -273,6 +277,79 @@
                                                TextAlignment="Center"
                                                Style="{StaticResource Baloo2-Bold}"
                                                Text="Đăng ký"
+                                               Margin="0,0,0,8" />
+                                </Border>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                BorderThickness="0"
+                                                Background="transparent"
+                                                BorderBrush="transparent">
+
+                                            <ContentPresenter Margin="2"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              RecognizesAccessKey="True" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsKeyboardFocused"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="transparent" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="transparent" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="true">
+                                                <Setter TargetName="Border"
+                                                        Property="Background"
+                                                        Value="transparent" />
+                                                <Setter TargetName="Border"
+                                                        Property="BorderBrush"
+                                                        Value="transparent" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button DataContext="{StaticResource OnBoardingVM}"
+                                    Command="{Binding Show}"
+                                    Background="Transparent"
+                                    Width="180"
+                                    Height="63"
+                                    Margin="-200 50 0 10"
+                                    BorderThickness="0">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.CornerRadius"
+                                                Value="70 70 70 70" />
+                                    </Style>
+                                </Button.Resources>
+
+                                <Border Background="#FFFFFF"
+                                        Width="177"
+                                        Height="59"
+                                        CornerRadius="23.44"
+                                        BorderThickness="4"
+                                        BorderBrush="#000000"
+                                        VerticalAlignment="Top">
+                                    <TextBlock Width="158"
+                                               VerticalAlignment="Bottom"
+                                               HorizontalAlignment="Center"
+                                               Foreground="#000000"
+                                               FontSize="21.88"
+                                               FontStyle="Normal"
+                                               FontWeight="Bold"
+                                               Background="#FFFFFF"
+                                               TextAlignment="Center"
+                                               Style="{StaticResource Baloo2-Bold}"
+                                               Text="Trở lại"
                                                Margin="0,0,0,8" />
                                 </Border>
                                 <Button.Template>

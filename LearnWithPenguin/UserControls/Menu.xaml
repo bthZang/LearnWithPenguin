@@ -23,7 +23,8 @@
                            Height="182.03"
                            Margin="89,59,89,-10"></Image>
                     <TextBlock TextAlignment="Center"
-                               Text="Display name"
+                               DataContext="{StaticResource MainVM}"
+                               Text="{Binding UserName}"
                                Foreground="#2D3D8F"
                                FontSize="28.12"
                                FontWeight="Bold"
@@ -357,6 +358,9 @@
                                Width="39.06"
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
+                        <Button DataContext="{StaticResource MainVM}"
+                                Command="{Binding Show}"
+                                >
                         <TextBlock TextAlignment="Left"
                                    Text="Đăng xuất"
                                    Foreground="#2D3D8F"
@@ -367,7 +371,7 @@
                                    Style="{StaticResource Baloo2-Bold}"
                                    Height="44.53"
                                    Width="131.25"
-                                   Margin="37.5,0,0,0" />
+                                   Margin="37.5,0,0,0" /></Button>
                     </StackPanel>
                 </StackPanel>
 
