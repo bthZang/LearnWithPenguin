@@ -271,7 +271,7 @@ namespace LearnWithPenguin.ViewModel
 
                         var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
                         FirebaseAuthLink firebaseAuthLink = await f.SignInWithEmailAndPasswordAsync(email, password);
-                        UserName = firebaseAuthLink.User.DisplayName ;                       
+                        UserName = firebaseAuthLink.User.DisplayName;
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
                         NavigatetoHome = new HomeViewModel();
 
