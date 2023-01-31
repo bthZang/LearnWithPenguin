@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel">
+                    xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
+                    >
 
-
+    
 
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
     <viewmodel:OnBoardingViewModel x:Key="OnBoardingVM"></viewmodel:OnBoardingViewModel>
@@ -23,6 +24,10 @@
     <viewmodel:Game2ViewModel x:Key="Game2VM"></viewmodel:Game2ViewModel>
     <viewmodel:Game3ViewModel x:Key="Game3VM"></viewmodel:Game3ViewModel>
     <viewmodel:GameWarnViewModel x:Key="GameWarnVM"></viewmodel:GameWarnViewModel>
+    <viewmodel:NoViewModel x:Key="NoVM"></viewmodel:NoViewModel>
+    <viewmodel:YesViewModel x:Key="YesVM"></viewmodel:YesViewModel>
+    <viewmodel:GRforGameViewModel x:Key="GRGameVM"></viewmodel:GRforGameViewModel>
+    <viewmodel:BRforGameViewModel x:Key="BRGameVM"></viewmodel:BRforGameViewModel>
 
 
     <viewmodel:MenuViewModel x:Key="MenuVM"></viewmodel:MenuViewModel>

@@ -1,15 +1,17 @@
-﻿<UserControl x:Class="LearnWithPenguin.UserControls.GoodResult"
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.BRforGame"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
+             xmlns:viewmodel="clr-namespace:LearnWithPenguin.ViewModel"
              d:DesignHeight="800"
-             d:DesignWidth="1200">
-    <Grid Margin="-485.5 0 0 0">
+             d:DesignWidth="1200"
+             d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}">
 
-        <Grid Background="Black"
+    <Grid Margin="0 0 0 0">
+        <Grid Background="#660C0C0C"
               Opacity="0.5"></Grid>
         <Border Width="599.27"
                 Height="395.39"
@@ -22,30 +24,30 @@
                                     Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                            <Image Source="/UserControls/yellowStar.png"
+                            <Image DataContext="{StaticResource GameVM}"
+                                   Source="{Binding ChangeColor1, UpdateSourceTrigger=PropertyChanged}"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0,0,12.9,0"></Image>
-                            <Image Source="/UserControls/yellowStar.png"
+                            <Image DataContext="{StaticResource GameVM}"
+                                   Source="{Binding ChangeColor2, UpdateSourceTrigger=PropertyChanged}"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
-                            <Image Source="/UserControls/yellowStar.png"
+                            <Image Source="/UserControls/whiteStar.png"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
-                            <Image DataContext="{StaticResource WriteVM}"
-                                   Source="{ Binding ChangeColor4}"
+                            <Image Source="/UserControls/whiteStar.png"
                                    Width="37"
                                    Height="34.54"
                                    Margin="0 0 12.9 0"></Image>
-                            <Image DataContext="{StaticResource WriteVM}"
-                                   Source="{ Binding ChangeColor5}"
+                            <Image Source="/UserControls/whiteStar.png"
                                    Width="37"
                                    Height="34.54"></Image>
 
                         </StackPanel>
-                        <Image Source="/UserControls/goodResult.png"
+                        <Image Source="/UserControls/badResult.png"
                                Width="210.05"
                                Height="217.77"
                                Margin="76.45,20.05,0,0"></Image>
@@ -55,7 +57,13 @@
                         <Button Width="234.76"
                                 Height="91.13"
                                 Margin="65 84.18 0 0"
-                                Command="{Binding Next, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                                Command="{Binding ReplayGame, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="20 20 20 20" />
+                                </Style>
+                            </Button.Resources>
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Border"
@@ -93,12 +101,6 @@
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Button.Template>
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="Border.CornerRadius"
-                                            Value="20 20 20 20" />
-                                </Style>
-                            </Button.Resources>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Style.Triggers>
@@ -115,10 +117,11 @@
                                     </Style.Triggers>
                                 </Style>
                             </Button.Style>
-                            <Border Width="234.76"
+                            <Border Background="#AB9DFF"
+                                    Width="234.76"
                                     Height="91.13"
-                                    Background="#AB9DFF"
                                     CornerRadius="20,0,0,20">
+
                                 <TextBlock Width="158"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
@@ -128,7 +131,7 @@
                                            FontWeight="Bold"
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
-                                           Text="Bài tiếp" />
+                                           Text="Làm lại" />
 
                             </Border>
                         </Button>
@@ -136,7 +139,7 @@
                         <Button Width="212.37"
                                 Height="91.13"
                                 Margin="87,60.24,0,0"
-                                Command="{Binding Replay, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                                Command="{Binding NextGame, RelativeSource={RelativeSource AncestorType=UserControl}}">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Border"
@@ -211,8 +214,8 @@
                                                FontWeight="Bold"
                                                TextAlignment="Center"
                                                Style="{StaticResource Baloo2-Bold}"
-                                               Text="Làm lại" />
-                                    <Image Source="/UserControls/tryAgain.png"
+                                               Text="Bài tiếp" />
+                                    <Image Source="/UserControls/next.png"
                                            Width="34"
                                            Height="45"
                                            Margin="7.04,0,0,0"
@@ -230,6 +233,4 @@
             </Grid>
         </Border>
     </Grid>
-
-
 </UserControl>

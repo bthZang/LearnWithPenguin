@@ -13,15 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for GameView.xaml
+    /// Interaction logic for YesIcon.xaml
     /// </summary>
-    public partial class GameView : Page
+    public partial class YesIcon : System.Windows.Controls.UserControl
     {
-
-        public GameView()
+        public YesIcon()
         {
             InitializeComponent();
         }
