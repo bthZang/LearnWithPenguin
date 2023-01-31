@@ -23,6 +23,7 @@ namespace LearnWithPenguin.View
         public HomeView()
         {
             InitializeComponent();
+            
         }
 
         

@@ -21,6 +21,7 @@ using LearnWithPenguin.Stores;
 using Firebase.Auth;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using LearnWithPenguin.View;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -96,9 +97,9 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new PuzzleViewModel();
+                    _music.Stop();
+                    NavigatetoHome = new QuizzView1ViewModel();
                     Menu = null;
-
                 });
             }
 
@@ -418,6 +419,7 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    //NavigatetoHome = new QuizzView2ViewModel();
                     NavigatetoHome = new QuizzView2ViewModel();
                     Menu = null;
 

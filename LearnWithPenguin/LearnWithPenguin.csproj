@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <NuGetPackageImportStamp>
@@ -146,6 +146,24 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="CommunityToolkit.Mvvm, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommunityToolkit.Mvvm.8.0.0\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers, Version=3.5.2.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileHelpers.3.5.2\lib\net45\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
@@ -162,6 +180,13 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -295,6 +320,21 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -347,6 +387,9 @@
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BadQuizResult.xaml.cs">
+      <DependentUpon>BadQuizResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BadResult.xaml.cs">
       <DependentUpon>BadResult.xaml</DependentUpon>
     </Compile>
@@ -355,6 +398,12 @@
     </Compile>
     <Compile Include="UserControls\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EndQuizBadResult.xaml.cs">
+      <DependentUpon>EndQuizBadResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EndQuizGoodResult.xaml.cs">
+      <DependentUpon>EndQuizGoodResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Game1.xaml.cs">
       <DependentUpon>Game1.xaml</DependentUpon>
@@ -401,6 +450,9 @@
     <Compile Include="UserControls\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GoodQuizResult.xaml.cs">
+      <DependentUpon>GoodQuizResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReloadGame.xaml.cs">
       <DependentUpon>ReloadGame.xaml</DependentUpon>
     </Compile>
@@ -426,11 +478,14 @@
       <DependentUpon>YesIcon.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BackViewModel.cs" />
+    <Compile Include="ViewModel\BadQuizResultViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\BRforGameViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
     <Compile Include="ViewModel\CreateViewModel.cs" />
     <Compile Include="ViewModel\ErrorsViewModel.cs" />
+    <Compile Include="ViewModel\EndQuizBadResultViewModel.cs" />
+    <Compile Include="ViewModel\EndQuizGoodResultViewModel.cs" />
     <Compile Include="ViewModel\Game1ViewModel.cs" />
     <Compile Include="ViewModel\Game2ViewModel.cs" />
     <Compile Include="ViewModel\Game3ViewModel.cs" />
@@ -445,9 +500,9 @@
     <Compile Include="ViewModel\NoViewModel.cs" />
     <Compile Include="ViewModel\NewAchivmViewModel.cs" />
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
-    <Compile Include="ViewModel\PuzzleViewModel.cs" />
+    <Compile Include="ViewModel\GoodQuizResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
-    <Compile Include="ViewModel\QuizzView2ViewModel.cs" />
+
     <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
@@ -468,14 +523,8 @@
     <Compile Include="View\OnBoardingView.xaml.cs">
       <DependentUpon>OnBoardingView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PuzzleView.xaml.cs">
-      <DependentUpon>PuzzleView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\QuizzView1.xaml.cs">
       <DependentUpon>QuizzView1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\QuizzView2.xaml.cs">
-      <DependentUpon>QuizzView2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RateView.xaml.cs">
       <DependentUpon>RateView.xaml</DependentUpon>
@@ -493,6 +542,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\BadQuizResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\BadResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -502,6 +555,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EndQuizBadResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EndQuizGoodResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -558,6 +619,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\GoodQuizResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -637,15 +702,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PuzzleView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\QuizzView1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\QuizzView2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -692,6 +749,7 @@
     <None Include="webfonts\fa-solid-900.eot" />
     <None Include="webfonts\fa-solid-900.woff" />
     <None Include="webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
     <Resource Include="fonts\Baloo2-ExtraBold.ttf" />
@@ -963,18 +1021,172 @@
     <Resource Include="View\reReadButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\reload%402x.png" />
-    <Resource Include="images\reload%403x.png" />
-    <Resource Include="images\reload.png" />
+    <Resource Include="images\Artwork.png" />
+    <Resource Include="images\Vietnamshistory.png" />
+    <Resource Include="images\VietnamNature.png" />
+    <Resource Include="images\AroundTheWorld.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\border.png" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="View\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="UserControls\yellowStar.png" />
+    <Resource Include="UserControls\BlurBack.png" />
+    <Resource Include="images\closeIcon.png" />
+    <Resource Include="images\greenTick.jpg" />
+    <Resource Include="images\greenTick.png" />
+    <Resource Include="images\Home.png" />
+    <Resource Include="images\HomeWhite.png" />
+    <Content Include="images\Question\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\10.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\11.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\12.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\13.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\14.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\15.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\5.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\6.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\7.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\8.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\9.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="View\1.jpg" />
+    <Resource Include="images\Quiz\1.jpg" />
+    <Resource Include="images\Quiz\13.jpg" />
+    <Resource Include="images\Quiz\14.jpg" />
+    <Resource Include="images\Quiz\15.jpg" />
+    <Resource Include="images\Quiz\2.jpg" />
+    <Resource Include="images\Quiz\20.jpg" />
+    <Resource Include="images\Quiz\21.jpg" />
+    <Resource Include="images\Quiz\22.jpg" />
+    <Resource Include="images\Quiz\23.jpg" />
+    <Resource Include="images\Quiz\24.jpg" />
+    <Resource Include="images\Quiz\25.jpg" />
+    <Resource Include="images\Quiz\26.jpg" />
+    <Resource Include="images\Quiz\27.jpg" />
+    <Resource Include="images\Quiz\28.jpg" />
+    <Resource Include="images\Quiz\29.jpg" />
+    <Resource Include="images\Quiz\3.jpg" />
+    <Resource Include="images\Quiz\30.jpg" />
+    <Resource Include="images\Quiz\31.jpg" />
+    <Resource Include="images\Quiz\32.jpg" />
+    <Resource Include="images\Quiz\33.jpg" />
+    <Resource Include="images\Quiz\34.jpg" />
+    <Resource Include="images\Quiz\35.jpg" />
+    <Resource Include="images\Quiz\36.jpg" />
+    <Resource Include="images\Quiz\37.jpg" />
+    <Resource Include="images\Quiz\38.jpg" />
+    <Resource Include="images\Quiz\39.jpg" />
+    <Resource Include="images\Quiz\4.jpg" />
+    <Resource Include="images\Quiz\40.jpg" />
+    <Resource Include="images\Quiz\41.jpg" />
+    <Resource Include="images\Quiz\42.jpg" />
+    <Resource Include="images\Quiz\43.jpg" />
+    <Resource Include="images\Quiz\44.jpg" />
+    <Resource Include="images\Quiz\45.jpg" />
+    <Resource Include="images\Quiz\46.jpg" />
+    <Resource Include="images\Quiz\47.jpg" />
+    <Resource Include="images\Quiz\48.jpg" />
+    <Resource Include="images\Quiz\9.jpg" />
+    <Resource Include="images\Quiz\10.jpg" />
+    <Resource Include="images\Quiz\11.jpg" />
+    <Resource Include="images\Quiz\12.jpg" />
+    <Content Include="images\Question\10.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\11.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\12.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\13.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\14.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\15.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\5.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\6.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\7.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\8.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Question\9.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\Quiz\16.jpg" />
+    <Resource Include="images\Quiz\17.jpg" />
+    <Resource Include="images\Quiz\18.jpg" />
+    <Resource Include="images\Quiz\19.jpg" />
+    <Resource Include="images\Quiz\49.jpg" />
+    <Resource Include="images\Quiz\50.jpg" />
+    <Resource Include="images\Quiz\51.jpg" />
+    <Resource Include="images\Quiz\52.jpg" />
+    <Resource Include="images\Quiz\53.jpg" />
+    <Resource Include="images\Quiz\54.jpg" />
+    <Resource Include="images\Quiz\55.jpg" />
+    <Resource Include="images\Quiz\56.jpg" />
+    <Resource Include="images\Quiz\57.jpg" />
+    <Resource Include="images\Quiz\58.jpg" />
+    <Resource Include="images\Quiz\59.jpg" />
+    <Resource Include="images\Quiz\60.jpg" />
+    <Resource Include="images\Quiz\5.jpg" />
+    <Resource Include="images\Quiz\6.jpg" />
+    <Resource Include="images\Quiz\7.jpg" />
+    <Resource Include="images\Quiz\8.jpg" />
+    <Resource Include="images\redCross.jpg" />
+    <Resource Include="images\redCross.png" />
+    <Resource Include="images\ReloadQuiz.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TapViet\ChuDut\1.png" />
@@ -1280,4 +1492,11 @@
     <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
   </Target>
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Import Project="..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets'))" />
+  </Target>
 </Project>

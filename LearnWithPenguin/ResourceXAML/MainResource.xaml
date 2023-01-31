@@ -12,14 +12,14 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ReadViewModel x:Key="ReadVM"></viewmodel:ReadViewModel>
     <viewmodel:WriteViewModel x:Key="WriteVM"></viewmodel:WriteViewModel>
-    <viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>
-    <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
-    
-    <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
-    <viewmodel:QuizzView2ViewModel x:Key="QuizzView2VM"></viewmodel:QuizzView2ViewModel>
-
+    <!--<viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>-->
+    <!--<viewmodel:PuzzleViewModel x:Key="PuzzleVM"></viewmodel:PuzzleViewModel>-->
     <viewmodel:CodingViewModel x:Key="CodingVM"></viewmodel:CodingViewModel>
     <viewmodel:GameViewModel x:Key="GameVM"></viewmodel:GameViewModel>
+    <viewmodel:UserViewModel x:Key="UserVM"></viewmodel:UserViewModel>
+
+    <viewmodel:QuizzView1ViewModel x:Key="QuizzView1VM"></viewmodel:QuizzView1ViewModel>
+
     <viewmodel:Game1ViewModel x:Key="Game1VM"></viewmodel:Game1ViewModel>
     <viewmodel:Game2ViewModel x:Key="Game2VM"></viewmodel:Game2ViewModel>
     <viewmodel:Game3ViewModel x:Key="Game3VM"></viewmodel:Game3ViewModel>
@@ -42,10 +42,13 @@
     <viewmodel:UserRankingViewModel x:Key="UserRankingVM"></viewmodel:UserRankingViewModel>
     
     
-
     <viewmodel:HomeIconViewModel x:Key="HomeIconVM"></viewmodel:HomeIconViewModel>
     <viewmodel:WarningViewModel x:Key="WarningVM"></viewmodel:WarningViewModel>
 
+    <viewmodel:GoodQuizResultViewModel x:Key="GoodQuizResultVM"></viewmodel:GoodQuizResultViewModel>
+    <viewmodel:BadQuizResultViewModel x:Key="BadQuizResultVM"></viewmodel:BadQuizResultViewModel>
+    <viewmodel:EndQuizBadResultViewModel x:Key="EndQuizBadResultVM"></viewmodel:EndQuizBadResultViewModel>
+    <viewmodel:EndQuizGoodResultViewModel x:Key="EndQuizGoodResultVM"></viewmodel:EndQuizGoodResultViewModel>
     <viewmodel:RateViewModel x:Key="RateVM"></viewmodel:RateViewModel>
 
     <viewmodel:RegisterViewModel x:Key="RegisterVM"></viewmodel:RegisterViewModel>

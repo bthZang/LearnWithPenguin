@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnWithPenguin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,20 +8,23 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for QuizzView2.xaml
+    /// Interaction logic for EndQuizGoodResult.xaml
     /// </summary>
-    public partial class QuizzView2 : Page
+    public partial class EndQuizGoodResult : System.Windows.Controls.UserControl
     {
-        public QuizzView2()
+
+        public EndQuizGoodResult()
         {
             InitializeComponent();
         }
