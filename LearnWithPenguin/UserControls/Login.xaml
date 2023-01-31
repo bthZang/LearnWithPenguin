@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              Height="800"
              Width="947">
-    <Grid Margin="110,210,50, 0">
+    <Grid Margin="110,99,50, 0">
         <StackPanel HorizontalAlignment="Left">
             <StackPanel VerticalAlignment="Center"
                         Margin="0 0 0 160.32">
@@ -32,9 +32,10 @@
                             BorderBrush="#000000">
                         <Grid>
                             <TextBox Width="250"
+                                     DataContext="{StaticResource MainVM}"
+                                     Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                      VerticalAlignment="Top"
                                      HorizontalAlignment="Center"
-                                     x:Name="Username"
                                      Margin="0,8,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
@@ -47,7 +48,7 @@
                                      Style="{StaticResource Baloo2-Bold}"
                                      SelectionBrush="#FF5B84C6" />
                             <TextBlock IsHitTestVisible="False"
-                                       Text="Tên đăng nhập"
+                                       Text="Email đăng nhập"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
@@ -90,6 +91,8 @@
                                      x:Name="Password"
                                      Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
+                                     DataContext="{StaticResource MainVM}"
+                                     Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                                      Foreground="#FFFFFF"
                                      FontSize="51.88"
                                      Height="42"
@@ -98,7 +101,7 @@
                                      Background="Transparent"
                                      BorderThickness="0"
                                      Style="{StaticResource Baloo2-Bold}"
-                                     Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}" />
+                                      />
                             <TextBlock IsHitTestVisible="False"
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"
@@ -108,7 +111,7 @@
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
                                        TextAlignment="Center"
-                                       Width="250">
+                                       Width="250"><!--Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"-->
                                 <TextBlock.Style>
 
                                     <Style TargetType="{x:Type TextBlock}"
@@ -129,7 +132,7 @@
 
                     </Border>
                     <Grid DataContext="{StaticResource MainVM}">
-                        <Button Command="{Binding Transform}"
+                        <Button Command="{Binding Login}"
                                 Background="Transparent"
                                 Width="180"
                                 Height="63"
@@ -162,13 +165,14 @@
                                            Text="Đăng nhập"
                                            Margin="0,0,0,8" />
                             </Border>
+
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Border"
                                             BorderThickness="0"
                                             Background="transparent"
                                             BorderBrush="transparent">
-                                       
+
                                         <ContentPresenter Margin="2"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
@@ -202,54 +206,154 @@
                         </Button>
                     </Grid>
 
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Margin="0 118.09 0 0"
-                            Orientation="Horizontal">
+                    <!--quen mat khau-->
+                    <!--<Button Background="Transparent"
+                            Width="180"
+                            Height="63"
+                            Margin="0 20 0 10"
+                            BorderThickness="0">
 
-                    <TextBlock TextAlignment="Center"
-                               TextWrapping="Wrap"
-                               Text="Hoặc đăng nhập với"
-                               Foreground="#2D3D8F"
-                               FontSize="18.75"
-                               FontWeight="Light"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Width="160"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="30"></TextBlock>
-                    <Border Background="#FFFFFF"
-                            Width="125"
-                            Height="35.94"
-                            CornerRadius="16.24"
-                            BorderThickness="1.5"
-                            BorderBrush="#857D7D"
-                            Margin="15.78 26.56 10 25">
 
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="28.12"
-                                   Source="../images/iconGoogle.png"
-                                   Stretch="Uniform"
-                                   Height="28.12"
+
+                        <TextBlock Width="150"
                                    VerticalAlignment="Center"
-                                   Margin="14.84 0 0 0" />
-                            <TextBlock Width="61"
-                                       VerticalAlignment="Center"
-                                       Foreground="#000000"
-                                       FontSize="15.63"
-                                       FontStyle="Normal"
-                                       FontWeight="Light"
-                                       Background="#FFFFFF"
-                                       TextAlignment="Center"
-                                       Style="{StaticResource Baloo2-Bold}"
-                                       Text="Google"
-                                       Height="25" />
-                        </StackPanel>
+                                   HorizontalAlignment="Center"
+                                   Foreground="#FF076080"
+                                   FontSize="21.88"
+                                   FontStyle="Italic"
+                                   FontWeight="Medium"
+                                   Background="Transparent"
+                                   TextAlignment="Center"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Text="Quên mật khẩu"
+                                   Margin="0,-50,0,8" />
 
-                    </Border>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="Border"
+                                        BorderThickness="0"
+                                        Background="transparent"
+                                        BorderBrush="transparent">
 
+                                    <ContentPresenter Margin="2"
+                                                      HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"
+                                                      RecognizesAccessKey="True" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsKeyboardFocused"
+                                             Value="true">
+                                        <Setter TargetName="Border"
+                                                Property="BorderBrush"
+                                                Value="transparent" />
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="true">
+                                        <Setter TargetName="Border"
+                                                Property="Background"
+                                                Value="transparent" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed"
+                                             Value="true">
+                                        <Setter TargetName="Border"
+                                                Property="Background"
+                                                Value="transparent" />
+                                        <Setter TargetName="Border"
+                                                Property="BorderBrush"
+                                                Value="transparent" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>-->
+                    <!--dangky-->
+                    <Grid>
+                        <TextBlock Text="Bạn chưa có tài khoản ?"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Left"
+                                   FontSize="20"
+                                   Margin="0,18,0,0"
+                                   Foreground="Gray"
+                                   FontWeight="Normal"
+                                   Width="512"></TextBlock>
+                        <Button Background="Transparent"
+                                Width="180"
+                                DataContext="{StaticResource OnBoardingVM}"
+                                Command="{Binding TransformToRegester}"
+                                Height="63"
+                                Margin="200 0 0 10"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="70 70 70 70" />
+                                </Style>
+                            </Button.Resources>
+
+                            <Border Background="#FFFFFF"
+                                    Width="140"
+                                    Height="45"
+                                    CornerRadius="18"
+                                    BorderThickness="2"
+                                    BorderBrush="gray"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                                <TextBlock Width="130"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Foreground="DarkGoldenrod"
+                                           FontSize="21.88"
+                                           FontStyle="Normal"
+                                           FontWeight="Medium"
+                                           Background="#FFFFFF"
+                                           TextAlignment="Center"
+                                           Style="{StaticResource Baloo2-Bold}"
+                                           Text="Đăng ký"
+                                           Margin="0,10,0,8" />
+                            </Border>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+
+                                        <ContentPresenter Margin="2"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
                 </StackPanel>
+
             </StackPanel>
         </StackPanel>
     </Grid>

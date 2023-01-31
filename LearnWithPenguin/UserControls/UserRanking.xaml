@@ -64,17 +64,6 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
                                    Margin="0 0 0 0" />
-                        <TextBlock VerticalAlignment="Center"
-                                   Foreground="#073580"
-                                   Text="Tuổi : 7"
-                                   FontSize="26"
-                                   FontStyle="Normal"
-                                   FontWeight="Light"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Width="300"
-                                   Height="36"
-                                   HorizontalAlignment="Left"
-                                   Margin="30 50 0 0"></TextBlock>
                     </Grid>
                     <TextBlock VerticalAlignment="Center"
                                Foreground="#073580"

@@ -56,6 +56,7 @@ namespace LearnWithPenguin.View
                 viewmodel.Number -= 1;
                 clearCanvas();
             });
+            media.Position = TimeSpan.Zero;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

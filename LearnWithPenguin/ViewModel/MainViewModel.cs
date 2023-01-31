@@ -16,8 +16,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-
+using System.Threading;
+using LearnWithPenguin.Stores;
+using Firebase.Auth;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -66,6 +69,8 @@ namespace LearnWithPenguin.ViewModel
                 {
                     _music.Stop();
                     NavigatetoHome = new ReadViewModel();
+                    Menu = null;
+
                 });
             }
 
@@ -78,6 +83,8 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new WriteViewModel();
+                    Menu = null;
+
                 });
             }
 
@@ -90,6 +97,8 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new PuzzleViewModel();
+                    Menu = null;
+
                 });
             }
 
@@ -102,6 +111,25 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new CodingViewModel();
+                    Menu = null;
+
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand TransformOutRead
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    _music.Position = TimeSpan.Zero;
+                    _music.Play();
+                    NavigatetoHome = new HomeViewModel();
+                    Menu = null;
+
                 });
             }
 
@@ -129,9 +157,150 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new HomeViewModel();
+                    Menu = null;
+
                 });
             }
 
+            set { }
+        }
+
+        private string _email;
+        public string Email
+        {
+            get { return _email; }
+            set
+            {
+                _email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _userName;
+        public string UserName
+        {
+            get { return _userName; }
+            set
+            {
+                _userName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _password;
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _confirmPassword;
+        public string ConfirmPassword
+        {
+            get { return _confirmPassword; }
+            set
+            {
+                _confirmPassword = value;
+                OnPropertyChanged();
+            }
+        }
+
+       
+        public ICommand Register
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, async (p) =>
+                {
+                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
+                    string email = Email;
+                    string password = Password;
+                    string confirmPassword = ConfirmPassword;
+                    string userName = UserName;
+
+                    if (email == null || password == null || confirmPassword == null || userName == null)
+                    {
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                        return;
+                    }
+                    if (password != confirmPassword)
+                    {
+                        MessageBox.Show("Xác nhận mật khẩu sai");
+                        //return;
+                    }
+
+                    if (password.Length < 6)
+                    {
+                        MessageBox.Show("Tài khoản chưa hợp lệ! Vui lòng nhập mật khẩu tối thiểu 6 ký tự");
+                        //return;
+                    }
+
+                    try
+                    {
+                        string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
+
+                        var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+                        var a = await f.CreateUserWithEmailAndPasswordAsync(email, password, userName);
+                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                        MessageBox.Show("Đăng ký thành công");
+
+                      //  PartOnBoarding = new LoginViewModel();
+                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Không có đăng ký nào");
+                      //  PartOnBoarding = new LoginViewModel();
+                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+
+                        //throw;
+                    }
+
+
+                });
+            }
+            set { }
+        }
+        public ICommand Login
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, async (p) =>
+                {
+                    Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
+                    string email = Email;
+                    string password = Password;
+                    string confirmPassword = ConfirmPassword;
+                    string userName = UserName;
+
+                    try
+                    {
+                        string firebaseApikey = "AIzaSyASQNYYKfeSJWHfbYiw4KDlxNrQk9qFQqA";
+
+                        var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
+                        FirebaseAuthLink firebaseAuthLink = await f.SignInWithEmailAndPasswordAsync(email, password);
+                        UserName = firebaseAuthLink.User.DisplayName;
+                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                        NavigatetoHome = new HomeViewModel();
+
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Mật khẩu hoặc email không hợp lệ!");
+                        //throw;
+                    }
+
+
+                });
+            }
             set { }
         }
 
@@ -158,6 +327,8 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new GameViewModel();
+                    Menu = null;
+
                 });
             }
 
@@ -235,6 +406,8 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new QuizzView1ViewModel();
+                    Menu = null;
+
                 });
             }
             set { }
@@ -246,6 +419,8 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new QuizzView2ViewModel();
+                    Menu = null;
+
                 });
             }
             set { }
@@ -258,12 +433,27 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new RateViewModel();
+                    Menu = null;
+
                 });
             }
             set { }
         }
 
+        public ICommand Show
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    NavigatetoHome = new OnBoardingViewModel();
+                    Menu = null;
 
+                });
+            }
+
+            set { }
+        }
 
         //play sound + button on menu
 
@@ -364,6 +554,37 @@ namespace LearnWithPenguin.ViewModel
             }
 
             set { }
+        }
+
+
+
+        //firebase
+
+        private readonly NavigationStore _navigationStore;
+        private readonly ModalNavigationStore _modalNavigationStore;
+
+        public BaseViewModel CurrentViewModel => _navigationStore.CurrentViewModel;
+        public BaseViewModel CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
+        public bool IsOpen => _modalNavigationStore.IsOpen;
+
+        public MainViewModel(NavigationStore navigationStore, ModalNavigationStore modalNavigationStore)
+        {
+            _navigationStore = navigationStore;
+            _modalNavigationStore = modalNavigationStore;
+
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+            _modalNavigationStore.CurrentViewModelChanged += OnCurrentModalViewModelChanged;
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
+        }
+
+        private void OnCurrentModalViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentModalViewModel));
+            OnPropertyChanged(nameof(IsOpen));
         }
     }
 
