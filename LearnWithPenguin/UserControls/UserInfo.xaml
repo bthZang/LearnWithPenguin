@@ -126,22 +126,30 @@
                                    FontSize="23"
                                    Foreground="#073580"
                                    Text="Giới tính :" />
-                        <TextBox Width="500"
-                                 VerticalAlignment="Top"
-                                 HorizontalAlignment="Center"
-                                 Margin="0,8,0,0"
-                                 BorderBrush="#BDB2FF"
-                                 Foreground="#FFFFFF"
-                                 FontSize="21.88"
-                                 BorderThickness="0"
-                                 FontStyle="Normal"
-                                 FontWeight="Bold"
-                                 DataContext="{StaticResource MainVM}"
-                                 Text="{Binding Email, Mode=OneWay}"
-                                 Style="{StaticResource Baloo2-Bold}"
-                                 Background="Transparent"
-                                 TextAlignment="Left"
-                                 SelectionBrush="#FF5B84C6" />
+                        <ComboBox IsEditable="True"
+                                  IsReadOnly="True"
+                                  Margin="20 0 0 0"
+                                  Text="Chưa xác định"
+                                  FontStyle="Normal"
+                                  FontWeight="Bold"
+                                  Style="{StaticResource Baloo2-Bold}"
+                                  FontSize="20"
+                                  Foreground="#073580"
+                                  BorderThickness="0">
+                            <ComboBoxItem>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/images/male.jpg" />
+                                    <TextBlock Foreground="Blue">Nam</TextBlock>
+                                </StackPanel>
+                            </ComboBoxItem>
+
+                            <ComboBoxItem>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/images/male.jpg" />
+                                    <TextBlock Foreground="Pink">Nữ</TextBlock>
+                                </StackPanel>
+                            </ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
                 </StackPanel>
 
