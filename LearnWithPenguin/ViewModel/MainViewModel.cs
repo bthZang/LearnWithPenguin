@@ -21,6 +21,9 @@ using LearnWithPenguin.Stores;
 using Firebase.Auth;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Google.Cloud.Firestore;
+using LearnWithPenguin.Utils;
+using DocumentReference = Google.Cloud.Firestore.DocumentReference;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -30,6 +33,8 @@ namespace LearnWithPenguin.ViewModel
 
         public bool isClosing = false;
         public bool isSound = true;
+
+        public static string userEmail;
 
         public MainViewModel()
         {
@@ -194,7 +199,7 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-       
+
         public ICommand Register
         {
             get
@@ -231,17 +236,31 @@ namespace LearnWithPenguin.ViewModel
 
                         var f = new FirebaseAuthProvider(new FirebaseConfig(firebaseApikey));
                         var a = await f.CreateUserWithEmailAndPasswordAsync(email, password, userName);
+
+                        // create user in firestore
+                        DocumentReference doc = Firestore.db.Collection("user").Document(email);
+                        Dictionary<string, object> data = new Dictionary<string, object> {
+                            {"birthDay", "" },
+                            {"gender", true },
+                            {"name", userName },
+                            {"score_1", 0 },
+                            {"score_2", 0 },
+                            {"score_3", 0 },
+                            {"score_4", 0 }
+                        };
+                        await doc.SetAsync(data);
+
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
                         MessageBox.Show("Đăng ký thành công");
 
-                      //  PartOnBoarding = new LoginViewModel();
+                        //  PartOnBoarding = new LoginViewModel();
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
 
                     }
                     catch (Exception e)
                     {
                         MessageBox.Show("Không có đăng ký nào");
-                      //  PartOnBoarding = new LoginViewModel();
+                        //  PartOnBoarding = new LoginViewModel();
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
 
                         //throw;
@@ -264,6 +283,7 @@ namespace LearnWithPenguin.ViewModel
                     string password = Password;
                     string confirmPassword = ConfirmPassword;
                     string userName = UserName;
+                    userEmail = email;
 
                     try
                     {
