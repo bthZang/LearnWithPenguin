@@ -339,9 +339,11 @@
                     </StackPanel>
                 </Border>
                 <DockPanel>
-                    <Grid HorizontalAlignment="Left">
-                        <localUser:Back Width="97.13"
-                                        Height="34.99"
+                    <Grid HorizontalAlignment="Left"
+                          Width="auto"
+                          Height="auto">
+                        <localUser:Back Width="99"
+                                        Height="36"
                                         Margin="42.97,21.87,0,0"
                                         DataContext="{StaticResource MainVM}"
                                         Command="{Binding TransformToCoding}">
