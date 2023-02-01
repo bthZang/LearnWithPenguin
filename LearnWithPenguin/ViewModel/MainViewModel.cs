@@ -137,20 +137,20 @@ namespace LearnWithPenguin.ViewModel
             set { }
         }
 
-        public ICommand TransformOutRead
-        {
-            get
-            {
-                return new RelayCommand<object>((p) => { return true; }, (p) =>
-                {
-                    _music.Position = TimeSpan.Zero;
-                    _music.Play();
-                    NavigatetoHome = new HomeViewModel();
-                });
-            }
+        //public ICommand TransformOutRead
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            _music.Position = TimeSpan.Zero;
+        //            _music.Play();
+        //            NavigatetoHome = new HomeViewModel();
+        //        });
+        //    }
 
-            set { }
-        }
+        //    set { }
+        //}
         public ICommand Transform
         {
             get
@@ -420,7 +420,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     //NavigatetoHome = new QuizzView2ViewModel();
-                    NavigatetoHome = new QuizzView2ViewModel();
+                   // NavigatetoHome = new QuizzView2ViewModel();
                     Menu = null;
 
                 });
