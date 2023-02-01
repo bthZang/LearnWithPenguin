@@ -320,7 +320,7 @@
                                             Height="100"
                                             CornerRadius="90"
                                             HorizontalAlignment="Center">
-                                        <TextBlock Text="RUN"
+                                        <TextBlock Text="CHẠY"
                                                    Foreground="#FFFFFF"
                                                    FontSize="35"
                                                    FontWeight="Bold"

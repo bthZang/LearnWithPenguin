@@ -18,7 +18,9 @@
         Loaded="Window_Loaded"
         Closed="Window_Closed"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown">
+        PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
+        WindowState="Maximized"
+        >
 
     <Grid>
         <ContentControl Content="{Binding NavigatetoHome}">
