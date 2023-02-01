@@ -34,6 +34,9 @@ namespace LearnWithPenguin.View
     {
         public int currentLevel = 1;
         public string read_Result = "";
+        public int overall_point = 0;
+        public int[] chapter_score = {1,1,1,1,1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
         public ReadView()
         {
             InitializeComponent();
@@ -46,6 +49,7 @@ namespace LearnWithPenguin.View
             string pathImage = "/TapDoc/img/1.png";
             Uri uri = new Uri(pathImage, UriKind.Relative);
             ImgChange.Source = new BitmapImage(uri);
+            
         }
         
         private void NextLesson(object sender, RoutedEventArgs e)
@@ -240,17 +244,30 @@ namespace LearnWithPenguin.View
 
         }
 
+        //setting array
+        
+        public void update_overallScore()
+        {
+
+        }
+
         private void Check_Click (object sender, RoutedEventArgs e)
         {
             if (read_Result == picName.Text)
             {
+                //dark background
                 mainScreen.Opacity = 0.2;
                 layoutScreen.Background = System.Windows.Media.Brushes.Black;
+                //display result
                 goodResult.Visibility = Visibility.Visible;
+                //music
                 MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("./TapDoc/voicemp3/congrats.mp3",UriKind.Relative));
                 mp.Play();
-
+                //point
+                overall_point += chapter_score[currentLevel];
+                chapter_score[currentLevel] = 0;
+                score.Text = overall_point.ToString();
             }
             else
             {
