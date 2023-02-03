@@ -231,7 +231,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource WriteVM}"
+                                   Text="{Binding Point}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"

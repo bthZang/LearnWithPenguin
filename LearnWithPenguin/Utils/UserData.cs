@@ -17,5 +17,6 @@ namespace LearnWithPenguin.Utils
         public static int score_2;
         public static int score_3;
         public static int score_4;
+
     }
 }

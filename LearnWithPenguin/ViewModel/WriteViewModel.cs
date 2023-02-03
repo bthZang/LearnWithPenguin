@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 using System.Windows.Forms;
+using LearnWithPenguin.Utils;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -194,6 +195,21 @@ namespace LearnWithPenguin.ViewModel
             mousePositions.Add(point);
         }
 
+        public string _point;
+
+        public string Point
+        {
+            get
+            {
+                return _point;
+            }
+            set
+            {
+                _point = value;
+                OnPropertyChanged();
+            }
+        }
+
         public bool Submit()
         {
             float[] _positionX;
@@ -227,6 +243,8 @@ namespace LearnWithPenguin.ViewModel
 
                 if (isCorrect)
                     point += 1;
+                Point = Convert.ToString(UserData.score_1 += point);
+
             }
 
             if (point >= 3)
@@ -311,7 +329,7 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
-       
+
 
         public string ChangeColor1
         {
@@ -333,7 +351,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-                _star2= value;
+                _star2 = value;
                 ChangeColor2 = "";
                 OnPropertyChanged();
             }
@@ -360,7 +378,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-                _star3= value;
+                _star3 = value;
                 ChangeColor3 = "";
                 OnPropertyChanged();
             }
@@ -387,7 +405,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-                _star4= value;
+                _star4 = value;
                 ChangeColor4 = "";
                 OnPropertyChanged();
             }
@@ -414,7 +432,7 @@ namespace LearnWithPenguin.ViewModel
             }
             set
             {
-                _star5= value;
+                _star5 = value;
                 ChangeColor5 = "5";
                 OnPropertyChanged();
             }
