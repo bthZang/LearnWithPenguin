@@ -49,6 +49,8 @@
 
     <viewmodel:NewAchivmViewModel x:Key="NewAchivmVM"></viewmodel:NewAchivmViewModel>
     <viewmodel:EditUserNameViewModel x:Key="EditUserNameVM"></viewmodel:EditUserNameViewModel>
+    <viewmodel:AvartarViewModel x:Key="AvartarVM"></viewmodel:AvartarViewModel>
+
 
 
 

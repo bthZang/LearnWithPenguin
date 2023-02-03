@@ -16,6 +16,64 @@
                    Height="156"
                    Width="156"
                    Margin="0 31 0 0"></Image>
+            <Button Background="Transparent"
+                    Margin="-175 -65 0 0"
+                    Width="30.06"
+                    Height="30.06"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Grid>
+
+                    <Image Stretch="Uniform"
+                                       Source="/UserControls/Vector.png">
+
+                                </Image>
+                </Grid>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                BorderThickness="0"
+                                Background="transparent"
+                                BorderBrush="transparent">
+
+                            <ContentPresenter Margin="0"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="transparent" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"
+                                     Value="true">
+                               
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="transparent" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="transparent" />
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="transparent" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
             <TextBlock Background="#A0C4FF"
                        DataContext="{StaticResource MainVM}"
                        Text="{Binding UserName}"
@@ -33,6 +91,64 @@
                        Margin="16.55 18"></TextBlock>
 
         </StackPanel>
+        <Button Background="Transparent"
+                Margin="-650 -200 0 0"
+                Width="30.06"
+                Height="30.06"
+                BorderThickness="0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Border.CornerRadius"
+                            Value="13 13 13 13" />
+                </Style>
+            </Button.Resources>
+            <Grid>
+
+                <Image 
+                       Stretch="Uniform"
+                       Source="/UserControls/Vector.png">
+
+                </Image>
+            </Grid>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border"
+                            BorderThickness="0"
+                            Background="transparent"
+                            BorderBrush="transparent">
+
+                        <ContentPresenter Margin="0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="transparent" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="transparent" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="transparent" />
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
 
         <StackPanel>
             <Border HorizontalAlignment="Left"
@@ -112,7 +228,7 @@
                                     Style="{StaticResource Baloo2-Bold}"
                                     FontSize="23"
                                     BorderThickness="0"
-                                    Height="30"
+                                    Height="40"
                                     Foreground="#073580"
                                     Margin="0 3 0 0"
                                     SelectedDateChanged="DatePicker_SelectedDateChanged"></DatePicker>

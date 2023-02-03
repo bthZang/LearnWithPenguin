@@ -399,6 +399,9 @@
     <Compile Include="Stores\NavigationStore.cs" />
     <Compile Include="Stores\INavigationStore.cs" />
     <Compile Include="Stores\ModalNavigationStore.cs" />
+    <Compile Include="UserControls\avartar.xaml.cs">
+      <DependentUpon>avartar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Back.xaml.cs">
       <DependentUpon>Back.xaml</DependentUpon>
     </Compile>
@@ -474,6 +477,7 @@
     <Compile Include="Utils\Firestore.cs" />
     <Compile Include="Utils\UserData.cs" />
     <Compile Include="Utils\UserInfo.cs" />
+    <Compile Include="ViewModel\AvartarViewModel.cs" />
     <Compile Include="ViewModel\BackViewModel.cs" />
     <Compile Include="ViewModel\BadResultViewModel.cs" />
     <Compile Include="ViewModel\CodingViewModel.cs" />
@@ -535,6 +539,10 @@
     <Compile Include="View\WriteView.xaml.cs">
       <DependentUpon>WriteView.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\avartar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Back.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1293,6 +1301,7 @@
     <Resource Include="View\tickCheck.jpg" />
     <Resource Include="UserControls\homeMenu.png" />
     <Resource Include="UserControls\homeMenu.jpg" />
+    <Resource Include="UserControls\Vector.png" />
     <Content Include="View\1.mp4" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
