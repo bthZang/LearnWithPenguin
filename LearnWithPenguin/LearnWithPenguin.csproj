@@ -1302,6 +1302,7 @@
     <Resource Include="UserControls\homeMenu.png" />
     <Resource Include="UserControls\homeMenu.jpg" />
     <Resource Include="UserControls\Vector.png" />
+    <Resource Include="UserControls\1.png" />
     <Content Include="View\1.mp4" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />

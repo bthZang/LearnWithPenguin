@@ -8,8 +8,13 @@
              d:DesignHeight="670"
              d:DesignWidth="1125"
              Loaded="UserControl_Loaded">
+    
+   
     <DockPanel Background="#A0C4FF"
                Style="{StaticResource Baloo2-Bold}">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource UserVM}"
+                        Content="{Binding Popup}" />
         <StackPanel Width="405">
             <Image Source="/images/User.png"
                    HorizontalAlignment="Center"
@@ -18,6 +23,8 @@
                    Margin="0 31 0 0"></Image>
             <Button Background="Transparent"
                     Margin="-175 -65 0 0"
+                    DataContext="{StaticResource UserVM}"
+                    Command="{Binding EditAvartar}"
                     Width="30.06"
                     Height="30.06"
                     BorderThickness="0">
@@ -58,7 +65,7 @@
                                
                                 <Setter TargetName="Border"
                                         Property="Background"
-                                        Value="transparent" />
+                                        Value="#6195ED" />
                             </Trigger>
                             <Trigger Property="IsPressed"
                                      Value="true">
@@ -67,7 +74,7 @@
                                         Value="transparent" />
                                 <Setter TargetName="Border"
                                         Property="BorderBrush"
-                                        Value="transparent" />
+                                        Value="#6195ED" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -92,9 +99,11 @@
 
         </StackPanel>
         <Button Background="Transparent"
-                Margin="-650 -200 0 0"
+                Margin="-650 -210 0 0"
                 Width="30.06"
                 Height="30.06"
+                DataContext="{StaticResource UserVM}"
+                Command="{Binding EditUserName}"
                 BorderThickness="0">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -133,16 +142,16 @@
                                  Value="true">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="transparent" />
+                                    Value="#6195ED" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="true">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="transparent" />
+                                    Value="#6195ED" />
                             <Setter TargetName="Border"
                                     Property="BorderBrush"
-                                    Value="transparent" />
+                                    Value="#6195ED" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -38,12 +38,12 @@
                    Stretch="Uniform"
                    Height="651"
                    VerticalAlignment="Bottom"
-                   Margin="-35 0" />
+                   Margin="-35 0" /><!--Content="{Binding Snipping}"-->
             <Grid>
                 <ContentControl Content="{Binding PartOnBoarding}" />
                 <ContentControl Panel.ZIndex="9999"
                                 DataContext="{StaticResource OnBoardingVM}"
-                                Content="{Binding Snipping}" />
+                                 />
             </Grid>
         </DockPanel>
 
