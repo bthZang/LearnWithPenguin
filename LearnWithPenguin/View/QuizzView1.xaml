@@ -309,7 +309,7 @@
 
                         </localUC:HomeIcon>
                     </Grid>
-                    <!--<DockPanel>
+                    <DockPanel>
                         <Grid HorizontalAlignment="Right">
                             <Label Name="scoreText"
                                    Foreground="#073580"
@@ -320,7 +320,7 @@
                                    Margin="720,-110,44,0"
                                    Height="112">Số câu trả lời đúng: 0/15</Label>
                         </Grid>
-                    </DockPanel>-->
+                    </DockPanel>
                 </DockPanel>
             </StackPanel>
         </StackPanel>
