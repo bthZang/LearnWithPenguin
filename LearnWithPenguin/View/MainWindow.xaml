@@ -19,7 +19,7 @@
         Closed="Window_Closed"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
-        WindowState="Maximized"
+        
         >
 
     <Grid>

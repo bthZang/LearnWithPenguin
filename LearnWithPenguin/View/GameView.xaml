@@ -63,7 +63,7 @@
                             <Image Source="/images/Back.png" />
                         </Button>
 
-                        <TextBlock Text="Bài"
+                        <TextBlock Text="Màn"
                                    Foreground="#FF073580"
                                    FontSize="30"
                                    FontWeight="Bold"
