@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="LearnWithPenguin.UserControls.Game1"
+﻿<UserControl x:Name="GameOne" 
+            x:Class="LearnWithPenguin.UserControls.Game1"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -61,8 +62,7 @@
                                             Height="60"
                                             CornerRadius="30"
                                             BorderThickness="2 2 2 2"
-                                            BorderBrush="#E97777"
-                                            >
+                                            BorderBrush="#E97777">
                                         <Image Source="{Binding}"></Image>
                                     </Border>
                                 </DataTemplate>
@@ -75,18 +75,13 @@
                                       Width="70"
                                       Height="70"
                                       Margin="65,15,30,55"
-                                      Command="{Binding Reload}" >
+                                      Command="{Binding Reload}">
                 </localUser:ReloadGame>
                 <Image Grid.Column="0"
                        Grid.Row="1"
                        Source="\images\iceStand@3x.png"
                        Margin="-11,6,10,134"
                        Grid.RowSpan="2" />
-                <Image Grid.Column="0"
-                       Source="\images\penguin@3x.png"
-                       Margin="-4,41,4,99"
-                       Grid.RowSpan="2"
-                       RenderTransformOrigin="0.507,-0.209" />
                 <Image Grid.Column="1"
                        Source="\images\iceJumpa@3x.png"
                        Margin="0,136,0,4"
@@ -123,7 +118,20 @@
                        Source="\images\fish@3x.png"
                        Margin="32,70,-20,99"
                        Grid.RowSpan="2" />
+                <Image x:Name="Penguin"
+                       Grid.Column="{Binding ColumnNum, UpdateSourceTrigger=PropertyChanged}"
+                       Source="\images\penguin@3x.png"
+                       Margin="-4,41,4,99"
+                       Grid.RowSpan="2"
+                       RenderTransformOrigin="0.507,-0.209">
+                </Image>
             </Grid>
         </Border>
+        <!--<Path Margin="70, 70" 
+              Data="M0.5 110C0.5 137 17.0611 -0.100164 78 1.50005C135.851 3.0192 98.3457 122.492 156 127.5C217.16 132.813 189.042 -5.77748 250 1.50005C306.37 8.22987 266.033 121.643 322.5 127.5C382.873 133.762 352.839 -0.608161 413.5 1.50005C472.711 3.55789 438.755 127.016 498 127.5C557.573 127.987 525.033 9.99241 584 1.50005C650.07 -8.01528 633.75 139.018 699.5 127.5C757.015 117.424 721.703 4.82425 780 1.50005C840.599 -1.95543 871 127.5 871 127.5"
+              Stroke="Black"
+              >
+            
+        </Path>-->
     </Grid>
 </UserControl>

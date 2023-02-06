@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="LearnWithPenguin.UserControls.GoodQuizResult"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1125">
+    <Grid Margin="0 0 0 0"
+          Background="#CC000000"
+          HorizontalAlignment="Stretch">
+
+        <Button BorderThickness="0"
+                Background="Transparent"
+                DataContext="{StaticResource QuizzView1VM}"
+                Width="1125"
+                Height="800">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:InvokeCommandAction Command="{Binding NextLevel, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border"
+                            BorderThickness="0"
+                            Background="transparent"
+                            BorderBrush="transparent">
+                        <Border.Effect>
+                            <DropShadowEffect />
+                        </Border.Effect>
+                        <ContentPresenter Margin="2"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="transparent" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="transparent" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="transparent" />
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Image          Source="/images/greenTick.png"
+                        Margin="450,300,450,300" />
+
+    </Grid>
+
+
+</UserControl>

@@ -24,6 +24,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Google.Cloud.Firestore;
 using LearnWithPenguin.Utils;
 using DocumentReference = Google.Cloud.Firestore.DocumentReference;
+using LearnWithPenguin.View;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -101,9 +102,9 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
+                    _music.Stop();
                     NavigatetoHome = new PuzzleViewModel();
                     Menu = null;
-
                 });
             }
 
@@ -140,6 +141,21 @@ namespace LearnWithPenguin.ViewModel
 
             set { }
         }
+
+        //public ICommand TransformOutRead
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand<object>((p) => { return true; }, (p) =>
+        //        {
+        //            _music.Position = TimeSpan.Zero;
+        //            _music.Play();
+        //            NavigatetoHome = new HomeViewModel();
+        //        });
+        //    }
+
+        //    set { }
+        //}
         public ICommand Transform
         {
             get
@@ -423,7 +439,8 @@ namespace LearnWithPenguin.ViewModel
             {
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
-                    NavigatetoHome = new QuizzView2ViewModel();
+                    //NavigatetoHome = new QuizzView2ViewModel();
+                   // NavigatetoHome = new QuizzView2ViewModel();
                     Menu = null;
 
                 });

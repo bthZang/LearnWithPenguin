@@ -154,46 +154,6 @@
                             HorizontalAlignment="Center"
                             Margin="0, 70, 0, 50">
                     <StackPanel>
-                        <Button Command="{Binding TransformToReview}"
-                                DataContext="{StaticResource MainVM}"
-                                Background="Transparent"
-                                Width="auto"
-                                Height="auto"
-                                BorderThickness="0">
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="Border.CornerRadius"
-                                            Value="70 70 70 70" />
-                                </Style>
-                            </Button.Resources>
-
-                            <Border Background="#FFFFFF"
-                                    Width="248.94"
-                                    Height="95.64"
-                                    CornerRadius="23.44"
-                                    BorderThickness="4"
-                                    BorderBrush="#000000"
-                                    VerticalAlignment="Top">
-                                <TextBlock Width="158"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"
-                                           Foreground="#000000"
-                                           FontSize="26.37"
-                                           FontStyle="Normal"
-                                           FontWeight="Bold"
-                                           Background="#FFFFFF"
-                                           TextAlignment="Center"
-                                           Style="{StaticResource Baloo2-Bold}"
-                                           Text="Xem lại" />
-                            </Border>
-                        </Button>
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock Background="Transparent"
-                                   Margin="40">
-                        </TextBlock>
-                    </StackPanel>
-                    <StackPanel>
                         <Button Command="{Binding TransformToGame}"
                                 DataContext="{StaticResource MainVM}"
                                 Background="Transparent"

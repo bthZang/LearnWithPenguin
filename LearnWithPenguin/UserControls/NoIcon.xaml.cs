@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for QuizzView2.xaml
+    /// Interaction logic for NoIcon.xaml
     /// </summary>
-    public partial class QuizzView2 : Page
+    public partial class NoIcon : System.Windows.Controls.UserControl
     {
-        public QuizzView2()
+        public NoIcon()
         {
             InitializeComponent();
         }

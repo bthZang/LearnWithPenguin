@@ -55,11 +55,11 @@ namespace LearnWithPenguin.ViewModel
         {
             this.IsDisplayVideo = "Hidden";
             this.Number = 1;
-            this._star1 = "yellow";
-            this._star2 = "white";
-            this._star3 = "white";
-            this._star4 = "white";
-            this._star5 = "white";
+            this._Star1 = "yellow";
+            this._Star2 = "white";
+            this._Star3 = "white";
+            this._Star4 = "white";
+            this._Star5 = "white";
         }
 
         public int Number
@@ -325,35 +325,33 @@ namespace LearnWithPenguin.ViewModel
 
         //star
 
-        public string _star1;
-        public string _star2;
-        public string _star3;
-        public string _star4;
-        public string _star5;
-
-
+        public string _Star1;
+        public string _Star2;
+        public string _Star3;
+        public string _Star4;
+        public string _Star5;
 
         public string Star1
         {
             get
             {
-                return _star1;
+                return _Star1;
             }
             set
             {
-                _star1 = value;
+                _Star1 = value;
                 ChangeColor1 = "";
                 OnPropertyChanged();
             }
         }
 
-
+       
 
         public string ChangeColor1
         {
             get
             {
-                return "/UserControls/" + _star1 + "Star.png";
+                return "/UserControls/" + _Star1 + "Star.png";
             }
             set
             {
@@ -365,11 +363,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star2;
+                return _Star2;
             }
             set
             {
-                _star2 = value;
+                _Star2= value;
                 ChangeColor2 = "";
                 OnPropertyChanged();
             }
@@ -380,7 +378,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star2 + "Star.png";
+                return "/UserControls/" + _Star2 + "Star.png";
             }
             set
             {
@@ -392,11 +390,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star3;
+                return _Star3;
             }
             set
             {
-                _star3 = value;
+                _Star3= value;
                 ChangeColor3 = "";
                 OnPropertyChanged();
             }
@@ -407,7 +405,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star3 + "Star.png";
+                return "/UserControls/" + _Star3 + "Star.png";
             }
             set
             {
@@ -419,11 +417,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star4;
+                return _Star4;
             }
             set
             {
-                _star4 = value;
+                _Star4= value;
                 ChangeColor4 = "";
                 OnPropertyChanged();
             }
@@ -434,7 +432,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star4 + "Star.png";
+                return "/UserControls/" + _Star4 + "Star.png";
             }
             set
             {
@@ -446,11 +444,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _star5;
+                return _Star5;
             }
             set
             {
-                _star5 = value;
+                _Star5 = value;
                 ChangeColor5 = "5";
                 OnPropertyChanged();
             }
@@ -461,7 +459,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _star5 + "Star.png";
+                return "/UserControls/" + _Star5 + "Star.png";
             }
             set
             {

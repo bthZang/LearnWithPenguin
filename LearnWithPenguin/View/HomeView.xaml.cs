@@ -27,6 +27,7 @@ namespace LearnWithPenguin.View
         public HomeView()
         {
             InitializeComponent();
+            
         }
 
         async void getData()

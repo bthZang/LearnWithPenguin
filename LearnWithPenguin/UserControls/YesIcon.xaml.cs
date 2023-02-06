@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LearnWithPenguin.View
+namespace LearnWithPenguin.UserControls
 {
     /// <summary>
-    /// Interaction logic for PuzzleView.xaml
+    /// Interaction logic for YesIcon.xaml
     /// </summary>
-    public partial class PuzzleView : System.Windows.Controls.Page
+    public partial class YesIcon : System.Windows.Controls.UserControl
     {
-        public PuzzleView()
+        public YesIcon()
         {
-            
+            InitializeComponent();
         }
     }
 }
