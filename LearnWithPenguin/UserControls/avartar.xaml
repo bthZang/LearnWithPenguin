@@ -7,74 +7,203 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1125">
-    <Grid >
+    <Grid>
 
         <Grid Background="Black"
               Opacity="0.5"></Grid>
         <Border CornerRadius="50.24"
                 Background="White"
-                Margin="136,101,137,101">
-            <ScrollViewer>
-                <Button Background="Transparent"
-                        Margin="-477 -330 0 0"
-                        Width="150"
-                        Height="150"
-                        BorderThickness="0">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
+                Margin="136.5,101,136.5,101">
+            <Grid>
+                <ScrollViewer>
+                    <Button Background="Transparent"
+                            Margin="-477 -330 0 0"
+                            Width="150"
+                            Height="150"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <Grid>
+
+                            <Image Stretch="Uniform"
+                                   Source="/UserControls/1.png">
+
+                            </Image>
+                        </Grid>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="Border"
+                                        BorderThickness="0"
+                                        Background="transparent"
+                                        BorderBrush="transparent">
+
+                                    <ContentPresenter Margin="0"
+                                                      HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"
+                                                      RecognizesAccessKey="True" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsKeyboardFocused"
+                                             Value="true">
+                                        <Setter TargetName="Border"
+                                                Property="BorderBrush"
+                                                Value="transparent" />
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="true">
+
+                                        <Setter TargetName="Border"
+                                                Property="Background"
+                                                Value="#6195ED" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed"
+                                             Value="true">
+                                        <Setter TargetName="Border"
+                                                Property="Background"
+                                                Value="#6195ED" />
+                                        <Setter TargetName="Border"
+                                                Property="BorderBrush"
+                                                Value="#6195ED" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                </ScrollViewer>
+                <Border CornerRadius="0 0 50.24 50.24"
+                        Background="Gainsboro"
+                        Margin="0,488,0,0">
                     <Grid>
 
-                        <Image Stretch="Uniform"
-                               Source="/UserControls/1.png">
+                        <Button Background="Transparent"
+                                Margin="300 0 51.75 0"
+                                Width="100"
+                                Height="50"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <TextBlock Foreground="#2D3D8F"
+                                       FontSize="24.45"
+                                       TextAlignment="Center"
+                                       FontWeight="DemiBold"
+                                       Text="Xong"
+                                       Style="{StaticResource Baloo2-Regular}"
+                                       Width="100"
+                                       Height="50"></TextBlock>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="2"
+                                            Background="transparent"
+                                            BorderBrush="#2D3D8F">
 
-                        </Image>
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#6195ED" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#6195ED" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#6195ED" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+                        <Button Background="Transparent"
+                                Margin="50 0 297.5 0"
+                                Width="100"
+                                DataContext="{StaticResource MainVM}"
+                                Command="{Binding HidePopup}"
+                                Height="50"
+                                BorderThickness="0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            <TextBlock Foreground="#2D3D8F"
+                                       FontSize="24.45"
+                                       TextAlignment="Center"
+                                       FontWeight="DemiBold"
+                                       Text="Thoát"
+                                       Style="{StaticResource Baloo2-Regular}"
+                                       Width="100"
+                                       Height="50"></TextBlock>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="2"
+                                            Background="transparent"
+                                            BorderBrush="#2D3D8F">
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#6195ED" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="#6195ED" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="#6195ED" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+
                     </Grid>
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border x:Name="Border"
-                                    BorderThickness="0"
-                                    Background="transparent"
-                                    BorderBrush="transparent">
-
-                                <ContentPresenter Margin="0"
-                                                  HorizontalAlignment="Center"
-                                                  VerticalAlignment="Center"
-                                                  RecognizesAccessKey="True" />
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsKeyboardFocused"
-                                         Value="true">
-                                    <Setter TargetName="Border"
-                                            Property="BorderBrush"
-                                            Value="transparent" />
-                                </Trigger>
-                                <Trigger Property="IsMouseOver"
-                                         Value="true">
-
-                                    <Setter TargetName="Border"
-                                            Property="Background"
-                                            Value="#6195ED" />
-                                </Trigger>
-                                <Trigger Property="IsPressed"
-                                         Value="true">
-                                    <Setter TargetName="Border"
-                                            Property="Background"
-                                            Value="#6195ED" />
-                                    <Setter TargetName="Border"
-                                            Property="BorderBrush"
-                                            Value="#6195ED" />
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-
-                </Button>
-
-            </ScrollViewer>
+                </Border>
+            </Grid>
         </Border>
     </Grid>
 

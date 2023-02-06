@@ -24,7 +24,7 @@
                          Height="100"
                          Margin="44,43,43,89"></TextBox>
                 <Button Background="Transparent"
-                        Margin="300 150 0 0"
+                        Margin="300 150 51.75 0"
                         Width="100"
                         Height="50"
                         BorderThickness="0">
@@ -36,18 +36,19 @@
                     </Button.Resources>
                     <TextBlock Foreground="#2D3D8F"
                                FontSize="24.45"
-                               FontStyle="Normal"
+                               TextAlignment="Center"
+                               FontWeight="DemiBold"
                                Text="Xong"
                                Style="{StaticResource Baloo2-Regular}"
-                               Width="508"
-                               Height="100"
-                               Margin="44,43,43,89"></TextBlock>
+                               Width="100"
+                               Height="50"
+                               ></TextBlock>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"
-                                    BorderThickness="0"
+                                    BorderThickness="2"
                                     Background="transparent"
-                                    BorderBrush="transparent">
+                                    BorderBrush="#2D3D8F">
 
                                 <ContentPresenter Margin="0"
                                                   HorizontalAlignment="Center"
@@ -83,10 +84,10 @@
 
                 </Button>
                 <Button Background="Transparent"
-                        Margin="50 150 0 0"
+                        Margin="50 150 297.5 0"
                         Width="100"
-                        DataContext="{StaticResource UserInfoVM}"
-                        Command="{Binding EditAvartar}"
+                        DataContext="{StaticResource MainVM}"
+                        Command="{Binding HidePopup}"
                         Height="50"
                         BorderThickness="0">
                     <Button.Resources>
@@ -97,19 +98,18 @@
                     </Button.Resources>
                     <TextBlock Foreground="#2D3D8F"
                                FontSize="24.45"
-                               FontStyle="Normal"
+                               TextAlignment="Center"
+                               FontWeight="DemiBold"
                                Text="Thoát"
                                Style="{StaticResource Baloo2-Regular}"
-                               Width="508"
-                               Height="100"
-                               Margin="44,43,43,89"></TextBlock>
+                               Width="100"
+                               Height="50"></TextBlock>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"
-                                    BorderThickness="0"
+                                    BorderThickness="2"
                                     Background="transparent"
-                                    BorderBrush="transparent">
-
+                                    BorderBrush="#2D3D8F">
                                 <ContentPresenter Margin="0"
                                                   HorizontalAlignment="Center"
                                                   VerticalAlignment="Center"
