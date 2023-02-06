@@ -13,7 +13,7 @@
               Opacity="0.5"></Grid>
         <Border CornerRadius="50.24"
                 Background="White"
-                Margin="136.5,101,136.5,101">
+                >
             <Grid>
                 <ScrollViewer>
                     <Button Background="Transparent"
@@ -139,12 +139,12 @@
                                 </ControlTemplate>
                             </Button.Template>
 
-                        </Button>
+                        </Button><!--DataContext="{StaticResource MainVM}"
+                                Command="{Binding HidePopup}"-->
                         <Button Background="Transparent"
                                 Margin="50 0 297.5 0"
                                 Width="100"
-                                DataContext="{StaticResource MainVM}"
-                                Command="{Binding HidePopup}"
+                                
                                 Height="50"
                                 BorderThickness="0">
                             <Button.Resources>

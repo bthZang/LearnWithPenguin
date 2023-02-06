@@ -113,9 +113,10 @@
             </Button.Resources>
             <Grid>
 
-                <Image 
+                <!--Margin="0,27,0,-27"--><Image 
                        Stretch="Uniform"
-                       Source="/UserControls/Vector.png">
+                       Source="/UserControls/Vector.png"
+                       >
 
                 </Image>
             </Grid>

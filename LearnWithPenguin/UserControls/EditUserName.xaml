@@ -7,24 +7,24 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1125">
-    <Grid Margin="0 0 0 0">
+    <Grid >
 
         <Grid Background="Black"
               Opacity="0.5"></Grid>
         <Border CornerRadius="50.24"
                 Background="White"
-                Margin="265,284,265,284">
+                Width="950"
+                Height="500"
+                >
             <Grid>
                 <TextBox Foreground="#2D3D8F"
                          BorderThickness="4"
                          FontSize="24.45"
                          FontStyle="Normal"
                          Style="{StaticResource Baloo2-Regular}"
-                         Width="508"
-                         Height="100"
-                         Margin="44,43,43,89"></TextBox>
+                         Margin="22,91,23,159" />
                 <Button Background="Transparent"
-                        Margin="300 150 51.75 0"
+                        Margin="300 350 51.75 0"
                         Width="100"
                         Height="50"
                         BorderThickness="0">
@@ -41,8 +41,7 @@
                                Text="Xong"
                                Style="{StaticResource Baloo2-Regular}"
                                Width="100"
-                               Height="50"
-                               ></TextBlock>
+                               Height="50"></TextBlock>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"
@@ -84,9 +83,9 @@
 
                 </Button>
                 <Button Background="Transparent"
-                        Margin="50 150 297.5 0"
+                        Margin="50 350 297.5 0"
                         Width="100"
-                        DataContext="{StaticResource MainVM}"
+                        DataContext="{StaticResource UserVM}"
                         Command="{Binding HidePopup}"
                         Height="50"
                         BorderThickness="0">
