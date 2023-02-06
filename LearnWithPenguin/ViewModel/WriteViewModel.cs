@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using System.Windows.Forms;
 using LearnWithPenguin.Utils;
+using Google.Cloud.Firestore;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -210,6 +211,20 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+        async void updatePoint()
+        {
+            Dictionary<string, object> data = new Dictionary<string, object> {
+                {"score_1", UserData.score_1 }
+            };
+            DocumentReference doc = Firestore.db.Collection("user").Document(UserData.email);
+            DocumentSnapshot snap = await doc.GetSnapshotAsync();
+            if (snap.Exists)
+            {
+                await doc.UpdateAsync(data);
+                //MessageBox.Show("Cập nhật thành công");
+            }
+        }
+
         public bool Submit()
         {
             float[] _positionX;
@@ -243,9 +258,12 @@ namespace LearnWithPenguin.ViewModel
 
                 if (isCorrect)
                     point += 1;
-                Point = Convert.ToString(UserData.score_1 += point);
+                //Point = Convert.ToString(UserData.score_1 += point);
 
             }
+
+            UserData.score_1[_number-1] = point;
+            updatePoint();
 
             if (point >= 3)
             {

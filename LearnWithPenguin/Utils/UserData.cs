@@ -13,10 +13,10 @@ namespace LearnWithPenguin.Utils
         public static string birthday;
         public static bool gender;
         public static string name;
-        public static int score_1;
-        public static int score_2;
-        public static int score_3;
-        public static int score_4;
+        public static int[] score_1;
+        public static int[] score_2;
+        public static int[] score_3;
+        public static int[] score_4;
 
     }
 }

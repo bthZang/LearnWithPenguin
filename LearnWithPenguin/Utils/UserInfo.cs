@@ -17,12 +17,12 @@ namespace LearnWithPenguin.Utils
         [FirestoreProperty]
         public string name { get; set; }
         [FirestoreProperty]
-        public int score_1 { get; set; }
+        public int[] score_1 { get; set; }
         [FirestoreProperty]
-        public int score_2 { get; set; }
+        public int[] score_2 { get; set; }
         [FirestoreProperty]
-        public int score_3 { get; set; }
+        public int[] score_3 { get; set; }
         [FirestoreProperty]
-        public int score_4 { get; set; }
+        public int[] score_4 { get; set; }
     }
 }

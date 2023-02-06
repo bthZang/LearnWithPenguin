@@ -243,18 +243,18 @@ namespace LearnWithPenguin.ViewModel
                             {"birthDay", "" },
                             {"gender", true },
                             {"name", userName },
-                            {"score_1", 0 },
-                            {"score_2", 0 },
-                            {"score_3", 0 },
-                            {"score_4", 0 }
-                        };
+                            { "score_1", Enumerable.Repeat(0, 30).ToArray() },
+                            { "score_2", Enumerable.Repeat(0, 30).ToArray() },
+                            { "score_3", Enumerable.Repeat(0, 30).ToArray() },
+                            { "score_4", Enumerable.Repeat(0, 30).ToArray() }
+                    };
                         await doc.SetAsync(data);
 
                         Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
                         MessageBox.Show("Đăng ký thành công");
 
                         //  PartOnBoarding = new LoginViewModel();
-                        Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+                       // Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
 
                     }
                     catch (Exception e)
