@@ -574,7 +574,6 @@
     <Compile Include="ViewModel\OnBoardingViewModel.cs" />
     <Compile Include="ViewModel\GoodQuizResultViewModel.cs" />
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
-
     <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
@@ -782,15 +781,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PuzzleView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\QuizzView1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\QuizzView2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -837,7 +828,6 @@
     <None Include="webfonts\fa-solid-900.eot" />
     <None Include="webfonts\fa-solid-900.woff" />
     <None Include="webfonts\fa-solid-900.woff2" />
-    <None Include="packages.config" />
     <Resource Include="fonts\Baloo-Regular.ttf" />
     <Resource Include="fonts\Baloo2-Bold.ttf" />
     <Resource Include="fonts\Baloo2-ExtraBold.ttf" />
@@ -848,7 +838,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MVVMEssentials.csproj" />
-    <None Include="packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1118,12 +1107,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="yellowStar.png" />
     <Resource Include="UserControls\BlurBack.png" />
     <Resource Include="images\closeIcon.png" />
     <Resource Include="images\greenTick.jpg" />
     <Resource Include="images\greenTick.png" />
     <Resource Include="images\Home.png" />
     <Resource Include="images\HomeWhite.png" />
+    <Resource Include="border.png" />
     <Content Include="images\Question\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1275,7 +1266,7 @@
     <Resource Include="images\redCross.jpg" />
     <Resource Include="images\redCross.png" />
     <Resource Include="images\ReloadQuiz.png" />
-	  <Resource Include="View\1.png" />
+    <Resource Include="View\1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TapViet\ChuDut\1.png" />
@@ -1562,7 +1553,9 @@
     <Resource Include="UserControls\homeMenu.jpg" />
     <Resource Include="UserControls\Vector.png" />
     <Resource Include="UserControls\1.png" />
+    <Resource Include="UserControls\yellowStar.png" />
     <Content Include="View\1.mp4" />
+    <Resource Include="View\border.png" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />

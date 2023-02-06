@@ -103,7 +103,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     _music.Stop();
-                    NavigatetoHome = new PuzzleViewModel();
+                    NavigatetoHome = new QuizzView1ViewModel();
                     Menu = null;
                 });
             }
