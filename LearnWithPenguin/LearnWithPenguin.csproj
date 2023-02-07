@@ -1560,6 +1560,12 @@
     <Resource Include="UserControls\5.png" />
     <Resource Include="UserControls\7.png" />
     <Resource Include="UserControls\8.png" />
+    <Resource Include="UserControls\9.png" />
+    <Resource Include="UserControls\10.png" />
+    <Resource Include="UserControls\11.png" />
+    <Resource Include="UserControls\12.png" />
+    <Resource Include="UserControls\13.png" />
+    <Resource Include="UserControls\15.png" />
     <Content Include="View\1.mp4" />
     <Resource Include="View\border.png" />
     <Content Include="webfonts\fa-brands-400.svg" />
