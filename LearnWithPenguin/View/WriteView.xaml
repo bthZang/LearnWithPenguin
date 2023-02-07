@@ -133,8 +133,8 @@
                                x:Name="MyCanvas"
                                Margin="0,10,0,10"
                                Panel.ZIndex="75"
-                               MinWidth="900"
-                               MinHeight="500"
+                               MinWidth="500"
+                               MinHeight="100"
                                MouseDown="MyCanvas_MouseDown"
                                MouseMove="MyCanvas_MouseMove" />
                 </Grid>

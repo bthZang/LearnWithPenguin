@@ -20,10 +20,11 @@ namespace LearnWithPenguin.View
     public partial class QuizzView1 : System.Windows.Controls.Page
     {
         private int score = 0;
-        private int tempScore;
-        private bool backClicked = false;
+        //private int tempScore;
+        //private bool backClicked = false;
 
         List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+        List<int> answerQuestion = new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
         public QuizzView1()
         {
@@ -32,7 +33,7 @@ namespace LearnWithPenguin.View
             GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
             GoBack.Click += checkBack;
 
-            
+
             QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
             viewmodel.Number = 1;
             viewmodel.Question();
@@ -46,10 +47,11 @@ namespace LearnWithPenguin.View
                     viewmodel.Number += 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    backClicked = false;
+                    //backClicked = false;
                     GoBack.IsEnabled = true;
                     NextQuestion();
                 }
+
                 if (viewmodel.Number > 14 && viewmodel.Number <= 15)
                 {
                     GoNextImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurNext.png", UriKind.Relative));
@@ -57,30 +59,33 @@ namespace LearnWithPenguin.View
                 if (viewmodel.Number > 15)
                 {
                     GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/backIcon.png", UriKind.Relative));
-                    //viewmodel.Question();
+                    viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    backClicked = false;
+                    //backClicked = false;
                     GoBack.IsEnabled = true;
                     GoNext.IsEnabled = false;
                     NextQuestion();
                 }
-                
+
             });
-           
+
             viewmodel.OnclickHandlePreviousLevel = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 if (viewmodel.Number > 1)
                 {
-                    backClicked = true;
+                    //backClicked = true;
                     viewmodel.Number -= 1;
                     viewmodel.Question();
                     viewmodel.NavigatetoResult = null;
-                    GoBack.IsEnabled = false;
-                    GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
+                    //GoBack.IsEnabled = false;
                     GoNextImg.Source = new BitmapImage(new Uri(@"/UserControls/next.png", UriKind.Relative));
                     NextQuestion();
-
                 }
+                if (viewmodel.Number == 1)
+                {
+                    GoBackImg.Source = new BitmapImage(new Uri(@"/UserControls/BlurBack.png", UriKind.Relative));
+                }
+
             });
 
         }
@@ -103,16 +108,25 @@ namespace LearnWithPenguin.View
 
             Button senderButton = sender as Button;
 
-            tempScore = score;
+            //tempScore = score;
+            QuizzView1ViewModel viewmodel = button.DataContext as QuizzView1ViewModel;
 
-            if (senderButton.Tag.ToString() == "1" && backClicked == false)
+            //if (senderButton.Tag.ToString() == "1" && backClicked == false)
+            //{
+            //    score++;
+            //}
+            //else if (backClicked == true && senderButton.Tag.ToString() == "1" && tempScore + 1 == score)
+            //{
+            //    score = score;
+            //}
+
+            if (senderButton.Tag.ToString() == "1" && answerQuestion[viewmodel.Number] == 1)
             {
                 score++;
+                answerQuestion[viewmodel.Number] = 0;
+
             }
-            else if (backClicked == true && senderButton.Tag.ToString() == "1" && tempScore + 1 == score)
-            {
-                score = score;
-            }
+
             //scoreText.Content = "Số câu trả lời đúng " + score + "/" + questionNumbers.Count;
 
         }
