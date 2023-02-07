@@ -32,10 +32,7 @@
                     Background="#A0C4FF"
                     x:Name="mainScreen"
                     >
-            <Grid>
-                <TextBlock x:Name="score"
-                           FontSize="10">Xin chafo</TextBlock>
-            </Grid>
+            
             <DockPanel>
                 <Grid>
                     <localUC:Icon Width="63.28"

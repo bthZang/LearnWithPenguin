@@ -267,7 +267,6 @@ namespace LearnWithPenguin.View
                 //point
                 overall_point += chapter_score[currentLevel];
                 chapter_score[currentLevel] = 0;
-                score.Text = overall_point.ToString();
             }
             else
             {
