@@ -1568,6 +1568,8 @@
     <Resource Include="UserControls\15.png" />
     <Content Include="View\1.mp4" />
     <Resource Include="View\border.png" />
+    <Resource Include="View\4.png" />
+    <Resource Include="View\10.png" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
