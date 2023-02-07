@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="800"
-             d:DesignWidth="1225">
+             d:DesignWidth="1325">
     <Grid>
 
         <Grid Background="Black"
@@ -503,13 +503,14 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal"
-                                    Height="200"
+                                    Height="350"
                                     HorizontalAlignment="Center"
                                     Width="900"
-                                    Margin="0 0 0 0">
+                                    Margin="0 30 0 0">
                             <Button Background="Transparent"
                                     Width="150"
                                     Height="150"
+                                    VerticalAlignment="Top"
                                     BorderThickness="0">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -568,6 +569,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    VerticalAlignment="Top"
+                                    
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -627,6 +630,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    VerticalAlignment="Top"
+                                    
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -686,6 +691,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    VerticalAlignment="Top"
+                                    
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
