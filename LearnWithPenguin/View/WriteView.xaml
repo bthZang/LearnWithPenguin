@@ -136,7 +136,14 @@
                                MinWidth="500"
                                MinHeight="100"
                                MouseDown="MyCanvas_MouseDown"
-                               MouseMove="MyCanvas_MouseMove" />
+                               MouseMove="MyCanvas_MouseMove">
+                        <InkCanvas.DefaultDrawingAttributes>
+                            <DrawingAttributes x:Name="attribute"
+                                               Width="1"
+                                               Height="1"
+                                               />
+                        </InkCanvas.DefaultDrawingAttributes>
+                    </InkCanvas>
                 </Grid>
 
                 <Button Height="171.09"
@@ -208,16 +215,15 @@
                     </Border>
                 </Button>
                 <MediaElement x:Name="media"
-                              Width="600"
                               Height="593.03"
                               LoadedBehavior="Manual"
                               Panel.ZIndex="9999"
                               UnloadedBehavior="Manual"
                               DataContext="{StaticResource WriteVM}"
-                              Visibility="Visible"
+                              Visibility="{Binding IsDisplayVideo}"
                               Margin="0 -565.34 0 0"
-                              Source="./TapViet/ChuThuong/1.mp4"
-                              ></MediaElement>
+                              Source="{Binding ConcatVideo}"
+                              MediaEnded="media_MediaEnded"></MediaElement>
 
                 <Button Height="71.09"
                         Width="171.09"

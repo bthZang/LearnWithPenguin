@@ -70,6 +70,7 @@ namespace LearnWithPenguin.View
             var viewModelInstance = media.DataContext;
             (viewModelInstance as WriteViewModel).IsDisplayVideo = "Hidden";
             media.Stop();
+            media.Close();
         }
 
         private void MyCanvas_MouseDown(object sender, MouseButtonEventArgs e)
@@ -83,6 +84,11 @@ namespace LearnWithPenguin.View
             var viewModelInstance = media.DataContext;
             if (System.Windows.Input.Mouse.LeftButton == MouseButtonState.Pressed)
                 (viewModelInstance as WriteViewModel).AddPosition(position);
+        }
+
+        private void media_IsHitTestVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
         }
     }
 }
