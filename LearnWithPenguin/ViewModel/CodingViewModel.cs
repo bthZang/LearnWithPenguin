@@ -44,6 +44,7 @@ namespace LearnWithPenguin.ViewModel
         public CodingViewModel()
         {
             PositionNumber = "1";
+           
             GameView = @"/images/game1@3x.png";
 
             ForwardCommand = new RelayCommand<object>((p) => { return true; }, (p) =>

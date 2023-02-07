@@ -9,7 +9,7 @@
       d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="800"
-      d:DesignWidth="1200"
+      d:DesignWidth="1125"
       DataContext="{StaticResource GameVM}"
       Title="GameView">
 
@@ -63,7 +63,7 @@
                             <Image Source="/images/Back.png" />
                         </Button>
 
-                        <TextBlock Text="Bài"
+                        <TextBlock Text="Màn"
                                    Foreground="#FF073580"
                                    FontSize="30"
                                    FontWeight="Bold"
@@ -320,7 +320,7 @@
                                             Height="100"
                                             CornerRadius="90"
                                             HorizontalAlignment="Center">
-                                        <TextBlock Text="RUN"
+                                        <TextBlock Text="CHẠY"
                                                    Foreground="#FFFFFF"
                                                    FontSize="35"
                                                    FontWeight="Bold"
@@ -339,9 +339,11 @@
                     </StackPanel>
                 </Border>
                 <DockPanel>
-                    <Grid HorizontalAlignment="Left">
-                        <localUser:Back Width="97.13"
-                                        Height="34.99"
+                    <Grid HorizontalAlignment="Left"
+                          Width="auto"
+                          Height="auto">
+                        <localUser:Back Width="99"
+                                        Height="36"
                                         Margin="42.97,21.87,0,0"
                                         DataContext="{StaticResource MainVM}"
                                         Command="{Binding TransformToCoding}">
