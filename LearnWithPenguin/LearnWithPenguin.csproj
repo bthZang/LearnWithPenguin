@@ -1554,6 +1554,12 @@
     <Resource Include="UserControls\Vector.png" />
     <Resource Include="UserControls\1.png" />
     <Resource Include="UserControls\yellowStar.png" />
+    <Resource Include="UserControls\2.png" />
+    <Resource Include="UserControls\3.png" />
+    <Resource Include="UserControls\4.png" />
+    <Resource Include="UserControls\5.png" />
+    <Resource Include="UserControls\7.png" />
+    <Resource Include="UserControls\8.png" />
     <Content Include="View\1.mp4" />
     <Resource Include="View\border.png" />
     <Content Include="webfonts\fa-brands-400.svg" />
