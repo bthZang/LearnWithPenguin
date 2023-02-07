@@ -10,106 +10,106 @@
              d:DesignWidth="1250">
     <Grid Background="#660C0C0C"
           HorizontalAlignment="Stretch">
-    <Border Background="White"
-          Width="892"
-            CornerRadius="30"
-          Height="606">
-        
-        
-        <StackPanel>
-            <DockPanel>
-                <Image Source="/UserControls/WarningPG.png"
-                       Width="253.44"
-                       VerticalAlignment="Top"
-                       Margin="30.05 25 0 0"
-                       Height="254"></Image>
-                <StackPanel>
-                    <TextBlock TextAlignment="Left"
-                               VerticalAlignment="Stretch"
-                               HorizontalAlignment="Left"
-                               TextWrapping="Wrap"
-                               Text="LƯU Ý!"
-                               Foreground="#073580"
-                               FontSize="40"
-                               FontWeight="UltraBold"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="59"
-                               Width="131"
-                               Margin="20.52,84,0,0" />
-                    <TextBlock TextWrapping="Wrap"
-                               HorizontalAlignment="Left"
-                               Margin="20.52 13 0 0"
-                               Text="Trong trường hợp bạn không thể sử dụng chuột máy tính hoặc viết trên màn hình máy tính, xin hãy tải về ứng dụng hỗ trợ viết chữ trên điện thoại do chúng tôi tạo ra bằng cách quét mã dưới đây"
-                               Foreground="#2D3D8F"
-                               FontSize="20.89"
-                               FontStyle="Normal"
-                               FontWeight="Bold"
-                               Style="{StaticResource Baloo2-Regular}"
-                               Width="513"
-                               Height="168"
-                               TextAlignment="Justify" />
-                </StackPanel>
-            </DockPanel>
-            <DockPanel Margin="114,165.6,114,0">
-                <Button Width="136"
-                        BorderThickness="0"
-                        DataContext="{StaticResource HomeVM}"
-                        Command="{Binding HideWarning}"
-                        Height="61">
+        <Border Background="White"
+                Width="892"
+                CornerRadius="30"
+                Height="606">
 
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <TextBlock TextAlignment="Center"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Top"
-                               TextWrapping="Wrap"
-                               Text="Quay lại"
-                               Foreground="#073580"
-                               FontSize="28.82"
-                               FontWeight="Black"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="49"
-                               Width="126" />
-                </Button>
-                <Button Width="136"
-                        BorderThickness="0"
-                        HorizontalAlignment="Right"
-                        HorizontalContentAlignment="Right"
-                        DataContext="{StaticResource MainVM}"
-                        Command="{Binding TransformToWrite}"
-                        Height="61">
 
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="Border.CornerRadius"
-                                    Value="13 13 13 13" />
-                        </Style>
-                    </Button.Resources>
-                    <TextBlock TextAlignment="Center"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Top"
-                               TextWrapping="Wrap"
-                               Text="Tiếp tục"
-                               Foreground="#073580"
-                               FontSize="28.82"
-                               FontWeight="Black"
-                               FontStyle="Normal"
-                               LineStackingStrategy="MaxHeight"
-                               Style="{StaticResource Baloo2-Bold}"
-                               Height="49"
-                               Width="126" />
-                </Button>
+            <StackPanel>
+                <DockPanel>
+                    <Image Source="/UserControls/WarningPG.png"
+                           Width="253.44"
+                           VerticalAlignment="Top"
+                           Margin="30.05 175 0 0"
+                           Height="254"></Image>
+                    <StackPanel>
+                        <TextBlock TextAlignment="Left"
+                                   VerticalAlignment="Stretch"
+                                   HorizontalAlignment="Left"
+                                   TextWrapping="Wrap"
+                                   Text="LƯU Ý!"
+                                   Foreground="#073580"
+                                   FontSize="40"
+                                   FontWeight="UltraBold"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="59"
+                                   Width="131"
+                                   Margin="20.52,84,0,0" />
+                        <TextBlock TextWrapping="Wrap"
+                                   HorizontalAlignment="Left"
+                                   Margin="20.52 13 0 0"
+                                   Text="Trong trường hợp bạn không thể sử dụng chuột máy tính hoặc bút cảm ứng trên màn hình máy tính, xin hãy thử trải nghiệm tính năng khác và quay lại sau. Chúng tôi rất xin lỗi về sự bất tiện này !"
+                                   Foreground="#2D3D8F"
+                                   FontSize="30.89"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   Style="{StaticResource Baloo2-Regular}"
+                                   Width="513"
+                                   Height="300"
+                                   TextAlignment="Justify" />
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel Margin="114,35.6,114,0">
+                    <Button Width="136"
+                            BorderThickness="0"
+                            DataContext="{StaticResource HomeVM}"
+                            Command="{Binding HideWarning}"
+                            Height="61">
 
-            </DockPanel>
-        </StackPanel>
-    </Border>
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <TextBlock TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   TextWrapping="Wrap"
+                                   Text="Quay lại"
+                                   Foreground="#073580"
+                                   FontSize="28.82"
+                                   FontWeight="Black"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="49"
+                                   Width="126" />
+                    </Button>
+                    <Button Width="136"
+                            BorderThickness="0"
+                            HorizontalAlignment="Right"
+                            HorizontalContentAlignment="Right"
+                            DataContext="{StaticResource MainVM}"
+                            Command="{Binding TransformToWrite}"
+                            Height="61">
+
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="Border.CornerRadius"
+                                        Value="13 13 13 13" />
+                            </Style>
+                        </Button.Resources>
+                        <TextBlock TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   TextWrapping="Wrap"
+                                   Text="Tiếp tục"
+                                   Foreground="#073580"
+                                   FontSize="28.82"
+                                   FontWeight="Black"
+                                   FontStyle="Normal"
+                                   LineStackingStrategy="MaxHeight"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   Height="49"
+                                   Width="126" />
+                    </Button>
+
+                </DockPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearnWithPenguin.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace LearnWithPenguin.View
         public OnBoardingView()
         {
             InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Firestore.db == null)
+                Firestore.initFireStore();
         }
     }
 }

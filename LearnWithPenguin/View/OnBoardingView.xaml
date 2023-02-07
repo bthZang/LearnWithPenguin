@@ -11,7 +11,8 @@
       DataContext="{StaticResource OnBoardingVM}"
       d:DesignHeight="800"
       d:DesignWidth="1125"
-      Title="OnBoardingView">
+      Title="OnBoardingView"
+      Loaded="Page_Loaded">
     <Page.Resources>
         <DataTemplate DataType="{x:Type viewmodel:TextOnBoardingViewModel}">
             <local:TextOnBoarding />
@@ -22,20 +23,31 @@
         <DataTemplate DataType="{x:Type viewmodel:TermAndConditionViewModel}">
             <localLorgin:TermAndCondition />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:RegisterViewModel}">
+            <localLorgin:Register />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:LoadingPanelViewModel}">
+            <localLorgin:LoadingPanel />
+        </DataTemplate>
     </Page.Resources>
     <Grid>
-        
-            <DockPanel   Background="#FFA0C4FF">
-                <Image Width="552"
-                       Source="../images/OnBoarding.png"
-                       Stretch="Uniform"
-                       Height="651"
-                       VerticalAlignment="Bottom"
-                       Margin="-35 0" />
-                <ContentControl Content="{Binding PartOnBoarding}" />
-            </DockPanel>
 
-       
-     
+        <DockPanel   Background="#FFA0C4FF">
+            <Image Width="552"
+                   Source="../images/OnBoarding.png"
+                   Stretch="Uniform"
+                   Height="651"
+                   VerticalAlignment="Bottom"
+                   Margin="-35 0" /><!--Content="{Binding Snipping}"-->
+            <Grid>
+                <ContentControl Content="{Binding PartOnBoarding}" />
+                <ContentControl Panel.ZIndex="9999"
+                                DataContext="{StaticResource OnBoardingVM}"
+                                 />
+            </Grid>
+        </DockPanel>
+
+
+
     </Grid>
 </Page>

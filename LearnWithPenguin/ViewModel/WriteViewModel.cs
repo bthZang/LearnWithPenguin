@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 using System.Windows.Forms;
+using LearnWithPenguin.Utils;
+using Google.Cloud.Firestore;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -53,11 +55,11 @@ namespace LearnWithPenguin.ViewModel
         {
             this.IsDisplayVideo = "Hidden";
             this.Number = 1;
-            this._Star1 = "yellow";
-            this._Star2 = "white";
-            this._Star3 = "white";
-            this._Star4 = "white";
-            this._Star5 = "white";
+            this._star1 = "yellow";
+            this._star2 = "white";
+            this._star3 = "white";
+            this._star4 = "white";
+            this._star5 = "white";
         }
 
         public int Number
@@ -94,7 +96,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "./TapViet/ChuThuong" + _number + ".mp4";
+                return "./TapViet/ChuThuong/" + _number + ".mp4";
                 //return "/TapViet/ChuThuong/" + _number + ".mp4";
             }
             set
@@ -194,6 +196,35 @@ namespace LearnWithPenguin.ViewModel
             mousePositions.Add(point);
         }
 
+        public string _point;
+
+        public string Point
+        {
+            get
+            {
+                return _point;
+            }
+            set
+            {
+                _point = value;
+                OnPropertyChanged();
+            }
+        }
+
+        async void updatePoint()
+        {
+            Dictionary<string, object> data = new Dictionary<string, object> {
+                {"score_1", UserData.score_1 }
+            };
+            DocumentReference doc = Firestore.db.Collection("user").Document(UserData.email);
+            DocumentSnapshot snap = await doc.GetSnapshotAsync();
+            if (snap.Exists)
+            {
+                await doc.UpdateAsync(data);
+                //MessageBox.Show("Cập nhật thành công");
+            }
+        }
+
         public bool Submit()
         {
             float[] _positionX;
@@ -227,7 +258,12 @@ namespace LearnWithPenguin.ViewModel
 
                 if (isCorrect)
                     point += 1;
+                //Point = Convert.ToString(UserData.score_1 += point);
+
             }
+
+            UserData.score_1[_number-1] = point;
+            updatePoint();
 
             if (point >= 3)
             {
@@ -289,31 +325,33 @@ namespace LearnWithPenguin.ViewModel
 
         //star
 
-        public string _Star1;
-        public string _Star2;
-        public string _Star3;
-        public string _Star4;
-        public string _Star5;
+        public string _star1;
+        public string _star2;
+        public string _star3;
+        public string _star4;
+        public string _star5;
 
         public string Star1
         {
             get
             {
-                return _Star1;
+                return _star1;
             }
             set
             {
-                _Star1 = value;
+                _star1 = value;
                 ChangeColor1 = "";
                 OnPropertyChanged();
             }
         }
 
+       
+
         public string ChangeColor1
         {
             get
             {
-                return "/UserControls/" + _Star1 + "Star.png";
+                return "/UserControls/" + Star1 + "Star.png";
             }
             set
             {
@@ -325,11 +363,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _Star2;
+                return _star2;
             }
             set
             {
-                _Star2= value;
+                _star2= value;
                 ChangeColor2 = "";
                 OnPropertyChanged();
             }
@@ -340,7 +378,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _Star2 + "Star.png";
+                return "/UserControls/" + _star2 + "Star.png";
             }
             set
             {
@@ -352,11 +390,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _Star3;
+                return _star3;
             }
             set
             {
-                _Star3= value;
+                _star3= value;
                 ChangeColor3 = "";
                 OnPropertyChanged();
             }
@@ -367,7 +405,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _Star3 + "Star.png";
+                return "/UserControls/" + _star3 + "Star.png";
             }
             set
             {
@@ -379,11 +417,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _Star4;
+                return _star4;
             }
             set
             {
-                _Star4= value;
+                _star4= value;
                 ChangeColor4 = "";
                 OnPropertyChanged();
             }
@@ -394,7 +432,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _Star4 + "Star.png";
+                return "/UserControls/" + _star4 + "Star.png";
             }
             set
             {
@@ -406,11 +444,11 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return _Star5;
+                return _star5;
             }
             set
             {
-                _Star5 = value;
+                _star5 = value;
                 ChangeColor5 = "5";
                 OnPropertyChanged();
             }
@@ -421,7 +459,7 @@ namespace LearnWithPenguin.ViewModel
         {
             get
             {
-                return "/UserControls/" + _Star5 + "Star.png";
+                return "/UserControls/" + _star5 + "Star.png";
             }
             set
             {

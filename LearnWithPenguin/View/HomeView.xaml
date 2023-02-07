@@ -9,7 +9,8 @@
       mc:Ignorable="d"
       d:DesignHeight="800"
       d:DesignWidth="1125"
-      Title="HomeView">
+      Title="HomeView"
+      Loaded="Page_Loaded">
     <Page.Resources>
         <DataTemplate DataType="{x:Type viewmodel:IconViewModel}">
             <localUC:Icon />

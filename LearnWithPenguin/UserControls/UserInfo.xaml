@@ -6,40 +6,159 @@
              xmlns:local="clr-namespace:LearnWithPenguin.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="670"
-             d:DesignWidth="1125">
+             d:DesignWidth="1125"
+             Loaded="UserControl_Loaded">
+    
+   
     <DockPanel Background="#A0C4FF"
                Style="{StaticResource Baloo2-Bold}">
+        <ContentControl Panel.ZIndex="999"
+                        DataContext="{StaticResource UserVM}"
+                        Content="{Binding Popup}" />
         <StackPanel Width="405">
             <Image Source="/images/User.png"
                    HorizontalAlignment="Center"
                    Height="156"
                    Width="156"
                    Margin="0 31 0 0"></Image>
+            <Button Background="Transparent"
+                    Margin="-175 -65 0 0"
+                    DataContext="{StaticResource UserVM}"
+                    Command="{Binding EditAvartar}"
+                    Width="30.06"
+                    Height="30.06"
+                    BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Border.CornerRadius"
+                                Value="13 13 13 13" />
+                    </Style>
+                </Button.Resources>
+                <Grid>
+
+                    <Image Stretch="Uniform"
+                                       Source="/UserControls/Vector.png">
+
+                                </Image>
+                </Grid>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                BorderThickness="0"
+                                Background="transparent"
+                                BorderBrush="transparent">
+
+                            <ContentPresenter Margin="0"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="transparent" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"
+                                     Value="true">
+                               
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="#6195ED" />
+                            </Trigger>
+                            <Trigger Property="IsPressed"
+                                     Value="true">
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="transparent" />
+                                <Setter TargetName="Border"
+                                        Property="BorderBrush"
+                                        Value="#6195ED" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
             <TextBlock Background="#A0C4FF"
+                       DataContext="{StaticResource MainVM}"
+                       Text="{Binding UserName}"
                        Foreground="#073580"
-                       Text="Biệt danh"
                        FontSize="41.7956"
                        FontStyle="Normal"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"
                        FontWeight="Bold"
                        Style="{StaticResource Baloo2-Bold}"
                        Width="200"
-                       Height="66"
+                       Height="466"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        Margin="16.55 18"></TextBlock>
-            <TextBlock Background="#A0C4FF"
-                       Foreground="#073580"
-                       Text="Tuổi : 7"
-                       FontSize="23"
-                       FontStyle="Normal"
-                       FontWeight="Bold"
-                       Style="{StaticResource Baloo2-Bold}"
-                       Width="300"
-                       Height="36"
-                       HorizontalAlignment="Left"
-                       Margin="105 0 252 0"></TextBlock>
-            
+
         </StackPanel>
+        <Button Background="Transparent"
+                Margin="-650 -210 0 0"
+                Width="30.06"
+                Height="30.06"
+                DataContext="{StaticResource UserVM}"
+                Command="{Binding EditUserName}"
+                BorderThickness="0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Border.CornerRadius"
+                            Value="13 13 13 13" />
+                </Style>
+            </Button.Resources>
+            <Grid>
+
+                <!--Margin="0,27,0,-27"--><Image 
+                       Stretch="Uniform"
+                       Source="/UserControls/Vector.png"
+                       >
+
+                </Image>
+            </Grid>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border"
+                            BorderThickness="0"
+                            Background="transparent"
+                            BorderBrush="transparent">
+
+                        <ContentPresenter Margin="0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="transparent" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="#6195ED" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="#6195ED" />
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="#6195ED" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
 
         <StackPanel>
             <Border HorizontalAlignment="Left"
@@ -57,30 +176,25 @@
                                    FontStyle="Normal"
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
-                                   Text="Tên :"
+                                   Text="Email :"
                                    FontSize="23"
                                    HorizontalAlignment="Center"
                                    Width="70"
                                    Margin="0 0 0 0"></TextBlock>
 
-                        <Grid>
-                            <TextBox Width="500"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="Center"
-                                     x:Name="Username"
-                                     Margin="0,8,0,0"
-                                     BorderBrush="#BDB2FF"
-                                     Foreground="#FFFFFF"
-                                     FontSize="21.88"
-                                     BorderThickness="0"
-                                     FontStyle="Normal"
-                                     FontWeight="Bold"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     Background="Transparent"
-                                     TextAlignment="Left"
-                                     Text="Họ và tên bé"
-                                     SelectionBrush="#FF5B84C6" />
-                            <!--<TextBlock IsHitTestVisible="False"
+                        <TextBlock Width="500"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,8,0,0"
+                                   Foreground="#073580"
+                                   FontSize="21.88"
+                                   FontStyle="Normal"
+                                   FontWeight="Bold"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding Email}"
+                                   Style="{StaticResource Baloo2-Bold}"
+                                   TextAlignment="Left" />
+                        <!--<TextBlock IsHitTestVisible="False"
                                        VerticalAlignment="Bottom"
                                        HorizontalAlignment="Left"
                                        TextAlignment="Center"
@@ -103,7 +217,6 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>-->
-                        </Grid>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal"
@@ -119,15 +232,16 @@
                                    HorizontalAlignment="Center"
                                    Width="130"
                                    Margin="0 5 0 0"></TextBlock>
-                        <DatePicker SelectedDate="1/1/2000"
+                        <DatePicker x:Name="datePicker"
                                     FontStyle="Normal"
                                     FontWeight="Bold"
                                     Style="{StaticResource Baloo2-Bold}"
                                     FontSize="23"
                                     BorderThickness="0"
-                                    Height="30"
+                                    Height="40"
                                     Foreground="#073580"
-                                    Margin="0 3 0 0"></DatePicker>
+                                    Margin="0 3 0 0"
+                                    SelectedDateChanged="DatePicker_SelectedDateChanged"></DatePicker>
                     </StackPanel>
 
                     <StackPanel VerticalAlignment="Top"
@@ -138,7 +252,8 @@
                                    FontWeight="Bold"
                                    Style="{StaticResource Baloo2-Bold}"
                                    FontSize="23"
-                                   Foreground="#073580">Giới tính:</TextBlock>
+                                   Foreground="#073580"
+                                   Text="Giới tính :" />
                         <ComboBox IsEditable="True"
                                   IsReadOnly="True"
                                   Margin="20 0 0 0"
@@ -148,8 +263,10 @@
                                   Style="{StaticResource Baloo2-Bold}"
                                   FontSize="20"
                                   Foreground="#073580"
-                                  BorderThickness="0">
-                            <ComboBoxItem>
+                                  BorderThickness="0"
+                                  x:Name="genderComboBox"
+                                  SelectionChanged="ComboBox_SelectionChanged">
+                            <!--<ComboBoxItem>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/images/male.jpg" />
                                     <TextBlock Foreground="Blue">Nam</TextBlock>
@@ -161,6 +278,14 @@
                                     <Image Source="/images/male.jpg" />
                                     <TextBlock Foreground="Pink">Nữ</TextBlock>
                                 </StackPanel>
+                            </ComboBoxItem>-->
+
+                            <ComboBoxItem>
+                                Nam
+                            </ComboBoxItem>
+
+                            <ComboBoxItem>
+                                Nữ
                             </ComboBoxItem>
                         </ComboBox>
                     </StackPanel>

@@ -23,7 +23,8 @@
                            Height="182.03"
                            Margin="89,59,89,-10"></Image>
                     <TextBlock TextAlignment="Center"
-                               Text="Display name"
+                               DataContext="{StaticResource MainVM}"
+                               Text="{Binding UserName}"
                                Foreground="#2D3D8F"
                                FontSize="28.12"
                                FontWeight="Bold"
@@ -357,6 +358,9 @@
                                Width="39.06"
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
+                        <Button DataContext="{StaticResource MainVM}"
+                                Command="{Binding Show}"
+                                >
                         <TextBlock TextAlignment="Left"
                                    Text="Đăng xuất"
                                    Foreground="#2D3D8F"
@@ -368,6 +372,51 @@
                                    Height="44.53"
                                    Width="131.25"
                                    Margin="37.5,0,0,0" />
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Border.CornerRadius"
+                                            Value="13 13 13 13" />
+                                </Style>
+                            </Button.Resources>
+                            
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Border"
+                                            BorderThickness="0"
+                                            Background="transparent"
+                                            BorderBrush="transparent">
+
+                                        <ContentPresenter Margin="0"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsKeyboardFocused"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed"
+                                                 Value="true">
+                                            <Setter TargetName="Border"
+                                                    Property="Background"
+                                                    Value="transparent" />
+                                            <Setter TargetName="Border"
+                                                    Property="BorderBrush"
+                                                    Value="transparent" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </StackPanel>
                 </StackPanel>
 

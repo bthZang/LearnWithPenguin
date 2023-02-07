@@ -37,9 +37,9 @@
                 <DataTemplate DataType="{x:Type viewmodelHome:WriteViewModel}">
                     <Frame Source="WriteView.xaml"></Frame>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type viewmodelHome:PuzzleViewModel}">
-                    <Frame Source="PuzzleView.xaml"></Frame>
-                </DataTemplate>
+                <!--<DataTemplate DataType="{x:Type viewmodelHome:PuzzleViewModel}">
+                <Frame Source="PuzzleView.xaml"></Frame>
+            </DataTemplate>-->
                 <DataTemplate DataType="{x:Type viewmodelHome:CodingViewModel}">
                     <Frame Source="CodingView.xaml"></Frame>
                 </DataTemplate>
@@ -52,12 +52,18 @@
                 <DataTemplate DataType="{x:Type viewmodelHome:QuizzView1ViewModel}">
                     <Frame Source="QuizzView1.xaml"></Frame>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type viewmodelHome:QuizzView2ViewModel}">
-                    <Frame Source="QuizzView2.xaml"></Frame>
-                </DataTemplate>
+                <!--<DataTemplate DataType="{x:Type viewmodelHome:QuizzView2ViewModel}">
+                <Frame Source="QuizzView2.xaml"></Frame>
+            </DataTemplate>-->
+                <!--<DataTemplate DataType="{x:Type viewmodelHome:QuizQuestionAsideViewModel}">
+                <Frame Source="QuizQuestionAside.xaml"></Frame>
+            </DataTemplate>-->
                 <DataTemplate DataType="{x:Type viewmodelHome:RateViewModel}">
                     <Frame Source="RateView.xaml"></Frame>
                 </DataTemplate>
+                <!--<DataTemplate DataType="{x:Type localLorgin:RegisterViewModel}">
+                    <Frame Source="Register.xaml"></Frame>
+                </DataTemplate>-->
             </ContentControl.Resources>
         </ContentControl>
 

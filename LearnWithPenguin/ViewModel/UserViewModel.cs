@@ -18,7 +18,63 @@ namespace LearnWithPenguin.ViewModel
         private int _heightRanking;
         private int _heightStatistic;
 
+        private BaseViewModel _popup;
 
+   
+        public BaseViewModel Popup
+        {
+            get
+            {
+                return _popup;
+            }
+            set
+            {
+                _popup = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand EditUserName
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Popup = new EditUserNameViewModel();
+
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand EditAvartar
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Popup = new AvartarViewModel();
+
+                });
+            }
+
+            set { }
+        }
+
+        public ICommand HidePopup
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+                    Popup = null;
+
+                });
+            }
+
+            set { }
+        }
         public int HeightInfor
         {
             get
@@ -156,7 +212,7 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     DisplayUser = new UserStatisticViewModel();
-                    ColorStatistic = "#073580"; 
+                    ColorStatistic = "#073580";
                     ColorInfor = "#586A86";
                     ColorRanking = "#586A86";
                     this.HeightInfor = 0;
@@ -177,6 +233,7 @@ namespace LearnWithPenguin.ViewModel
             this.HeightInfor = 5;
             this.HeightRanking = 0;
             this.HeightStatistic = 0;
+            _popup = null;
 
 
 

@@ -120,23 +120,31 @@
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
                       Margin="0 -560 0 0">
-                    <!---->
+                    <!----><!--Source="{Binding SouceDash}"-->
                     <Image DataContext="{StaticResource WriteVM}"
-                           Source="{Binding SouceDash}"
-                           Height="400"
+                           
+                           Height="600"
                            Opacity="0.5"
-                           Width="325"
-                           Margin="58 29 0 0"></Image>
+                           Width="300"
+                           Margin="95 49 0 0"
+                           Source="{Binding SouceDash}"></Image>
                     <InkCanvas Background="Transparent"
                                ForceCursor="True"
                                Cursor="Pen"
                                x:Name="MyCanvas"
                                Margin="0,10,0,10"
                                Panel.ZIndex="75"
-                               MinWidth="900"
-                               MinHeight="500"
+                               MinWidth="500"
+                               MinHeight="100"
                                MouseDown="MyCanvas_MouseDown"
-                               MouseMove="MyCanvas_MouseMove" />
+                               MouseMove="MyCanvas_MouseMove">
+                        <InkCanvas.DefaultDrawingAttributes>
+                            <DrawingAttributes x:Name="attribute"
+                                               Width="1"
+                                               Height="1"
+                                               />
+                        </InkCanvas.DefaultDrawingAttributes>
+                    </InkCanvas>
                 </Grid>
 
                 <Button Height="171.09"

@@ -29,6 +29,12 @@
         <DataTemplate DataType="{x:Type viewmodel:UserStatisticViewModel}">
             <localUC:UserStatistic />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:EditUserNameViewModel}">
+            <localUC:EditUserName />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:AvartarViewModel}">
+            <localUC:avartar />
+        </DataTemplate>
     </Page.Resources>
 
     <Grid Background="#A0C4FF"
