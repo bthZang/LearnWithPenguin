@@ -127,7 +127,7 @@
                            Opacity="0.5"
                            Width="300"
                            Margin="95 49 0 0"
-                           Source="/View/10.png"></Image>
+                           Source="{Binding SouceDash}"></Image>
                     <InkCanvas Background="Transparent"
                                ForceCursor="True"
                                Cursor="Pen"
