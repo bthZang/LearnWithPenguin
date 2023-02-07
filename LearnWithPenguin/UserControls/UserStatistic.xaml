@@ -25,7 +25,8 @@
                 Margin="-650 0 0 0">
             <StackPanel>
                 <TextBlock Foreground="#073580"
-                           Text="Biệt danh"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding UserName}"
                            FontSize="41.7956"
                            FontStyle="Normal"
                            FontWeight="Bold"

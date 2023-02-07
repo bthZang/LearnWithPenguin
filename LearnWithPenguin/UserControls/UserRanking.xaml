@@ -54,7 +54,8 @@
                           VerticalAlignment="Top"
                           HorizontalAlignment="Left">
 
-                        <TextBlock Text="Biệt danh"
+                        <TextBlock DataContext="{StaticResource MainVM}"
+                                   Text="{Binding UserName}"
                                    FontSize="40"
                                    FontStyle="Normal"
                                    FontWeight="SemiBold"
