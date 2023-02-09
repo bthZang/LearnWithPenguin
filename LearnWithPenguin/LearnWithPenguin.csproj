@@ -827,6 +827,7 @@
     <Resource Include="webfonts\fa-solid-900.ttf" />
     <Resource Include="webfonts\fa-regular-400.ttf" />
     <Resource Include="webfonts\fa-brands-400.ttf" />
+    <None Include="READme.md" />
     <None Include="webfonts\fa-brands-400.eot" />
     <None Include="webfonts\fa-brands-400.woff" />
     <None Include="webfonts\fa-brands-400.woff2" />
