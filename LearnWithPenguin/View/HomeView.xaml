@@ -21,6 +21,9 @@
         <DataTemplate DataType="{x:Type viewmodel:WarningViewModel}">
             <localUC:Warning />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:NewAchivmViewModel}">
+            <localUC:NewAchivm />
+        </DataTemplate>
     </Page.Resources>
 
     <Grid Background="#FFA0C4FF">
@@ -28,6 +31,9 @@
         <ContentControl Panel.ZIndex="99900"
                         DataContext="{StaticResource MainVM}"
                         Content="{Binding Menu}" />
+        <ContentControl Panel.ZIndex="89900"
+                        DataContext="{StaticResource MainVM}"
+                        Content="{Binding Achi}" />
 
         <ContentControl Panel.ZIndex="9999"
                         DataContext="{StaticResource HomeVM}"

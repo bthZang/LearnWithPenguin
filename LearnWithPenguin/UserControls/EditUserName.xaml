@@ -7,15 +7,14 @@
              mc:Ignorable="d"
              d:DesignHeight="800"
              d:DesignWidth="1125">
-    <Grid >
+    <Grid>
 
         <Grid Background="Black"
               Opacity="0.5"></Grid>
         <Border CornerRadius="50.24"
                 Background="White"
                 Width="550"
-                Height="300"
-                >
+                Height="300">
             <Grid>
                 <TextBox Foreground="#2D3D8F"
                          BorderThickness="4"
@@ -23,12 +22,16 @@
                          Margin="0 -50 0 0 "
                          FontStyle="Normal"
                          Style="{StaticResource Baloo2-Regular}"
+                         DataContext="{StaticResource UserVM}"
+                         Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
                          Width="400"
-                         Height="100"/>
+                         Height="100" />
                 <Button Background="Transparent"
                         Margin="300 150 51.75 0"
                         Width="100"
                         Height="50"
+                        DataContext="{StaticResource UserVM}"
+                        Command="{Binding DoneEditUserName}"
                         BorderThickness="0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">

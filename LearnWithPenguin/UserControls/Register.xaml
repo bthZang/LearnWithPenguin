@@ -45,34 +45,54 @@
                                      BorderThickness="0"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
+                                     Tag="Email đăng ký"
+                                     
                                      Background="Transparent"
                                      TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     SelectionBrush="#FF5B84C6" />
-                            <TextBlock IsHitTestVisible="False"
-                                       Text="Email"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       TextAlignment="Center"
-                                       FontSize="21.88"
-                                       Foreground="#FFFFFF"
-                                       FontWeight="Bold"
-                                       Width="250">
-                                <TextBlock.Style>
-                                    <Style TargetType="{x:Type TextBlock}"
+                                     SelectionBrush="#FF5B84C6">
+                            <TextBox.Style>
+                                    <Style 
+                                           TargetType="{x:Type TextBox}"
                                            BasedOn="{StaticResource Baloo2-Bold}">
-                                        <Setter Property="Visibility"
-                                                Value="Collapsed" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=Username}"
-                                                         Value="">
-                                                <Setter Property="Visibility"
-                                                        Value="Visible" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                                    <Grid>
+                                                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                                                 x:Name="textSource"
+                                                                 Foreground="#FFFFFF"
+                                                                 BorderThickness="0"
+                                                                 Background="Transparent"
+                                                                 Panel.ZIndex="2" />
+                                                        <TextBox Text="{TemplateBinding Tag}"
+                                                                 Background="{TemplateBinding Background}"
+                                                                 Panel.ZIndex="1">
+                                                            <TextBox.Style>
+                                                                <Style TargetType="{x:Type TextBox}">
+                                                                    <Setter Property="Foreground"
+                                                                            Value="Transparent" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}"
+                                                                                     Value="">
+                                                                            <Setter Property="Foreground"
+                                                                                    Value="White" />
+                                                                            <Setter Property="TextAlignment"
+                                                                                    Value="Center" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBox.Style>
+                                                        </TextBox>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
                                     </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                </TextBox.Style>
+                            </TextBox>
                         </Grid>
 
                     </Border>
@@ -94,38 +114,56 @@
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
                                      FontSize="21.88"
+                                     Tag="Tên đăng ký"
+                                     
                                      BorderThickness="0"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
                                      Background="Transparent"
                                      TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     SelectionBrush="#FF5B84C6"
-                                     />
-                            <TextBlock IsHitTestVisible="False"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       TextAlignment="Center"
-                                       FontSize="21.88"
-                                       Text="Tên đăng ký"
-                                       Foreground="#FFFFFF"
-                                       FontWeight="Bold"
-                                       Width="250">
-                                <TextBlock.Style>
-                                    <Style TargetType="{x:Type TextBlock}"
+                                     SelectionBrush="#FF5B84C6">
+                                <TextBox.Style>
+                                    <Style TargetType="{x:Type TextBox}"
                                            BasedOn="{StaticResource Baloo2-Bold}">
-                                        <Setter Property="Visibility"
-                                                Value="Collapsed" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=Username}"
-                                                         Value="">
-                                                <Setter Property="Visibility"
-                                                        Value="Visible" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                                    <Grid>
+                                                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                                                 x:Name="textSource"
+                                                                 Foreground="#FFFFFF"
+                                                                 BorderThickness="0"
+                                                                 Background="Transparent"
+                                                                 Panel.ZIndex="2" />
+                                                        <TextBox Text="{TemplateBinding Tag}"
+                                                                 Background="{TemplateBinding Background}"
+                                                                 Panel.ZIndex="1">
+                                                            <TextBox.Style>
+                                                                <Style TargetType="{x:Type TextBox}">
+                                                                    <Setter Property="Foreground"
+                                                                            Value="Transparent" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}"
+                                                                                     Value="">
+                                                                            <Setter Property="Foreground"
+                                                                                    Value="White" />
+                                                                            <Setter Property="TextAlignment"
+                                                                                    Value="Center" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBox.Style>
+                                                        </TextBox>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
                                     </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                </TextBox.Style>
+                            </TextBox>
                         </Grid>
 
                     </Border>
@@ -150,7 +188,7 @@
                                      Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
-                                     FontSize="51.88"
+                                     FontSize="21.88"
                                      Height="42"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
@@ -205,7 +243,7 @@
                                      Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
                                      Foreground="#FFFFFF"
-                                     FontSize="51.88"
+                                     FontSize="21.88"
                                      Height="42"
                                      FontStyle="Normal"
                                      FontWeight="Bold"

@@ -84,7 +84,8 @@
                            Height="34.49"
                            Margin="130 5 0 0"></Image>
                     <TextBlock Foreground="#073580"
-                               Text="5000"
+                               Text="{Binding TotalScore}"
+                               DataContext="{StaticResource MainVM}"
                                FontSize="40"
                                FontStyle="Normal"
                                FontWeight="Bold"
@@ -104,7 +105,8 @@
             <Grid>
                 <Image Source="/UserControls/TapDocIce.png"></Image>
                 <TextBlock Foreground="#073580"
-                           Text="5000"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding TotalReadScore}"
                            FontSize="23"
                            FontStyle="Normal"
                            FontWeight="Thin"
@@ -117,7 +119,8 @@
                 <TextBlock VerticalAlignment="Top"
                            Foreground="#FF1059CF"
                            TextWrapping="Wrap"
-                           Text="Bạn đã đọc tốt hơn x người rồi đấy!"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding RankReadScore}"
                            FontSize="20"
                            FontStyle="Italic"
                            FontWeight="Medium"
@@ -134,7 +137,8 @@
             <Grid>
                 <Image Source="/UserControls/TapVietIce.png"></Image>
                 <TextBlock Foreground="#FF802607"
-                           Text="5000"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding TotalWriteScore}"
                            FontSize="23"
                            FontStyle="Normal"
                            FontWeight="Thin"
@@ -147,7 +151,8 @@
                 <TextBlock VerticalAlignment="Top"
                            Foreground="#FFCF1710"
                            TextWrapping="Wrap"
-                           Text="Thật tuyệt vời!Bạn viết khéo hơn x người "
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding RankWriteScore}"
                            FontSize="20"
                            FontStyle="Italic"
                            FontWeight="Medium"
@@ -164,7 +169,8 @@
             <Grid>
                 <Image Source="/UserControls/TroChoiIce.png"></Image>
                 <TextBlock Foreground="#FFD73F9D"
-                           Text="5000"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding TotalGameScore}"
                            FontSize="23"
                            FontStyle="Normal"
                            FontWeight="Thin"
@@ -177,7 +183,8 @@
                 <TextBlock VerticalAlignment="Top"
                            Foreground="#FFD73F9D"
                            TextWrapping="Wrap"
-                           Text="Trời ơi tin được không!?Bạn chơi giỏi hơn x người luôn đó "
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding RankGameScore}"
                            FontSize="20"
                            FontStyle="Italic"
                            FontWeight="Medium"
@@ -194,7 +201,8 @@
             <Grid>
                 <Image Source="/UserControls/DoVuiIce.png"></Image>
                 <TextBlock Foreground="#FF195C50"
-                           Text="5000"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding TotalQuizzScore}"
                            FontSize="23"
                            FontStyle="Normal"
                            FontWeight="Thin"
@@ -207,7 +215,8 @@
                 <TextBlock VerticalAlignment="Top"
                            Foreground="#FF195C50"
                            TextWrapping="Wrap"
-                           Text="Đúng là thiên tài! Đã có x người đoán sai nhiều hơn bạn đấy"
+                           DataContext="{StaticResource MainVM}"
+                           Text="{Binding RankQuizzScore}"
                            FontSize="20"
                            FontStyle="Italic"
                            FontWeight="Medium"

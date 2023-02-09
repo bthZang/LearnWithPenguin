@@ -27,6 +27,9 @@
                                     Margin="0 0 0 0">
                             <Button Background="Transparent"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b1}"
+                                    x:Name="a"
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -86,6 +89,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b5}"
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -144,6 +149,8 @@
 
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b2}"
                                     Width="150"
                                     Height="150"
                                     BorderThickness="0">
@@ -204,6 +211,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b7}"
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -269,6 +278,8 @@
                             <Button Background="Transparent"
                                     Width="150"
                                     Height="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b3}"
                                     BorderThickness="0">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -327,6 +338,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b9}"
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -385,6 +398,8 @@
 
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b10}"
                                     Width="150"
                                     Height="150"
                                     BorderThickness="0">
@@ -445,6 +460,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b11}"
                                     Height="150"
                                     BorderThickness="0">
                                 <Button.Resources>
@@ -509,6 +526,8 @@
                                     Margin="0 30 0 0">
                             <Button Background="Transparent"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b8}"
                                     Height="150"
                                     VerticalAlignment="Top"
                                     BorderThickness="0">
@@ -569,6 +588,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b12}"
                                     VerticalAlignment="Top"
                                     Height="150"
                                     BorderThickness="0">
@@ -631,6 +652,8 @@
                                     Width="150"
                                     VerticalAlignment="Top"
                                     Height="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b13}"
                                     BorderThickness="0">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -689,6 +712,8 @@
                             <Button Background="Transparent"
                                     Margin="100 0 0 0"
                                     Width="150"
+                                    DataContext="{StaticResource MainVM}"
+                                    Command="{Binding b15}"
                                     VerticalAlignment="Top"
                                     Height="150"
                                     BorderThickness="0">
@@ -762,6 +787,8 @@
                                 Margin="300 0 51.75 0"
                                 Width="100"
                                 Height="50"
+                                DataContext="{StaticResource UserVM}"
+                                Command="{Binding DoneAvatar}"
                                 BorderThickness="0">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
@@ -887,4 +914,3 @@
 
 
 </UserControl>
-

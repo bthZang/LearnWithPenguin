@@ -96,7 +96,7 @@
                     <!--Số bài đã vượt qua-->
                     <StackPanel>
                         <TextBlock Foreground="#5A616C"
-                                   Text="Số bài học"
+                                   Text="Số bài hoàn thành"
                                    FontSize="30"
                                    FontStyle="Normal"
                                    FontWeight="Bold"
@@ -106,7 +106,8 @@
                                    TextAlignment="Center"
                                    Margin="0 50 0 8"></TextBlock>
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   Text="{Binding ReadNumber}"
+                                   DataContext="{StaticResource MainVM}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -117,7 +118,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   Text="{Binding WriteNumber}"
+                                   DataContext="{StaticResource MainVM}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -128,7 +130,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   Text="{Binding QuizzNumber}"
+                                   DataContext="{StaticResource MainVM}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -139,7 +142,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   Text="{Binding GameNumber}"
+                                   DataContext="{StaticResource MainVM}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -163,7 +167,8 @@
                                    TextAlignment="Center"
                                    Margin="0 50 0 8"></TextBlock>
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding HighReadScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -174,7 +179,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding HighWriteScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -185,7 +191,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding HighQuizzScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -196,7 +203,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding HighGameScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -221,7 +229,8 @@
                                    TextAlignment="Center"
                                    Margin="0 50 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding TotalReadScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -232,8 +241,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   DataContext="{StaticResource WriteVM}"
-                                   Text="{Binding Point}"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding TotalWriteScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -244,7 +253,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding TotalQuizzScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"
@@ -255,7 +265,8 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#EA2E4B"
-                                   Text="0"
+                                   DataContext="{StaticResource MainVM}"
+                                   Text="{Binding TotalGameScore}"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"

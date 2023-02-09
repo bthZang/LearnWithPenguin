@@ -58,6 +58,7 @@
     <viewmodel:EditUserNameViewModel x:Key="EditUserNameVM"></viewmodel:EditUserNameViewModel>
     <viewmodel:AvartarViewModel x:Key="AvartarVM"></viewmodel:AvartarViewModel>
 
+    <viewmodel:RegisterBugViewModel x:Key="RegisterBugVM"></viewmodel:RegisterBugViewModel>
 
 
 

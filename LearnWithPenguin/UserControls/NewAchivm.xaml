@@ -64,10 +64,11 @@
                                LineStackingStrategy="MaxHeight"
                                Style="{StaticResource Baloo2-Regular}" />
                 </Button>
-                <Image Source="{Binding Achivm}"
+                <Image 
                        DataContext="{StaticResource MainVM}"
                        Margin="0 -30 0 0"
-                       Height="180"></Image>
+                       Height="180"
+                       Source="{Binding Medal}"></Image>
 
             </StackPanel>
         </Border>

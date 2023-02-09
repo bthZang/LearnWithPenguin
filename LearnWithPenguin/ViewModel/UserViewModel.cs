@@ -1,9 +1,12 @@
-﻿using System;
+﻿using LearnWithPenguin.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Google.Cloud.Firestore;
+using System.Windows;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -20,7 +23,7 @@ namespace LearnWithPenguin.ViewModel
 
         private BaseViewModel _popup;
 
-   
+
         public BaseViewModel Popup
         {
             get
@@ -34,6 +37,57 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+
+        private string _userName;
+        public string UserName
+        {
+            get { return _userName; }
+            set
+            {
+                _userName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICommand DoneEditUserName
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, async (p) =>
+                {
+                    Dictionary<string, object> data = new Dictionary<string, object> {
+                        {"name", UserName}
+                    };
+                    DocumentReference doc = Firestore.db.Collection("user").Document(UserData.email);
+                    DocumentSnapshot snap = await doc.GetSnapshotAsync();
+                    if (snap.Exists)
+                    {
+                        await doc.UpdateAsync(data);
+                        UserData.name = UserName;
+
+                        //MessageBox.Show("Cập nhật thành công");
+                    }
+                });
+            }
+
+            set { }
+        }
+
+        // hàm xong avatar
+        public ICommand DoneAvatar
+        {
+            get
+            {
+                return new RelayCommand<object>((p) => { return true; }, (p) =>
+                {
+
+                });
+            }
+
+            set { }
+        }
+
+        //hàm xong avatar
         public ICommand EditUserName
         {
             get
@@ -238,6 +292,8 @@ namespace LearnWithPenguin.ViewModel
 
 
         }
+
+        
 
 
 

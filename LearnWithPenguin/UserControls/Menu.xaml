@@ -359,7 +359,7 @@
                                Height="39.06"
                                Margin="0,0,0,0"></Image>
                         <Button DataContext="{StaticResource MainVM}"
-                                Command="{Binding Show}"
+                                Command="{Binding Logout}"
                                 >
                         <TextBlock TextAlignment="Left"
                                    Text="Đăng xuất"

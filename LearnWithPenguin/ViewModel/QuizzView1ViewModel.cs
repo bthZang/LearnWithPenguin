@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Security.Cryptography.X509Certificates;
 using System.CodeDom;
+using Google.Cloud.Firestore;
+using LearnWithPenguin.Utils;
 
 namespace LearnWithPenguin.ViewModel
 {
@@ -882,6 +884,21 @@ namespace LearnWithPenguin.ViewModel
             }
         }
 
+        async void updatePoint()
+        {
+            UserData.score_4[Number - 1] = 1;
+            Dictionary<string, object> data = new Dictionary<string, object> {
+                {"score_4", UserData.score_4 }
+            };
+            DocumentReference doc = Firestore.db.Collection("user").Document(UserData.email);
+            DocumentSnapshot snap = await doc.GetSnapshotAsync();
+            if (snap.Exists)
+            {
+                await doc.UpdateAsync(data);
+                //MessageBox.Show("Cập nhật thành công");
+            }
+        }
+
         public ICommand ShowResult1
         {
             get
@@ -892,12 +909,14 @@ namespace LearnWithPenguin.ViewModel
                     {
                         case 1:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 2:
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 3:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 4:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -907,12 +926,14 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 6:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 7:
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 8:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 9:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -922,6 +943,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 11:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 12:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -934,6 +956,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 15:
                             NavigatetoResult = new EndQuizGoodResultViewModel();
+                            updatePoint();
                             break;
                         default:
                             break;
@@ -979,6 +1002,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 10:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 11:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -988,6 +1012,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 13:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 14:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -1015,12 +1040,14 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 2:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 3:
                             NavigatetoResult = new BadQuizResultViewModel();
                             break;
                         case 4:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 5:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -1030,6 +1057,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 7:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 8:
                             NavigatetoResult = new BadQuizResultViewModel();
@@ -1045,6 +1073,7 @@ namespace LearnWithPenguin.ViewModel
                             break;
                         case 12:
                             NavigatetoResult = new GoodQuizResultViewModel();
+                            updatePoint();
                             break;
                         case 13:
                             NavigatetoResult = new BadQuizResultViewModel();

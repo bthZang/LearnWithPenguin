@@ -56,6 +56,7 @@ namespace LearnWithPenguin.UserControls
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             datePicker.Text = UserData.birthday;
+            UserNameTextBlock.Text = UserData.name;
             if (UserData.gender)
                 genderComboBox.SelectedIndex = 0;
             else

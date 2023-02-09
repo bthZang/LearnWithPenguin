@@ -576,6 +576,7 @@
     <Compile Include="ViewModel\QuizzView1ViewModel.cs" />
     <Compile Include="ViewModel\RateViewModel.cs" />
     <Compile Include="ViewModel\ReadViewModel.cs" />
+    <Compile Include="ViewModel\RegisterBugViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\TermAndConditionViewModel.cs" />
     <Compile Include="ViewModel\UserInfoViewModel.cs" />
@@ -602,6 +603,9 @@
     </Compile>
     <Compile Include="View\ReadView.xaml.cs">
       <DependentUpon>ReadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterBug.xaml.cs">
+      <DependentUpon>RegisterBug.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
@@ -792,6 +796,10 @@
     <Page Include="View\ReadView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RegisterBug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserView.xaml">
       <SubType>Designer</SubType>
@@ -1115,6 +1123,22 @@
     <Resource Include="images\Home.png" />
     <Resource Include="images\HomeWhite.png" />
     <Resource Include="border.png" />
+    <Resource Include="Avatar\1.png" />
+    <Resource Include="Avatar\10.png" />
+    <Resource Include="Avatar\11.png" />
+    <Resource Include="Avatar\12.png" />
+    <Resource Include="Avatar\13.png" />
+    <Resource Include="Avatar\14.png" />
+    <Resource Include="Avatar\15.png" />
+    <Resource Include="Avatar\2.png" />
+    <Resource Include="Avatar\3.png" />
+    <Resource Include="Avatar\4.png" />
+    <Resource Include="Avatar\5.png" />
+    <Resource Include="Avatar\6.png" />
+    <Resource Include="Avatar\7.png" />
+    <Resource Include="Avatar\8.png" />
+    <Resource Include="Avatar\9.png" />
+    <Resource Include="Avatar\0.png" />
     <Content Include="images\Question\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1362,6 +1386,7 @@
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="nuget-scripts.txt" />
+    <Resource Include="reload%403x.png" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
     <Content Include="Scripts\fontawesome\brands.js" />
@@ -1460,6 +1485,42 @@
     <Content Include="TapDoc\voicemp3\ohno.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="TapViet\ChuDut\12.png" />
+    <Resource Include="TapViet\ChuDut\13.png" />
+    <Resource Include="TapViet\ChuDut\14.png" />
+    <Resource Include="TapViet\ChuDut\15.png" />
+    <Resource Include="TapViet\ChuDut\16.png" />
+    <Resource Include="TapViet\ChuDut\17.png" />
+    <Resource Include="TapViet\ChuDut\18.png" />
+    <Resource Include="TapViet\ChuDut\19.png" />
+    <Resource Include="TapViet\ChuDut\20.png" />
+    <Resource Include="TapViet\ChuDut\21.png" />
+    <Resource Include="TapViet\ChuDut\22.png" />
+    <Resource Include="TapViet\ChuDut\23.png" />
+    <Resource Include="TapViet\ChuDut\24.png" />
+    <Resource Include="TapViet\ChuDut\25.png" />
+    <Resource Include="TapViet\ChuDut\26.png" />
+    <Resource Include="TapViet\ChuDut\27.png" />
+    <Resource Include="TapViet\ChuDut\28.png" />
+    <Resource Include="TapViet\ChuDut\29.png" />
+    <Resource Include="TapViet\ChuLien\12.png" />
+    <Resource Include="TapViet\ChuLien\13.png" />
+    <Resource Include="TapViet\ChuLien\14.png" />
+    <Resource Include="TapViet\ChuLien\15.png" />
+    <Resource Include="TapViet\ChuLien\16.png" />
+    <Resource Include="TapViet\ChuLien\17.png" />
+    <Resource Include="TapViet\ChuLien\18.png" />
+    <Resource Include="TapViet\ChuLien\19.png" />
+    <Resource Include="TapViet\ChuLien\20.png" />
+    <Resource Include="TapViet\ChuLien\21.png" />
+    <Resource Include="TapViet\ChuLien\22.png" />
+    <Resource Include="TapViet\ChuLien\23.png" />
+    <Resource Include="TapViet\ChuLien\24.png" />
+    <Resource Include="TapViet\ChuLien\25.png" />
+    <Resource Include="TapViet\ChuLien\26.png" />
+    <Resource Include="TapViet\ChuLien\27.png" />
+    <Resource Include="TapViet\ChuLien\28.png" />
+    <Resource Include="TapViet\ChuLien\29.png" />
     <Content Include="TapViet\ChuThuong\1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1566,10 +1627,12 @@
     <Resource Include="UserControls\12.png" />
     <Resource Include="UserControls\13.png" />
     <Resource Include="UserControls\15.png" />
+    <Resource Include="UserControls\HCXuatSacTapViet.png" />
     <Content Include="View\1.mp4" />
     <Resource Include="View\border.png" />
     <Resource Include="View\4.png" />
     <Resource Include="View\10.png" />
+    <Resource Include="View\bangnaymoidungne.png" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />

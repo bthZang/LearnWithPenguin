@@ -113,21 +113,20 @@
                         CornerRadius="31.25"
                         Margin="0 65.34 0 0"
                         BorderThickness="8">
-                    <Image Source="/View/border.png"></Image>
+                    <Image Source="/View/bangnaymoidungne.png"></Image>
                 </Border>
                 <Grid Height="550"
                       Width="925"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
-                      Margin="0 -560 0 0">
-                    <!----><!--Source="{Binding SouceDash}"-->
+                      Margin="-85 -471.5 0 0">
+                    <!--{Binding SouceDash}-->
+                    <!---->
+                    <!--Source=-->
                     <Image DataContext="{StaticResource WriteVM}"
                            
-                           Height="600"
-                           Opacity="0.5"
-                           Width="300"
-                           Margin="95 49 0 0"
-                           Source="{Binding SouceDash}"></Image>
+                           Margin="153 -105 10 10"
+                           Source="{Binding SouceDash}" />
                     <InkCanvas Background="Transparent"
                                ForceCursor="True"
                                Cursor="Pen"
@@ -141,8 +140,7 @@
                         <InkCanvas.DefaultDrawingAttributes>
                             <DrawingAttributes x:Name="attribute"
                                                Width="1"
-                                               Height="1"
-                                               />
+                                               Height="1" />
                         </InkCanvas.DefaultDrawingAttributes>
                     </InkCanvas>
                 </Grid>
@@ -232,6 +230,7 @@
                         DataContext="{StaticResource WriteVM}"
                         Command="{Binding ShowResult}"
                         Background="Transparent">
+
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="Border"

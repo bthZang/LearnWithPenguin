@@ -23,31 +23,39 @@ using System.Windows.Forms;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 using System.Security.Policy;
+using MessageBox = System.Windows.Forms.MessageBox;
+using Google.Cloud.Firestore;
+using LearnWithPenguin.Utils;
+using DocumentReference = Google.Cloud.Firestore.DocumentReference;
 
 namespace LearnWithPenguin.View
 {
     /// <summary>
     /// Interaction logic for ReadView.xaml
     /// </summary>
-    
+
     public partial class ReadView : System.Windows.Controls.Page
     {
         public int currentLevel = 1;
         public string read_Result = "";
+        public int overall_point = 0;
+        //public int[] chapter_score = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
         public ReadView()
         {
             InitializeComponent();
             this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
             loadStartData();
         }
-        void loadStartData ()
+        void loadStartData()
         {
             //load start img
             string pathImage = "/TapDoc/img/1.png";
             Uri uri = new Uri(pathImage, UriKind.Relative);
             ImgChange.Source = new BitmapImage(uri);
+
         }
-        
+
         private void NextLesson(object sender, RoutedEventArgs e)
         {
             if (currentLevel == 26)
@@ -74,6 +82,12 @@ namespace LearnWithPenguin.View
 
             // set color
             picName.Foreground = System.Windows.Media.Brushes.White;
+
+            //opacity
+            mainScreen.Opacity = 1;
+
+            //read result == null
+            read_Result = "";
         }
 
         private void PrevLesson(object sender, RoutedEventArgs e)
@@ -99,6 +113,9 @@ namespace LearnWithPenguin.View
 
             //set color
             picName.Foreground = System.Windows.Media.Brushes.White;
+
+            //read result == null
+            read_Result = "";
         }
 
         // example read button
@@ -107,7 +124,7 @@ namespace LearnWithPenguin.View
         {
             MediaPlayer mplayer = new MediaPlayer();
             string path = "./TapDoc/voicemp3/" + currentLevel + ".mp3";
-            Uri uri = new Uri(path,UriKind.Relative);
+            Uri uri = new Uri(path, UriKind.Relative);
             mplayer.Open(uri);
             mplayer.Play();
 
@@ -141,10 +158,10 @@ namespace LearnWithPenguin.View
                                       select o).FirstOrDefault();
             srecog = new SpeechRecognitionEngine(selectedRecognizer);
             srecog.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
-            
+
             synth = new SpeechSynthesizer();
         }
-        
+
         private bool SelectInputDevice()
         {
             bool proceedLoading = true;
@@ -206,14 +223,14 @@ namespace LearnWithPenguin.View
                 case State.Accepting:
                     RecogState = State.Off;
                     srecog.RecognizeAsyncStop();
-                    micImg.Source = new BitmapImage(new Uri("/images/readOn.png",UriKind.Relative));
+                    micImg.Source = new BitmapImage(new Uri("/images/readOn.png", UriKind.Relative));
                     break;
             }
         }
         // recognize words
         private void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            
+
             if (RecogState == State.Off)
                 return;
             picName.Foreground = System.Windows.Media.Brushes.Red;
@@ -221,27 +238,55 @@ namespace LearnWithPenguin.View
             read_Result = e.Result.Text;
         }
 
-        private void stayStage (object sender, RoutedEventArgs e)
+        private void stayStage(object sender, RoutedEventArgs e)
         {
+            read_Result = "";
             goodResult.Visibility = Visibility.Collapsed;
             badResult.Visibility = Visibility.Collapsed;
             picName.Foreground = System.Windows.Media.Brushes.White;
+            mainScreen.Opacity = 1;
 
         }
 
-        private void Check_Click (object sender, RoutedEventArgs e)
+        //setting array
+
+        public async void update_overallScore()
+        {
+            UserData.score_3[currentLevel - 1] = 1;
+            Dictionary<string, object> data = new Dictionary<string, object> {
+                {"score_3", UserData.score_3 }
+             };
+            DocumentReference doc = Firestore.db.Collection("user").Document(UserData.email);
+            DocumentSnapshot snap = await doc.GetSnapshotAsync();
+            if (snap.Exists)
+            {
+                await doc.UpdateAsync(data);
+                //MessageBox.Show("Cập nhật thành công");
+            }
+        }
+
+        private void Check_Click(object sender, RoutedEventArgs e)
         {
             if (read_Result == picName.Text)
             {
+                //dark background
+                mainScreen.Opacity = 0.2;
+                layoutScreen.Background = System.Windows.Media.Brushes.Black;
+                //display result
                 goodResult.Visibility = Visibility.Visible;
+                //music
                 MediaPlayer mp = new MediaPlayer();
-                mp.Open(new Uri("./TapDoc/voicemp3/congrats.mp3",UriKind.Relative));
+                mp.Open(new Uri("./TapDoc/voicemp3/congrats.mp3", UriKind.Relative));
                 mp.Play();
-
+                //point
+                //overall_point += chapter_score[currentLevel];
+                //chapter_score[currentLevel] = 0;
+                update_overallScore();
             }
             else
             {
-
+                mainScreen.Opacity = 0.2;
+                layoutScreen.Background = System.Windows.Media.Brushes.Black;
                 badResult.Visibility = Visibility.Visible;
                 MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("./TapDoc/voicemp3/ohno.mp3", UriKind.Relative));

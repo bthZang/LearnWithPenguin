@@ -27,7 +27,7 @@ namespace LearnWithPenguin.View
         public HomeView()
         {
             InitializeComponent();
-            
+
         }
 
         async void getData()
@@ -47,7 +47,7 @@ namespace LearnWithPenguin.View
                 UserData.score_2 = user.score_2;
                 UserData.score_3 = user.score_3;
                 UserData.score_4 = user.score_4;
-                //MessageBox.Show(user.name);
+                MessageBox.Show("Load dữ liệu thành công");
             }
         }
 

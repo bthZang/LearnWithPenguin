@@ -31,6 +31,7 @@
                             BorderThickness="4"
                             BorderBrush="#000000">
                         <Grid>
+
                             <TextBox Width="250"
                                      DataContext="{StaticResource MainVM}"
                                      Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
@@ -38,31 +39,79 @@
                                      HorizontalAlignment="Center"
                                      Margin="0,8,0,0"
                                      BorderBrush="#BDB2FF"
+                                     Background="#BDB2FF"
                                      Foreground="#FFFFFF"
                                      FontSize="21.88"
                                      BorderThickness="0"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
-                                     Background="Transparent"
+                                     Tag="Email đăng nhập"
                                      TextAlignment="Left"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                     SelectionBrush="#FF5B84C6" />
-                            <TextBlock IsHitTestVisible="False"
+                                     SelectionBrush="#BDB2FF">
+                                <TextBox.Style>
+                                    <Style 
+                                           TargetType="{x:Type TextBox}"
+                                           BasedOn="{StaticResource Baloo2-Bold}">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                                    <Grid>
+                                                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                                                 x:Name="textSource"
+                                                                 Foreground="#FFFFFF"
+                                                                 BorderThickness="0"
+                                                                 Background="Transparent"
+                                                                 Panel.ZIndex="2" />
+                                                        <TextBox Text="{TemplateBinding Tag}"
+                                                                 Background="{TemplateBinding Background}"
+                                                                 Panel.ZIndex="1">
+                                                            <TextBox.Style>
+                                                                <Style TargetType="{x:Type TextBox}">
+                                                                    <Setter Property="Foreground"
+                                                                            Value="Transparent" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}"
+                                                                                     Value="">
+                                                                            <Setter Property="Foreground"
+                                                                                    Value="White" />
+                                                                            <Setter Property="TextAlignment"
+                                                                                    Value="Center" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBox.Style>
+                                                        </TextBox>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+
+                            <!--<TextBlock IsHitTestVisible="False"
                                        Text="Email đăng nhập"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       TextAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="20,0,0,0"
                                        FontSize="21.88"
                                        Foreground="#FFFFFF"
                                        FontWeight="Bold"
-                                       Width="250">
+                                       TextAlignment="Center"
+                                       Width="250">-->
+                            <!--Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"-->
+                            <!--
                                 <TextBlock.Style>
+
                                     <Style TargetType="{x:Type TextBlock}"
                                            BasedOn="{StaticResource Baloo2-Bold}">
                                         <Setter Property="Visibility"
                                                 Value="Collapsed" />
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=Username}"
+                                            <DataTrigger Binding="{Binding Text, ElementName=Password}"
                                                          Value="">
                                                 <Setter Property="Visibility"
                                                         Value="Visible" />
@@ -70,7 +119,7 @@
                                         </Style.Triggers>
                                     </Style>
                                 </TextBlock.Style>
-                            </TextBlock>
+                            </TextBlock>-->
                         </Grid>
 
                     </Border>
@@ -83,32 +132,52 @@
                             BorderThickness="4"
                             BorderBrush="#000000"
                             Margin="0 26.56 0 0">
-
+                        <!---->
                         <Grid DataContext="{StaticResource LoginVM}">
                             <TextBox Width="240"
                                      VerticalAlignment="Stretch"
                                      HorizontalAlignment="Left"
                                      x:Name="Password"
+                                     Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                                      Margin="20,0,0,0"
                                      BorderBrush="#BDB2FF"
                                      DataContext="{StaticResource MainVM}"
-                                     Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                                      Foreground="#FFFFFF"
-                                     FontSize="51.88"
+                                     FontSize="21.88"
                                      Height="42"
                                      FontStyle="Normal"
                                      FontWeight="Bold"
                                      Background="Transparent"
                                      BorderThickness="0"
-                                     Style="{StaticResource Baloo2-Bold}"
-                                      />
+                                     Style="{StaticResource Baloo2-Bold}">
+                                <!--<TextBox.Template>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <PasswordBox x:Name="PasswordBox"
+                                                     BorderBrush="#BDB2FF"
+                                                     FontStyle="Normal"
+                                                     Foreground="#000000"></PasswordBox>
+                                    </ControlTemplate>
+                                </TextBox.Template>
+
+
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type PasswordBox}">
+                                        <Setter Property="PasswordBox.PasswordChar"
+                                                Value="." />
+                                        <Setter Property="PasswordBox.Foreground"
+                                                Value="Bisque" />
+                                    </Style>
+                                </TextBox.Resources>-->
+
+
+                            </TextBox>
                             <TextBlock IsHitTestVisible="False"
                                        Text="Mật khẩu"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="20,0,0,0"
                                        FontSize="21.88"
-                                       Foreground="#FFFFFF"
+                                       Foreground="#FFFF"
                                        FontWeight="Bold"
                                        TextAlignment="Center"
                                        Width="250"><!--Text="{Binding Display, UpdateSourceTrigger=PropertyChanged}"-->
@@ -279,8 +348,8 @@
                                    Width="512"></TextBlock>
                         <Button Background="Transparent"
                                 Width="180"
-                                DataContext="{StaticResource OnBoardingVM}"
-                                Command="{Binding TransformToRegester}"
+                                DataContext="{StaticResource MainVM}"
+                                Command="{Binding TransformToRegister}"
                                 Height="63"
                                 Margin="200 0 0 10"
                                 BorderThickness="0">

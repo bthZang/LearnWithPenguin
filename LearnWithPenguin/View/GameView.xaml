@@ -9,7 +9,7 @@
       d:DataContext="{d:DesignInstance Type=viewmodel:GameViewModel}"
       mc:Ignorable="d"
       d:DesignHeight="800"
-      d:DesignWidth="1200"
+      d:DesignWidth="1125"
       DataContext="{StaticResource GameVM}"
       Title="GameView">
 
@@ -20,12 +20,12 @@
         <DataTemplate DataType="{x:Type viewmodel:BRforGameViewModel}">
             <localUser:BRforGame DataContext="{StaticResource GameVM}"
                                  NextGame="{Binding NextGame}"
-                                 ReplayGame="{Binding ReplayGame}"/>
+                                 ReplayGame="{Binding ReplayGame}" />
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodel:GRforGameViewModel}">
             <localUser:GRforGame DataContext="{StaticResource GameVM}"
                                  NextGame="{Binding NextGame}"
-                                 ReplayGame="{Binding ReplayGame}"/>
+                                 ReplayGame="{Binding ReplayGame}" />
         </DataTemplate>
 
     </Page.Resources>
@@ -38,74 +38,67 @@
                         DataContext="{StaticResource GameVM}"
                         Content="{Binding NavigatetoResult}" />
         <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
-                <StackPanel>
-                    <localUser:Icon Width="63.28"
-                                    Height="63.28"
-                                    Margin="28,35,15,0"
-                                    DataContext="{StaticResource MainVM}"
-                                    Command="{Binding ShowMenu}">
-                    </localUser:Icon>
-                </StackPanel>
-                <StackPanel Width="987.44"
+            <DockPanel>
+                <localUser:Icon Width="63.28"
+                                Height="63.28"
+                                Margin="28,35,15,0"
+                                DataContext="{StaticResource MainVM}"
+                                Command="{Binding ShowMenu}">
+                </localUser:Icon>
+
+                <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Bottom">
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Bottom">
-                        <Button x:Name="Back"
-                                Command="{Binding BackwardCommand}"
-                                DataContext="{StaticResource GameVM}"
-                                CommandParameter="{Binding ElementName=BacknForward}"
-                                Width="20"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <Image Source="/images/Back.png" />
-                        </Button>
+                    <Button x:Name="Back"
+                            Command="{Binding BackwardCommand}"
+                            DataContext="{StaticResource GameVM}"
+                            CommandParameter="{Binding ElementName=BacknForward}"
+                            Width="20"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Image Source="/images/Back.png" />
+                    </Button>
 
-                        <TextBlock Text="Bài"
-                                   Foreground="#FF073580"
-                                   FontSize="30"
-                                   FontWeight="Bold"
-                                   FontStyle="Normal"
-                                   LineStackingStrategy="MaxHeight"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Width="65"
-                                   Margin="10, 0, 0, 0"
-                                   TextAlignment="Center"
-                                   VerticalAlignment="Center" />
+                    <TextBlock Text="Màn"
+                               Foreground="#FF073580"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Width="65"
+                               Margin="10, 0, 0, 0"
+                               TextAlignment="Center"
+                               VerticalAlignment="Center" />
 
-                        <TextBlock x:Name="Number"
-                                   Text="{Binding PositionNumber, UpdateSourceTrigger=PropertyChanged}"
-                                   DataContext="{StaticResource GameVM}"
-                                   Foreground="#FF073580"
-                                   FontSize="30"
-                                   FontWeight="Bold"
-                                   FontStyle="Normal"
-                                   LineStackingStrategy="MaxHeight"
-                                   Style="{StaticResource Baloo2-Bold}"
-                                   Width="auto"
-                                   Margin="0, 0, 20, 0"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   VerticalAlignment="Center" />
+                    <TextBlock x:Name="Number"
+                               Text="{Binding PositionNumber, UpdateSourceTrigger=PropertyChanged}"
+                               DataContext="{StaticResource GameVM}"
+                               Foreground="#FF073580"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               FontStyle="Normal"
+                               LineStackingStrategy="MaxHeight"
+                               Style="{StaticResource Baloo2-Bold}"
+                               Width="auto"
+                               Margin="0, 0, 20, 0"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"
+                               VerticalAlignment="Center" />
 
-                        <Button x:Name="Forward"
-                                Command="{Binding ForwardCommand}"
-                                DataContext="{StaticResource GameVM}"
-                                CommandParameter="{Binding ElementName=BacknForward}"
-                                Width="20"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <Image Source="/images/Forward.png" />
-                        </Button>
-                    </StackPanel>
+                    <Button x:Name="Forward"
+                            Command="{Binding ForwardCommand}"
+                            DataContext="{StaticResource GameVM}"
+                            CommandParameter="{Binding ElementName=BacknForward}"
+                            Width="20"
+                            Background="Transparent"
+                            BorderThickness="0">
+                        <Image Source="/images/Forward.png" />
+                    </Button>
                 </StackPanel>
-                <StackPanel Width="63.28"
-                      Height="63.28"
-                      Margin="28,35,15,0">
-                </StackPanel>
-            </StackPanel>
+            </DockPanel>
+           
+
             <StackPanel Margin="0, 30, 0, 0">
                 <Border Background="Beige"
                         BorderBrush="#073580"
@@ -119,6 +112,7 @@
                         <ContentControl Content="{Binding GameTurn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                                         DataContext="{StaticResource GameVM}">
                         </ContentControl>
+                       
                         <Border Background="#E7F7FD"
                                 CornerRadius="0, 0, 41, 41"
                                 Width="996"
@@ -171,8 +165,7 @@
                                         Height="auto"
                                         Command="{Binding HandleButtonPress}"
                                         CommandParameter="\images\left@3x.png"
-                                        BorderThickness="0"
-                                        >
+                                        BorderThickness="0">
                                     <Button.Resources>
                                         <Style TargetType="{x:Type Border}">
                                             <Setter Property="Border.CornerRadius"
@@ -320,7 +313,7 @@
                                             Height="100"
                                             CornerRadius="90"
                                             HorizontalAlignment="Center">
-                                        <TextBlock Text="RUN"
+                                        <TextBlock Text="CHẠY"
                                                    Foreground="#FFFFFF"
                                                    FontSize="35"
                                                    FontWeight="Bold"
@@ -339,9 +332,11 @@
                     </StackPanel>
                 </Border>
                 <DockPanel>
-                    <Grid HorizontalAlignment="Left">
-                        <localUser:Back Width="97.13"
-                                        Height="34.99"
+                    <Grid HorizontalAlignment="Left"
+                          Width="auto"
+                          Height="auto">
+                        <localUser:Back Width="70"
+                                        Height="70"
                                         Margin="42.97,21.87,0,0"
                                         DataContext="{StaticResource MainVM}"
                                         Command="{Binding TransformToCoding}">
