@@ -38,13 +38,13 @@
                   Panel.ZIndex="5"
                   ClipToBounds="True">
 
-                <Image Source="/images/User.png"
+                <Image Source="/UserControls/5.png"
                        HorizontalAlignment="Center"
                        Height="240"
                        Panel.ZIndex="9"
                        VerticalAlignment="Top"
                        Width="240"
-                       Margin="-130 70 0 0"></Image>
+                       Margin="0 70 0 0"></Image>
                 <Grid Width="257"
                       VerticalAlignment="Center"
                       Margin="0 300 0 0"
@@ -58,6 +58,7 @@
                                    Text="{Binding UserName}"
                                    FontSize="40"
                                    FontStyle="Normal"
+                                   TextAlignment="Center"
                                    FontWeight="SemiBold"
                                    Style="{StaticResource Baloo2-Bold}"
                                    Width="200"
@@ -115,7 +116,7 @@
                            Height="66"
                            TextAlignment="Center"
                            HorizontalAlignment="Center"
-                           Margin="-160 -100 0 0"></TextBlock>
+                           Margin="-200 -190 0 0"></TextBlock>
                 <TextBlock VerticalAlignment="Top"
                            Foreground="#FF1059CF"
                            TextWrapping="Wrap"
