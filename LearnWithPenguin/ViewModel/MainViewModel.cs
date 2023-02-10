@@ -209,7 +209,6 @@ namespace LearnWithPenguin.ViewModel
                 return new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
                     NavigatetoHome = new HomeViewModel();
-
                     Menu = null;
 
                 });
@@ -402,7 +401,6 @@ namespace LearnWithPenguin.ViewModel
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show("Không đc");
                         //throw;
                     }
                 });
@@ -1478,7 +1476,7 @@ namespace LearnWithPenguin.ViewModel
         protected string _rankWriteScore;
         public string RankWriteScore
         {
-            get { return "Thật tuyệt vời!Bạn viết khéo hơn " + _rankWriteScore + " người "; }
+            get { return "Thật tuyệt vời! Bạn viết khéo hơn " + _rankWriteScore + " người "; }
             set
             {
                 _rankWriteScore = value;
@@ -1489,7 +1487,7 @@ namespace LearnWithPenguin.ViewModel
         protected string _rankGameScore;
         public string RankGameScore
         {
-            get { return "Trời ơi tin được không!?Bạn chơi giỏi hơn " + _rankGameScore + " người luôn đó "; }
+            get { return "Trời ơi tin được không!? Bạn chơi giỏi hơn " + _rankGameScore + " người luôn đó "; }
             set
             {
                 _rankGameScore = value;

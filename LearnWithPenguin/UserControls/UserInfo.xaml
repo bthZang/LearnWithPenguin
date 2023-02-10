@@ -35,13 +35,7 @@
                                 Value="13 13 13 13" />
                     </Style>
                 </Button.Resources>
-                <Grid>
-
-                    <Image Stretch="Uniform"
-                           Source="/UserControls/Vector.png">
-
-                    </Image>
-                </Grid>
+                <Grid />
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="Border"
@@ -114,10 +108,6 @@
             <Grid>
 
                 <!--Margin="0,27,0,-27"-->
-                <Image Stretch="Uniform"
-                       Source="/UserControls/Vector.png">
-
-                </Image>
             </Grid>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -361,7 +351,7 @@
                                            TextAlignment="Center"
                                            Style="{StaticResource Baloo2-Bold}"
                                            Foreground="#073580"
-                                           Text="Nhận biết"
+                                           Text="Đố vui"
                                            Margin="0 15 0 0"></TextBlock>
                                 <TextBlock FontSize="28"
                                            FontStyle="Normal"

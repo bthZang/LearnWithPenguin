@@ -71,7 +71,7 @@
                                    HorizontalAlignment="Left"
                                    Margin="76 30 0 8" />
                         <TextBlock Foreground="#9D1014"
-                                   Text="Nhận biết"
+                                   Text="Đố vui"
                                    FontSize="25"
                                    FontStyle="Normal"
                                    FontWeight="Medium"

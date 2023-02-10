@@ -36,6 +36,8 @@ namespace LearnWithPenguin.View
             DocumentSnapshot snap = await documentReference.GetSnapshotAsync();
             if (snap.Exists)
             {
+                Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
                 //Dictionary<string, object> data = snap.ToDictionary();
                 UserInfo user = snap.ConvertTo<UserInfo>();
                 //MessageBox.Show(MainViewModel.userEmail);
@@ -47,7 +49,9 @@ namespace LearnWithPenguin.View
                 UserData.score_2 = user.score_2;
                 UserData.score_3 = user.score_3;
                 UserData.score_4 = user.score_4;
-                MessageBox.Show("Load dữ liệu thành công");
+                Mouse.OverrideCursor = System.Windows.Input.Cursors.Arrow;
+
+               // MessageBox.Show("Load dữ liệu thành công");
             }
         }
 

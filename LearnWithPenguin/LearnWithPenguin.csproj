@@ -1386,6 +1386,7 @@
     <Content Include="Content\svg-with-js.min.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <Resource Include="images\reload%403x.png" />
     <Content Include="nuget-scripts.txt" />
     <Resource Include="reload%403x.png" />
     <Content Include="Scripts\fontawesome\all.js" />
